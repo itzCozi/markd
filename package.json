@@ -25,6 +25,7 @@
 	"type": "module",
 	"dependencies": {
 		"path": "^0.12.7",
-		"svelte-markdown": "^0.4.1"
+		"svelte-markdown": "^0.4.1",
+		"svrollbar": "^0.12.0"
 	}
 }

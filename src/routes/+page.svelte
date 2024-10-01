@@ -1,6 +1,7 @@
 <script lang="ts">
   import '../global.css'; // Tailwind CSS
   import SvelteMarkdown from 'svelte-markdown';
+  import { Svrollbar } from 'svrollbar';
 
   let leftWidth = 50; // Initial width percentage of the left div
   let isResizing = false;
@@ -33,6 +34,12 @@
     const numberOfLines = value.split('\n').length;
     lines = Array.from({ length: numberOfLines }, (_, i) => i + 1);
   }
+
+  function syncScroll(event: Event): void {
+    const target = event.target as HTMLTextAreaElement;
+    const lineNumbers = document.querySelector('.line-numbers') as HTMLElement;
+    lineNumbers.scrollTop = target.scrollTop;
+  }
 </script>
 
 <nav class="w-full p-4 bg-mono-accent shadow-lg z-20">
@@ -47,18 +54,18 @@
 </nav>
 
 <div class="flex h-screen bg-mono-background">
-  <div class="border-r border-[#404040]" style="width: {leftWidth}%;">
-    <div class="flex h-full">
-      <div class="p-2 text-gray-600 text-right border-r border-[#252525] w-12">
+  <div style="width: {leftWidth}%;">
+    <div class="flex h-full overflow-hidden">
+      <div class="p-2 text-gray-600 text-right border-r border-[#252525] w-12 line-numbers">
         {#each lines as line}
           <div>{line}</div>
         {/each}
       </div>
-      <textarea class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono" bind:value={source} on:input={updateLineNumbers} placeholder="Input markdown here..."></textarea>
+      <textarea class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto" bind:value={source} on:input={updateLineNumbers} placeholder="Input markdown here..." on:scroll={syncScroll}></textarea>
     </div>
   </div>
 
-  <div class="w-5 cursor-ew-resize" role="separator" on:mousedown={handleMouseDown}></div>
+  <div class="w-1 cursor-ew-resize bg-[#353535]" style="left: calc({leftWidth}% - 2.5px);" role="separator" on:mousedown={handleMouseDown}></div>
 
   <div class="p-2 overflow-auto" style="width: {100 - leftWidth}%;">
     <SvelteMarkdown {source} />

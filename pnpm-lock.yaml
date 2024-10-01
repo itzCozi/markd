@@ -14,6 +14,9 @@ importers:
       svelte-markdown:
         specifier: ^0.4.1
         version: 0.4.1(svelte@4.2.19)
+      svrollbar:
+        specifier: ^0.12.0
+        version: 0.12.0
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^3.0.0
@@ -889,6 +892,9 @@ packages:
     resolution: {integrity: sha512-IY1rnGr6izd10B0A8LqsBfmlT5OILVuZ7XsI0vdGPEvuonFV7NYEUK4dAkm9Zg2q0Um92kYjTpS1CAP3Nh/KWw==}
     engines: {node: '>=16'}
 
+  svrollbar@0.12.0:
+    resolution: {integrity: sha512-okH0sz8bGtw+tgOfN1mpEtbveifxROcE3mbUMBJ1RQz8Q+1rVr+nVG7EAJ9b0G80cGDu7dskjAWuzj3iru0k5g==}
+
   tailwindcss@3.4.13:
     resolution: {integrity: sha512-KqjHOJKogOUt5Bs752ykCeiwvi0fKVkr5oqsFNt/8px/tA8scFPIlkygsf6jXrfCqGHz7VflA6+yytWuM+XhFw==}
     engines: {node: '>=14.0.0'}
@@ -1731,6 +1737,8 @@ snapshots:
       locate-character: 3.0.0
       magic-string: 0.30.11
       periscopic: 3.1.0
+
+  svrollbar@0.12.0: {}
 
   tailwindcss@3.4.13:
     dependencies:

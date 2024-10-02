@@ -88,6 +88,8 @@
   </div>
 
   <div class="p-2 overflow-auto markdown-content" style="width: {100 - leftWidth}%;">
-    <Markdown {carta} value={source} />
+    {#key source}
+	    <Markdown {carta} value={source} />
+    {/key}
   </div>
 </div>

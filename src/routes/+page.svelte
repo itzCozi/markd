@@ -2,6 +2,9 @@
   import { setContext } from "svelte";
   import SvelteMarkdown from "svelte-markdown";
   import Blockquote from "$lib/renderers/Blockquote.svelte";
+  import CodeSpan from "$lib/renderers/CodeSpan.svelte";
+  import CodeBlock from "$lib/renderers/CodeBlock.svelte";
+  import hr from "$lib/renderers/hr.svelte";
 
   let leftWidth = 50;
   let isResizing = false;
@@ -68,10 +71,11 @@
   </div>
 
   <!--
-    Add a &% symbol or something of the sort to add a br into the html output 
-    https://www.npmjs.com/package/svelte-markdown#renderers
+    Dont forget about permalinks!! (gonna take a work of god)
   -->
   <div class="p-2 overflow-auto markdown-content" style="width: {100 - leftWidth}%;">
-    <SvelteMarkdown {source} renderers={{ blockquote: Blockquote }} />
+    <SvelteMarkdown
+      {source}
+      renderers={{ blockquote: Blockquote, codespan: CodeSpan, hr: hr, code: CodeBlock }} />
   </div>
 </div>

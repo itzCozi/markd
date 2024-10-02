@@ -1,6 +1,6 @@
 <script lang="ts">
   import { setContext } from "svelte";
-  import { Carta, Markdown } from 'carta-md';
+  import { Carta, Markdown, MarkdownEditor } from 'carta-md';
   import localStorageStore from '../lib/stores/localStorage';
   import DOMPurify from 'isomorphic-dompurify';
 
@@ -72,12 +72,9 @@
                 <span class="new-line" />
         {/each}
       </div>
-      <textarea
-        class="text-content w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
-        value={source}
-        on:input={handleInput}
-        on:keydown={KeyDown}
-        placeholder="Input markdown here..."></textarea>
+      <div class="text-content w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto">     
+        <MarkdownEditor {carta} bind:value={source} />
+      </div>
     </div>
   </div>
 

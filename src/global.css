@@ -5,12 +5,10 @@
 :root ::-webkit-scrollbar {
   width: 7px;
   background-color: transparent;
-  border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 :root ::-webkit-scrollbar-thumb {
   background-color: #353535;
-  border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 :root ::-webkit-scrollbar-thumb:hover {

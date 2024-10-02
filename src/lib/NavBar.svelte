@@ -4,6 +4,7 @@
   import html2canvas from "html2canvas";
   export let source: string; // Receive the source prop
 
+  // We gotta do all of this without changing the DOM
   async function exportToPDF() {
     const element = document.querySelector(".markdown-content") as HTMLElement;
     if (!element) {

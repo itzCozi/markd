@@ -60,7 +60,8 @@
   };
 
   const carta = new Carta({
-    sanitizer: DOMPurify.sanitize
+    sanitizer: DOMPurify.sanitize,
+    theme: 'carta-dark'
   });
 </script>
 

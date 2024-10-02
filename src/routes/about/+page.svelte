@@ -1,9 +1,5 @@
-<script lang="ts">
-  import "@/global.css";
-</script>
-
 <div class="flex pt-8 bg-mono-background justify-center items-center">
-  <div class="p-4 bg-mono-card w-1/2 h-1/3 rounded-sm">
+  <div class="p-4 bg-mono-accent w-1/2 h-1/3 rounded-md">
     <p class="text-3xl font-semibold">About Us</p>
     <p class="text-type-dimmed mt-2">
       MarkD is an advanced live markdown editor directly in your browser. It is built using
@@ -11,13 +7,19 @@
       project and a very opinionated one at that. All of the styles are inline tailwind css classes,
       and the Markdown linter is built on svelte-markdown.
     </p>
-    <div class="flex flex-row gap-3 items-center mt-2 mb-3">
-      <a href="https://github.com/itzcozi/markd" title="Github">Github</a>
-      <a href="mailto:dev@wyzie.ru" title="Email">Email</a>
+    <a href="https://github.com/itzcozi/markd" title="Source code" class="mt-2 text-sm"
+      >Source Code</a>
+    <div class="flex flex-row gap-3 items-center my-2">
+      <button
+        title="Email"
+        on:click={() => window.open("mailto:dev@wyzie,ru")}
+        class="w-full py-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-100 px-1 rounded">
+        Email Us
+      </button>
     </div>
-    <sup>
+    <p class="text-xs mt-4">
       Created by <a href="https://github.com/itzcozi" title="Developer github">BadDeveloper</a> with
       💙
-    </sup>
+    </p>
   </div>
 </div>

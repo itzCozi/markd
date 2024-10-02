@@ -20,7 +20,8 @@ module.exports = {
           accentLight1: "#2c2c2c",
           accentLight2: "#3a3a3a"
         },
-        type: { 
+        type: {
+          primary: "#d0d0d0",
           emphasized: "#e0e0e0", 
           subheader: "#d0d0d0", 
           dimmed: "#a3a3a3", 

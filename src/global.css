@@ -17,11 +17,13 @@
 
 :root {
   --background-color: #121212;
+  font-family: "open sans";
 }
 
 html, body {
   background-color: var(--background-color);
   color: #d0d0d0;
+  font-family: "open sans";
   margin: 0;
   padding: 0;
   height: 100%;

@@ -9,6 +9,6 @@
   "semi": true,
   "quoteProps": "consistent",
   "htmlWhitespaceSensitivity": "css",
-  "filepath": "src/**/*.{tsx,ts}",
+  "filepath": "src/**/*.{ts,svelte,html}",
   "plugins": ["prettier-plugin-svelte"]
 }

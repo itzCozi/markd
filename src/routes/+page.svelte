@@ -1,5 +1,4 @@
 <script lang="ts">
-  import "@/global.css";
   import { setContext } from "svelte";
   import SvelteMarkdown from "svelte-markdown";
 
@@ -62,9 +61,8 @@
 
   <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
   <div
-    class="w-1 cursor-ew-resize bg-[#353535]"
-    style="left: calc({leftWidth}% - 2.5px);"
-    role="separator"
+    class="w-1 cursor-ew-resize bg-[#202020]"
+    style="left: calc({leftWidth}% - 5px);"
     on:mousedown={handleMouseDown}>
   </div>
 

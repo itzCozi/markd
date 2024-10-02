@@ -1,8 +1,18 @@
 <script lang="ts">
-  import "@/global.css";
   import jsPDF from "jspdf";
   import html2canvas from "html2canvas";
-  export let source: string; // Receive the source prop
+  import { Menu, FileText } from "lucide-svelte";
+  import Sidebar from "$lib/Sidebar.svelte";
+
+  let isSidebarOpen = false;
+
+  function toggleSidebar() {
+    isSidebarOpen = !isSidebarOpen;
+  }
+
+  function closeSidebar() {
+    isSidebarOpen = false;
+  }
 
   // We gotta do all of this without changing the DOM
   async function exportToPDF() {
@@ -54,20 +64,30 @@
   }
 </script>
 
-<header class="w-full p-4 bg-mono-accent shadow-lg z-20">
+<header class="w-full p-4 bg-mono-card shadow-lg z-20">
   <nav class="flex justify-between items-center">
+    <a href="/" title="Home" class="hover:no-underline">
+      <div class="flex flex-row gap-3 items-center hover:scale-105 duration-100">
+        <img src="/favicon.svg" alt="logo" class="w-10 h-10" />
+        <p class="text-4xl font-bold">MarkD</p>
+      </div>
+    </a>
     <div class="flex flex-row gap-3 items-center">
-      <a href="/"
-        ><img src="/favicon.svg" alt="logo" class="w-10 h-10 hover:scale-110 duration-200" /></a>
-      <p class="text-3xl font-semibold cursor-default">MarkD</p>
-    </div>
-    <div class="flex flex-row gap-3 items-center">
+      <!-- https://flowbite-svelte.com/docs/components/dropdown -->
       <button
-        class="text-left px-4 py-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
-        on:click={exportToPDF}>Export to PDF</button>
+        class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
+        title="Export"
+        on:click={exportToTxt}>
+        <FileText />
+      </button>
       <button
-        class="text-left px-4 py-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
-        on:click={exportToTxt}>Export to TXT</button>
+        class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
+        title="Navigation"
+        on:click={toggleSidebar}>
+        <Menu />
+      </button>
     </div>
   </nav>
 </header>
+
+<Sidebar {isSidebarOpen} {closeSidebar} />

@@ -2,6 +2,7 @@
   import { setContext } from "svelte";
   import { Carta, Markdown } from 'carta-md';
   import localStorageStore from '../lib/stores/localStorage';
+  import DOMPurify from 'isomorphic-dompurify';
 
   let leftWidth = 50;
   let isResizing = false;
@@ -59,7 +60,7 @@
   };
 
   const carta = new Carta({
-    // needs sanitization
+    sanitizer: DOMPurify.sanitize
   });
 </script>
 

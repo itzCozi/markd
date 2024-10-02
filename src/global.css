@@ -80,3 +80,18 @@ ol {
   padding-left: 2em;
   margin-block: 1.2em;
 }
+
+.line-numbers {
+  width: auto;
+  text-align: right;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.line-numbers .new-line {
+  counter-increment: linenumber;
+}
+
+.line-numbers .new-line::before {
+  content: counter(linenumber);
+  display: block;
+}

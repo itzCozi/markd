@@ -25,46 +25,54 @@
     document.removeEventListener("mouseup", handleMouseUp);
   }
 
-  let lines: number[] = [1];
   let source: string = localStorageStore.get('markdown') || '';
   setContext("source", source);
 
-  function updateLineNumbers(event: Event): void {
-    const target = event.target as HTMLTextAreaElement;
-    const value = target.value;
-    const numberOfLines = value.split("\n").length;
-    lines = Array.from({ length: numberOfLines }, (_, i) => i + 1);
-  }
-
-  function syncScroll(event: Event) {
-    const target = event.target as HTMLElement;
-    const lineNumbers = document.querySelector(".line-numbers") as HTMLElement;
-    lineNumbers.scrollTop = target.scrollTop;
-  }
+  let numberOfLines = source.split('\n').length;
 
   function handleInput(event: Event) {
     const target = event.target as HTMLTextAreaElement;
     const value = target.value;
     source = value;
     localStorageStore.set('markdown', value);
+    KeyUp(event);
   }
+
+  const KeyUp = (event: Event) => {
+    const textarea = event.target as HTMLInputElement;
+    numberOfLines = textarea.value.split('\n').length;
+  };
+
+  const KeyDown = (event: Event) => {
+    const textarea = event.target as HTMLInputElement;
+
+    if ((event as KeyboardEvent).key === 'Tab') {
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+
+      if (start && end) {
+        textarea.value = textarea.value.substring(0, start) + '\t'
+        + textarea.value.substring(end);
+        event.preventDefault();
+      }
+    }
+  };
 </script>
 
 <div class="flex h-screen bg-mono-background">
   <div style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div class="p-2 text-gray-600 text-right border-r border-[#252525] w-12 line-numbers">
-        {#each lines as line}
-          <div>{line}</div>
+        {#each Array(numberOfLines) as _}
+                <span class="new-line" />
         {/each}
       </div>
       <textarea
-        class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
+        class="text-content w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
         value={source}
         on:input={handleInput}
-        on:input={updateLineNumbers}
-        placeholder="Input markdown here..."
-        on:scroll={syncScroll}></textarea>
+        on:keydown={KeyDown}
+        placeholder="Input markdown here..."></textarea>
     </div>
   </div>
 

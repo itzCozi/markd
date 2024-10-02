@@ -15,13 +15,15 @@ module.exports = {
         },
         mono: { 
           background: "#121212",
-          card: "#0b0b0b", 
-          accent: "#1a1a1a" 
+          card: "#202020", 
+          accent: "#1a1a1a",
+          accentLight1: "#2c2c2c",
+          accentLight2: "#3a3a3a"
         },
         type: { 
           emphasized: "#e0e0e0", 
           subheader: "#d0d0d0", 
-          dimmed: "#c0c0c0", 
+          dimmed: "#a3a3a3", 
           footer: "#6b7280" 
         },
       },

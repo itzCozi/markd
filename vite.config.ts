@@ -12,6 +12,11 @@ export default defineConfig({
   css: {
     postcss,
   },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+    },
+  },
   server: {
     fs: {
       allow: [

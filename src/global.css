@@ -3,19 +3,18 @@
 @tailwind utilities;
 
 :root ::-webkit-scrollbar {
-  width: 12.5px;
-  height: 10px;
-  background-color: #cccccc;
+  width: 7px;
+  background-color: transparent;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 :root ::-webkit-scrollbar-thumb {
-  background-color: #ff0000;
+  background-color: #353535;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 :root ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(255, 0, 0, .75);
+  background-color: #444;
 }
 
 :root {
@@ -39,7 +38,7 @@ textarea {
 }
 
 a {
-  color: #0070f3;
+  color: #357ccc;
   text-decoration: none;
 }
 

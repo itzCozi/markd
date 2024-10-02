@@ -6,6 +6,7 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
+		"format": "prettier --log-level warn --write \"src/**/*.{svelte,ts}\"",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
@@ -16,6 +17,8 @@
 		"@types/node": "^22.7.4",
 		"autoprefixer": "^10.4.20",
 		"postcss": "^8.4.47",
+		"prettier": "^3.3.3",
+		"prettier-plugin-svelte": "^3.2.7",
 		"svelte": "^4.2.7",
 		"svelte-check": "^4.0.0",
 		"tailwindcss": "^3.4.13",
@@ -24,6 +27,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"html2canvas": "^1.4.1",
+		"jspdf": "^2.5.2",
 		"path": "^0.12.7",
 		"svelte-markdown": "^0.4.1",
 		"svrollbar": "^0.12.0"

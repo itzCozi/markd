@@ -1,0 +1,5 @@
+build
+
+# Ignore specific directories:
+.svelte-kit
+node_modules

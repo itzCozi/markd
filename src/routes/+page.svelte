@@ -59,13 +59,17 @@
     </div>
   </div>
 
-  <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
     class="w-1 cursor-ew-resize bg-[#202020]"
     style="left: calc({leftWidth}% - 5px);"
     on:mousedown={handleMouseDown}>
   </div>
 
+  <!--
+    Add a &% symbol or something of the sort to add a br into the html output 
+    https://www.npmjs.com/package/svelte-markdown#renderers
+  -->
   <div class="p-2 overflow-auto markdown-content" style="width: {100 - leftWidth}%;">
     <SvelteMarkdown {source} />
   </div>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { setContext } from "svelte";
   import SvelteMarkdown from "svelte-markdown";
+  import localStorageStore from '../lib/stores/localStorage';
 
   let leftWidth = 50;
   let isResizing = false;
@@ -25,7 +26,7 @@
   }
 
   let lines: number[] = [1];
-  let source: string = "";
+  let source: string = localStorageStore.get('markdown') || '';
   setContext("source", source);
 
   function updateLineNumbers(event: Event): void {
@@ -40,6 +41,13 @@
     const lineNumbers = document.querySelector(".line-numbers") as HTMLElement;
     lineNumbers.scrollTop = target.scrollTop;
   }
+
+  function handleInput(event: Event) {
+    const target = event.target as HTMLTextAreaElement;
+    const value = target.value;
+    source = value;
+    localStorageStore.set('markdown', value);
+  }
 </script>
 
 <div class="flex h-screen bg-mono-background">
@@ -52,7 +60,8 @@
       </div>
       <textarea
         class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
-        bind:value={source}
+        value={source}
+        on:input={handleInput}
         on:input={updateLineNumbers}
         placeholder="Input markdown here..."
         on:scroll={syncScroll}></textarea>

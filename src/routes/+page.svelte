@@ -1,11 +1,7 @@
 <script lang="ts">
   import { setContext } from "svelte";
-  import SvelteMarkdown from "svelte-markdown";
+  import { Carta, Markdown } from 'carta-md';
   import localStorageStore from '../lib/stores/localStorage';
-  import Blockquote from "$lib/renderers/Blockquote.svelte";
-  import CodeSpan from "$lib/renderers/CodeSpan.svelte";
-  import CodeBlock from "$lib/renderers/CodeBlock.svelte";
-  import hr from "$lib/renderers/hr.svelte";
 
   let leftWidth = 50;
   let isResizing = false;
@@ -61,6 +57,10 @@
       }
     }
   };
+
+  const carta = new Carta({
+    // needs sanitization
+  });
 </script>
 
 <div class="flex h-screen bg-mono-background">
@@ -87,12 +87,7 @@
     on:mousedown={handleMouseDown}>
   </div>
 
-  <!--
-    Dont forget about permalinks!! (gonna take a work of god)
-  -->
   <div class="p-2 overflow-auto markdown-content" style="width: {100 - leftWidth}%;">
-    <SvelteMarkdown
-      {source}
-      renderers={{ blockquote: Blockquote, codespan: CodeSpan, hr: hr, code: CodeBlock }} />
+    <Markdown {carta} value={source} />
   </div>
 </div>

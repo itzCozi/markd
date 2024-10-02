@@ -1,6 +1,7 @@
 <script lang="ts">
   import { setContext } from "svelte";
   import SvelteMarkdown from "svelte-markdown";
+  import Blockquote from "$lib/renderers/Blockquote.svelte";
 
   let leftWidth = 50;
   let isResizing = false;
@@ -71,6 +72,6 @@
     https://www.npmjs.com/package/svelte-markdown#renderers
   -->
   <div class="p-2 overflow-auto markdown-content" style="width: {100 - leftWidth}%;">
-    <SvelteMarkdown {source} />
+    <SvelteMarkdown {source} renderers={{ blockquote: Blockquote }} />
   </div>
 </div>

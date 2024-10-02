@@ -31,7 +31,6 @@
 		"jspdf": "^2.5.2",
 		"lucide-svelte": "^0.447.0",
 		"path": "^0.12.7",
-		"svelte-markdown": "^0.4.1",
-		"svrollbar": "^0.12.0"
+		"svelte-markdown": "^0.4.1"
 	}
 }

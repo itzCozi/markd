@@ -46,7 +46,7 @@
       <div class="p-2 text-gray-600 text-right border-r border-[#252525] w-12">
       </div>
       <div class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto">     
-        <MarkdownEditor {carta} bind:value={source} />
+        <MarkdownEditor {carta} bind:value={source} selectedTab="write" scroll="sync" placeholder="Markdown here..." />
       </div>
     </div>
   </div>
@@ -60,7 +60,7 @@
 
   <div class="p-2 overflow-auto markdown-content" style="width: {100 - leftWidth}%;">
     {#key source}
-	    <Markdown {carta} value={source} />
+	    <Markdown {carta} value={source}/>
     {/key}
   </div>
 </div>

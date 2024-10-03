@@ -81,6 +81,19 @@ ol {
   margin-block: 1.2em;
 }
 
+.carta-toolbar {
+  position: sticky !important;
+  top: 0;
+  background-color: #111 !important;
+  border: 1px solid #2f4359;
+  border-radius: 5px;
+  z-index: 9999;
+}
+
+.carta-toolbar-right {
+  margin-right: 10px !important;
+}
+
 .carta-toolbar-left {
   display: none !important;
 }

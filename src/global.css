@@ -82,12 +82,14 @@ ol {
 }
 
 .carta-toolbar {
+  width: fit-content;
   position: sticky !important;
   top: 0;
   background-color: #111 !important;
   border: 1px solid #2f4359;
   border-radius: 5px;
   z-index: 9999;
+  margin-left: auto;
 }
 
 .carta-toolbar-right {

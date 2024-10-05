@@ -11,7 +11,6 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.2.5",
 		"@sveltejs/kit": "^2.6.1",
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",
 		"@types/node": "^22.7.4",
@@ -31,9 +30,6 @@
 		"html2canvas": "^1.4.1",
 		"isomorphic-dompurify": "^2.16.0",
 		"jspdf": "^2.5.2",
-		"lucide-svelte": "^0.447.0",
-		"marked": "^14.1.2",
-		"path": "^0.12.7",
-		"svelte-markdown": "^0.4.1"
+		"lucide-svelte": "^0.447.0"
 	}
 }

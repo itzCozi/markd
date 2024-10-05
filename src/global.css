@@ -52,6 +52,13 @@ html, body {
   display: none;
 }
 
+.sync-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+}
+
 @media (max-width: 768px) {
   .divider {
     display: none !important;
@@ -80,5 +87,9 @@ html, body {
 
   .carta-toolbar-left {
     display: block !important;
+  }
+
+  .sync-button {
+    display: none;
   }
 }

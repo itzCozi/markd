@@ -1,12 +1,13 @@
 <script lang="ts">
+  import "@/styles.css"; // HTML renderer styles
   import { setContext } from "svelte";
-  import { Carta, Markdown, MarkdownEditor } from 'carta-md';
-  import localStorageStore from '../lib/stores/localStorage';
-  import DOMPurify from 'isomorphic-dompurify';
+  import { Carta, Markdown, MarkdownEditor } from "carta-md";
+  import localStorageStore from "../lib/stores/localStorage";
+  import DOMPurify from "isomorphic-dompurify";
 
   let leftWidth = 50;
   let isResizing = false;
-  let selectedTab: "write" | "preview" = 'write';
+  let selectedTab: "write" | "preview" = "write";
 
   function handleMouseDown() {
     isResizing = true;
@@ -27,27 +28,37 @@
     document.removeEventListener("mouseup", handleMouseUp);
   }
 
-  let source: string = localStorageStore.get('markdown') || '';
+  let source: string = localStorageStore.get("markdown") || "";
   setContext("source", source);
 
   $: {
-    localStorageStore.set('markdown', source);
+    localStorageStore.set("markdown", source);
   }
 
   const carta = new Carta({
     sanitizer: DOMPurify.sanitize,
-    theme: 'github-dark'
+    theme: "github-dark",
   });
-
 </script>
 
 <div class="flex h-[100dvh] bg-mono-background">
   <div class="editor" style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
-      <div class="line-count p-2 text-gray-600 text-right border-r border-[#252525] w-12 {selectedTab === 'write' ? '' : 'hidden'}">
+      <div
+        class="line-count p-2 text-gray-600 text-right border-r border-[#252525] w-12 {selectedTab ===
+        'write'
+          ? ''
+          : 'hidden'}">
       </div>
-      <div class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto">     
-        <MarkdownEditor {carta} bind:value={source} bind:selectedTab={selectedTab} mode="tabs" scroll="sync" placeholder="Markdown here..." />
+      <div
+        class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto">
+        <MarkdownEditor
+          {carta}
+          bind:value={source}
+          bind:selectedTab
+          mode="tabs"
+          scroll="sync"
+          placeholder="Insert your markdown here..." />
       </div>
     </div>
   </div>
@@ -61,7 +72,7 @@
 
   <div class="renderer p-2 overflow-auto markdown-content" style="width: {100 - leftWidth}%;">
     {#key source}
-	    <Markdown {carta} value={source}/>
+      <Markdown {carta} value={source} />
     {/key}
   </div>
 </div>

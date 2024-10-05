@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { writable } from "svelte/store";
 
 interface LocalStorageStore {
   get: (key: string) => string | null;
@@ -8,18 +8,18 @@ interface LocalStorageStore {
 
 const localStorageStore: LocalStorageStore = {
   get: (key: string) => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       return localStorage.getItem(key);
     }
     return null;
   },
   set: (key: string, value: string) => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       localStorage.setItem(key, value);
     }
   },
   remove: (key: string) => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       localStorage.removeItem(key);
     }
   },

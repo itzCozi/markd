@@ -5,14 +5,12 @@
 :root ::-webkit-scrollbar {
   width: 7px;
   background-color: transparent;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 :root ::-webkit-scrollbar-thumb {
-  background-color: #353535;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #252525;
 }
 :root ::-webkit-scrollbar-thumb:hover {
-  background-color: #444;
+  background-color: #353535;
 }
 
 :root {

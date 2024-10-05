@@ -41,7 +41,7 @@
 </script>
 
 <div class="flex h-screen bg-mono-background">
-  <div style="width: {leftWidth}%;">
+  <div class="editor" style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div class="p-2 text-gray-600 text-right border-r border-[#252525] w-12">
       </div>
@@ -53,12 +53,12 @@
 
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
-    class="w-1 cursor-ew-resize bg-[#202020]"
+    class="divider w-1 cursor-ew-resize bg-[#202020]"
     style="left: calc({leftWidth}% - 5px);"
     on:mousedown={handleMouseDown}>
   </div>
 
-  <div class="p-2 overflow-auto markdown-content" style="width: {100 - leftWidth}%;">
+  <div class="renderer p-2 overflow-auto markdown-content" style="width: {100 - leftWidth}%;">
     {#key source}
 	    <Markdown {carta} value={source}/>
     {/key}

@@ -99,3 +99,17 @@ ol {
 .carta-toolbar-left {
   display: none !important;
 }
+
+@media (max-width: 768px) {
+  .divider {
+    display: none !important;
+  }
+
+  .renderer {
+    display: none !important;
+  }
+
+  .editor {
+    width: 100% !important;
+  }
+}

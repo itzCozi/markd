@@ -27,58 +27,6 @@ html, body {
   caret-color: white;
 }
 
-p {
-  color: #d0d0d0;
-}
-
-textarea {
-  color: #d0d0d0;
-}
-
-a {
-  color: #357ccc;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-h1 {
-  color: #e0e0e0;
-  font-size: 2rem;
-  margin-block: 1.3rem;
-  font-weight: bold;
-  border-bottom: 1px solid #505050;
-}
-
-h2 {
-  color: #e0e0e0;
-  font-size: 1.5rem;
-  margin-block: 1.2rem;
-  font-weight: bold;
-  border-bottom: 1px solid #505050;
-}
-
-h3 {
-  color: #e0e0e0;
-  font-size: 1.5rem;
-  margin-block: 0.8rem;
-  font-weight: 500;
-}
-
-ul {
-  list-style-type: disc;
-  padding-left: 2em;
-  margin-block: 1.2em;
-}
-
-ol {
-  list-style-type: decimal;
-  padding-left: 2em;
-  margin-block: 1.2em;
-}
-
 .carta-toolbar {
   width: fit-content;
   position: sticky !important;

@@ -6,10 +6,5 @@ export default defineConfig({
   plugins: [sveltekit()],
   css: {
     postcss
-  },
-  resolve: {
-    alias: {
-      '@': '/src',
-    },
-  },
+  }
 });

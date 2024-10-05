@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "@/styles.css"; // HTML renderer styles
+  import "../styles.css"; // HTML renderer styles
   import { setContext } from "svelte";
   import { Carta, Markdown, MarkdownEditor } from "carta-md";
   import localStorageStore from "../lib/stores/localStorage";

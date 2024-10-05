@@ -17,6 +17,19 @@
 
   // We gotta do all of this without changing the DOM
   async function exportToPDF() {
+  // Display a toast notification
+  const toast = document.createElement("div");
+  toast.textContent = "Processing PDF, please wait...";
+  toast.style.position = "fixed";
+  toast.style.top = "10px";
+  toast.style.right = "10px";
+  toast.style.background = "rgba(0, 0, 0, 0.5)";
+  toast.style.color = "white";
+  toast.style.padding = "10px";
+  toast.style.borderRadius = "5px";
+  document.body.appendChild(toast);
+
+  try {
     const element = document.querySelector(".markdown-content") as HTMLElement;
     if (!element) {
       console.error("Element not found");
@@ -47,7 +60,10 @@
     }
 
     pdf.save("document.pdf");
+  } finally {
+    document.body.removeChild(toast);
   }
+}
 
   async function exportToTxt() {
     const element = document.querySelector(".markdown-content") as HTMLElement;

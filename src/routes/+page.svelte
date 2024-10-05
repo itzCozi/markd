@@ -40,13 +40,13 @@
 
 </script>
 
-<div class="flex h-screen bg-mono-background">
+<div class="flex h-[100dvh] bg-mono-background">
   <div class="editor" style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div class="p-2 text-gray-600 text-right border-r border-[#252525] w-12">
       </div>
       <div class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto">     
-        <MarkdownEditor {carta} bind:value={source} mode="tabs" selectedTab="write" scroll="sync" placeholder="Markdown here..." />
+        <MarkdownEditor {carta} bind:value={source} mode="tabs" scroll="sync" placeholder="Markdown here..." />
       </div>
     </div>
   </div>

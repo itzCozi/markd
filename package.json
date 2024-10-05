@@ -26,6 +26,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-cloudflare": "^4.7.2",
 		"carta-md": "^4.5.0",
 		"html2canvas": "^1.4.1",
 		"isomorphic-dompurify": "^2.16.0",

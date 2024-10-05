@@ -81,17 +81,21 @@ ol {
   margin-block: 1.2em;
 }
 
-.line-numbers {
-  width: auto;
-  text-align: right;
-  font-family: 'Courier New', Courier, monospace;
+.carta-toolbar {
+  width: fit-content;
+  position: sticky !important;
+  top: 0;
+  background-color: #111 !important;
+  border: 1px solid #2f4359;
+  border-radius: 5px;
+  z-index: 9999;
+  margin-left: auto;
 }
 
-.line-numbers .new-line {
-  counter-increment: linenumber;
+.carta-toolbar-right {
+  margin-right: 10px !important;
 }
 
-.line-numbers .new-line::before {
-  content: counter(linenumber);
-  display: block;
+.carta-toolbar-left {
+  display: none !important;
 }

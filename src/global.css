@@ -119,7 +119,7 @@ ol {
   }
 
   .carta-toolbar {
-    height: 7dvh !important;
+    height: 20px !important;
     position: fixed !important; 
     top: unset !important;
     bottom: 0 !important;

@@ -3,6 +3,7 @@
   import html2canvas from "html2canvas";
   import { Menu, FileText } from "lucide-svelte";
   import Sidebar from "$lib/Sidebar.svelte";
+  import ThemeToggle from "$lib/ThemeToggle.svelte";
 
   let isSidebarOpen = false;
   let exportMenuOpen = false;
@@ -140,6 +141,7 @@
           </div>
         {/if}
       </div>
+      <ThemeToggle />
       <button
         class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
         title="Navigation"

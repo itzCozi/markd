@@ -4,6 +4,9 @@
   import { Carta, Markdown, MarkdownEditor } from "carta-md";
   import localStorageStore from "../lib/stores/localStorage";
   import DOMPurify from "isomorphic-dompurify";
+  import { markdownTheme } from "$lib/stores/themeStore";
+
+  $: theme = $markdownTheme;
 
   let leftWidth = 50;
   let isResizing = false;
@@ -119,7 +122,7 @@
     </label>
   </div>
     {#key source}
-      <Markdown {carta} value={source} />
+      <Markdown {carta} value={source} theme={$markdownTheme}/>
     {/key}
   </div>
 </div>

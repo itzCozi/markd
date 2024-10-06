@@ -15,8 +15,7 @@
 
 /* Gotta update these werid blue colors with our grey pallete */
 
-/* @media (prefers-color-scheme: dark) { */
-  .markdown-body, [data-theme="dark"] {
+  .markdown-body {
     /* dark */
     color-scheme: dark;
     --focus-outlineColor: #1f6feb;
@@ -72,9 +71,7 @@
   }
 
 
-/*
-@media (prefers-color-scheme: light) {
-  .markdown-body, [data-theme="light"] {
+ .carta-theme__light {
     color-scheme: light;
     --focus-outlineColor: #0969da;
     --fgColor-default: #1f2328;
@@ -127,8 +124,6 @@
     --color-prettylights-syntax-meta-diff-range: #8250df;
     --color-prettylights-syntax-sublimelinter-gutter-mark: #818b98;
   }
-}
-*/
 
 .markdown-body {
   -ms-text-size-adjust: 100%;

@@ -61,6 +61,21 @@ a:hover {
   text-decoration: underline;
 }
 
+.sync-switch {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  height: 32px;
+  width: 140px;
+  background-color: #111 !important;
+  border: 1px solid #2f4359;
+  border-radius: 5px;
+  z-index: 30;
+  margin-left: auto;
+}
+
 @media (max-width: 768px) {
   .divider {
     display: none !important;
@@ -91,7 +106,7 @@ a:hover {
     display: block !important;
   }
 
-  .sync-button {
+  .sync-switch {
     display: none;
   }
 }

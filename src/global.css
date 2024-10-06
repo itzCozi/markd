@@ -61,7 +61,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.sync-switch {
+.renderer-toolbar {
   position: sticky;
   display: flex;
   justify-content: center;
@@ -106,7 +106,7 @@ a:hover {
     display: block !important;
   }
 
-  .sync-switch {
+  .renderer-toolbar {
     display: none;
   }
 }

@@ -102,7 +102,7 @@
   </div>
 
   <div class="renderer p-2 overflow-auto markdown-content" style="width: {100 - leftWidth}%" on:scroll={handleRendererScroll}>
-    <div class="sync-switch">
+    <div class="renderer-toolbar">
       <span class="mr-2 text-white">Sync Scroll</span>
       <label class="inline-flex items-center">
       <input 

@@ -18,53 +18,91 @@
 
   // We gotta do all of this without changing the DOM
   async function exportToPDF() {
-  // Display a toast notification
-  const toast = document.createElement("div");
-  toast.textContent = "Processing PDF, please wait...";
-  toast.style.position = "fixed";
-  toast.style.top = "10px";
-  toast.style.right = "10px";
-  toast.style.background = "rgba(0, 0, 0, 0.5)";
-  toast.style.color = "white";
-  toast.style.padding = "10px";
-  toast.style.borderRadius = "5px";
-  document.body.appendChild(toast);
+    // Display a toast notification
+    const toast = document.createElement("div");
+    toast.textContent = "Processing PDF, please wait...";
+    toast.style.position = "fixed";
+    toast.style.top = "50%";
+    toast.style.left = "50%";
+    toast.style.transform = "translate(-50%, -50%)";
+    toast.style.background = "rgba(0, 0, 0, 0.8)";
+    toast.style.color = "white";
+    toast.style.padding = "20px";
+    toast.style.borderRadius = "10px";
+    toast.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.2)";
+    toast.style.zIndex = "1000";
+    document.body.appendChild(toast);
+    document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
 
-  try {
-    const element = document.querySelector(".markdown-content") as HTMLElement;
-    if (!element) {
-      console.error("Element not found");
-      return;
-    }
 
-    const originalHeight = element.style.height;
-    const originalOverflow = element.style.overflow;
-    element.style.height = "auto";
-    element.style.overflow = "visible";
-    const pdf = new jsPDF("p", "mm", "a4");
-    const pageHeight = pdf.internal.pageSize.getHeight();
-    const pageWidth = pdf.internal.pageSize.getWidth();
-    const canvasHeight = element.scrollHeight;
-    const canvasWidth = element.scrollWidth;
-    const aspectRatio = canvasWidth / canvasHeight;
-    const totalPages = Math.ceil(canvasHeight / pageHeight);
-
-    for (let i = 0; i < totalPages; i++) {
-      const canvas = await html2canvas(element, {
-        scale: 2,
-      });
-      const imgData = canvas.toDataURL("image/png");
-      if (i > 0) {
-        pdf.addPage();
+    try {
+      const element = document.querySelector(".markdown-content") as HTMLElement;
+      if (!element) {
+        console.error("Element not found");
+        return;
       }
-      pdf.addImage(imgData, "PNG", 0, 0, pageWidth, pageHeight);
-    }
 
-    pdf.save("document.pdf");
-  } finally {
-    document.body.removeChild(toast);
+      // Hide .renderer-toolbar
+      const toolbar = document.querySelector(".renderer-toolbar") as HTMLElement;
+      if (toolbar) {
+        toolbar.style.display = "none";
+      }
+
+
+      const originalHeight = element.style.height;
+      const originalOverflow = element.style.overflow;
+      element.style.height = "auto";
+      element.style.overflow = "visible";
+      const pdf = new jsPDF("p", "mm", "a4");
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const canvasHeight = element.scrollHeight;
+      const canvasWidth = element.scrollWidth;
+      const aspectRatio = canvasWidth / canvasHeight;
+      const totalPages = Math.ceil(canvasHeight / pageHeight);
+
+      // Add margins
+      const margin = 10; // mm
+      const leftMargin = margin;
+      const rightMargin = margin;
+      const topMargin = margin;
+      const bottomMargin = margin;
+
+      for (let i = 0; i < totalPages; i++) {
+        const canvas = await html2canvas(element, {
+          scale: 2,
+        });
+        const imgData = canvas.toDataURL("image/png");
+        if (i > 0) {
+          pdf.addPage();
+        }
+
+        // Adjust image position and size to account for margins
+        pdf.addImage(
+          imgData,
+          "PNG",
+          leftMargin,
+          topMargin,
+          pageWidth - leftMargin - rightMargin,
+          pageHeight - topMargin - bottomMargin
+        );
+      }
+
+      pdf.save("document.pdf");
+
+      // Restore toolbar visibility
+      if (toolbar) {
+        toolbar.style.display = "";
+      }
+
+    } finally {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+      document.body.removeChild(toast);
+      window.location.reload();
+    }
   }
-}
 
   async function exportToTxt() {
     const element = document.querySelector(".markdown-content") as HTMLElement;

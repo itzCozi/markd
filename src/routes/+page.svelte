@@ -1,7 +1,8 @@
 <script lang="ts">
   import "../styles.css"; // HTML renderer styles
-  import { setContext } from "svelte";
+  import { setContext, onMount } from "svelte";
   import { Carta, Markdown, MarkdownEditor } from "carta-md";
+  import { Carta as CartaType } from "carta-md"
   import localStorageStore from "../lib/stores/localStorage";
   import DOMPurify from "isomorphic-dompurify";
   import { markdownTheme } from "$lib/stores/themeStore";
@@ -68,14 +69,17 @@
   $: {
     localStorageStore.set("markdown", source);
   }
+  let carta: CartaType;
 
-  const carta = new Carta({
+$: {
+  carta = new Carta({
     sanitizer: DOMPurify.sanitize,
-    theme: "dark-plus",
+    theme: $markdownTheme === 'light' ? 'light-plus' : 'dark-plus',
   });
+}
 </script>
 
-<div class="flex h-[100dvh] bg-mono-background">
+<div class={`flex h-[100dvh] ${$markdownTheme === 'light' ? 'bg-white' : 'bg-mono-background'}`}>
   <div class="editor" style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div
@@ -85,14 +89,17 @@
           : 'hidden'}">
       </div>
       <div
-        class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
+        class={`w-full p-2 border-none outline-none resize-none ${$markdownTheme === 'light' ? 'bg-white' : 'bg-mono-background'} font-mono overflow-y-auto`}
         on:scroll={handleEditorScroll}>
+        {#key $markdownTheme}
         <MarkdownEditor
           {carta}
           bind:value={source}
           bind:selectedTab
+          theme={$markdownTheme}
           mode="tabs"
           placeholder="Insert your markdown here..." />
+          {/key}
       </div>
     </div>
   </div>
@@ -104,7 +111,7 @@
     on:mousedown={handleMouseDown}>
   </div>
 
-  <div class="renderer p-2 overflow-auto markdown-content" style="width: {100 - leftWidth}%" on:scroll={handleRendererScroll}>
+  <div class={`renderer p-2 overflow-auto markdown-content ${$markdownTheme === 'light' ? 'bg-white' : ''}`} style="width: {100 - leftWidth}%" on:scroll={handleRendererScroll}>
     <div class="renderer-toolbar">
       <span class="mr-2 text-white">Sync Scroll</span>
       <label class="inline-flex items-center">

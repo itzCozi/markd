@@ -86,7 +86,7 @@
     <a href="/" title="Home" class="hover:no-underline">
       <div class="flex flex-row gap-3 items-center hover:scale-105 duration-100">
         <img src="/favicon.svg" alt="logo" class="w-10 h-10" />
-        <p class="text-4xl font-bold">MarkD</p>
+        <p class="text-4xl font-bold text-type-primary">MarkD</p>
       </div>
     </a>
     <div class="flex flex-row gap-3 items-center">

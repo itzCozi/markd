@@ -59,6 +59,15 @@ html, body {
   padding: 10px;
 }
 
+a {
+  color: #4493f8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .divider {
     display: none !important;

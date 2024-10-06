@@ -68,7 +68,7 @@
 
   const carta = new Carta({
     sanitizer: DOMPurify.sanitize,
-    theme: "github-dark",
+    theme: "dark-plus",
   });
 </script>
 

@@ -52,13 +52,6 @@ html, body {
   display: none;
 }
 
-.sync-button {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  padding: 10px;
-}
-
 a {
   color: #4493f8;
   text-decoration: none;

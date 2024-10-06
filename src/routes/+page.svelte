@@ -109,7 +109,7 @@
 </div>
 
 <!-- Toggle Button for Scroll Sync -->
-<div class="sync-button">
+<div class="sync-button fixed bottom-4 right-4 p-2">
   <button on:click={toggleScrollSync} class="px-4 py-2 bg-gray-600 text-white rounded">
     {isScrollSyncEnabled ? 'Un-Sync' : 'Sync'}
   </button>

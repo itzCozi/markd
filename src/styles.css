@@ -13,6 +13,8 @@
   --fgColor-accent: Highlight;
 }
 
+/* Gotta update these werid blue colors with our grey pallete */
+
 /* @media (prefers-color-scheme: dark) { */
   .markdown-body, [data-theme="dark"] {
     /* dark */
@@ -26,7 +28,7 @@
     --fgColor-danger: #f85149;
     --fgColor-done: #ab7df8;
     --bgColor-default: #121212;
-    --bgColor-muted: #151b23;
+    --bgColor-muted: #222;
     --bgColor-neutral-muted: #656c7633;
     --bgColor-attention-muted: #bb800926;
     --borderColor-default: #3d444d;

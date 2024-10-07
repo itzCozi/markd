@@ -18,6 +18,9 @@
     const style = document.createElement("style");
     style.innerHTML = `
     @media print {
+      h1, h2, h3, p, ul, li, pre, table {
+        color: black;
+      }
       .renderer {
         display: block !important;
         width: 100% !important;

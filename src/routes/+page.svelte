@@ -2,7 +2,7 @@
   import "../styles.css"; // HTML renderer styles
   import { setContext, onMount } from "svelte";
   import { Carta, Markdown, MarkdownEditor } from "carta-md";
-  import { Carta as CartaType } from "carta-md"
+  import { Carta as CartaType } from "carta-md";
   import localStorageStore from "../lib/stores/localStorage";
   import DOMPurify from "isomorphic-dompurify";
   import { markdownTheme } from "$lib/stores/themeStore";
@@ -22,7 +22,7 @@
     editorScrollTop = editor.scrollTop;
     rendererScrollTop = editorScrollTop;
 
-    const renderer = document.querySelector('.renderer') as HTMLDivElement;
+    const renderer = document.querySelector(".renderer") as HTMLDivElement;
     if (renderer) {
       renderer.scrollTop = rendererScrollTop; // Only scroll if renderer exists
     }
@@ -34,7 +34,7 @@
     rendererScrollTop = renderer.scrollTop;
     editorScrollTop = rendererScrollTop;
 
-    const editor = document.querySelector('.editor .w-full') as HTMLDivElement;
+    const editor = document.querySelector(".editor .w-full") as HTMLDivElement;
     if (editor) {
       editor.scrollTop = editorScrollTop; // Only scroll if editor exists
     }
@@ -71,15 +71,15 @@
   }
   let carta: CartaType;
 
-$: {
-  carta = new Carta({
-    sanitizer: DOMPurify.sanitize,
-    theme: $markdownTheme === 'light' ? 'light-plus' : 'dark-plus',
-  });
-}
+  $: {
+    carta = new Carta({
+      sanitizer: DOMPurify.sanitize,
+      theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
+    });
+  }
 </script>
 
-<div class={`flex h-[100dvh] ${$markdownTheme === 'light' ? 'bg-white' : 'bg-mono-background'}`}>
+<div class={`flex h-[100dvh] ${$markdownTheme === "light" ? "bg-white" : "bg-mono-background"}`}>
   <div class="editor" style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div
@@ -89,17 +89,17 @@ $: {
           : 'hidden'}">
       </div>
       <div
-        class={`w-full p-2 border-none outline-none resize-none ${$markdownTheme === 'light' ? 'bg-white' : 'bg-mono-background'} font-mono overflow-y-auto`}
+        class={`w-full p-2 border-none outline-none resize-none ${$markdownTheme === "light" ? "bg-white" : "bg-mono-background"} font-mono overflow-y-auto`}
         on:scroll={handleEditorScroll}>
         {#key $markdownTheme}
-        <MarkdownEditor
-          {carta}
-          bind:value={source}
-          bind:selectedTab
-          theme={$markdownTheme}
-          mode="tabs"
-          placeholder="Insert your markdown here..." />
-          {/key}
+          <MarkdownEditor
+            {carta}
+            bind:value={source}
+            bind:selectedTab
+            theme={$markdownTheme}
+            mode="tabs"
+            placeholder="Insert your markdown here..." />
+        {/key}
       </div>
     </div>
   </div>
@@ -111,25 +111,29 @@ $: {
     on:mousedown={handleMouseDown}>
   </div>
 
-  <div class={`renderer p-2 overflow-auto markdown-content ${$markdownTheme === 'light' ? 'bg-white' : ''}`} style="width: {100 - leftWidth}%" on:scroll={handleRendererScroll}>
+  <div
+    class={`renderer p-2 overflow-auto markdown-content ${$markdownTheme === "light" ? "bg-white" : ""}`}
+    style="width: {100 - leftWidth}%"
+    on:scroll={handleRendererScroll}>
     <div class="renderer-toolbar">
       <span class="mr-2 text-type-primary">Sync Scroll</span>
       <label class="inline-flex items-center">
-      <input 
-        type="checkbox" 
-        bind:checked={isScrollSyncEnabled} 
-        class="hidden"
-      />
-      <span class={`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${isScrollSyncEnabled ? 'bg-[#2E6AAC]' : 'bg-gray-600'} rounded-full cursor-pointer`}>
-        <span class={`absolute top-1 left-1 inline-block w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out ${isScrollSyncEnabled ? "translate-x-3" : ""}`} />
-        <span class={`absolute top-1 left-1 flex items-center justify-center w-3 h-3 transition-transform duration-200 ${isScrollSyncEnabled ? "translate-x-3" : ""}`}>
-          <i class={`fas ${isScrollSyncEnabled ? "fa-check" : "fa-times"} ${isScrollSyncEnabled ? 'text-[#2E6AAC]' : 'text-gray-600'} text-[10px]`}></i>
+        <input type="checkbox" bind:checked={isScrollSyncEnabled} class="hidden" />
+        <span
+          class={`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${isScrollSyncEnabled ? "bg-[#2E6AAC]" : "bg-gray-600"} rounded-full cursor-pointer`}>
+          <span
+            class={`absolute top-1 left-1 inline-block w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out ${isScrollSyncEnabled ? "translate-x-3" : ""}`} />
+          <span
+            class={`absolute top-1 left-1 flex items-center justify-center w-3 h-3 transition-transform duration-200 ${isScrollSyncEnabled ? "translate-x-3" : ""}`}>
+            <i
+              class={`fas ${isScrollSyncEnabled ? "fa-check" : "fa-times"} ${isScrollSyncEnabled ? "text-[#2E6AAC]" : "text-gray-600"} text-[10px]`}
+            ></i>
+          </span>
         </span>
-      </span>
-    </label>
-  </div>
+      </label>
+    </div>
     {#key source}
-      <Markdown {carta} value={source} theme={$markdownTheme}/>
+      <Markdown {carta} value={source} theme={$markdownTheme} />
     {/key}
   </div>
 </div>

@@ -35,7 +35,6 @@
     document.body.style.overflow = "hidden";
     document.documentElement.style.overflow = "hidden";
 
-
     try {
       const element = document.querySelector(".markdown-content") as HTMLElement;
       if (!element) {
@@ -48,7 +47,6 @@
       if (toolbar) {
         toolbar.style.display = "none";
       }
-
 
       const originalHeight = element.style.height;
       const originalOverflow = element.style.overflow;
@@ -85,7 +83,7 @@
           leftMargin,
           topMargin,
           pageWidth - leftMargin - rightMargin,
-          pageHeight - topMargin - bottomMargin
+          pageHeight - topMargin - bottomMargin,
         );
       }
 
@@ -95,7 +93,6 @@
       if (toolbar) {
         toolbar.style.display = "";
       }
-
     } finally {
       document.body.style.overflow = "";
       document.documentElement.style.overflow = "";

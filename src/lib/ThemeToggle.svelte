@@ -3,11 +3,11 @@
   import { Sun, Moon } from "lucide-svelte";
 
   function toggleMarkdownTheme() {
-    markdownTheme.update(theme => theme === "light" ? "" : "light");
+    markdownTheme.update((theme) => (theme === "light" ? "" : "light"));
   }
 </script>
 
-<button 
+<button
   class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
   title="Theme Toggle"
   on:click={toggleMarkdownTheme}>

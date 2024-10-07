@@ -29,6 +29,7 @@
 		"html2canvas": "^1.4.1",
 		"isomorphic-dompurify": "^2.16.0",
 		"jspdf": "^2.5.2",
-		"lucide-svelte": "^0.447.0"
+		"lucide-svelte": "^0.447.0",
+		"surge": "^0.24.6"
 	}
 }

@@ -7,9 +7,9 @@
     }
 
     const toolbar = document.querySelector(".renderer-toolbar");
-      if (toolbar) {
-        toolbar.remove();
-      }
+    if (toolbar) {
+      toolbar.remove();
+    }
 
     const html = element.outerHTML;
     const blob = new Blob([html], { type: "text/html" });

@@ -7,16 +7,16 @@
       return;
     }
 
-  const body = document.body;
-  body.innerHTML = element.outerHTML;
+    const body = document.body;
+    body.innerHTML = element.outerHTML;
 
-  const toolbar = document.querySelector(".renderer-toolbar");
-  if (toolbar) {
-    toolbar.remove();
-  }
+    const toolbar = document.querySelector(".renderer-toolbar");
+    if (toolbar) {
+      toolbar.remove();
+    }
 
-  const style = document.createElement("style");
-  style.innerHTML = `
+    const style = document.createElement("style");
+    style.innerHTML = `
     @media print {
       .renderer {
         display: block !important;
@@ -24,12 +24,12 @@
       }
     }
   `;
-  document.head.appendChild(style);
+    document.head.appendChild(style);
 
-  window.print();
+    window.print();
 
-  window.location.reload();
-}
+    window.location.reload();
+  }
 </script>
 
 <button

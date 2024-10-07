@@ -149,17 +149,17 @@
             aria-labelledby="user-menu-button"
             tabindex="-1">
             <button
-              class="block w-full px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900"
+              class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-gray-200 hover:text-gray-900"
               on:click={exportToTxt}>
               Export as Text (.txt)
             </button>
             <button
-              class="block w-full px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900"
+              class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-gray-200 hover:text-gray-900"
               on:click={exportToPDF}>
               Export as PDF (.pdf)
             </button>
             <button
-              class="block w-full px-4 py-2 text-sm text-white hover:bg-gray-100 hover:text-gray-900"
+              class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-gray-200 hover:text-gray-900"
               on:click={() => {
                 const element = document.querySelector(".markdown-content");
                 if (!element) {

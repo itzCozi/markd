@@ -1,6 +1,6 @@
 <script lang="ts">
   import { markdownTheme } from "./stores/themeStore";
-  import { SunMoon} from "lucide-svelte";
+  import { Sun, Moon } from "lucide-svelte";
 
   function toggleMarkdownTheme() {
     markdownTheme.update(theme => theme === "light" ? "" : "light");
@@ -9,7 +9,11 @@
 
 <button 
   class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
-  title="Export"
+  title="Theme Toggle"
   on:click={toggleMarkdownTheme}>
-  <SunMoon />
+  {#if $markdownTheme === "light"}
+    <Moon />
+  {:else}
+    <Sun />
+  {/if}
 </button>

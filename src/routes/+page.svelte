@@ -113,7 +113,7 @@ $: {
 
   <div class={`renderer p-2 overflow-auto markdown-content ${$markdownTheme === 'light' ? 'bg-white' : ''}`} style="width: {100 - leftWidth}%" on:scroll={handleRendererScroll}>
     <div class="renderer-toolbar">
-      <span class="mr-2 text-white">Sync Scroll</span>
+      <span class="mr-2 text-type-primary">Sync Scroll</span>
       <label class="inline-flex items-center">
       <input 
         type="checkbox" 

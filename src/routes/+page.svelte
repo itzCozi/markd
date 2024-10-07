@@ -7,36 +7,44 @@
   import DOMPurify from "isomorphic-dompurify";
   import { markdownTheme } from "$lib/stores/themeStore";
 
-  $: theme = $markdownTheme;
-
   let leftWidth = 50;
   let isResizing = false;
   let selectedTab: "write" | "preview" = "write";
   let editorScrollTop = 0;
   let rendererScrollTop = 0;
-  let isScrollSyncEnabled = true; // Variable to toggle scroll sync
+  let isScrollSyncEnabled = true;
+  let carta: CartaType;
+  let source = localStorageStore.get("markdown") || "";
+  setContext("source", source);
+
+  $: localStorageStore.set("markdown", source);
+
+  $: carta = new Carta({
+    sanitizer: DOMPurify.sanitize,
+    theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
+  });
 
   function handleEditorScroll(event: Event) {
-    if (!isScrollSyncEnabled) return; // Only sync if enabled
+    if (!isScrollSyncEnabled) return;
     const editor = event.target as HTMLDivElement;
     editorScrollTop = editor.scrollTop;
     rendererScrollTop = editorScrollTop;
 
     const renderer = document.querySelector(".renderer") as HTMLDivElement;
     if (renderer) {
-      renderer.scrollTop = rendererScrollTop; // Only scroll if renderer exists
+      renderer.scrollTop = rendererScrollTop;
     }
   }
 
   function handleRendererScroll(event: Event) {
-    if (!isScrollSyncEnabled) return; // Only sync if enabled
+    if (!isScrollSyncEnabled) return;
     const renderer = event.target as HTMLDivElement;
     rendererScrollTop = renderer.scrollTop;
     editorScrollTop = rendererScrollTop;
 
     const editor = document.querySelector(".editor .w-full") as HTMLDivElement;
     if (editor) {
-      editor.scrollTop = editorScrollTop; // Only scroll if editor exists
+      editor.scrollTop = editorScrollTop;
     }
   }
 
@@ -57,25 +65,6 @@
     isResizing = false;
     document.removeEventListener("mousemove", handleMouseMove);
     document.removeEventListener("mouseup", handleMouseUp);
-  }
-
-  function toggleScrollSync() {
-    isScrollSyncEnabled = !isScrollSyncEnabled;
-  }
-
-  let source: string = localStorageStore.get("markdown") || "";
-  setContext("source", source);
-
-  $: {
-    localStorageStore.set("markdown", source);
-  }
-  let carta: CartaType;
-
-  $: {
-    carta = new Carta({
-      sanitizer: DOMPurify.sanitize,
-      theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
-    });
   }
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { markdownTheme } from "./stores/themeStore";
+  import { markdownTheme } from "../stores/themeStore";
   import { Sun, Moon } from "lucide-svelte";
 
   function toggleMarkdownTheme() {

@@ -1,9 +1,10 @@
 <script lang="ts">
-  import jsPDF from "jspdf";
-  import html2canvas from "html2canvas";
   import { Menu, FileText } from "lucide-svelte";
   import Sidebar from "$lib/Sidebar.svelte";
-  import ThemeToggle from "$lib/ThemeToggle.svelte";
+  import ThemeToggle from "$lib/buttons/ThemeToggle.svelte";
+  import PdfButton from "./buttons/PDFButton.svelte";
+  import TxtButton from "./buttons/TxtButton.svelte";
+  import HtmlButton from "./buttons/HTMLButton.svelte";
 
   let isSidebarOpen = false;
   let exportMenuOpen = false;
@@ -14,51 +15,6 @@
 
   function closeSidebar() {
     isSidebarOpen = false;
-  }
-
-  // Print instead of pdf export
-  async function printContent() {
-    const element = document.querySelector(".markdown-content");
-    if (!element) {
-      console.error("Element not found");
-      return;
-    }
-
-  const body = document.body;
-  const originalHtml = body.innerHTML;
-  body.innerHTML = element.outerHTML;
-
-  const style = document.createElement("style");
-  style.innerHTML = `
-    @media print {
-      .renderer {
-        display: block !important;
-        width: 100% !important;
-      }
-    }
-  `;
-  document.head.appendChild(style);
-
-  window.print();
-
-  body.innerHTML = originalHtml;
-  document.head.removeChild(style);
-  window.location.reload();
-}
-
-  async function exportToTxt() {
-    const element = document.querySelector(".markdown-content") as HTMLElement;
-    if (!element) {
-      console.error("Element not found");
-      return;
-    }
-
-    const text = element.innerText;
-    const blob = new Blob([text], { type: "text/plain" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "document.txt";
-    link.click();
   }
 </script>
 
@@ -78,7 +34,6 @@
           class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
           title="Export"
           on:click={() => {
-            // Toggle export menu
             exportMenuOpen = !exportMenuOpen;
           }}>
           <FileText />
@@ -90,34 +45,9 @@
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"
             tabindex="-1">
-            <button
-              class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-gray-200 hover:text-gray-900"
-              on:click={exportToTxt}>
-              Export as Text (.txt)
-            </button>
-            <button
-              class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-gray-200 hover:text-gray-900"
-              on:click={printContent}>
-              Export as PDF (.pdf)
-            </button>
-            <button
-              class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-gray-200 hover:text-gray-900"
-              on:click={() => {
-                const element = document.querySelector(".markdown-content");
-                if (!element) {
-                  console.error("Element not found");
-                  return;
-                }
-
-                const html = element.outerHTML;
-                const blob = new Blob([html], { type: "text/html" });
-                const link = document.createElement("a");
-                link.href = URL.createObjectURL(blob);
-                link.download = "document.html";
-                link.click();
-              }}>
-              Export as HTML (.html)
-            </button>
+            <TxtButton />
+            <PdfButton />
+            <HtmlButton />
           </div>
         {/if}
       </div>

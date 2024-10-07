@@ -11,6 +11,7 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"devDependencies": {
+		"@sveltejs/adapter-auto": "^3.2.5",
 		"@sveltejs/kit": "^2.6.2",
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",
 		"autoprefixer": "^10.4.20",
@@ -20,12 +21,10 @@
 		"svelte": "^4.2.19",
 		"svelte-check": "^4.0.4",
 		"tailwindcss": "^3.4.13",
-		"typescript": "^5.6.2",
 		"vite": "^5.4.8"
 	},
 	"type": "module",
 	"dependencies": {
-		"@sveltejs/adapter-cloudflare": "^4.7.2",
 		"carta-md": "^4.5.0",
 		"html2canvas": "^1.4.1",
 		"isomorphic-dompurify": "^2.16.0",

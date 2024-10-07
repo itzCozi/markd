@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { page } from "$app/stores";
   import { Menu, FileText } from "lucide-svelte";
   import Sidebar from "$lib/Sidebar.svelte";
   import ThemeToggle from "$lib/buttons/ThemeToggle.svelte";
@@ -30,14 +31,16 @@
       <!-- https://flowbite-svelte.com/docs/components/dropdown -->
       <!-- Export dropdown menu -->
       <div class="relative inline-block text-left">
-        <button
-          class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
-          title="Export"
-          on:click={() => {
-            exportMenuOpen = !exportMenuOpen;
-          }}>
-          <FileText />
-        </button>
+        {#if $page.url.pathname === "/"}
+          <button
+            class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
+            title="Export"
+            on:click={() => {
+              exportMenuOpen = !exportMenuOpen;
+            }}>
+            <FileText />
+          </button>
+        {/if}
         {#if exportMenuOpen}
           <div
             class="origin-top-right z-40 absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-mono-card ring-1 ring-black ring-opacity-5 focus:outline-none"
@@ -51,7 +54,9 @@
           </div>
         {/if}
       </div>
-      <ThemeToggle />
+      {#if $page.url.pathname === "/"}
+        <ThemeToggle />
+      {/if}
       <button
         class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
         title="Navigation"

@@ -1,5 +1,5 @@
 <div class="flex pt-8 bg-mono-background justify-center items-center">
-  <div class="p-4 bg-mono-accent h-1/3 rounded-md" style="width: 90dvh;">
+  <div class="p-4 bg-mono-accent h-1/3 max-w-3xl rounded-md">
     <p class="text-3xl font-semibold">About Us</p>
     <p class="text-type-dimmed mt-2">
       MarkD is an advanced live markdown editor directly in your browser. It is built using

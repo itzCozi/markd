@@ -6,6 +6,7 @@
   import PdfButton from "./buttons/PDFButton.svelte";
   import TxtButton from "./buttons/TxtButton.svelte";
   import HtmlButton from "./buttons/HTMLButton.svelte";
+  import FullscreenToggle from "./buttons/FullscreenToggle.svelte";
 
   let isSidebarOpen = false;
   let exportMenuOpen = false;
@@ -55,6 +56,7 @@
         {/if}
       </div>
       {#if $page.url.pathname === "/"}
+        <FullscreenToggle />
         <ThemeToggle />
       {/if}
       <button

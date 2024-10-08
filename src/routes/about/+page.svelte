@@ -5,7 +5,7 @@
       MarkD is an advanced live markdown editor directly in your browser. It is built using
       SvelteKit and supports HTML as well as Markdown, all in the same file. MarkD is an open source
       project and a very opinionated one at that. All of the styles are inline tailwind css classes,
-      and the Markdown linter is built on custom built mainly.
+      and the Markdown editor uses Carta.
     </p>
     <a href="https://github.com/itzcozi/markd" title="Source code" class="mt-2 text-sm"
       >Source Code</a>

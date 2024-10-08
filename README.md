@@ -1,38 +1,32 @@
-# create-svelte
+<p align="center">
+  <a href="https://markd.top" alt="Homepage" title="Homepage" style="display: flex; flex-direction: column; align-items: center; gap: 1em; text-decoration: none;">
+    <img src="static/favicon.svg" height="120">
+    <sup>
+      Sleek, fast and opinionated open-source markdown editor.
+    </sup>
+    <h1 align="center">MarkD</h1>
+  </a>
+</p>
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+MarkD (sounds like "maarkt" when pronounced) is an advanced live markdown editor in your browser. It is designed to be a sleek, fast and opinionated markdown editor that can be used to write and preview markdown files in real-time. It is built using Svelte and Carta, all components are hand made using tailwind and svelte.
 
-## Creating a project
+## Features
+- Live preview of markdown
+- No ads or tracking
+- Advanced markdown editor
+- Extended syntax
+- Editor themes
+- PDF export
+- Split view (scalable)
+- Light mode
+- Persistent storage
 
-If you're seeing this, you've probably already done this step. Congrats!
+### Contact Us
+- [GitHub Issues](https://github.com/itzCozi/markd/issues)
+- [Developers Email](mailto:dev@wyzie.ru)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+<hr />
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+<sup>
+  Created by <a href="https://github.com/itzcozi" title="Developer github">BadDeveloper</a> with 💙
+</sup>

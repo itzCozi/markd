@@ -109,4 +109,12 @@ a:hover {
   .renderer-toolbar {
     display: none;
   }
+
+  .theme-toggle {
+    display: none;
+  }
+
+  .fullscreen-toggle {
+    display: none;
+  }
 }

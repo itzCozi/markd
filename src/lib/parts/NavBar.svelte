@@ -1,12 +1,12 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import { Menu, FileText } from "lucide-svelte";
-  import Sidebar from "$lib/Sidebar.svelte";
+  import Sidebar from "$lib/parts/Sidebar.svelte";
   import ThemeToggle from "$lib/buttons/ThemeToggle.svelte";
-  import PdfButton from "./buttons/PDFButton.svelte";
-  import TxtButton from "./buttons/TxtButton.svelte";
-  import HtmlButton from "./buttons/HTMLButton.svelte";
-  import FullscreenToggle from "./buttons/FullscreenToggle.svelte";
+  import PdfButton from "../buttons/PDFButton.svelte";
+  import TxtButton from "../buttons/TxtButton.svelte";
+  import HtmlButton from "../buttons/HTMLButton.svelte";
+  import FullscreenToggle from "../buttons/FullscreenToggle.svelte";
 
   let isSidebarOpen = false;
   let exportMenuOpen = false;
@@ -20,7 +20,7 @@
   }
 </script>
 
-<header class="w-full p-4 bg-mono-card shadow-lg z-20">
+<header class="navbar w-full p-4 bg-mono-card shadow-lg z-20">
   <nav class="flex justify-between items-center">
     <a href="/" title="Home" class="hover:no-underline">
       <div class="flex flex-row gap-3 items-center hover:scale-105 duration-100">

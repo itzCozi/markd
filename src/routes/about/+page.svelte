@@ -1,3 +1,11 @@
+<script>
+
+  import NavBar from "$lib/parts/NavBar.svelte";
+
+</script>
+
+<NavBar />
+
 <div class="flex pt-8 bg-mono-background justify-center items-center">
   <div class="p-4 bg-mono-accent h-1/3 max-w-3xl rounded-md">
     <p class="text-3xl font-semibold">About Us</p>

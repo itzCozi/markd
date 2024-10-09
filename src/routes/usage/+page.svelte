@@ -1,8 +1,18 @@
+<script>
+
+  import NavBar from "$lib/parts/NavBar.svelte";
+
+</script>
+
+<div class="sticky top-0">
+  <NavBar />
+</div>
+
 <!--https://rentry.org/how-->
 
 <div class="flex pt-8 bg-mono-background justify-center items-center">
   <div class="p-4 bg-mono-accent max-w-3xl mb-6 rounded-md">
-    <p class="text-3xl font-semibold">Usage</p>
+    <p class="text-3xl font-semibold">How To</p>
     <p class="text-type-dimmed mt-2">
       Markdown is a lightweight markup language with plain text formatting syntax. Its design allows
       easy conversion to HTML and other formats, and its syntax is influenced by Perl. Markdown is

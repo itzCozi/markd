@@ -6,6 +6,7 @@
   import localStorageStore from "../lib/stores/localStorage";
   import DOMPurify from "isomorphic-dompurify";
   import { markdownTheme } from "$lib/stores/themeStore";
+  import NavBar from "$lib/parts/NavBar.svelte";
 
   let leftWidth = 50;
   let isResizing = false;
@@ -68,7 +69,9 @@
   }
 </script>
 
-<div class={`flex h-[100dvh] ${$markdownTheme === "light" ? "bg-white" : "bg-mono-background"}`}>
+<NavBar />
+
+<div class={`flex h-[calc(100dvh-80px)] ${$markdownTheme === "light" ? "bg-white" : "bg-mono-background"}`}>
   <div class="editor" style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div

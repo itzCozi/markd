@@ -26,6 +26,7 @@ function createPersistentStore<T extends string>(key: LocalStorageKey, initialVa
 }
 
 function handleThemeChange(theme: string) {
+  if (typeof document === 'undefined') return;
   const existingStyleTag = document.getElementById('renderer-style');
 
   if (theme === 'light') {
@@ -50,6 +51,8 @@ function handleThemeChange(theme: string) {
   }
 }
 
-export const markdownTheme = createPersistentStore<string>("markdownTheme", "dark"); // Default to 'dark'
+export const markdownTheme = createPersistentStore<string>("markdownTheme", "dark");
 
-handleThemeChange(get(markdownTheme));
+if (typeof window !== 'undefined') {
+  handleThemeChange(get(markdownTheme));
+}

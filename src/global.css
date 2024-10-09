@@ -76,6 +76,10 @@ a:hover {
   margin-left: auto;
 }
 
+.carta-renderer {
+  background-color: transparent;
+}
+
 @media (max-width: 768px) {
   .divider {
     display: none !important;

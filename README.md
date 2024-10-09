@@ -29,5 +29,5 @@ MarkD (sounds like "maarkt" when pronounced) is an advanced live markdown editor
 <hr />
 
 <sup>
-  Created by <a href="https://github.com/itzcozi" title="Developer github">BadDeveloper</a> with 💙
+  Created by <a href="https://github.com/itzcozi" title="BadDeveloper's github">BadDeveloper</a> and <a href="https://github.com/Pasithea0" title="Pas's github">Pasithea</a> with 💙
 </sup>

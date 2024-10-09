@@ -18,7 +18,7 @@
       </button>
     </div>
     <p class="text-xs mt-4">
-      Created by <a href="https://github.com/itzcozi" title="Developer github">BadDeveloper</a> with
+      Created by <a href="https://github.com/itzcozi" title="BadDeveloper's github">BadDeveloper</a> and <a href="https://github.com/Pasithea0" title="Pas's github">Pasithea</a> with
       💙
     </p>
   </div>

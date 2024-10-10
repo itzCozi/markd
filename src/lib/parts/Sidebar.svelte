@@ -13,7 +13,7 @@
   role="button"
   tabindex="0"
   on:click="{closeSidebar}"
-  on:keydown="{(e) => e.key === "Enter" && closeSidebar()}">
+  on:keydown="{(e) => e.key === 'Enter' && closeSidebar()}">
 </div>
 
 <aside
@@ -36,21 +36,21 @@
         class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
         on:click="{() => {
           closeSidebar();
-          goto("/");
+          goto('/');
         }}">Home</button>
       <button
         title="About"
         class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
         on:click="{() => {
           closeSidebar();
-          goto("/about");
+          goto('/about');
         }}">About</button>
       <button
         title="Usage"
         class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
         on:click="{() => {
           closeSidebar();
-          goto("/usage");
+          goto('/usage');
         }}">Usage</button>
     </div>
   </div>
@@ -60,7 +60,7 @@
       class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
       on:click="{() => {
         closeSidebar();
-        window.location.href = "https://github.com/itzcozi/markd";
+        window.location.href = 'https://github.com/itzcozi/markd';
       }}">
       <Github />
     </button>
@@ -69,7 +69,7 @@
       class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
       on:click="{() => {
         closeSidebar();
-        open("https://github.com/itzcozi/markd", "_blank");
+        open('https://github.com/itzcozi/markd', '_blank');
       }}">
       <Mail />
     </button>

@@ -23,9 +23,15 @@
 
 <header class="navbar w-full p-4 bg-mono-card shadow-lg z-20">
   <nav class="flex justify-between items-center">
-    <a href="/" title="Home" class="hover:no-underline">
+    <a
+      href="/"
+      title="Home"
+      class="hover:no-underline">
       <div class="flex flex-row gap-3 items-center hover:scale-105 duration-100">
-        <img src="/favicon.svg" alt="logo" class="w-10 h-10" />
+        <img
+          src="/favicon.svg"
+          alt="logo"
+          class="w-10 h-10" />
         <p class="text-4xl font-bold text-type-primary">MarkD</p>
       </div>
     </a>
@@ -36,7 +42,7 @@
         <button
           class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
           title="How to"
-          on:click="{() => goto("/usage")}">
+          on:click="{() => goto('/usage')}">
           <CircleHelp />
         </button>
       {/if}
@@ -78,4 +84,6 @@
   </nav>
 </header>
 
-<Sidebar {isSidebarOpen} {closeSidebar} />
+<Sidebar
+  {isSidebarOpen}
+  {closeSidebar} />

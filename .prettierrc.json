@@ -10,8 +10,8 @@
   "arrowParens": "always",
   "printWidth": 100,
   "tabWidth": 2,
+  "singleAttributePerLine": true,
   "semi": true,
-  "quoteProps": "consistent",
   "htmlWhitespaceSensitivity": "css",
   "filepath": "src/**/*.{ts,js,svelte,html,css}",
   "plugins": ["prettier-plugin-svelte"]

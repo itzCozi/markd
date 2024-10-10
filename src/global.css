@@ -84,6 +84,10 @@ a:hover {
   display: none;
 }
 
+.carta-container, .carta-editor, .carta-wrapper {
+  height: 100% !important;
+}
+
 @media (max-width: 768px) {
   .divider {
     display: none !important;

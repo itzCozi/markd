@@ -27,6 +27,10 @@ html, body {
   caret-color: white;
 }
 
+.carta-wrapper, .carta-container {
+  height: 100%;
+}
+
 .carta-toolbar {
   width: fit-content;
   position: sticky !important;
@@ -82,10 +86,6 @@ a:hover {
 
 #footnote-label {
   display: none;
-}
-
-.carta-container, .carta-editor, .carta-wrapper {
-  height: 100% !important;
 }
 
 @media (max-width: 768px) {

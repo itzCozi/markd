@@ -36,7 +36,7 @@
         <button
           class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
           title="How to"
-          on:click="{() => goto('/usage')}">
+          on:click="{() => goto("/usage")}">
           <CircleHelp />
         </button>
       {/if}

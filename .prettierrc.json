@@ -13,6 +13,6 @@
   "semi": true,
   "quoteProps": "consistent",
   "htmlWhitespaceSensitivity": "css",
-  "filepath": "src/**/*.{ts,svelte,html}",
+  "filepath": "src/**/*.{ts,js,svelte,html,css}",
   "plugins": ["prettier-plugin-svelte"]
 }

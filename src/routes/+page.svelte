@@ -72,17 +72,17 @@
 <NavBar />
 
 <div
-  class="{`flex h-[calc(100dvh-80px)] ${$markdownTheme === 'light' ? 'bg-white' : 'bg-mono-background'}`}">
+  class="{`flex h-[calc(100dvh-80px)] ${$markdownTheme === "light" ? "bg-white" : "bg-mono-background"}`}">
   <div class="editor" style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div
         class="line-count p-2 text-gray-600 text-right border-r border-[#252525] w-12 {selectedTab ===
-        'write'
-          ? ''
-          : 'hidden'}">
+        "write"
+          ? ""
+          : "hidden"}">
       </div>
       <div
-        class="{`w-full p-2 border-none outline-none resize-none ${$markdownTheme === 'light' ? 'bg-white' : 'bg-mono-background'} font-mono overflow-y-auto`}"
+        class="{`w-full p-2 border-none outline-none resize-none ${$markdownTheme === "light" ? "bg-white" : "bg-mono-background"} font-mono overflow-y-auto`}"
         on:scroll="{handleEditorScroll}">
         {#key $markdownTheme}
           <MarkdownEditor
@@ -105,7 +105,7 @@
   </div>
 
   <div
-    class="{`renderer p-2 overflow-auto markdown-content ${$markdownTheme === 'light' ? 'bg-white' : ''}`}"
+    class="{`renderer p-2 overflow-auto markdown-content ${$markdownTheme === "light" ? "bg-white" : ""}`}"
     style="width: {100 - leftWidth}%"
     on:scroll="{handleRendererScroll}">
     <div class="renderer-toolbar">
@@ -113,14 +113,14 @@
       <label class="inline-flex items-center">
         <input type="checkbox" bind:checked="{isScrollSyncEnabled}" class="hidden" />
         <span
-          class="{`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${isScrollSyncEnabled ? 'bg-[#2E6AAC]' : 'bg-gray-600'} rounded-full cursor-pointer`}">
+          class="{`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${isScrollSyncEnabled ? "bg-[#2E6AAC]" : "bg-gray-600"} rounded-full cursor-pointer`}">
           <span
-            class="{`absolute top-1 left-1 inline-block w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out ${isScrollSyncEnabled ? 'translate-x-3' : ''}`}"
+            class="{`absolute top-1 left-1 inline-block w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out ${isScrollSyncEnabled ? "translate-x-3" : ""}`}"
           ></span>
           <span
-            class="{`absolute top-1 left-1 flex items-center justify-center w-3 h-3 transition-transform duration-200 ${isScrollSyncEnabled ? 'translate-x-3' : ''}`}">
+            class="{`absolute top-1 left-1 flex items-center justify-center w-3 h-3 transition-transform duration-200 ${isScrollSyncEnabled ? "translate-x-3" : ""}`}">
             <i
-              class="{`fas ${isScrollSyncEnabled ? 'fa-check' : 'fa-times'} ${isScrollSyncEnabled ? 'text-[#2E6AAC]' : 'text-type-primary'} text-[10px]`}"
+              class="{`fas ${isScrollSyncEnabled ? "fa-check" : "fa-times"} ${isScrollSyncEnabled ? "text-[#2E6AAC]" : "text-type-primary"} text-[10px]`}"
             ></i>
           </span>
         </span>

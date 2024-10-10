@@ -23,7 +23,7 @@
     <div class="flex flex-row gap-3 items-center my-2">
       <button
         title="Email"
-        on:click="{() => window.open('mailto:dev@wyzie,ru')}"
+        on:click="{() => window.open("mailto:dev@wyzie,ru")}"
         class="w-full py-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 px-1 rounded">
         Email Us
       </button>

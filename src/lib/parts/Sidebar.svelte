@@ -1,5 +1,6 @@
 <script lang="ts">
   import { XIcon } from "lucide-svelte";
+  import { goto } from "$app/navigation";
   export let isSidebarOpen = false;
   export let closeSidebar;
 </script>
@@ -15,7 +16,7 @@
 </div>
 
 <aside
-  class="fixed top-0 left-0 w-64 h-full bg-mono-card shadow-lg z-40 transform transition-transform duration-200"
+  class="fixed top-0 left-0 w-full md:w-64 flex flex-col h-full bg-mono-card shadow-lg z-40 transform transition-transform duration-200"
   class:translate-x-0={isSidebarOpen}
   class:-translate-x-full={!isSidebarOpen}>
   <div class="p-4">
@@ -29,21 +30,27 @@
       </button>
     </div>
     <div class="flex flex-col gap-3">
-      <a
-        href="/"
+      <button
         title="Home"
-        class="text-left text-type-primary py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 hover:no-underline duration-150 rounded-md"
-        on:click={closeSidebar}>Home</a>
-      <a
-        href="/about"
+        class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
+        on:click={() => {
+          closeSidebar();
+          goto("/");
+        }}>Home</button>
+      <button
         title="About"
-        class="text-left text-type-primary py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 hover:no-underline duration-150 rounded-md"
-        on:click={closeSidebar}>About</a>
-      <a
-        href="/usage"
+        class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
+        on:click={() => {
+          closeSidebar();
+          goto("/about");
+        }}>About</button>
+      <button
         title="Usage"
-        class="text-left text-type-primary py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 hover:no-underline duration-150 rounded-md"
-        on:click={closeSidebar}>Usage</a>
+        class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
+        on:click={() => {
+          closeSidebar();
+          goto("/usage");
+        }}>Usage</button>
     </div>
   </div>
 </aside>

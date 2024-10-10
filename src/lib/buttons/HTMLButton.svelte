@@ -24,7 +24,7 @@
 </script>
 
 <button
-  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-gray-200 hover:text-gray-900"
+  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-gray-200 duration-200 hover:text-gray-900"
   on:click={exportAsHtml}>
   Export as HTML (.html)
 </button>

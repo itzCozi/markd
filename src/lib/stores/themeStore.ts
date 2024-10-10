@@ -3,12 +3,15 @@ import type { Writable } from "svelte/store";
 
 type LocalStorageKey = "markdownTheme" | "userPreferences" | "otherKey";
 
-function createPersistentStore<T extends string>(key: LocalStorageKey, initialValue: T): Writable<T> {
+function createPersistentStore<T extends string>(
+  key: LocalStorageKey,
+  initialValue: T,
+): Writable<T> {
   let data: T;
 
   if (typeof window !== "undefined") {
     const storedValue = localStorage.getItem(key);
-    data = storedValue ? JSON.parse(storedValue) as T : initialValue;
+    data = storedValue ? (JSON.parse(storedValue) as T) : initialValue;
   } else {
     data = initialValue;
   }
@@ -26,10 +29,10 @@ function createPersistentStore<T extends string>(key: LocalStorageKey, initialVa
 }
 
 function handleThemeChange(theme: string) {
-  if (typeof document === 'undefined') return;
-  const existingStyleTag = document.getElementById('renderer-style');
+  if (typeof document === "undefined") return;
+  const existingStyleTag = document.getElementById("renderer-style");
 
-  if (theme === 'light') {
+  if (theme === "light") {
     if (!existingStyleTag) {
       const style = document.createElement("style");
       style.id = "renderer-style";
@@ -53,6 +56,6 @@ function handleThemeChange(theme: string) {
 
 export const markdownTheme = createPersistentStore<string>("markdownTheme", "dark");
 
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   handleThemeChange(get(markdownTheme));
 }

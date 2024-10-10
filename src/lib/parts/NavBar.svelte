@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
-  import { Menu, FileText } from "lucide-svelte";
+  import { goto } from "$app/navigation";
+  import { Menu, FileText, CircleHelp } from "lucide-svelte";
   import Sidebar from "$lib/parts/Sidebar.svelte";
   import ThemeToggle from "$lib/buttons/ThemeToggle.svelte";
   import PdfButton from "../buttons/PDFButton.svelte";
@@ -34,7 +35,7 @@
       <div class="relative inline-block text-left">
         {#if $page.url.pathname === "/"}
           <button
-            class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
+            class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
             title="Export"
             on:click={() => {
               exportMenuOpen = !exportMenuOpen;
@@ -58,9 +59,15 @@
       {#if $page.url.pathname === "/"}
         <FullscreenToggle />
         <ThemeToggle />
+        <button
+          class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
+          title="How to"
+          on:click={() => goto("/usage")}>
+          <CircleHelp />
+        </button>
       {/if}
       <button
-        class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 rounded"
+        class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
         title="Navigation"
         on:click={toggleSidebar}>
         <Menu />

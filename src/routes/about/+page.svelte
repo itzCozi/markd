@@ -1,7 +1,5 @@
 <script>
-
   import NavBar from "$lib/parts/NavBar.svelte";
-
 </script>
 
 <NavBar />
@@ -15,19 +13,24 @@
       project and a very opinionated one at that. All of the styles are inline tailwind css classes,
       and the Markdown editor uses Carta.
     </p>
-    <a href="https://github.com/itzcozi/markd" title="Source code" class="mt-2 text-sm"
-      >Source Code</a>
+    <div class="flex justify-center my-3">
+      <a href="https://github.com/itzcozi/markd" title="Source code" class="text-sm">
+        <img
+          src="https://github-readme-stats.vercel.app/api/pin/?username=itzcozi&repo=markd&theme=dark"
+          alt="Github repository" />
+      </a>
+    </div>
     <div class="flex flex-row gap-3 items-center my-2">
       <button
         title="Email"
         on:click={() => window.open("mailto:dev@wyzie,ru")}
-        class="w-full py-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-100 px-1 rounded">
+        class="w-full py-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 px-1 rounded">
         Email Us
       </button>
     </div>
     <p class="text-xs mt-4">
-      Created by <a href="https://github.com/itzcozi" title="BadDeveloper's github">BadDeveloper</a> and <a href="https://github.com/Pasithea0" title="Pas's github">Pasithea</a> with
-      💙
+      Created by <a href="https://github.com/itzcozi" title="BadDeveloper's github">BadDeveloper</a>
+      and <a href="https://github.com/Pasithea0" title="Pas's github">Pasithea</a> with 💙
     </p>
   </div>
 </div>

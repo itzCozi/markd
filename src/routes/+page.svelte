@@ -71,7 +71,8 @@
 
 <NavBar />
 
-<div class={`flex h-[calc(100dvh-80px)] ${$markdownTheme === "light" ? "bg-white" : "bg-mono-background"}`}>
+<div
+  class={`flex h-[calc(100dvh-80px)] ${$markdownTheme === "light" ? "bg-white" : "bg-mono-background"}`}>
   <div class="editor" style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div

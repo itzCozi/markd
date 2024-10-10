@@ -11,7 +11,7 @@
 <!--https://rentry.org/how-->
 
 <div class="flex pt-8 bg-mono-background justify-center items-center">
-  <div class="p-4 bg-mono-accent max-w-3xl mb-6 rounded-md">
+  <div class="p-4 bg-mono-accent max-w-4xl mb-6 rounded-md">
     <p class="text-3xl font-semibold">How To</p>
     <p class="text-type-dimmed mt-2">
       Markdown is a lightweight markup language with plain text formatting syntax. Its design allows
@@ -20,6 +20,7 @@
       create rich text using a plain text editor. Here I will teach you how to use markdown, both
       basic syntax and our custom site specific syntax.
     </p>
+    <hr class="border-b border-mono-accentLight2 my-4 border-0"/>
 
     <div class="my-4">
       <p class="text-2xl my-2 text-type-emphasized">Headers</p>
@@ -75,6 +76,28 @@
 1. First item
 2. Second item
 3. Third item
+</pre>
+    </div>
+
+    <div class="my-4">
+      <p class="text-2xl my-2 text-type-emphasized">Checklists</p>
+      <p class="text-type-dimmed">
+        Checklists are defined by using <code>- [ ]</code> for an unchecked box and <code>- [x]</code> the <code>-</code> can be replaced with an <code>*</code> as well.
+      </p>
+<pre class="text-mono bg-mono-card p-3 my-1 rounded-sm text-wrap">
+- [ ] Unchecked box
+- [x] Checked box
+</pre>
+    </div>
+
+    <div class="my-4">
+      <p class="text-2xl my-2 text-type-emphasized">Strikethrough</p>
+      <p class="text-type-dimmed">
+        Strikethrough's are defined using <code>&#x7e;&#x7e;</code> symbols before and after the text you 
+        want to strikethrough, this is very useful for todo lists among other things.
+      </p>
+<pre class="text-mono bg-mono-card p-3 my-1 rounded-sm text-wrap">
+~~very secret information~~
 </pre>
     </div>
 
@@ -144,7 +167,10 @@ ___
     </div>
 
     <div class="my-4">
-      <p class="text-2xl my-2 text-type-emphasized">Admonitions</p>
+      <p class="text-2xl my-2  text-type-emphasized">
+        Admonitions
+        <span class="text-type-dimmed font-semibold text-base ml-4">Coming Soon</span>
+      </p>
       <p class="text-type-dimmed">
         Admonitions are defined by using the <code>!!!</code> symbol followed by the
         type of admonition you want to use and the text you want to display. The admonition types

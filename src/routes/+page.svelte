@@ -118,7 +118,7 @@
           <span
             class={`absolute top-1 left-1 flex items-center justify-center w-3 h-3 transition-transform duration-200 ${isScrollSyncEnabled ? "translate-x-3" : ""}`}>
             <i
-              class={`fas ${isScrollSyncEnabled ? "fa-check" : "fa-times"} ${isScrollSyncEnabled ? "text-[#2E6AAC]" : "text-gray-600"} text-[10px]`}
+              class={`fas ${isScrollSyncEnabled ? "fa-check" : "fa-times"} ${isScrollSyncEnabled ? "text-[#2E6AAC]" : "text-type-primary"} text-[10px]`}
             ></i>
           </span>
         </span>

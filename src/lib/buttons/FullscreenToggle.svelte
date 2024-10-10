@@ -37,7 +37,7 @@
 <button
   class="fullscreen-toggle text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
   title="Fullscreen Toggle"
-  on:click={toggleFullscreen}>
+  on:click="{toggleFullscreen}">
   {#if isFullscreen}
     <Minimize />
   {:else}

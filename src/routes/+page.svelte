@@ -72,7 +72,7 @@
 <NavBar />
 
 <div
-  class={`flex h-[calc(100dvh-80px)] ${$markdownTheme === "light" ? "bg-white" : "bg-mono-background"}`}>
+  class="{`flex h-[calc(100dvh-80px)] ${$markdownTheme === 'light' ? 'bg-white' : 'bg-mono-background'}`}">
   <div class="editor" style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div
@@ -82,14 +82,14 @@
           : 'hidden'}">
       </div>
       <div
-        class={`w-full p-2 border-none outline-none resize-none ${$markdownTheme === "light" ? "bg-white" : "bg-mono-background"} font-mono overflow-y-auto`}
-        on:scroll={handleEditorScroll}>
+        class="{`w-full p-2 border-none outline-none resize-none ${$markdownTheme === 'light' ? 'bg-white' : 'bg-mono-background'} font-mono overflow-y-auto`}"
+        on:scroll="{handleEditorScroll}">
         {#key $markdownTheme}
           <MarkdownEditor
             {carta}
-            bind:value={source}
+            bind:value="{source}"
             bind:selectedTab
-            theme={$markdownTheme}
+            theme="{$markdownTheme}"
             mode="tabs"
             placeholder="Insert your markdown here..." />
         {/key}
@@ -101,32 +101,33 @@
   <div
     class="divider w-1 cursor-ew-resize bg-[#202020]"
     style="left: calc({leftWidth}% - 5px);"
-    on:mousedown={handleMouseDown}>
+    on:mousedown="{handleMouseDown}">
   </div>
 
   <div
-    class={`renderer p-2 overflow-auto markdown-content ${$markdownTheme === "light" ? "bg-white" : ""}`}
+    class="{`renderer p-2 overflow-auto markdown-content ${$markdownTheme === 'light' ? 'bg-white' : ''}`}"
     style="width: {100 - leftWidth}%"
-    on:scroll={handleRendererScroll}>
+    on:scroll="{handleRendererScroll}">
     <div class="renderer-toolbar">
       <span class="mr-2 text-type-primary">Sync Scroll</span>
       <label class="inline-flex items-center">
-        <input type="checkbox" bind:checked={isScrollSyncEnabled} class="hidden" />
+        <input type="checkbox" bind:checked="{isScrollSyncEnabled}" class="hidden" />
         <span
-          class={`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${isScrollSyncEnabled ? "bg-[#2E6AAC]" : "bg-gray-600"} rounded-full cursor-pointer`}>
+          class="{`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${isScrollSyncEnabled ? 'bg-[#2E6AAC]' : 'bg-gray-600'} rounded-full cursor-pointer`}">
           <span
-            class={`absolute top-1 left-1 inline-block w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out ${isScrollSyncEnabled ? "translate-x-3" : ""}`} />
+            class="{`absolute top-1 left-1 inline-block w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out ${isScrollSyncEnabled ? 'translate-x-3' : ''}`}"
+          ></span>
           <span
-            class={`absolute top-1 left-1 flex items-center justify-center w-3 h-3 transition-transform duration-200 ${isScrollSyncEnabled ? "translate-x-3" : ""}`}>
+            class="{`absolute top-1 left-1 flex items-center justify-center w-3 h-3 transition-transform duration-200 ${isScrollSyncEnabled ? 'translate-x-3' : ''}`}">
             <i
-              class={`fas ${isScrollSyncEnabled ? "fa-check" : "fa-times"} ${isScrollSyncEnabled ? "text-[#2E6AAC]" : "text-type-primary"} text-[10px]`}
+              class="{`fas ${isScrollSyncEnabled ? 'fa-check' : 'fa-times'} ${isScrollSyncEnabled ? 'text-[#2E6AAC]' : 'text-type-primary'} text-[10px]`}"
             ></i>
           </span>
         </span>
       </label>
     </div>
     {#key source}
-      <Markdown {carta} value={source} theme={$markdownTheme} />
+      <Markdown {carta} value="{source}" theme="{$markdownTheme}" />
     {/key}
   </div>
 </div>

@@ -1,6 +1,10 @@
 {
   "trailingComma": "all",
   "singleQuote": false,
+  "svelteStrictMode": true,
+  "svelteAllowShorthand": true,
+  "svelteIndentScriptAndStyle": true,
+  "embeddedLanguageFormatting": "auto",
   "bracketSameLine": true,
   "bracketSpacing": true,
   "arrowParens": "always",

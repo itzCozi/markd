@@ -32,14 +32,22 @@
     <div class="flex flex-row gap-3 items-center">
       <!-- https://flowbite-svelte.com/docs/components/dropdown -->
       <!-- Export dropdown menu -->
+      {#if $page.url.pathname === "/"}
+        <button
+          class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
+          title="How to"
+          on:click="{() => goto('/usage')}">
+          <CircleHelp />
+        </button>
+      {/if}
       <div class="relative inline-block text-left">
         {#if $page.url.pathname === "/"}
           <button
             class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
             title="Export"
-            on:click={() => {
+            on:click="{() => {
               exportMenuOpen = !exportMenuOpen;
-            }}>
+            }}">
             <FileText />
           </button>
         {/if}
@@ -59,17 +67,11 @@
       {#if $page.url.pathname === "/"}
         <FullscreenToggle />
         <ThemeToggle />
-        <button
-          class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
-          title="How to"
-          on:click={() => goto("/usage")}>
-          <CircleHelp />
-        </button>
       {/if}
       <button
         class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
         title="Navigation"
-        on:click={toggleSidebar}>
+        on:click="{toggleSidebar}">
         <Menu />
       </button>
     </div>

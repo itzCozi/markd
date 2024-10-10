@@ -80,6 +80,10 @@ a:hover {
   background-color: transparent;
 }
 
+#footnote-label {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .divider {
     display: none !important;

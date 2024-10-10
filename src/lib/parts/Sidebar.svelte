@@ -65,11 +65,11 @@
       <Github />
     </button>
     <button
-      title="GitHub"
+      title="Email"
       class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
       on:click="{() => {
         closeSidebar();
-        open('https://github.com/itzcozi/markd', '_blank');
+        open('mailto:dev@wyzie.ru', '_blank');
       }}">
       <Mail />
     </button>

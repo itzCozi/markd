@@ -5,13 +5,14 @@ type LocalStorageKey = "markdownTheme" | "userPreferences" | "otherKey";
 
 function createPersistentStore<T extends string>(
   key: LocalStorageKey,
-  initialValue: T,
+  initialValue: T
 ): Writable<T> {
   let data: T;
 
   if (typeof window !== "undefined") {
     const storedValue = localStorage.getItem(key);
     data = storedValue ? (JSON.parse(storedValue) as T) : initialValue;
+    handleThemeChange(data);
   } else {
     data = initialValue;
   }
@@ -30,6 +31,7 @@ function createPersistentStore<T extends string>(
 
 function handleThemeChange(theme: string) {
   if (typeof document === "undefined") return;
+
   const existingStyleTag = document.getElementById("renderer-style");
 
   if (theme === "light") {

@@ -4,8 +4,8 @@
 
 <NavBar />
 
-<div class="flex pt-8 bg-mono-background justify-center items-center">
-  <div class="p-4 bg-mono-accent h-1/3 max-w-3xl rounded-md">
+<div class="flex pt-8 mx-2 bg-mono-background justify-center items-center">
+  <div class="p-4 bg-mono-accent h-1/3 max-w-2xl rounded-md">
     <p class="text-3xl font-semibold">About Us</p>
     <p class="text-type-dimmed mt-2">
       MarkD is an advanced live markdown editor directly in your browser. It is built using

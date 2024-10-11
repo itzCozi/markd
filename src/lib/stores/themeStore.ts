@@ -44,9 +44,13 @@ function handleThemeChange(theme: string) {
         .carta-renderer h3,
         .carta-renderer p,
         .carta-renderer ul,
-        .carta-renderer li,
+        .carta-renderer li {
+          color: black;
+        }
+
         .carta-renderer pre {
           color: black;
+          background-color: #f0f0f0;
         }
       `;
       document.head.appendChild(style);

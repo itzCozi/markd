@@ -81,7 +81,7 @@ a:hover {
 }
 
 .carta-renderer {
-  background-color: transparent;
+  background-color: transparent !important;
 }
 
 #footnote-label {

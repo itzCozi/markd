@@ -69,6 +69,10 @@ function handleThemeChange(theme: string) {
           --hover-background: #f1f1f1;
           --contrast-background: #f1f1f1;
         }
+
+        html, body {
+          caret-color: black !important;
+        }
       `;
       document.head.appendChild(style);
     }

@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@cartamd/plugin-slash':
+        specifier: ^4.0.2
+        version: 4.0.2(carta-md@4.5.0(svelte@4.2.19))(svelte@4.2.19)
       carta-md:
         specifier: ^4.5.0
         version: 4.5.0(svelte@4.2.19)
@@ -61,6 +64,12 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
+
+  '@cartamd/plugin-slash@4.0.2':
+    resolution: {integrity: sha512-js9fWi1wxOHSoO4faG8Zmgd1nxG5KQzdWUsqIndTDPcLTc9fIb9qlTh0lzmwtQQwS1JpcPncIpp9Ik8txJJyYA==}
+    peerDependencies:
+      carta-md: ^4.0.0
+      svelte: ^3.54.0 || ^4.0.0
 
   '@esbuild/aix-ppc64@0.21.5':
     resolution: {integrity: sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ==}
@@ -456,6 +465,9 @@ packages:
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
+
+  bezier-easing@2.1.0:
+    resolution: {integrity: sha512-gbIqZ/eslnUFC1tjEvtz0sgx+xTK20wDnYMIA27VA04R7w6xxXQPZDbibjA9DTWZRA2CXtwHykkVzlCaAJAZig==}
 
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
@@ -1436,6 +1448,12 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
+  '@cartamd/plugin-slash@4.0.2(carta-md@4.5.0(svelte@4.2.19))(svelte@4.2.19)':
+    dependencies:
+      bezier-easing: 2.1.0
+      carta-md: 4.5.0(svelte@4.2.19)
+      svelte: 4.2.19
+
   '@esbuild/aix-ppc64@0.21.5':
     optional: true
 
@@ -1747,6 +1765,8 @@ snapshots:
   bail@2.0.2: {}
 
   balanced-match@1.0.2: {}
+
+  bezier-easing@2.1.0: {}
 
   binary-extensions@2.3.0: {}
 

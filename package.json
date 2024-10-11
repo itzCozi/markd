@@ -25,6 +25,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@cartamd/plugin-slash": "^4.0.2",
 		"carta-md": "^4.5.0",
 		"isomorphic-dompurify": "^2.16.0",
 		"lucide-svelte": "^0.447.0"

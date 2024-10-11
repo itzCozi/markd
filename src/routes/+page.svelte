@@ -8,6 +8,10 @@
   import { markdownTheme } from "$lib/stores/themeStore";
   import NavBar from "$lib/parts/NavBar.svelte";
 
+  // Plugins:
+  import "../slash.css";
+  import { slash } from "@cartamd/plugin-slash";
+
   let leftWidth = 50;
   let isResizing = false;
   let selectedTab: "write" | "preview" = "write";
@@ -23,6 +27,7 @@
   $: carta = new Carta({
     sanitizer: DOMPurify.sanitize,
     theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
+    extensions: [slash()]
   });
 
   function handleEditorScroll(event: Event) {

@@ -52,6 +52,14 @@ function handleThemeChange(theme: string) {
           color: black;
           background-color: #f0f0f0;
         }
+        
+        .carta-slash {
+          --background: #EBEBEBFF;
+          --group-color: #3b3b3b;
+          --title-color: #232323;
+          --description-color: #313030;
+          --hover-background: #f1f1f1;
+        }
       `;
       document.head.appendChild(style);
     }

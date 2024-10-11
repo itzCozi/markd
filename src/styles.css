@@ -250,10 +250,10 @@
   overflow: hidden;
   background: transparent;
   border-bottom: 1px solid var(--borderColor-muted);
-  height: .25em;
+  height: .1em;
   padding: 0;
   margin: var(--base-size-24) 0;
-  background-color: var(--borderColor-default);
+  background-color: var(--borderColor-muted);
   border: 0;
 }
 

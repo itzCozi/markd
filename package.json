@@ -25,6 +25,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@cartamd/plugin-emoji": "^4.1.3",
 		"@cartamd/plugin-slash": "^4.0.2",
 		"carta-md": "^4.5.0",
 		"isomorphic-dompurify": "^2.16.0",

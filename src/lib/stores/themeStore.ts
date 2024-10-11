@@ -54,11 +54,20 @@ function handleThemeChange(theme: string) {
         }
         
         .carta-slash {
-          --background: #EBEBEBFF;
+          --background: #F5F5F5FF;
           --group-color: #3b3b3b;
           --title-color: #232323;
           --description-color: #313030;
           --hover-background: #f1f1f1;
+        }
+
+        .carta-emoji {
+          --background: #F5F5F5FF;
+          --group-color: #3b3b3b;
+          --title-color: #232323;
+          --description-color: #313030;
+          --hover-background: #f1f1f1;
+          --contrast-background: #f1f1f1;
         }
       `;
       document.head.appendChild(style);

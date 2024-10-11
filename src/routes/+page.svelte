@@ -11,6 +11,8 @@
   // Plugins:
   import "../slash.css";
   import { slash } from "@cartamd/plugin-slash";
+  import "../emoji.css"
+  import { emoji } from '@cartamd/plugin-emoji';
 
   let leftWidth = 50;
   let isResizing = false;
@@ -27,7 +29,7 @@
   $: carta = new Carta({
     sanitizer: DOMPurify.sanitize,
     theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
-    extensions: [slash()]
+    extensions: [slash(), emoji()]
   });
 
   function handleEditorScroll(event: Event) {

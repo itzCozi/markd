@@ -40,7 +40,7 @@
       <!-- Export dropdown menu -->
       {#if $page.url.pathname === "/"}
         <button
-          class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
+          class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"
           title="How to"
           on:click="{() => goto('/usage')}">
           <CircleHelp />
@@ -49,7 +49,7 @@
       <div class="relative inline-block text-left">
         {#if $page.url.pathname === "/"}
           <button
-            class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
+            class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"
             title="Export"
             on:click="{() => {
               exportMenuOpen = !exportMenuOpen;
@@ -75,7 +75,7 @@
         <ThemeToggle />
       {/if}
       <button
-        class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
+        class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"
         title="Navigation"
         on:click="{toggleSidebar}">
         <Menu />

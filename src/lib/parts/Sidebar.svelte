@@ -57,7 +57,7 @@
   <div class="mt-auto mb-2 px-4 flex justify-between">
     <button
       title="GitHub"
-      class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
+      class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-100 rounded-md"
       on:click="{() => {
         closeSidebar();
         window.location.href = 'https://github.com/itzcozi/markd';
@@ -66,7 +66,7 @@
     </button>
     <button
       title="Email"
-      class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
+      class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-100 rounded-md"
       on:click="{() => {
         closeSidebar();
         open('mailto:dev@wyzie.ru', '_blank');

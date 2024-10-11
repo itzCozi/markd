@@ -5,7 +5,7 @@ type LocalStorageKey = "markdownTheme" | "userPreferences" | "otherKey";
 
 function createPersistentStore<T extends string>(
   key: LocalStorageKey,
-  initialValue: T
+  initialValue: T,
 ): Writable<T> {
   let data: T;
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   import "../styles.css"; // HTML renderer styles
-  import { setContext, onMount } from "svelte";
+  import { setContext } from "svelte";
   import { Carta, Markdown, MarkdownEditor } from "carta-md";
   import { Carta as CartaType } from "carta-md";
   import localStorageStore from "../lib/stores/localStorage";
@@ -11,8 +11,8 @@
   // Plugins:
   import "../slash.css";
   import { slash } from "@cartamd/plugin-slash";
-  import "../emoji.css"
-  import { emoji } from '@cartamd/plugin-emoji';
+  import "../emoji.css";
+  import { emoji } from "@cartamd/plugin-emoji";
 
   let leftWidth = 50;
   let isResizing = false;
@@ -29,7 +29,7 @@
   $: carta = new Carta({
     sanitizer: DOMPurify.sanitize,
     theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
-    extensions: [slash(), emoji()]
+    extensions: [slash(), emoji()],
   });
 
   function handleEditorScroll(event: Event) {

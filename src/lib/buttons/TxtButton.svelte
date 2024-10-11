@@ -17,6 +17,7 @@
 
 <button
   class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-gray-200 hover:text-gray-900 duration-200"
-  on:click="{exportToTxt}">
+  on:click="{exportToTxt}"
+  title="Export as TXT">
   Export as Text (.txt)
 </button>

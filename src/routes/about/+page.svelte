@@ -9,9 +9,10 @@
     <p class="text-3xl font-semibold">About Us</p>
     <p class="text-type-dimmed mt-2">
       MarkD is an advanced live markdown editor directly in your browser. It is built using
-      SvelteKit and supports HTML as well as Markdown, all in the same file. MarkD is an open source
-      project and a very opinionated one at that. All of the styles are inline tailwind css classes,
-      and the Markdown editor uses Carta.
+      SvelteKit and supports HTML as well as an extended Markdown syntax, all in the same file.
+      MarkD is an open source project and a very opinionated one at that. All of the styles are
+      inline tailwind css classes, and the Markdown editor uses Carta. All hosted on Cloudflare
+      Pages!
     </p>
     <div class="flex justify-center my-3">
       <a

@@ -9,7 +9,7 @@
 <!--https://rentry.org/how-->
 
 <div class="flex pt-8 mx-2 bg-mono-background justify-center items-center">
-  <div class="p-4 mb-8 bg-mono-accent max-w-3xl rounded-md">
+  <div class="p-4 bg-mono-accent max-w-4xl rounded-md">
     <p class="text-3xl font-semibold">Usage</p>
     <p class="text-type-dimmed mt-2">
       Markdown is a lightweight markup language with plain text formatting syntax. Its design allows

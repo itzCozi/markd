@@ -8,7 +8,7 @@
 </script>
 
 <button
-  class="theme-toggle text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded"
+  class="theme-toggle text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"
   title="Theme Toggle"
   on:click="{toggleMarkdownTheme}">
   {#if $markdownTheme === "light"}

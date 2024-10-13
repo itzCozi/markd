@@ -31,7 +31,10 @@
 		"isomorphic-dompurify": "^2.16.0",
 		"lucide-svelte": "^0.447.0",
 		"rehype-external-links": "^3.0.0",
+		"rehype-stringify": "^10.0.1",
 		"remark-github-beta-blockquote-admonitions": "^3.1.1",
+		"remark-parse": "^11.0.0",
+		"remark-rehype": "^11.1.1",
 		"unified": "^11.0.5"
 	}
 }

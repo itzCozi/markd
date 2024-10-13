@@ -32,6 +32,28 @@
 		transformers: [externalLinksTransformer]
 	})
 
+  import plugin from "remark-github-beta-blockquote-admonitions";
+  import remarkParse from "remark-parse";
+  import remarkRehype from "remark-rehype";
+  import rehypeStringify from "rehype-stringify";
+  import "../admonitions.css";
+  import { defaultConfig } from "../lib/functions/admonitionsConfig"
+
+  const admonitionsTransformer: UnifiedTransformer<"sync"> = {
+    execution: "sync",
+    type: "remark",
+    transform: ({ processor }) => {
+      processor.use(remarkParse);
+      processor.use(plugin, defaultConfig);
+      processor.use(remarkRehype);
+      processor.use(rehypeStringify);
+    }
+  };
+
+  const admonitions = (): Plugin => ({
+    transformers: [admonitionsTransformer]
+  })
+
   let leftWidth = 50;
   let isResizing = false;
   let selectedTab: "write" | "preview" = "write";
@@ -47,7 +69,7 @@
   $: carta = new Carta({
     sanitizer: DOMPurify.sanitize,
     theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
-    extensions: [slash(), emoji(), externalLinks()],
+    extensions: [slash(), emoji(), externalLinks(), admonitions()],
   });
 
   function handleEditorScroll(event: Event) {

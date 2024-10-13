@@ -14,6 +14,24 @@
   import "../emoji.css";
   import { emoji } from "@cartamd/plugin-emoji";
 
+  import type { Plugin, UnifiedTransformer } from "carta-md";
+  import rehypeExternalLinks from "rehype-external-links";
+
+  const externalLinksTransformer: UnifiedTransformer<'sync'> = {
+		execution: 'sync',
+		type: 'rehype',
+		transform: ({ processor }) => {
+			processor.use(rehypeExternalLinks, {
+				target: '_blank',
+				rel: ['noopener', 'noreferrer']
+			});
+		}
+	};
+
+	const externalLinks = (): Plugin => ({
+		transformers: [externalLinksTransformer]
+	})
+
   let leftWidth = 50;
   let isResizing = false;
   let selectedTab: "write" | "preview" = "write";
@@ -29,7 +47,7 @@
   $: carta = new Carta({
     sanitizer: DOMPurify.sanitize,
     theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
-    extensions: [slash(), emoji()],
+    extensions: [slash(), emoji(), externalLinks()],
   });
 
   function handleEditorScroll(event: Event) {

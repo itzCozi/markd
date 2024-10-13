@@ -17,13 +17,13 @@
   import type { Plugin, UnifiedTransformer } from "carta-md";
   import rehypeExternalLinks from "rehype-external-links";
 
-  const externalLinksTransformer: UnifiedTransformer<'sync'> = {
-		execution: 'sync',
-		type: 'rehype',
+  const externalLinksTransformer: UnifiedTransformer<"sync"> = {
+		execution: "sync",
+		type: "rehype",
 		transform: ({ processor }) => {
 			processor.use(rehypeExternalLinks, {
-				target: '_blank',
-				rel: ['noopener', 'noreferrer']
+				target: "_blank",
+				rel: ["noopener", "noreferrer"]
 			});
 		}
 	};

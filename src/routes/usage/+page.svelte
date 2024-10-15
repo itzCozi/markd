@@ -169,16 +169,15 @@ ___
     <div class="my-4">
       <p class="text-2xl my-2 text-type-emphasized">
         Admonitions
-        <span class="text-type-dimmed font-semibold text-base ml-4">Coming Soon</span>
       </p>
       <p class="text-type-dimmed">
-        Admonitions are defined by using the <code>!!!</code> symbol followed by the type of
+        Admonitions are defined by using the <code>&#62;</code> symbol followed by the type of
         admonition you want to use and the text you want to display. The admonition types are
-        <code>note</code>, <code>warning</code>, <code>tip</code>, and <code>important</code>.
+        <code>[!NOTE]</code>, <code>[!IMPORTANT]</code>, <code>[!TIP]</code>, <code>[!CAUTION]</code> and <code>[!WARNING]</code>.
       </p>
       <pre class="text-mono bg-mono-card p-3 my-1 rounded-sm text-wrap">
-!!! note Real Debrid Limits
-Keep in mind Real Debrid will only allow devices on the same network as you, Real debrid allows unlimited devices on one IP at a time.
+> [!NOTE]
+> Keep in mind Real Debrid will only allow devices on the same network as you, Real debrid allows unlimited devices on one IP at a time.
 </pre>
     </div>
 

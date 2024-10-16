@@ -54,6 +54,11 @@
     transformers: [admonitionsTransformer]
   })
 
+  import { math } from '@cartamd/plugin-math';
+  import 'katex/dist/katex.css';
+
+  // End Plugins
+
   let leftWidth = 50;
   let isResizing = false;
   let selectedTab: "write" | "preview" = "write";
@@ -69,7 +74,7 @@
   $: carta = new Carta({
     sanitizer: DOMPurify.sanitize,
     theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
-    extensions: [slash(), emoji(), externalLinks(), admonitions()],
+    extensions: [slash(), emoji(), externalLinks(), admonitions(), math()],
   });
 
   function handleEditorScroll(event: Event) {

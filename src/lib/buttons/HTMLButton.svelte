@@ -1,6 +1,6 @@
 <script lang="ts">
   function exportAsHtml() {
-    const element = document.querySelector(".markdown-content");
+    const element = document.querySelector(".markdown-body");
     if (!element) {
       console.error("Element not found");
       return;
@@ -11,13 +11,14 @@
       toolbar.remove();
     }
 
-    const html = element.outerHTML;
-    const blob = new Blob([html], { type: "text/html" });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = "document.html";
-    link.click();
-    URL.revokeObjectURL(link.href);
+    const html = element.innerHTML;
+    const blob = new Blob([html], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'export.html';
+    a.click();
+    URL.revokeObjectURL(url);
 
     window.location.reload();
   }

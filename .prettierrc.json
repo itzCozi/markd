@@ -9,6 +9,7 @@
   "bracketSpacing": true,
   "arrowParens": "always",
   "jsxSingleQuote": false,
+  "svelteSortOrder": "options-scripts-styles-markup",
   "quoteProps": "consistent",
   "proseWrap": "always",
   "useTabs": false,

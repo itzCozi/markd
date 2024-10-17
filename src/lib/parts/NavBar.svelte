@@ -21,13 +21,22 @@
   }
 </script>
 
+<style>
+  .scale-hover {
+    transition: transform 0.15s;
+  }
+  .scale-hover:hover {
+    transform: scale(1.03);
+  }
+</style>
+
 <header class="navbar w-full p-4 bg-mono-card shadow-lg z-20">
   <nav class="flex justify-between items-center">
     <a
       href="/"
       title="Home"
       class="hover:no-underline">
-      <div class="flex flex-row gap-3 items-center hover:scale-105 duration-100">
+      <div class="flex flex-row gap-3 items-center scale-hover duration-100">
         <img
           src="/favicon.svg"
           alt="logo"

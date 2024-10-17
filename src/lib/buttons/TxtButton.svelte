@@ -16,8 +16,17 @@
 </script>
 
 <button
-  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-gray-200 hover:text-gray-900 duration-200"
+  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-[#ced2d9] hover:text-gray-900 hover:shadow-xl duration-200 scale-hover"
   on:click="{exportToTxt}"
   title="Export as TXT">
   Export as Text (.txt)
 </button>
+
+<style>
+  .scale-hover {
+    transition: transform 0.2s;
+  }
+  .scale-hover:hover {
+    transform: scale(1.01);
+  }
+</style>

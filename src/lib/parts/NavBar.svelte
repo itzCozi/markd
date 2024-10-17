@@ -59,7 +59,7 @@
         {/if}
         {#if exportMenuOpen}
           <div
-            class="origin-top-right z-40 absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-mono-card ring-1 ring-black ring-opacity-5 focus:outline-none"
+            class="origin-top-right z-40 absolute right-0 mt-2 w-48 rounded-md shadow-xl py-1 bg-mono-card ring-1 ring-black ring-opacity-15"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"

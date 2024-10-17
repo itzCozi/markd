@@ -54,8 +54,8 @@
     transformers: [admonitionsTransformer],
   });
 
-  import { math } from '@cartamd/plugin-math';
-  import 'katex/dist/katex.css';
+  import { math } from "@cartamd/plugin-math";
+  import "katex/dist/katex.css";
 
   // End Plugins
 

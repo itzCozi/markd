@@ -55,6 +55,7 @@
   });
 
   import { math } from "@cartamd/plugin-math";
+  import { code } from "@cartamd/plugin-code";
   import "katex/dist/katex.css";
 
   // End Plugins
@@ -74,7 +75,14 @@
   $: carta = new Carta({
     sanitizer: DOMPurify.sanitize,
     theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
-    extensions: [slash(), emoji(), externalLinks(), admonitions(), math()],
+    extensions: [
+      slash(),
+      emoji(),
+      externalLinks(),
+      admonitions(),
+      math(),
+      code({ theme: $markdownTheme === "light" ? "light-plus" : "dark-plus" }),
+    ],
   });
 
   function handleEditorScroll(event: Event) {

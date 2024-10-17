@@ -25,6 +25,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@cartamd/plugin-code": "^4.0.6",
 		"@cartamd/plugin-emoji": "^4.1.3",
 		"@cartamd/plugin-math": "^4.1.0",
 		"@cartamd/plugin-slash": "^4.0.2",

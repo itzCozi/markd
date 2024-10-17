@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@cartamd/plugin-code':
+        specifier: ^4.0.6
+        version: 4.0.6(carta-md@4.5.0(svelte@4.2.19))
       '@cartamd/plugin-emoji':
         specifier: ^4.1.3
         version: 4.1.3(carta-md@4.5.0(svelte@4.2.19))(svelte@4.2.19)
@@ -91,6 +94,11 @@ packages:
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
+
+  '@cartamd/plugin-code@4.0.6':
+    resolution: {integrity: sha512-2Y+hu+dobLaZC4Wzfe3NT9rF75rAiNiZfgGuDXccQa3fOre1hr893GrMKw6h8qA8AfrHangyP4I1W2ca3phhrA==}
+    peerDependencies:
+      carta-md: ^4.0.0
 
   '@cartamd/plugin-emoji@4.1.3':
     resolution: {integrity: sha512-xY1m7WEZtDsqJDpQgLDiwyn1qh9s1IN3w8XrbdspxZU8Ygucvg2n+wwltxK4Q12djmJDs6pvc0AaUUpw6HQRdA==}
@@ -377,6 +385,9 @@ packages:
 
   '@shikijs/engine-oniguruma@1.22.0':
     resolution: {integrity: sha512-5iBVjhu/DYs1HB0BKsRRFipRrD7rqjxlWTj4F2Pf+nQSPqc3kcyqFFeZXnBMzDf0HdqaFVvhDRAGiYNvyLP+Mw==}
+
+  '@shikijs/rehype@1.22.0':
+    resolution: {integrity: sha512-lgbERrnR5CZFDryZNn/JEBA5h54hpRxMT7lXrXceDS7fiLl6ZBWLGk1nTypk9LT80M2lNZVeeh9UGS+wLoFtWQ==}
 
   '@shikijs/types@1.22.0':
     resolution: {integrity: sha512-Fw/Nr7FGFhlQqHfxzZY8Cwtwk5E9nKDUgeLjZgt3UuhcM3yJR9xj3ZGNravZZok8XmEZMiYkSMTPlPkULB8nww==}
@@ -787,6 +798,9 @@ packages:
 
   hast-util-to-html@9.0.3:
     resolution: {integrity: sha512-M17uBDzMJ9RPCqLMO92gNNUDuBSq10a25SDBI08iCCxmorf4Yy6sYHK57n9WAbRAAaU+DuR4W6GN9K4DFZesYg==}
+
+  hast-util-to-string@3.0.1:
+    resolution: {integrity: sha512-XelQVTDWvqcl3axRfI0xSeoVKzyIFPwsAGSLIsKdJKQMXDYJS4WYrBNF/8J7RdhIcFI2BOHgAifggsvsxp/3+A==}
 
   hast-util-to-text@4.0.2:
     resolution: {integrity: sha512-KK6y/BN8lbaq654j7JgBydev7wuNMcID54lkRav1P0CaE1e47P72AWWPiGKXTJU271ooYzcvTAn/Zt0REnvc7A==}
@@ -1586,6 +1600,12 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
+  '@cartamd/plugin-code@4.0.6(carta-md@4.5.0(svelte@4.2.19))':
+    dependencies:
+      '@shikijs/rehype': 1.22.0
+      carta-md: 4.5.0(svelte@4.2.19)
+      unified: 11.0.5
+
   '@cartamd/plugin-emoji@4.1.3(carta-md@4.5.0(svelte@4.2.19))(svelte@4.2.19)':
     dependencies:
       bezier-easing: 2.1.0
@@ -1788,6 +1808,15 @@ snapshots:
     dependencies:
       '@shikijs/types': 1.22.0
       '@shikijs/vscode-textmate': 9.3.0
+
+  '@shikijs/rehype@1.22.0':
+    dependencies:
+      '@shikijs/types': 1.22.0
+      '@types/hast': 3.0.4
+      hast-util-to-string: 3.0.1
+      shiki: 1.22.0
+      unified: 11.0.5
+      unist-util-visit: 5.0.0
 
   '@shikijs/types@1.22.0':
     dependencies:
@@ -2233,6 +2262,10 @@ snapshots:
       space-separated-tokens: 2.0.2
       stringify-entities: 4.0.4
       zwitch: 2.0.4
+
+  hast-util-to-string@3.0.1:
+    dependencies:
+      '@types/hast': 3.0.4
 
   hast-util-to-text@4.0.2:
     dependencies:

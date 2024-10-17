@@ -1,5 +1,7 @@
 <script>
   import NavBar from "$lib/parts/NavBar.svelte";
+
+  const latexCode = `\\text{slope} = \\frac{f(5) - f(4)}{-1} = \\frac{0 - 1}{-1} = 1`;
 </script>
 
 <div class="sticky top-0">
@@ -167,13 +169,13 @@ ___
     </div>
 
     <div class="my-4">
-      <p class="text-2xl my-2 text-type-emphasized">
-        Admonitions
-      </p>
+      <p class="text-2xl my-2 text-type-emphasized">Admonitions</p>
       <p class="text-type-dimmed">
         Admonitions are defined by using the <code>&#62;</code> symbol followed by the type of
         admonition you want to use and the text you want to display. The admonition types are
-        <code>[!NOTE]</code>, <code>[!IMPORTANT]</code>, <code>[!TIP]</code>, <code>[!CAUTION]</code> and <code>[!WARNING]</code>.
+        <code>[!NOTE]</code>, <code>[!IMPORTANT]</code>, <code>[!TIP]</code>,
+        <code>[!CAUTION]</code>
+        and <code>[!WARNING]</code>.
       </p>
       <pre class="text-mono bg-mono-card p-3 my-1 rounded-sm text-wrap">
 > [!NOTE]
@@ -181,7 +183,28 @@ ___
 </pre>
     </div>
 
-    <p class="text-xs mt-5">
+    <div class="my-4">
+      <p class="text-2xl my-2 text-type-emphasized">Math</p>
+      <p class="text-type-dimmed">
+        Math is defined using the <code>$$</code> symbol followed by an equation in LaTeX format, then
+        followed by an ending set of double dollar signs.
+      </p>
+      <pre class="text-mono bg-mono-card p-3 my-1 rounded-sm text-wrap">
+$$
+f(5) = (5 - 5)^2 = 0
+$$
+
+$$
+{@html latexCode}
+$$
+</pre>
+      <a
+        class="text-sm"
+        href="https://i.postimg.cc/3wGPNSC5/math-example.png"
+        title="Markdown output exmaple">Example output</a>
+    </div>
+
+    <p class="text-xs mt-8">
       Created by <a
         href="https://github.com/itzcozi"
         title="BadDeveloper's github">BadDeveloper</a>

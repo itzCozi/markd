@@ -18,26 +18,26 @@
   import rehypeExternalLinks from "rehype-external-links";
 
   const externalLinksTransformer: UnifiedTransformer<"sync"> = {
-		execution: "sync",
-		type: "rehype",
-		transform: ({ processor }) => {
-			processor.use(rehypeExternalLinks, {
-				target: "_blank",
-				rel: ["noopener", "noreferrer"]
-			});
-		}
-	};
+    execution: "sync",
+    type: "rehype",
+    transform: ({ processor }) => {
+      processor.use(rehypeExternalLinks, {
+        target: "_blank",
+        rel: ["noopener", "noreferrer"],
+      });
+    },
+  };
 
-	const externalLinks = (): Plugin => ({
-		transformers: [externalLinksTransformer]
-	})
+  const externalLinks = (): Plugin => ({
+    transformers: [externalLinksTransformer],
+  });
 
   import plugin from "remark-github-beta-blockquote-admonitions";
   import remarkParse from "remark-parse";
   import remarkRehype from "remark-rehype";
   import rehypeStringify from "rehype-stringify";
   import "../admonitions.css";
-  import { defaultConfig } from "../lib/functions/admonitionsConfig"
+  import { defaultConfig } from "../lib/functions/admonitionsConfig";
 
   const admonitionsTransformer: UnifiedTransformer<"sync"> = {
     execution: "sync",
@@ -47,12 +47,12 @@
       processor.use(plugin, defaultConfig);
       processor.use(remarkRehype);
       processor.use(rehypeStringify);
-    }
+    },
   };
 
   const admonitions = (): Plugin => ({
-    transformers: [admonitionsTransformer]
-  })
+    transformers: [admonitionsTransformer],
+  });
 
   import { math } from '@cartamd/plugin-math';
   import 'katex/dist/katex.css';

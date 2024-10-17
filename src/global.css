@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 :root ::-webkit-scrollbar {
-  width: 7px;
+  width: 8px;
   background-color: transparent;
+  border-left: #202020 solid 0.5px;
 }
 :root ::-webkit-scrollbar-thumb {
   background-color: #252525;
@@ -104,7 +105,7 @@ a:hover {
 
   .carta-toolbar {
     height: 50px !important;
-    position: fixed !important; 
+    position: fixed !important;
     top: unset !important;
     bottom: 0 !important;
     left: 0 !important;

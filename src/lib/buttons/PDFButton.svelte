@@ -35,15 +35,6 @@
   }
 </script>
 
-<style>
-  .scale-hover {
-    transition: transform 0.2s;
-  }
-  .scale-hover:hover {
-    transform: scale(1.01);
-  }
-</style>
-
 <button
   class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-mono-accentLight2 hover:shadow-xl duration-200 scale-hover"
   on:click="{printContent}"

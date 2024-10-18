@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
   import { Menu, FileText, CircleHelp } from "lucide-svelte";
@@ -19,6 +20,19 @@
   function closeSidebar() {
     isSidebarOpen = false;
   }
+
+  let preventClose = false;
+
+  function closeExportMenu(event: MouseEvent) {
+    const exportMenu = document.querySelector('.export-menu');
+    if (exportMenu && !exportMenu.contains(event.target as Node) && event.target !== document.querySelector('button[title="Export"]') && !preventClose) {
+      exportMenuOpen = false;
+    }
+  }
+
+  onMount(() => {
+    document.addEventListener('click', closeExportMenu);
+  });
 </script>
 
 <style>
@@ -58,7 +72,7 @@
       <div class="relative inline-block text-left">
         {#if $page.url.pathname === "/"}
           <button
-            class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"
+            class="export-menu text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"
             title="Export"
             on:click="{() => {
               exportMenuOpen = !exportMenuOpen;

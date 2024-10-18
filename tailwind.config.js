@@ -15,6 +15,7 @@ module.exports = {
         },
         mono: {
           background: "#121212",
+          lightBackground: "#ffffff",
           card: "#202020",
           accent: "#1a1a1a",
           accentDark: "#252525",

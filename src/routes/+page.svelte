@@ -10,13 +10,13 @@
 
   // Plugins:
 
-    // Slash
+  // Slash
   import "../slash.css";
   import { slash } from "@cartamd/plugin-slash";
-    // Emoji
+  // Emoji
   import "../emoji.css";
   import { emoji } from "@cartamd/plugin-emoji";
-    // External links forced
+  // External links forced
   import type { Plugin, UnifiedTransformer } from "carta-md";
   import rehypeExternalLinks from "rehype-external-links";
 
@@ -34,26 +34,26 @@
   const externalLinks = (): Plugin => ({
     transformers: [externalLinksTransformer],
   });
-    // Admonitions
+  // Admonitions
   import plugin from "remark-github-beta-blockquote-admonitions";
   import { defaultConfig } from "../lib/functions/admonitionsConfig";
   import "../admonitions.css";
 
-  const admonitionsTransformer: UnifiedTransformer<'sync'> = {
-    execution: 'sync',
-    type: 'remark',
+  const admonitionsTransformer: UnifiedTransformer<"sync"> = {
+    execution: "sync",
+    type: "remark",
     transform: ({ processor }) => {
       processor.use(plugin, defaultConfig);
-    }
+    },
   };
 
   const admonitions = (): Plugin => ({
     transformers: [admonitionsTransformer],
   });
-    // Math
+  // Math
   import { math } from "@cartamd/plugin-math";
   import "katex/dist/katex.css";
-    // Code
+  // Code
   import { code } from "@cartamd/plugin-code";
   // End Plugins
 
@@ -66,7 +66,6 @@
   let carta: CartaType;
   let source = localStorageStore.get("markdown") || "";
   setContext("source", source);
-
   $: localStorageStore.set("markdown", source);
 
   $: carta = new Carta({
@@ -129,7 +128,7 @@
 <NavBar />
 
 <div
-  class="{`flex h-[calc(100dvh-80px)] ${$markdownTheme === 'light' ? 'bg-white' : 'bg-mono-background'}`}">
+  class="{`flex h-[calc(100dvh-73px)] ${$markdownTheme === 'light' ? 'bg-mono-lightBackground' : 'bg-mono-background'}`}">
   <div
     class="editor"
     style="width: {leftWidth}%;">
@@ -141,7 +140,7 @@
           : 'hidden'}">
       </div>
       <div
-        class="{`w-full p-2 border-none outline-none resize-none ${$markdownTheme === 'light' ? 'bg-white' : 'bg-mono-background'} font-mono overflow-y-auto`}"
+        class="{`w-full p-2 border-none outline-none resize-none ${$markdownTheme === 'light' ? 'bg-mono-lightBackground' : 'bg-mono-background'} font-mono overflow-y-auto`}"
         on:scroll="{handleEditorScroll}">
         {#key $markdownTheme}
           <MarkdownEditor
@@ -164,7 +163,7 @@
   </div>
 
   <div
-    class="{`renderer p-2 overflow-auto markdown-content ${$markdownTheme === 'light' ? 'bg-white' : ''}`}"
+    class="renderer p-2 overflow-auto markdown-content"
     style="width: {100 - leftWidth}%"
     on:scroll="{handleRendererScroll}">
     <div class="renderer-toolbar">

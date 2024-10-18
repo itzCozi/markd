@@ -82,7 +82,7 @@
     --fgColor-danger: #d1242f;
     --fgColor-done: #8250df;
     --bgColor-default: #ffffff;
-    --bgColor-muted: #f6f8fa;
+    --bgColor-muted: #ededed;
     --bgColor-neutral-muted: #818b981f;
     --bgColor-attention-muted: #fff8c5;
     --borderColor-default: #d1d9e0;
@@ -870,6 +870,7 @@
   color: var(--fgColor-default);
   background-color: var(--bgColor-muted);
   border-radius: 6px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
 }
 
 .markdown-body pre code,

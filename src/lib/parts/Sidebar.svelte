@@ -31,7 +31,7 @@
       <button
         title="Close"
         on:click="{closeSidebar}"
-        class="bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-100 p-2 rounded">
+        class="bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-100 p-1 rounded">
         <XIcon />
       </button>
     </div>

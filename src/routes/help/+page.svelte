@@ -10,9 +10,9 @@
 
 <!--https://rentry.org/how-->
 
-<div class="flex pt-8 mx-2 bg-mono-background justify-center items-center">
-  <div class="p-4 bg-mono-accent max-w-4xl mb-8 rounded-md">
-    <p class="text-3xl font-semibold">Usage</p>
+<div class="flex py-8 mx-2 bg-mono-background justify-center items-center">
+  <div class="p-5 bg-mono-accent max-w-4xl rounded-md">
+    <p class="text-3xl font-semibold">How to use Markdown</p>
     <p class="text-type-dimmed mt-2">
       Markdown is a lightweight markup language with plain text formatting syntax. Its design allows
       easy conversion to HTML and other formats, and its syntax is influenced by Perl. Markdown is
@@ -118,12 +118,13 @@
       <p class="text-2xl my-2 text-type-emphasized">Code</p>
       <p class="text-type-dimmed">
         Code is defined using the <code>`</code> symbol. Inline code is defined by wrapping the code
-        in singular backticks. Block code is defined by wrapping the code in triple backticks.
+        in singular backticks. Block code is defined by wrapping the code in triple backticks. Code blocks
+        allow for syntax highlighting by specifying the language after the first set of triple backticks.
       </p>
       <pre class="text-mono bg-mono-card p-3 my-1 rounded-sm text-wrap">
 `git clone https://github.com/itzcozi/markd.git`
 
-```
+```py
 number1 = 1
 number2 = 2
 print(number1 + number2)

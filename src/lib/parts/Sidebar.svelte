@@ -16,6 +16,11 @@
   on:keydown="{(e) => e.key === 'Enter' && closeSidebar()}">
 </div>
 
+<!--
+  I am really specific about transitions. here the duration for nav buttons
+  is 150 but the durations for other buttons like close and link buttons uses 100
+-->
+
 <aside
   class="fixed top-0 left-0 w-full md:w-64 flex flex-col h-full bg-mono-card shadow-lg z-50 transform transition-transform duration-200"
   class:translate-x-0="{isSidebarOpen}"
@@ -46,12 +51,12 @@
           goto('/about');
         }}">About</button>
       <button
-        title="Usage"
+        title="help"
         class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
         on:click="{() => {
           closeSidebar();
-          goto('/usage');
-        }}">Usage</button>
+          goto('/help');
+        }}">Docs</button>
     </div>
   </div>
   <div class="mt-auto mb-2 px-4 flex justify-between">

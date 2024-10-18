@@ -36,7 +36,7 @@
 </script>
 
 <button
-  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-mono-accentLight2 hover:shadow-xl duration-200 scale-hover"
+  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-mono-accentLight2 hover:shadow-xl duration-150"
   on:click="{printContent}"
   title="Export as PDF">
   Export as PDF (.pdf)

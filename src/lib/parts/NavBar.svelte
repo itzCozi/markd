@@ -50,8 +50,8 @@
       {#if $page.url.pathname === "/"}
         <button
           class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"
-          title="How to"
-          on:click="{() => goto('/usage')}">
+          title="Help"
+          on:click="{() => goto('/help')}">
           <CircleHelp />
         </button>
       {/if}

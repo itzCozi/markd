@@ -9,11 +9,14 @@
   import NavBar from "$lib/parts/NavBar.svelte";
 
   // Plugins:
+
+    // Slash
   import "../slash.css";
   import { slash } from "@cartamd/plugin-slash";
+    // Emoji
   import "../emoji.css";
   import { emoji } from "@cartamd/plugin-emoji";
-
+    // External links forced
   import type { Plugin, UnifiedTransformer } from "carta-md";
   import rehypeExternalLinks from "rehype-external-links";
 
@@ -31,32 +34,26 @@
   const externalLinks = (): Plugin => ({
     transformers: [externalLinksTransformer],
   });
-
+    // Admonitions
   import plugin from "remark-github-beta-blockquote-admonitions";
-  import remarkParse from "remark-parse";
-  import remarkRehype from "remark-rehype";
-  import rehypeStringify from "rehype-stringify";
-  import "../admonitions.css";
   import { defaultConfig } from "../lib/functions/admonitionsConfig";
+  import "../admonitions.css";
 
-  const admonitionsTransformer: UnifiedTransformer<"sync"> = {
-    execution: "sync",
-    type: "remark",
+  const admonitionsTransformer: UnifiedTransformer<'sync'> = {
+    execution: 'sync',
+    type: 'remark',
     transform: ({ processor }) => {
-      processor.use(remarkParse);
       processor.use(plugin, defaultConfig);
-      processor.use(remarkRehype);
-      processor.use(rehypeStringify);
-    },
+    }
   };
 
   const admonitions = (): Plugin => ({
     transformers: [admonitionsTransformer],
   });
-
+    // Math
   import { math } from "@cartamd/plugin-math";
   import "katex/dist/katex.css";
-
+    // Code
   import { code } from "@cartamd/plugin-code";
   // End Plugins
 

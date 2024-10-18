@@ -28,10 +28,6 @@ html, body {
   caret-color: white;
 }
 
-.carta-wrapper, .carta-container {
-  height: 100%;
-}
-
 .carta-toolbar {
   width: fit-content;
   position: sticky !important;

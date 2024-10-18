@@ -55,9 +55,9 @@
   });
 
   import { math } from "@cartamd/plugin-math";
-  import { code } from "@cartamd/plugin-code";
   import "katex/dist/katex.css";
 
+  import { code } from "@cartamd/plugin-code";
   // End Plugins
 
   let leftWidth = 50;
@@ -191,7 +191,7 @@
         </span>
       </label>
     </div>
-    {#key source}
+    {#key source + $markdownTheme}
       <Markdown
         {carta}
         value="{source}"

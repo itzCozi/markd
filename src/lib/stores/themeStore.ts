@@ -52,7 +52,7 @@ function handleThemeChange(theme: string) {
           color: black;
           background-color: #f0f0f0;
         }
-        
+
         .carta-slash {
           --background: #F5F5F5FF;
           --group-color: #3b3b3b;
@@ -72,6 +72,10 @@ function handleThemeChange(theme: string) {
 
         html, body {
           caret-color: black !important;
+        }
+
+        .shiki {
+          background-color: #f0f0f0 !important;
         }
       `;
       document.head.appendChild(style);

@@ -1,6 +1,19 @@
 <script lang="ts">
+  import { markdownTheme } from "$lib/stores/themeStore";
+
   // Print instead of pdf export
   async function printContent() {
+
+    const originalTheme = $markdownTheme;
+
+    if ($markdownTheme === "light") {
+      console.error("theme is light");
+    } else {
+      markdownTheme.update((theme) => (theme === "light" ? "" : "light"));
+    }
+
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     const element = document.querySelector(".markdown-content");
     if (!element) {
       console.error("Element not found");
@@ -30,6 +43,10 @@
     document.head.appendChild(style);
 
     window.print();
+
+    if (originalTheme !== "light") {
+      markdownTheme.update((theme) => "dark");
+    }
 
     window.location.reload();
   }

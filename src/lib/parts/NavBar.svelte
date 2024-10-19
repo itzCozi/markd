@@ -24,14 +24,19 @@
   let preventClose = false;
 
   function closeExportMenu(event: MouseEvent) {
-    const exportMenu = document.querySelector('.export-menu');
-    if (exportMenu && !exportMenu.contains(event.target as Node) && event.target !== document.querySelector('button[title="Export"]') && !preventClose) {
+    const exportMenu = document.querySelector(".export-menu");
+    if (
+      exportMenu &&
+      !exportMenu.contains(event.target as Node) &&
+      event.target !== document.querySelector('button[title="Export"]') &&
+      !preventClose
+    ) {
       exportMenuOpen = false;
     }
   }
 
   onMount(() => {
-    document.addEventListener('click', closeExportMenu);
+    document.addEventListener("click", closeExportMenu);
   });
 </script>
 
@@ -44,7 +49,7 @@
   }
 </style>
 
-<header class="navbar w-full p-4 bg-mono-card shadow-lg z-20">
+<header class="navbar w-full p-4 bg-mono-card z-20">
   <nav class="flex justify-between items-center">
     <a
       href="/"

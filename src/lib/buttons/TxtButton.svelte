@@ -16,7 +16,7 @@
 </script>
 
 <button
-  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-mono-accentLight2 hover:shadow-xl duration-150"
+  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-mono-accentLight2 duration-150 ease-in-out"
   on:click="{exportToTxt}"
   title="Export as TXT">
   Export as Text (.txt)

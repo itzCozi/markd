@@ -3,7 +3,6 @@
 
   // Print instead of pdf export
   async function printContent() {
-
     const originalTheme = $markdownTheme;
 
     if ($markdownTheme === "light") {
@@ -53,7 +52,7 @@
 </script>
 
 <button
-  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-mono-accentLight2 hover:shadow-xl duration-150"
+  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-mono-accentLight2 duration-150 ease-in-out"
   on:click="{printContent}"
   title="Export as PDF">
   Export as PDF (.pdf)

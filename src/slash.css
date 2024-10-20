@@ -6,7 +6,7 @@
 	--hover-background: #222222;
 
 	width: 18rem;
-	max-height: 14rem;
+	max-height: 20rem;
 	overflow-y: scroll;
 	border-radius: 4px;
 	font-family: inherit;
@@ -44,10 +44,12 @@
 	font-size: 0.85rem;
 	font-weight: 600;
 	color: var(--title-color);
+  text-align: left;
 }
 
 .carta-slash .carta-snippet-description {
 	font-size: 0.8rem;
 	text-overflow: ellipsis;
 	color: var(--description-color);
+  text-align: left;
 }

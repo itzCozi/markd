@@ -156,7 +156,7 @@
     style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div
-        class="line-count p-2 text-gray-600 text-right border-r border-[#252525] w-12 {selectedTab ===
+        class="line-count hidden p-2 text-gray-600 text-right border-r border-[#252525] w-12 {selectedTab ===
         "write"
           ? ""
           : "hidden"}">

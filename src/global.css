@@ -28,6 +28,10 @@ html, body {
   caret-color: white;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .carta-toolbar {
   width: fit-content;
   position: sticky !important;

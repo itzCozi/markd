@@ -14,6 +14,7 @@
   // Slash
   import "../slash.css";
   import { slash } from "@cartamd/plugin-slash";
+  import { additionalSnippets } from "$lib/functions/slash";
   // Emoji
   import "../emoji.css";
   import { emoji } from "@cartamd/plugin-emoji";
@@ -86,7 +87,9 @@
     sanitizer: DOMPurify.sanitize,
     theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
     extensions: [
-      slash(),
+      slash({
+        snippets: additionalSnippets
+      }),
       emoji(),
       externalLinks(),
       admonitions(),

@@ -8,6 +8,7 @@
   import TxtButton from "../buttons/TxtButton.svelte";
   import HtmlButton from "../buttons/HTMLButton.svelte";
   import FullscreenToggle from "../buttons/FullscreenToggle.svelte";
+  import { isIOS } from "$lib/functions/isMobile";
 
   let isSidebarOpen = false;
   let exportMenuOpen = false;
@@ -92,7 +93,9 @@
             aria-labelledby="user-menu-button"
             tabindex="-1">
             <TxtButton />
-            <PdfButton />
+            {#if !isIOS}
+              <PdfButton />
+            {/if}
             <HtmlButton />
           </div>
         {/if}

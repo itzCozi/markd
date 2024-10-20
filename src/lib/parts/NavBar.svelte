@@ -8,6 +8,7 @@
   import TxtButton from "../buttons/TxtButton.svelte";
   import HtmlButton from "../buttons/HTMLButton.svelte";
   import FullscreenToggle from "../buttons/FullscreenToggle.svelte";
+  import MdButton from "$lib/buttons/MdButton.svelte";
 
   let isSidebarOpen = false;
   let exportMenuOpen = false;
@@ -91,6 +92,7 @@
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"
             tabindex="-1">
+            <MdButton />
             <TxtButton />
             <PdfButton />
             <HtmlButton />

@@ -30,6 +30,7 @@ html, body {
 
 .carta-toolbar {
   width: fit-content;
+  max-width: 20dvw;
   position: sticky !important;
   top: 0;
   background-color: #111 !important;
@@ -92,6 +93,25 @@ a:hover {
   width: fit-content;
   border-radius: 5px;
   z-index: 9999;
+  text-wrap: nowrap;
+}
+
+.carta-icons-menu {
+  position: fixed !important;
+  top: unset !important;
+  left: 10px !important;
+  width: fit-content;
+  height: fit-content;
+  background-color: #111 !important;
+  border: 1px solid #2f4359;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 90;
+  gap: 2px;
+}
+
+.carta-icons-menu svg {
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
@@ -116,6 +136,7 @@ a:hover {
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
+    max-width: unset;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
@@ -138,5 +159,10 @@ a:hover {
   .stats {
     bottom: 50px !important;
     width: 100%;
+  }
+  .carta-icons-menu {
+      bottom: 80px !important;
+      left: unset !important;
+      right: 0 !important;
   }
 }

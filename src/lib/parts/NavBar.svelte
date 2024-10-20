@@ -4,7 +4,6 @@
   import { goto } from "$app/navigation";
   import { Menu, FileText, CircleHelp } from "lucide-svelte";
   import Sidebar from "$lib/parts/Sidebar.svelte";
-  import ThemeToggle from "$lib/buttons/ThemeToggle.svelte";
   import PdfButton from "../buttons/PDFButton.svelte";
   import TxtButton from "../buttons/TxtButton.svelte";
   import HtmlButton from "../buttons/HTMLButton.svelte";
@@ -100,7 +99,6 @@
       </div>
       {#if $page.url.pathname === "/"}
         <FullscreenToggle />
-        <ThemeToggle />
       {/if}
       <button
         class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"

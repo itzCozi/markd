@@ -3,6 +3,23 @@
 
   // Print instead of pdf export
   async function printContent() {
+    const overlay = document.createElement("div");
+    overlay.id = "export-overlay";
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100vw";
+    overlay.style.height = "100vh";
+    overlay.style.backgroundColor = "black";
+    overlay.style.color = "white";
+    overlay.style.display = "flex";
+    overlay.style.justifyContent = "center";
+    overlay.style.alignItems = "center";
+    overlay.style.zIndex = "9999";
+    overlay.style.fontSize = "2rem";
+    overlay.innerText = "Exporting...";
+    document.body.appendChild(overlay);
+
     const originalTheme = $markdownTheme;
 
     if ($markdownTheme === "light") {
@@ -42,6 +59,22 @@
     document.head.appendChild(style);
 
     window.print();
+
+    overlay.id = "export-overlay";
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100vw";
+    overlay.style.height = "100vh";
+    overlay.style.backgroundColor = "black";
+    overlay.style.color = "white";
+    overlay.style.display = "flex";
+    overlay.style.justifyContent = "center";
+    overlay.style.alignItems = "center";
+    overlay.style.zIndex = "9999";
+    overlay.style.fontSize = "2rem";
+    overlay.innerText = "Reloading...";
+    document.body.appendChild(overlay);
 
     if (originalTheme !== "light") {
       markdownTheme.update((theme) => "dark");

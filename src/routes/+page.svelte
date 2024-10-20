@@ -128,7 +128,7 @@
 <NavBar />
 
 <div
-  class="{`flex h-[calc(100dvh-73px)] ${$markdownTheme === 'light' ? 'bg-mono-lightBackground' : 'bg-mono-background'}`}">
+  class="flex h-[calc(100dvh-73px)] bg-mono-background">
   <div
     class="editor"
     style="width: {leftWidth}%;">
@@ -140,7 +140,7 @@
           : 'hidden'}">
       </div>
       <div
-        class="{`w-full p-2 border-none outline-none resize-none ${$markdownTheme === 'light' ? 'bg-mono-lightBackground' : 'bg-mono-background'} font-mono overflow-y-auto`}"
+        class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
         on:scroll="{handleEditorScroll}">
         {#key $markdownTheme}
           <MarkdownEditor

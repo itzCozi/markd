@@ -30,7 +30,6 @@ html, body {
 
 .carta-toolbar {
   width: fit-content;
-  max-width: 20dvw;
   position: sticky !important;
   top: 0;
   background-color: #111 !important;

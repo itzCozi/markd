@@ -50,6 +50,18 @@
   const admonitions = (): Plugin => ({
     transformers: [admonitionsTransformer],
   });
+  // Raw HTML
+  import rehypeRaw from 'rehype-raw'
+
+  const rawhtml: Plugin = {
+        transformers: [{
+            execution: 'sync',
+            type: 'rehype',
+            transform({ processor }) {
+                processor.use(rehypeRaw)
+            }
+        }]
+    }
   // Math
   import { math } from "@cartamd/plugin-math";
   import "katex/dist/katex.css";
@@ -69,6 +81,7 @@
   $: localStorageStore.set("markdown", source);
 
   $: carta = new Carta({
+    rehypeOptions: { allowDangerousHtml: true },
     sanitizer: DOMPurify.sanitize,
     theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
     extensions: [
@@ -78,6 +91,7 @@
       admonitions(),
       math(),
       code({ theme: $markdownTheme === "light" ? "light-plus" : "dark-plus" }),
+      rawhtml,
     ],
   });
 

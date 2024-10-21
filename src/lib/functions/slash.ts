@@ -189,6 +189,19 @@ export const additionalSnippets: SlashSnippet[] = [
       ),
   },
   {
+    id: "math",
+    group: "Advanced",
+    title: "Math",
+    description: "Create a mathematical equation",
+    action: (input: InputEnhancer) =>
+      insertLine(
+        input,
+        "$$\n" +
+        "\\text{slope} = \\frac{f(5) - f(4)}{-1} = \\frac{0 - 1}{-1} = 1\n" +
+        "$$"
+      ),
+  },
+  {
     id: "indented-paragraphs",
     group: "Advanced",
     title: "Indented Paragraphs",

@@ -205,6 +205,14 @@ $$
         title="Markdown output exmaple">Example output</a>
     </div>
 
+    <div class="my-4">
+      <p class="text-2xl my-2 text-type-emphasized">HTML Code</p>
+      <p class="text-type-dimmed">
+        Our editor allows for HTML code to be used in the same file as markdown. This is useful for
+        centering text and other more complex things markdown doesn't support natively.
+      </p>
+    </div>
+
     <p class="text-xs mt-8">
       Created by <a
         href="https://github.com/itzcozi"

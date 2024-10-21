@@ -121,7 +121,7 @@
         in singular backticks. Block code is defined by wrapping the code in triple backticks. Code blocks
         allow for syntax highlighting by specifying the language after the first set of triple backticks.
       </p>
-      <pre class="text-mono bg-mono-card p-3 my-1 rounded-sm text-wrap">
+      <pre class="text-mono bg-mono-card p-3 my-1 rounded-sm text-wrap overflow-x-auto max-w-full">
 `git clone https://github.com/itzcozi/markd.git`
 
 ```py

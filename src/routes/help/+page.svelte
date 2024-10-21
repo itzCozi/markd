@@ -211,13 +211,16 @@ $$
 {@html latexCode}
 $$
 </pre>
-      <p class="text-type-dimmed py-2">Math Preview:</p>
-      <img
-        src="/math-example.png"
-        alt="logo"
-        class="max-w-[400px]" />
-    </div>
-
+      <p class="text-type-dimmed py-4">
+        Math Preview:
+      </p>
+        <div class="flex">
+          <img
+            src="/math-example.png"
+            alt="logo"
+            class="rounded-lg max-w-[400px] w-[99%] pb-2" />
+        </div>
+      </div>
     <div class="my-4">
       <p class="text-2xl my-2 text-type-emphasized">HTML Code</p>
       <p class="text-type-dimmed">

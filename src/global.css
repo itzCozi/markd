@@ -95,7 +95,7 @@ a:hover {
   right: 0;
   width: fit-content;
   border-radius: 5px;
-  z-index: 9999;
+  z-index: 30;
   text-wrap: nowrap;
 }
 

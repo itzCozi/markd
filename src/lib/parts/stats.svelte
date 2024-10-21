@@ -8,10 +8,10 @@
   $: readTime = Math.ceil(wordCount / 200);
 </script>
 
-<div class="stats bg-mono-card py-1 px-3 gap-2 text-type-dimmed text-xs ml-auto">
-  <span>Characters: {characterCount}</span>
-  <span>|</span>
-  <span>Words: {wordCount}</span>
-  <span>|</span>
-  <span>Read Time: {readTime} minutes</span>
+<div class="stats bg-mono-card py-1 px-2 m-1 gap-3 text-type-dimmed text-xs">
+  <span class="stat-item">Characters: {characterCount}</span>
+  <span class="separator">•</span>
+  <span class="stat-item">Words: {wordCount}</span>
+  <span class="separator">•</span>
+  <span class="stat-item">Read Time: {readTime} minutes</span>
 </div>

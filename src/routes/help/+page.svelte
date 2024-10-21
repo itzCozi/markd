@@ -1,5 +1,6 @@
 <script>
   import NavBar from "$lib/parts/NavBar.svelte";
+  import { CircleAlert } from "lucide-svelte";
 
   const latexCode = `\\text{slope} = \\frac{f(5) - f(4)}{-1} = \\frac{0 - 1}{-1} = 1`;
 </script>
@@ -10,7 +11,8 @@
 
 <!--https://rentry.org/how-->
 
-<div class="py-6 mx-2 bg-mono-background flex flex-wrap justify-center items-center overflow-hidden">
+<div
+  class="py-6 mx-2 bg-mono-background flex flex-wrap justify-center items-center overflow-hidden">
   <div class="w-[97%] p-5 bg-mono-accent max-w-4xl rounded-md">
     <p class="text-3xl font-semibold">How to use Markdown</p>
     <p class="text-type-dimmed mt-2">
@@ -21,14 +23,15 @@
       basic syntax and our custom site-specific syntax.
     </p>
 
-    <!-- Important Admonition -->
-    <div class="bg-mono-card border-l-4 border-yellow-500 text-primary p-4 my-4 rounded-md">
-      <p class="font-bold text-yellow-500">Important:</p>
-      <p>
-        You can use <code class="text-type-emphasized">/</code> commands to quickly format text, create headers, and insert various elements in Markdown. These commands can greatly enhance your writing efficiency!
-      </p>
+    <div class="flex flex-row gap-2 items-center">
+      <p class="text-2xl font-semibold mt-2">IntelliSense</p>
+      <CircleAlert class="text-type-dimmed w-4 h-4" />
     </div>
-
+    <p class="text-type-dimmed mt-2">
+      Our editor features IntelliSense. Type <code>/</code> to see available commands, or
+      <code>:</code> for emoji selection. You can create headers, lists, tables and basically anything
+      using our IntelliSense.
+    </p>
     <hr class="border-b border-mono-accentLight2 my-4 border-0" />
 
     <div class="my-4">
@@ -208,15 +211,11 @@ $$
 {@html latexCode}
 $$
 </pre>
-      <p class="text-type-dimmed py-4">
-        Math Preview:
-      </p>
-        <div class="flex">
-          <img
-            src="/math-example.png"
-            alt="logo"
-            class="rounded-lg max-w-[400px] w-[99%] pb-2" />
-        </div>
+      <p class="text-type-dimmed py-2">Math Preview:</p>
+      <img
+        src="/math-example.png"
+        alt="logo"
+        class="max-w-[400px]" />
     </div>
 
     <div class="my-4">
@@ -226,13 +225,6 @@ $$
         centering text and other more complex things markdown doesn't support natively.
       </p>
     </div>
-
-    <div class="my-4">
-      <p class="text-2xl my-2 text-type-emphasized">Emoji Shortcut</p>
-      <p class="text-type-dimmed">
-          Use colons <code class="text-type-emphasized">:</code> to select an emoji! And wrap it on both sides like <code class="text-type-emphasized">:smile:</code> to display the corresponding emoji.
-      </p>
-  </div>
 
     <p class="text-xs mt-8">
       Created by <a

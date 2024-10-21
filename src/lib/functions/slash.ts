@@ -47,8 +47,68 @@ export const additionalSnippets: SlashSnippet[] = [
     id: "horizontalRule",
     group: "Basic",
     title: "Horizontal Rule",
-    description: "Add a horizontal rule",
+    description: "Add a horizontal rule (divider)",
     action: (input: InputEnhancer) => insertLine(input, "---"),
+  },
+  {
+    id: "noteAdmonition",
+    group: "Basic",
+    title: "Note",
+    description: "Add a note admonition",
+    action: (input: InputEnhancer) =>
+      insertLine(
+        input,
+        "> [!NOTE]\n" +
+        "> Something *Noteworthy*"
+      ),
+  },
+  {
+    id: "importantAdmonition",
+    group: "Basic",
+    title: "Important",
+    description: "Add an important admonition",
+    action: (input: InputEnhancer) =>
+      insertLine(
+        input,
+        "> [!IMPORTANT]\n" +
+        "> Something *Important*"
+      ),
+  },
+  {
+    id: "tipAdmonition",
+    group: "Basic",
+    title: "Tip",
+    description: "Add a tip admonition",
+    action: (input: InputEnhancer) =>
+      insertLine(
+        input,
+        "> [!TIP]\n" +
+        "> Something *Helpful*"
+      ),
+  },
+  {
+    id: "cautionAdmonition",
+    group: "Basic",
+    title: "Caution",
+    description: "Add a caution admonition",
+    action: (input: InputEnhancer) =>
+      insertLine(
+        input,
+        "> [!CAUTION]\n" +
+        "> Don't do ____!"
+      ),
+  },
+  {
+    id: "warningAdmonition",
+    group: "Basic",
+    title: "Warning",
+    description: "Add a warning admonition",
+    action: (input: InputEnhancer) =>
+      insertLine(
+        input,
+        "> [!WARNING]\n" +
+        "> Something *Scary*"
+      ),
   },
   {
     id: "table-2x2",

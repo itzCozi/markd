@@ -14,12 +14,14 @@ MarkD (sounds like "maarkt" when pronounced) is an advanced live markdown editor
 ## Features
 - Live preview of markdown
 - No ads or tracking
+- Syntax highlighting
 - Advanced markdown editor
 - Extended syntax
-- Editor themes
-- PDF export
-- Split view (scalable)
-- Light mode
+- Printer friendly
+- LaTeX support
+- PDF, RTF and HTML export
+- Scalable Split view
+- Scroll sync
 - Persistent storage
 
 ### Contact Us

@@ -164,13 +164,13 @@
       </div>
       <div
         class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
-        on:scroll="{handleEditorScroll}">
+        on:scroll={handleEditorScroll}>
         {#key $markdownTheme}
           <MarkdownEditor
             {carta}
-            bind:value="{source}"
+            bind:value={source}
             bind:selectedTab
-            theme="{$markdownTheme}"
+            theme={$markdownTheme}
             mode="tabs"
             placeholder="Insert your markdown here..." />
         {/key}
@@ -182,19 +182,19 @@
   <div
     class="divider w-1 cursor-ew-resize bg-[#202020]"
     style="left: calc({leftWidth}% - 5px);"
-    on:mousedown="{handleMouseDown}">
+    on:mousedown={handleMouseDown}>
   </div>
 
   <div
     class="renderer p-2 overflow-auto markdown-content"
     style="width: {100 - leftWidth}%"
-    on:scroll="{handleRendererScroll}">
+    on:scroll={handleRendererScroll}>
     <div class="renderer-toolbar">
       <span class="mr-2 text-type-primary">Sync Scroll</span>
       <label class="inline-flex items-center">
         <input
           type="checkbox"
-          bind:checked="{isScrollSyncEnabled}"
+          bind:checked={isScrollSyncEnabled}
           class="hidden" />
         <span
           class="{`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${isScrollSyncEnabled ? 'bg-[#2E6AAC]' : 'bg-gray-600'} rounded-full cursor-pointer`}">
@@ -213,8 +213,8 @@
     {#key source + $markdownTheme}
       <Markdown
         {carta}
-        value="{source}"
-        theme="{$markdownTheme}" />
+        value={source}
+        theme={$markdownTheme} />
     {/key}
   </div>
 </div>

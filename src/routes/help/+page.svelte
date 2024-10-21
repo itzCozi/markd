@@ -211,14 +211,14 @@ $$
 {@html latexCode}
 $$
 </pre>
-      <p class="text-type-dimmed py-4">
+      <p class="text-type-dimmed py-2">
         Math Preview:
       </p>
         <div class="flex">
           <img
             src="/math-example.png"
             alt="logo"
-            class="rounded-lg max-w-[400px] w-[99%] pb-2" />
+            class="max-w-[400px] w-[99%]" />
         </div>
       </div>
     <div class="my-4">

@@ -407,9 +407,9 @@ export const additionalSnippets: SlashSnippet[] = [
         input,
         "# FAQ\n\n" +
           "This section addresses common questions and concerns regarding the project:\n\n" +
-          "**Q:** What technologies are used in this project?\n" +
+          "**Q:** What technologies are used in this project?\n\n" +
           "**A:** We use a combination of React for the frontend, Node.js for the backend, and MongoDB for the database.\n\n" +
-          "**Q:** How can I contribute to the project?\n" +
+          "**Q:** How can I contribute to the project?\n\n" +
           "**A:** Contributions are welcome! Please check the guidelines in the CONTRIBUTING.md file for more information.\n\n",
       ),
   },

@@ -18,8 +18,17 @@
       easy conversion to HTML and other formats, and its syntax is influenced by Perl. Markdown is
       often used to format readme files, for writing messages in online discussion forums, and to
       create rich text using a plain text editor. Here I will teach you how to use markdown, both
-      basic syntax and our custom site specific syntax.
+      basic syntax and our custom site-specific syntax.
     </p>
+
+    <!-- Important Admonition -->
+    <div class="bg-mono-card border-l-4 border-yellow-500 text-primary p-4 my-4 rounded-md">
+      <p class="font-bold text-yellow-500">Important:</p>
+      <p>
+        You can use <code>/</code> commands to quickly format text, create headers, and insert various elements in Markdown. These commands can greatly enhance your writing efficiency!
+      </p>
+    </div>
+
     <hr class="border-b border-mono-accentLight2 my-4 border-0" />
 
     <div class="my-4">

@@ -3,12 +3,13 @@
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
   import { Menu, FileText, CircleHelp } from "lucide-svelte";
+  import IconButton from "$lib/components/IconButton.svelte";
   import Sidebar from "$lib/parts/Sidebar.svelte";
-  import PdfButton from "../buttons/PDFButton.svelte";
-  import TxtButton from "../buttons/TxtButton.svelte";
-  import HtmlButton from "../buttons/HTMLButton.svelte";
-  import FullscreenToggle from "../buttons/FullscreenToggle.svelte";
-  import MdButton from "$lib/buttons/MdButton.svelte";
+  import PdfButton from "$lib/components/buttons/PDFButton.svelte";
+  import TxtButton from "$lib/components/buttons/TxtButton.svelte";
+  import HtmlButton from "$lib/components/buttons/HTMLButton.svelte";
+  import FullscreenToggle from "$lib/components/buttons/FullscreenToggle.svelte";
+  import MdButton from "$lib/components/buttons/MdButton.svelte";
 
   let isSidebarOpen = false;
   let exportMenuOpen = false;
@@ -67,23 +68,22 @@
       <!-- https://flowbite-svelte.com/docs/components/dropdown -->
       <!-- Export dropdown menu -->
       {#if $page.url.pathname === "/"}
-        <button
-          class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"
+        <IconButton
           title="Help"
-          on:click="{() => goto('/help')}">
+          onClick="{() => goto('/help')}">
           <CircleHelp />
-        </button>
+        </IconButton>
       {/if}
       <div class="relative inline-block text-left">
         {#if $page.url.pathname === "/"}
-          <button
-            class="export-menu text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"
+          <IconButton
+            className="export-menu"
             title="Export"
-            on:click="{() => {
+            onClick="{() => {
               exportMenuOpen = !exportMenuOpen;
             }}">
             <FileText />
-          </button>
+          </IconButton>
         {/if}
         {#if exportMenuOpen}
           <div
@@ -102,12 +102,12 @@
       {#if $page.url.pathname === "/"}
         <FullscreenToggle />
       {/if}
-      <button
-        class="text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"
+      <IconButton
+        className=""
         title="Navigation"
-        on:click="{toggleSidebar}">
+        onClick="{toggleSidebar}">
         <Menu />
-      </button>
+      </IconButton>
     </div>
   </nav>
 </header>

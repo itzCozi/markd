@@ -1,5 +1,6 @@
 <script lang="ts">
-  import localStorageStore from "../../lib/stores/localStorage";
+  import DropdownButton from "$lib/components/DropdownButton.svelte";
+  import localStorageStore from "../../stores/localStorage";
 
   let source = localStorageStore.get("markdown") || "";
 
@@ -14,9 +15,9 @@
   }
 </script>
 
-<button
-  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-mono-accentLight2 duration-150 ease-in-out"
-  on:click="{exportToMd}"
+<DropdownButton
+  className=""
+  onClick="{exportToMd}"
   title="Export as Markdown">
   Export Markdown (.md)
-</button>
+</DropdownButton>

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import DropdownButton from "$lib/components/DropdownButton.svelte";
   import { markdownTheme } from "$lib/stores/themeStore";
 
   // Print instead of pdf export
@@ -84,9 +85,9 @@
   }
 </script>
 
-<button
-  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-mono-accentLight2 duration-150 ease-in-out"
-  on:click="{printContent}"
+<DropdownButton
+  className=""
+  onClick="{printContent}"
   title="Export as PDF">
   Export as PDF (.pdf)
-</button>
+</DropdownButton>

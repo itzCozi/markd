@@ -1,4 +1,6 @@
 <script lang="ts">
+  import DropdownButton from "$lib/components/DropdownButton.svelte";
+
   function exportAsHtml() {
     const element = document.querySelector(".markdown-body");
     if (!element) {
@@ -24,9 +26,9 @@
   }
 </script>
 
-<button
-  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-mono-accentLight2 duration-150 ease-in-out"
-  on:click="{exportAsHtml}"
+<DropdownButton
+  className=""
+  onClick="{exportAsHtml}"
   title="Export as HTML">
   Export as HTML (.html)
-</button>
+</DropdownButton>

@@ -1,4 +1,7 @@
 <script lang="ts">
+  import LargeIconButton from "$lib/components/LargeIconButton.svelte";
+  import SmallIconButton from "$lib/components/SmallIconButton.svelte";
+  import SidebarButton from "$lib/components/SidebarButton.svelte";
   import { XIcon } from "lucide-svelte";
   import { goto } from "$app/navigation";
   import { Github, Mail } from "lucide-svelte";
@@ -16,11 +19,6 @@
   on:keydown="{(e) => e.key === 'Enter' && closeSidebar()}">
 </div>
 
-<!--
-  I am really specific about transitions. here the duration for nav buttons
-  is 150 but the durations for other buttons like close and link buttons uses 100
--->
-
 <aside
   class="fixed top-0 left-0 w-full md:w-64 flex flex-col h-full bg-mono-card shadow-lg z-50 transform transition-transform duration-200"
   class:translate-x-0="{isSidebarOpen}"
@@ -28,55 +26,55 @@
   <div class="p-4">
     <div class="flex justify-between mt-1 mb-5">
       <p class="text-2xl font-semibold">Navigation</p>
-      <button
+      <SmallIconButton
         title="Close"
-        on:click="{closeSidebar}"
-        class="bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-100 p-1 rounded">
+        onClick="{closeSidebar}"
+        className="">
         <XIcon />
-      </button>
+      </SmallIconButton>
     </div>
     <div class="flex flex-col gap-3">
-      <button
+      <SidebarButton
         title="Home"
-        class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
-        on:click="{() => {
+        className=""
+        onClick="{() => {
           closeSidebar();
           goto('/');
-        }}">Home</button>
-      <button
+        }}">Home</SidebarButton>
+      <SidebarButton
         title="About"
-        class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
-        on:click="{() => {
+        className=""
+        onClick="{() => {
           closeSidebar();
           goto('/about');
-        }}">About</button>
-      <button
+        }}">About</SidebarButton>
+      <SidebarButton
         title="help"
-        class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-150 rounded-md"
-        on:click="{() => {
+        className=""
+        onClick="{() => {
           closeSidebar();
           goto('/help');
-        }}">Docs</button>
+        }}">Docs</SidebarButton>
     </div>
   </div>
   <div class="mt-auto mb-2 px-4 flex justify-between">
-    <button
+    <LargeIconButton
       title="GitHub"
-      class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-100 rounded-md"
-      on:click="{() => {
+      className=""
+      onClick="{() => {
         closeSidebar();
         window.location.href = 'https://github.com/itzcozi/markd';
       }}">
       <Github />
-    </button>
-    <button
+    </LargeIconButton>
+    <LargeIconButton
       title="Email"
-      class="text-left py-2 px-3 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-100 rounded-md"
-      on:click="{() => {
+      className=""
+      onClick="{() => {
         closeSidebar();
         open('mailto:dev@wyzie.ru', '_blank');
       }}">
       <Mail />
-    </button>
+    </LargeIconButton>
   </div>
 </aside>

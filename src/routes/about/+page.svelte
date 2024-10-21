@@ -1,5 +1,6 @@
 <script>
   import NavBar from "$lib/parts/NavBar.svelte";
+  import IconButton from "$lib/components/IconButton.svelte";
 </script>
 
 <div class="sticky top-0">
@@ -27,12 +28,12 @@
       </a>
     </div>
     <div class="flex flex-row gap-3 items-center my-2">
-      <button
+      <IconButton
         title="Email"
-        on:click="{() => window.open('mailto:dev@wyzie,ru')}"
-        class="w-full py-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 px-1 rounded">
+        onClick="{() => window.open('mailto:dev@wyzie,ru')}"
+        className="w-full py-2 rounded-md">
         Email Us
-      </button>
+      </IconButton>
     </div>
     <p class="text-xs mt-4">
       Created by <a

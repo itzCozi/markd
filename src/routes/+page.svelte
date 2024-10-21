@@ -53,17 +53,19 @@
     transformers: [admonitionsTransformer],
   });
   // Raw HTML
-  import rehypeRaw from "rehype-raw"
+  import rehypeRaw from "rehype-raw";
 
   const rawhtml: Plugin = {
-        transformers: [{
-            execution: "sync",
-            type: "rehype",
-            transform({ processor }) {
-                processor.use(rehypeRaw)
-            }
-        }]
-    }
+    transformers: [
+      {
+        execution: "sync",
+        type: "rehype",
+        transform({ processor }) {
+          processor.use(rehypeRaw);
+        },
+      },
+    ],
+  };
   // Math
   import { math } from "@cartamd/plugin-math";
   import "katex/dist/katex.css";
@@ -88,7 +90,7 @@
     theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
     extensions: [
       slash({
-        snippets: additionalSnippets
+        snippets: additionalSnippets,
       }),
       emoji(),
       externalLinks(),
@@ -146,20 +148,19 @@
 <NavBar />
 
 {#key source}
-<Stats />
+  <Stats />
 {/key}
 
-<div
-  class="flex h-[calc(100dvh-73px)] bg-mono-background">
+<div class="flex h-[calc(100dvh-73px)] bg-mono-background">
   <div
     class="editor"
     style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div
         class="line-count hidden p-2 text-gray-600 text-right border-r border-[#252525] w-12 {selectedTab ===
-        "write"
-          ? ""
-          : "hidden"}">
+        'write'
+          ? ''
+          : 'hidden'}">
       </div>
       <div
         class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
@@ -196,14 +197,14 @@
           bind:checked="{isScrollSyncEnabled}"
           class="hidden" />
         <span
-          class="{`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${isScrollSyncEnabled ? "bg-[#2E6AAC]" : "bg-gray-600"} rounded-full cursor-pointer`}">
+          class="{`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${isScrollSyncEnabled ? 'bg-[#2E6AAC]' : 'bg-gray-600'} rounded-full cursor-pointer`}">
           <span
-            class="{`absolute top-1 left-1 inline-block w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out ${isScrollSyncEnabled ? "translate-x-3" : ""}`}"
+            class="{`absolute top-1 left-1 inline-block w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out ${isScrollSyncEnabled ? 'translate-x-3' : ''}`}"
           ></span>
           <span
-            class="{`absolute top-1 left-1 flex items-center justify-center w-3 h-3 transition-transform duration-200 ${isScrollSyncEnabled ? "translate-x-3" : ""}`}">
+            class="{`absolute top-1 left-1 flex items-center justify-center w-3 h-3 transition-transform duration-200 ${isScrollSyncEnabled ? 'translate-x-3' : ''}`}">
             <i
-              class="{`fas ${isScrollSyncEnabled ? "fa-check" : "fa-times"} ${isScrollSyncEnabled ? "text-[#2E6AAC]" : "text-type-primary"} text-[10px]`}"
+              class="{`fas ${isScrollSyncEnabled ? 'fa-check' : 'fa-times'} ${isScrollSyncEnabled ? 'text-[#2E6AAC]' : 'text-type-primary'} text-[10px]`}"
             ></i>
           </span>
         </span>

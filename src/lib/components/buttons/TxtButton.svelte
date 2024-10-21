@@ -1,4 +1,6 @@
 <script lang="ts">
+  import DropdownButton from "$lib/components/DropdownButton.svelte";
+
   async function exportToTxt() {
     const element = document.querySelector(".markdown-content") as HTMLElement;
     if (!element) {
@@ -22,9 +24,9 @@
   }
 </script>
 
-<button
-  class="block w-full px-4 py-2 text-sm text-type-primary hover:bg-mono-accentLight2 duration-150 ease-in-out"
+<DropdownButton
+  className=""
   on:click="{exportToTxt}"
   title="Export as TXT">
   Export Plain Text (.txt)
-</button>
+</DropdownButton>

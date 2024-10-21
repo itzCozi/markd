@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Maximize, Minimize } from "lucide-svelte";
+  import IconButton from "$lib/components/IconButton.svelte";
 
   let isFullscreen = false;
 
@@ -34,13 +35,13 @@
   }
 </script>
 
-<button
-  class="fullscreen-toggle text-left p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded"
+<IconButton
+  className="fullscreen-toggle"
   title="Fullscreen Toggle"
-  on:click="{toggleFullscreen}">
+  onClick="{toggleFullscreen}">
   {#if isFullscreen}
     <Minimize />
   {:else}
     <Maximize />
   {/if}
-</button>
+</IconButton>

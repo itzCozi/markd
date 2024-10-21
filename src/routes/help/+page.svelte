@@ -10,8 +10,8 @@
 
 <!--https://rentry.org/how-->
 
-<div class="flex py-8 mx-2 bg-mono-background justify-center items-center">
-  <div class="p-5 bg-mono-accent max-w-4xl rounded-md">
+<div class="py-6 mx-2 bg-mono-background flex flex-wrap justify-center items-center overflow-hidden">
+  <div class="w-[97%] p-5 bg-mono-accent max-w-4xl rounded-md">
     <p class="text-3xl font-semibold">How to use Markdown</p>
     <p class="text-type-dimmed mt-2">
       Markdown is a lightweight markup language with plain text formatting syntax. Its design allows

@@ -25,7 +25,7 @@
     <div class="bg-mono-card border-l-4 border-yellow-500 text-primary p-4 my-4 rounded-md">
       <p class="font-bold text-yellow-500">Important:</p>
       <p>
-        You can use <code>/</code> commands to quickly format text, create headers, and insert various elements in Markdown. These commands can greatly enhance your writing efficiency!
+        You can use <code class="text-type-emphasized">/</code> commands to quickly format text, create headers, and insert various elements in Markdown. These commands can greatly enhance your writing efficiency!
       </p>
     </div>
 
@@ -189,7 +189,7 @@ ___
       </p>
       <pre class="text-mono bg-mono-card p-3 my-1 rounded-sm text-wrap">
 > [!NOTE]
-> Keep in mind Real Debrid will only allow devices on the same network as you, Real debrid allows unlimited devices on one IP at a time.
+> Something *Noteworthy*
 </pre>
     </div>
 
@@ -208,10 +208,15 @@ $$
 {@html latexCode}
 $$
 </pre>
-      <a
-        class="text-sm"
-        href="https://i.postimg.cc/3wGPNSC5/math-example.png"
-        title="Markdown output exmaple">Example output</a>
+      <p class="text-type-dimmed py-4">
+        Math Preview:
+      </p>
+        <div class="flex">
+          <img
+            src="/math-example.png"
+            alt="logo"
+            class="rounded-lg max-w-[400px] w-[99%] pb-2" />
+        </div>
     </div>
 
     <div class="my-4">
@@ -221,6 +226,13 @@ $$
         centering text and other more complex things markdown doesn't support natively.
       </p>
     </div>
+
+    <div class="my-4">
+      <p class="text-2xl my-2 text-type-emphasized">Emoji Shortcut</p>
+      <p class="text-type-dimmed">
+          Use colons <code class="text-type-emphasized">:</code> to select an emoji! And wrap it on both sides like <code class="text-type-emphasized">:smile:</code> to display the corresponding emoji.
+      </p>
+  </div>
 
     <p class="text-xs mt-8">
       Created by <a

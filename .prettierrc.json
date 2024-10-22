@@ -10,7 +10,7 @@
   "arrowParens": "always",
   "jsxSingleQuote": false,
   "svelteSortOrder": "options-scripts-styles-markup",
-  "quoteProps": "consistent",
+  "quoteProps": "as-needed",
   "proseWrap": "always",
   "useTabs": false,
   "printWidth": 100,

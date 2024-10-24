@@ -215,7 +215,7 @@ $$
           class="max-w-[400px] w-[99%] group-hover:opacity-50 transition-opacity duration-300" />
         <div
           class="absolute bg-black bg-opacity-55 inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <span class="text-type-primary bg-mono-accent px-2 py-1 rounded-md"
+          <span class="text-type-primary bg-mono-accent px-2 py-1 rounded-sm"
             >View full math example</span>
         </div>
       </a>

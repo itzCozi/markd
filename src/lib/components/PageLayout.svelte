@@ -11,7 +11,6 @@
   <div class="w-[97%] p-5 bg-mono-accent max-w-2xl rounded-md">
     <slot />
 
-    <hr class="border-b border-mono-accentLight2 my-4 border-0" />
     <p class="text-xs mt-4">
       Created by <a
         href="https://github.com/itzcozi"

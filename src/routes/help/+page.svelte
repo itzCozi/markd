@@ -205,10 +205,20 @@ $$
 </pre>
     <p class="text-type-dimmed py-2">Math Preview:</p>
     <div class="flex">
-      <img
-        src="/math-example.png"
-        alt="logo"
-        class="max-w-[400px] w-[99%]" />
+      <a
+        href="https://i.postimg.cc/3wGPNSC5/math-example.png"
+        title="Math example"
+        class="relative group">
+        <img
+          src="/math-example.png"
+          alt="logo"
+          class="max-w-[400px] w-[99%] group-hover:opacity-50 transition-opacity duration-300" />
+        <div
+          class="absolute bg-black bg-opacity-55 inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span class="text-type-primary bg-mono-accent px-2 py-1 rounded"
+            >View full math example</span>
+        </div>
+      </a>
     </div>
   </div>
   <div class="my-4">
@@ -218,14 +228,4 @@ $$
       centering text and other more complex things markdown doesn't support natively.
     </p>
   </div>
-
-  <p class="text-xs mt-8">
-    Created by <a
-      href="https://github.com/itzcozi"
-      title="BadDeveloper's github">BadDeveloper</a>
-    and
-    <a
-      href="https://github.com/Pasithea0"
-      title="Pas's github">Pasithea</a> with 💙
-  </p>
 </LargePageLayout>

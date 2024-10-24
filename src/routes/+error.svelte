@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
-  import { Undo2 } from 'lucide-svelte';
+  import { Undo2 } from "lucide-svelte";
   import IconButton from "$lib/components/IconButton.svelte";
 </script>
 
@@ -20,7 +20,7 @@ Host: {$page.url.host}
   </pre>
 
   <IconButton
-    onClick={() => goto("/")}
+    onClick="{() => goto('/')}"
     className="bottom-0 fixed left-0 m-3 flex flex-row items-center gap-1"
     title="Back home">
     <Undo2 />

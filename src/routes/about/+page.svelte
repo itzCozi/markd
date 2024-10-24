@@ -13,14 +13,14 @@
     classes, and the Markdown editor uses Carta. All hosted on Cloudflare Pages!
   </p>
   <div class="flex justify-center my-3">
-    <a
-      href="https://github.com/itzcozi/markd"
+    <button
+      on:click="{() => open('https://github.com/itzcozi/markd', '_blank')}"
       title="Source code"
       class="text-sm">
       <img
         src="https://github-readme-stats.vercel.app/api/pin/?username=itzcozi&repo=markd&theme=dark"
         alt="Github repository" />
-    </a>
+    </button>
   </div>
   <div class="flex flex-row gap-3 items-center my-2">
     <IconButton
@@ -30,13 +30,4 @@
       Email Us
     </IconButton>
   </div>
-  <p class="text-xs mt-4">
-    Created by <a
-      href="https://github.com/itzcozi"
-      title="BadDeveloper's github">BadDeveloper</a>
-    and
-    <a
-      href="https://github.com/Pasithea0"
-      title="Pas's github">Pasithea</a> with 💙
-  </p>
 </PageLayout>

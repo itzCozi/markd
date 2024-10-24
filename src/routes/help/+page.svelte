@@ -6,8 +6,8 @@
 </script>
 
 <LargePageLayout>
-  <p class="text-3xl font-semibold">How to use Markdown</p>
-  <p class="text-type-dimmed mt-2">
+  <p class="text-3xl my-2 font-semibold">How to use Markdown</p>
+  <p class="text-type-dimmed">
     Markdown is a lightweight markup language with plain text formatting syntax. Its design allows
     easy conversion to HTML and other formats, and its syntax is influenced by Perl. Markdown is
     often used to format readme files, for writing messages in online discussion forums, and to
@@ -16,10 +16,10 @@
   </p>
 
   <div class="flex flex-row gap-2 items-center">
-    <p class="text-2xl font-semibold mt-2">IntelliSense</p>
+    <p class="text-2xl my-2 text-type-emphasized">IntelliSense</p>
     <CircleAlert class="text-type-dimmed w-4 h-4" />
   </div>
-  <p class="text-type-dimmed mt-2">
+  <p class="text-type-dimmed">
     Our editor features IntelliSense. Type <code>/</code> to see available commands, or
     <code>:</code> for emoji selection. You can create headers, lists, tables and basically anything
     using our IntelliSense.
@@ -205,20 +205,20 @@ $$
 </pre>
     <p class="text-type-dimmed py-2">Math Preview:</p>
     <div class="flex">
-      <a
-        href="https://i.postimg.cc/3wGPNSC5/math-example.png"
+      <button
+        on:click="{() => open('https://i.postimg.cc/3wGPNSC5/math-example.png', '_blank')}"
         title="Math example"
         class="relative group">
         <img
           src="/math-example.png"
           alt="logo"
-          class="max-w-[400px] w-[99%] group-hover:opacity-50 transition-opacity duration-300" />
+          class="max-w-[400px] w-[99%] group-hover:opacity-35 transition-opacity duration-400" />
         <div
-          class="absolute bg-black bg-opacity-55 inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <span class="text-type-primary bg-mono-accent px-2 py-1 rounded-sm"
+          class="absolute bg-black bg-opacity-55 inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="text-type-primary bg-mono-accent px-2 py-1 rounded-md"
             >View full math example</span>
         </div>
-      </a>
+      </button>
     </div>
   </div>
   <div class="my-4">

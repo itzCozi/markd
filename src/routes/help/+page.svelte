@@ -115,22 +115,16 @@ ___" />
     description="Subscript is defined using two of the ~ symbol followed by the text you want to be subscripted. Superscript is defined using two the caret ^ symbol followed by the text you want to be superscripted."
     example="H~2~O is a liquid. 2^10^ is 1024." />
 
-  <div class="my-4">
-    <p class="text-2xl my-2 text-type-emphasized">Math</p>
-    <p class="text-type-dimmed">
-      Math is defined using the <code>$$</code> symbol followed by an equation in LaTeX format, then
-      followed by an ending set of double dollar signs.
-    </p>
-    <pre class="text-mono bg-mono-card p-3 my-1 rounded-sm text-wrap">
-$$
+  <HelpEntry
+    title="Math"
+    description="Math is defined using the $$ symbol followed by an equation in LaTeX format, then followed by an ending set of double dollar signs."
+    example={`$$
 f(5) = (5 - 5)^2 = 0
 $$
 
 $$
-{@html latexCode}
-$$
-</pre>
-
+\\text{slope} = \\frac{f(5) - f(4)}{-1} = \\frac{0 - 1}{-1} = 1
+$$`}>
     <p class="text-type-dimmed py-2">Math Preview:</p>
     <div class="flex">
       <button
@@ -148,7 +142,7 @@ $$
         </div>
       </button>
     </div>
-  </div>
+  </HelpEntry>
 
   <HelpEntry
     title="HTML Code"

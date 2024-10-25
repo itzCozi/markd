@@ -25,7 +25,6 @@ module.exports = {
         type: {
           primary: "#d0d0d0",
           emphasized: "#e0e0e0",
-          subheader: "#d0d0d0",
           dimmed: "#a3a3a3",
           footer: "#6b7280",
         },

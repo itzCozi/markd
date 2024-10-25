@@ -7,7 +7,7 @@
 </script>
 
 <LargePageLayout>
-  <p class="text-3xl mb-2 font-semibold">
+  <p class="text-3xl mb-2 font-semibold text-type-emphasized">
     How to use <span class="underline decoration-1 underline-offset-4 decoration-wavy">MarkD</span
     >own
   </p>

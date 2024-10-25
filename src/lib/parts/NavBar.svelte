@@ -13,6 +13,8 @@
 
   let isSidebarOpen = false;
   let exportMenuOpen = false;
+  let preventClose = false;
+
 
   function toggleSidebar() {
     isSidebarOpen = !isSidebarOpen;
@@ -21,8 +23,6 @@
   function closeSidebar() {
     isSidebarOpen = false;
   }
-
-  let preventClose = false;
 
   function closeExportMenu(event: MouseEvent) {
     const exportMenu = document.querySelector(".export-menu");
@@ -65,8 +65,6 @@
       </div>
     </button>
     <div class="flex flex-row gap-3 items-center">
-      <!-- https://flowbite-svelte.com/docs/components/dropdown -->
-      <!-- Export dropdown menu -->
       {#if $page.url.pathname === "/"}
         <IconButton
           title="Help"
@@ -92,10 +90,11 @@
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"
             tabindex="-1">
+            <!-- From longest item to shortest -->
             <MdButton />
+            <HtmlButton />
             <TxtButton />
             <PdfButton />
-            <HtmlButton />
           </div>
         {/if}
       </div>

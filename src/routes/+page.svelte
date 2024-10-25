@@ -71,6 +71,8 @@
   import "katex/dist/katex.css";
   // Code
   import { code } from "@cartamd/plugin-code";
+  // Subscript + Superscript
+  import { subscript } from 'carta-plugin-subscript';
   // End Plugins
 
   let leftWidth = 50;
@@ -98,7 +100,13 @@
       math(),
       code({ theme: $markdownTheme === "light" ? "light-plus" : "dark-plus" }),
       rawhtml,
+      subscript(),
     ],
+    gfmOptions: {
+			// remark-gfm that Carta uses convert single tilde to strikethrough, disable that to use single tilde for subscript.
+			// see https://stackoverflow.com/a/78076200/7884074
+			singleTilde: false,
+		},
   });
 
   function handleEditorScroll(event: Event) {

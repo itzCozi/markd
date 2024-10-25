@@ -8,8 +8,8 @@
   <p class="text-2xl my-2 text-type-emphasized">{title}</p>
   <p class="text-type-dimmed">{description}</p>
   {#if example}
-    <pre class="text-mono bg-mono-card p-3 my-1 rounded-sm text-wrap whitespace-pre-line">
-      {example}
+    <pre class="bg-mono-card p-3 my-1 rounded-sm text-wrap whitespace-pre-line">
+      <code>{example}</code>
     </pre>
   {/if}
   <slot></slot>

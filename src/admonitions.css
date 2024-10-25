@@ -10,11 +10,11 @@
 
 .admonition.note .admonition-title {
   font-weight: bold;
-  color: #1F6FEB;
+  color: #1f6feb;
 }
 
 .admonition.note {
-  border-left-color: #1F6FEB;
+  border-left-color: #1f6feb;
 }
 
 .admonition.tip .admonition-title {
@@ -28,11 +28,11 @@
 
 .admonition.important .admonition-title {
   font-weight: bold;
-  color: #8957E5;
+  color: #8957e5;
 }
 
 .admonition.important {
-  border-left-color: #8957E5;
+  border-left-color: #8957e5;
 }
 
 .admonition.warning .admonition-title {
@@ -46,11 +46,11 @@
 
 .admonition.caution .admonition-title {
   font-weight: bold;
-  color: #DA3633;
+  color: #da3633;
 }
 
 .admonition.caution {
-  border-left-color: #DA3633;
+  border-left-color: #da3633;
 }
 
 .admonition-title {

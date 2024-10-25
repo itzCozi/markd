@@ -19,7 +19,8 @@
   font-family: "open sans";
 }
 
-html, body {
+html,
+body {
   background-color: var(--background-color);
   color: #d0d0d0;
   font-family: "open sans";
@@ -164,9 +165,9 @@ a:hover {
     width: 100%;
   }
   .carta-icons-menu {
-      bottom: 80px !important;
-      left: unset !important;
-      right: 0 !important;
+    bottom: 80px !important;
+    left: unset !important;
+    right: 0 !important;
   }
   .carta-editor {
     margin-bottom: 70px !important;

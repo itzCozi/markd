@@ -1,5 +1,4 @@
 <script lang="ts">
-  // Close your fucking eyes bro 💀
   import LargePageLayout from "$lib/components/LargePageLayout.svelte";
   import HelpEntry from "$lib/components/HelpEntry.svelte";
   import { CircleAlert } from "lucide-svelte";
@@ -8,7 +7,10 @@
 </script>
 
 <LargePageLayout>
-  <p class="text-3xl mb-2 font-semibold">How to use Markdown</p>
+  <p class="text-3xl mb-2 font-semibold">
+    How to use <span class="underline decoration-1 underline-offset-4 decoration-wavy">MarkD</span
+    >own
+  </p>
   <p class="text-type-dimmed">
     Markdown is a lightweight markup language with plain text formatting syntax. Its design allows
     easy conversion to HTML and other formats, and its syntax is influenced by Perl. Markdown is
@@ -19,7 +21,7 @@
 
   <div class="flex flex-row gap-2 items-center">
     <p class="text-2xl my-2 text-type-emphasized">IntelliSense</p>
-    <CircleAlert class="text-type-dimmed w-4 h-4" />
+    <CircleAlert class="text-type-dimmed w-4 h-4 mb-3 -ml-1" />
   </div>
   <p class="text-type-dimmed">
     Our editor features IntelliSense. Type / to see available commands, or : for emoji selection.
@@ -98,7 +100,7 @@ print(number1 + number2)
 ___" />
 
   <HelpEntry
-    title="Tables:"
+    title="Tables"
     description="Tables are defined by using pipes | to separate columns and hyphens - to separate the header row from the content."
     example="| Header 1 | Header 2 |
 |----------|----------|
@@ -125,7 +127,7 @@ $$
 $$
 \\text{slope} = \\frac{f(5) - f(4)}{-1} = \\frac{0 - 1}{-1} = 1
 $$`}">
-    <p class="text-type-dimmed py-2">Math Preview:</p>
+    <p class="text-type-dimmed py-2">Math Preview</p>
     <div class="flex">
       <button
         on:click="{() => open('https://i.postimg.cc/3wGPNSC5/math-example.png', '_blank')}"
@@ -134,9 +136,9 @@ $$`}">
         <img
           src="/math-example.png"
           alt="logo"
-          class="max-w-[400px] w-[99%] group-hover:opacity-35 transition-opacity duration-400" />
+          class="max-w-[400px] w-[99%] group-hover:opacity-35 transition-opacity duration-400 rounded" />
         <div
-          class="absolute w-[99%] bg-black bg-opacity-55 inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          class="absolute w-[99%] rounded bg-black bg-opacity-55 inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <span class="text-type-primary bg-mono-card px-2 py-1 rounded-sm"
             >View full math example</span>
         </div>

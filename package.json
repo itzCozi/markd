@@ -1,44 +1,44 @@
 {
-	"name": "markd",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"format": "prettier --log-level warn --write \"src/**/*.{svelte,ts}\"",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-static": "^3.0.6",
-		"@sveltejs/kit": "^2.7.3",
-		"@sveltejs/vite-plugin-svelte": "^3.1.2",
-		"autoprefixer": "^10.4.20",
-		"postcss": "^8.4.47",
-		"prettier": "^3.3.3",
-		"prettier-plugin-svelte": "^3.2.7",
-		"svelte": "^4.2.19",
-		"svelte-check": "^4.0.5",
-		"tailwindcss": "^3.4.14",
-		"vite": "^5.4.10"
-	},
-	"type": "module",
-	"dependencies": {
-		"@cartamd/plugin-code": "^4.0.6",
-		"@cartamd/plugin-emoji": "^4.2.1",
-		"@cartamd/plugin-math": "^4.2.1",
-		"@cartamd/plugin-slash": "^4.1.2",
-		"@chevrotain/regexp-to-ast": "^11.0.3",
-		"carta-md": "^4.6.1",
-		"carta-plugin-subscript": "^2.0.0",
-		"isomorphic-dompurify": "^2.16.0",
-		"katex": "^0.16.11",
-		"lucide-svelte": "^0.447.0",
-		"rehype-external-links": "^3.0.0",
-		"rehype-raw": "^7.0.0",
-		"remark-github-beta-blockquote-admonitions": "^3.1.1",
-		"unified": "^11.0.5",
-		"vite-plugin-compression": "^0.5.1"
-	}
+  "name": "markd",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --log-level warn --write \"{src/**/*.{ts,js,svelte,html,css},*.{ts,js,svelte,html,css,json}}\"",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-static": "^3.0.6",
+    "@sveltejs/kit": "^2.7.3",
+    "@sveltejs/vite-plugin-svelte": "^3.1.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.7",
+    "svelte": "^4.2.19",
+    "svelte-check": "^4.0.5",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.10"
+  },
+  "type": "module",
+  "dependencies": {
+    "@cartamd/plugin-code": "^4.0.6",
+    "@cartamd/plugin-emoji": "^4.2.1",
+    "@cartamd/plugin-math": "^4.2.1",
+    "@cartamd/plugin-slash": "^4.1.2",
+    "@chevrotain/regexp-to-ast": "^11.0.3",
+    "carta-md": "^4.6.1",
+    "carta-plugin-subscript": "^2.0.0",
+    "isomorphic-dompurify": "^2.16.0",
+    "katex": "^0.16.11",
+    "lucide-svelte": "^0.447.0",
+    "rehype-external-links": "^3.0.0",
+    "rehype-raw": "^7.0.0",
+    "remark-github-beta-blockquote-admonitions": "^3.1.1",
+    "unified": "^11.0.5",
+    "vite-plugin-compression": "^0.5.1"
+  }
 }

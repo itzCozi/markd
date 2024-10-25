@@ -110,6 +110,11 @@ ___" />
     example="> [!NOTE]
 > Something *Noteworthy*" />
 
+  <HelpEntry
+    title="Subscript & Superscript"
+    description="Subscript is defined using two of the ~ symbol followed by the text you want to be subscripted. Superscript is defined using two the caret ^ symbol followed by the text you want to be superscripted."
+    example="H~2~O is a liquid. 2^10^ is 1024." />
+
   <div class="my-4">
     <p class="text-2xl my-2 text-type-emphasized">Math</p>
     <p class="text-type-dimmed">

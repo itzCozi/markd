@@ -137,8 +137,8 @@ $$
           alt="logo"
           class="max-w-[400px] w-[99%] group-hover:opacity-35 transition-opacity duration-400" />
         <div
-          class="absolute bg-black bg-opacity-55 inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-          <span class="text-type-primary bg-mono-accent px-2 py-1 rounded-md"
+          class="absolute w-[99%] bg-black bg-opacity-55 inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="text-type-primary bg-mono-card px-2 py-1 rounded-sm"
             >View full math example</span>
         </div>
       </button>

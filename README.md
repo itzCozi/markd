@@ -11,24 +11,31 @@ MarkD (sounds like "maarkt" when pronounced) is an advanced live markdown editor
   Sleek, fast and opinionated open-source markdown editor.
 </sup>
 
+
 ## Features
+- PDF, RTF, MD and HTML export
+- Word count and reading time
+- Professional print layout
+- Code syntax highlighting
 - Live preview of markdown
-- No ads or tracking
-- Syntax highlighting
-- Advanced markdown editor
-- Extended syntax
-- Printer friendly
-- LaTeX support
-- PDF, RTF and HTML export
+- Refined homemade editor
+- Supports inline HTML
 - Scalable Split view
-- Scroll sync
+- No ads or tracking
 - Persistent storage
+- Printer friendly
+- Extended syntax
+- LaTeX support
+- Scroll sync
+- Zen mode
+
+![Editor example](.github/editor-example.png) ![Printer preview](.github/printer-preview.png)
 
 ### Contact Us
 - [GitHub Issues](https://github.com/itzCozi/markd/issues)
 - [Developers Email](mailto:dev@wyzie.ru)
 
-<hr />
+---
 
 <sup>
   Created by <a href="https://github.com/itzcozi" title="BadDeveloper's github">BadDeveloper</a> and <a href="https://github.com/Pasithea0" title="Pas's github">Pasithea</a> with 💙

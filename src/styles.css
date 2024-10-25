@@ -816,13 +816,24 @@
   text-align: right;
 }
 
-.markdown-body code,
+.markdown-body :not(pre) > code {
+  padding: .2em .4em;
+  margin: 0;
+  font-size: 85%;
+  white-space: break-spaces;
+  color: var(--fgColor-default);
+  background-color: var(--bgColor-muted);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
 .markdown-body tt {
   padding: .2em .4em;
   margin: 0;
   font-size: 85%;
   white-space: break-spaces;
-  background-color: var(--bgColor-neutral-muted);
+  color: var(--fgColor-default);
+  background-color: var(--bgColor-muted);
   border-radius: 6px;
 }
 

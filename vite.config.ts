@@ -8,6 +8,22 @@ export default defineConfig({
   css: {
     postcss
   },
+  build: {
+    minify: 'esbuild',
+    target: 'esnext',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['svelte', 'svelte/internal']
+        }
+      }
+    }
+  },
+  optimizeDeps: {
+    include: ['svelte', 'svelte/internal'],
+    exclude: ['@sveltejs/kit']
+  },
   server: {
     fs: {
       allow: [
@@ -15,5 +31,6 @@ export default defineConfig({
         resolve(__dirname, 'static')
       ]
     }
-  }
+  },
+  cacheDir: 'node_modules/.vite',
 });

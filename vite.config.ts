@@ -1,10 +1,13 @@
-import { sveltekit } from "@sveltejs/kit/vite";
-import { defineConfig } from "vite";
-import postcss from "./postcss.config.js";
-import { resolve } from "path";
+import { defineConfig } from 'vite';
+import { sveltekit } from '@sveltejs/kit/vite';
+import postcss from './postcss.config.js';
+import viteCompression from 'vite-plugin-compression';
 
 export default defineConfig({
-  plugins: [sveltekit()],
+  plugins: [
+    sveltekit(),
+    viteCompression({ algorithm: 'brotliCompress' })
+  ],
   css: {
     postcss
   },
@@ -18,19 +21,15 @@ export default defineConfig({
           vendor: ['svelte', 'svelte/internal']
         }
       }
-    }
+    },
+    treeshake: true
   },
   optimizeDeps: {
     include: ['svelte', 'svelte/internal'],
-    exclude: ['@sveltejs/kit']
   },
   server: {
     fs: {
-      allow: [
-        resolve(__dirname, '.'),
-        resolve(__dirname, 'static')
-      ]
+      strict: true
     }
-  },
-  cacheDir: 'node_modules/.vite',
+  }
 });

@@ -118,13 +118,13 @@ ___" />
   <HelpEntry
     title="Math"
     description="Math is defined using the $$ symbol followed by an equation in LaTeX format, then followed by an ending set of double dollar signs."
-    example={`$$
+    example="{`$$
 f(5) = (5 - 5)^2 = 0
 $$
 
 $$
 \\text{slope} = \\frac{f(5) - f(4)}{-1} = \\frac{0 - 1}{-1} = 1
-$$`}>
+$$`}">
     <p class="text-type-dimmed py-2">Math Preview:</p>
     <div class="flex">
       <button

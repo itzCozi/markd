@@ -11,12 +11,12 @@
     overlay.style.left = "0";
     overlay.style.width = "100vw";
     overlay.style.height = "100vh";
-    overlay.style.backgroundColor = "black";
+    overlay.style.backgroundColor = "#121212";
     overlay.style.color = "white";
     overlay.style.display = "flex";
     overlay.style.justifyContent = "center";
     overlay.style.alignItems = "center";
-    overlay.style.zIndex = "9999";
+    overlay.style.zIndex = "9999"; // such great practice
     overlay.style.fontSize = "2rem";
     overlay.innerText = "Exporting...";
     document.body.appendChild(overlay);
@@ -67,7 +67,7 @@
     overlay.style.left = "0";
     overlay.style.width = "100vw";
     overlay.style.height = "100vh";
-    overlay.style.backgroundColor = "black";
+    overlay.style.backgroundColor = "#121212";
     overlay.style.color = "white";
     overlay.style.display = "flex";
     overlay.style.justifyContent = "center";

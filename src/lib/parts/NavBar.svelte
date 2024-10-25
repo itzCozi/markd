@@ -15,7 +15,6 @@
   let exportMenuOpen = false;
   let preventClose = false;
 
-
   function toggleSidebar() {
     isSidebarOpen = !isSidebarOpen;
   }

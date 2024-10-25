@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import NavBar from "$lib/parts/NavBar.svelte";
   import IconButton from "$lib/components/IconButton.svelte";
   import PageLayout from "$lib/components/PageLayout.svelte";

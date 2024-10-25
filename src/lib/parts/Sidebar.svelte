@@ -10,7 +10,7 @@
 </script>
 
 <div
-  class="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-200"
+  class="fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity duration-200 cursor-default"
   class:opacity-0="{!isSidebarOpen}"
   class:pointer-events-none="{!isSidebarOpen}"
   role="button"

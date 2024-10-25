@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   export let className = "";
   export let onClick = () => {};
   export let title = "";

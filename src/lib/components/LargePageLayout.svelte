@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import NavBar from "$lib/parts/NavBar.svelte";
 </script>
 
@@ -11,7 +11,7 @@
   <div class="w-[97%] p-5 bg-mono-accent max-w-4xl rounded-md">
     <slot />
 
-    <hr class="border-b border-mono-accentLight2 my-4 border-0" />
+    <hr class="border-b border-mono-accentLight2 my-3 border-0" />
     <p class="text-xs">
       Created by <a
         href="https://github.com/itzcozi"

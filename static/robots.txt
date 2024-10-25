@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /svelte-kit/
+Disallow: /non-ambient.d.ts
+Disallow: /types/
+Disallow: /src/
+Allow: /
+
+Sitemap: https://markd.it/sitemap.xml

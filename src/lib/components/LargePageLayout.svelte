@@ -12,7 +12,7 @@
     <slot />
 
     <hr class="border-b border-mono-accentLight2 my-3 border-0" />
-    <p class="text-xs">
+    <p class="text-xs text-type-dimmed">
       Created by <a
         href="https://github.com/itzcozi"
         title="BadDeveloper's github">BadDeveloper</a>

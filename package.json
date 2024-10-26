@@ -30,7 +30,7 @@
     "@cartamd/plugin-math": "^4.2.1",
     "@cartamd/plugin-slash": "^4.1.2",
     "@chevrotain/regexp-to-ast": "^11.0.3",
-    "carta-md": "^4.6.1",
+    "carta-md": "^4.6.2",
     "carta-plugin-subscript": "^2.0.0",
     "isomorphic-dompurify": "^2.16.0",
     "katex": "^0.16.11",

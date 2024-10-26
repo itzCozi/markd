@@ -10,25 +10,25 @@ importers:
     dependencies:
       '@cartamd/plugin-code':
         specifier: ^4.0.6
-        version: 4.0.6(carta-md@4.6.1(svelte@4.2.19))
+        version: 4.0.6(carta-md@4.6.2(svelte@4.2.19))
       '@cartamd/plugin-emoji':
         specifier: ^4.2.1
-        version: 4.2.1(carta-md@4.6.1(svelte@4.2.19))(svelte@4.2.19)
+        version: 4.2.1(carta-md@4.6.2(svelte@4.2.19))(svelte@4.2.19)
       '@cartamd/plugin-math':
         specifier: ^4.2.1
-        version: 4.2.1(carta-md@4.6.1(svelte@4.2.19))(svelte@4.2.19)
+        version: 4.2.1(carta-md@4.6.2(svelte@4.2.19))(svelte@4.2.19)
       '@cartamd/plugin-slash':
         specifier: ^4.1.2
-        version: 4.1.2(carta-md@4.6.1(svelte@4.2.19))(svelte@4.2.19)
+        version: 4.1.2(carta-md@4.6.2(svelte@4.2.19))(svelte@4.2.19)
       '@chevrotain/regexp-to-ast':
         specifier: ^11.0.3
         version: 11.0.3
       carta-md:
-        specifier: ^4.6.1
-        version: 4.6.1(svelte@4.2.19)
+        specifier: ^4.6.2
+        version: 4.6.2(svelte@4.2.19)
       carta-plugin-subscript:
         specifier: ^2.0.0
-        version: 2.0.0(carta-md@4.6.1(svelte@4.2.19))(svelte@4.2.19)(unified@11.0.5)
+        version: 2.0.0(carta-md@4.6.2(svelte@4.2.19))(svelte@4.2.19)(unified@11.0.5)
       isomorphic-dompurify:
         specifier: ^2.16.0
         version: 2.16.0
@@ -555,11 +555,11 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001669:
-    resolution: {integrity: sha512-DlWzFDJqstqtIVx1zeSpIMLjunf5SmwOw0N2Ck/QSQdS8PLS4+9HrLaYei4w8BIAL7IB/UEDu889d8vhCTPA0w==}
+  caniuse-lite@1.0.30001671:
+    resolution: {integrity: sha512-jocyVaSSfXg2faluE6hrWkMgDOiULBMca4QLtDT39hw1YxaIPHWc1CcTCKkPmHgGH6tKji6ZNbMSmUAvENf2/A==}
 
-  carta-md@4.6.1:
-    resolution: {integrity: sha512-1iaQjhBwFhVYzrAUOfkhwoqKOlp79iaZN7k38F8rfSGCvSUludMPb2havjgwVso64JEVO1hE7HXJ+UzprhzeJw==}
+  carta-md@4.6.2:
+    resolution: {integrity: sha512-ozVEKT3aI5IYQforRCUF5bju50xOd2hVossY1tWlPt/XWXe4OIYe1L/KUtLcd+RW0X/wRWU8ISOhqXFHkaO8DQ==}
     peerDependencies:
       svelte: ^3.54.0 || ^4.0.0 || ^5.0.0-next.1
 
@@ -697,8 +697,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.5.46:
-    resolution: {integrity: sha512-1XDk0Z8/YRgB2t5GeEg8DPK592DLjVmd/5uwAu6c/S4Z0CUwV/RwYqe5GWxQqcoN3bJ5U7hYMiMRPZzpCzSBhQ==}
+  electron-to-chromium@1.5.47:
+    resolution: {integrity: sha512-zS5Yer0MOYw4rtK2iq43cJagHZ8sXN0jDHDKzB+86gSBSAI4v07S97mcq+Gs2vclAxSh1j7vOAHxSVgduiiuVQ==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -1453,11 +1453,11 @@ packages:
   tiny-glob@0.2.9:
     resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
 
-  tldts-core@6.1.55:
-    resolution: {integrity: sha512-BL+BuKHHaOpntE5BGI6naXjULU6aRlgaYdfDHR3T/hdbNTWkWUZ9yuc11wGnwgpvRwlyUiIK+QohYK3olaVU6Q==}
+  tldts-core@6.1.56:
+    resolution: {integrity: sha512-Ihxv/Bwiyj73icTYVgBUkQ3wstlCglLoegSgl64oSrGUBX1hc7Qmf/CnrnJLaQdZrCnTaLqMYOwKMKlkfkFrxQ==}
 
-  tldts@6.1.55:
-    resolution: {integrity: sha512-HxQR/9roQ07Pwc8RyyrJMAxRz5/ssoF3qIPPUiIo3zUt6yMdmYZjM2OZIFMiZ3jHyz9jrGHEHuQZrUhoc1LkDw==}
+  tldts@6.1.56:
+    resolution: {integrity: sha512-2PT1oRZCxtsbLi5R2SQjE/v4vvgRggAtVcYj+3Rrcnu2nPZvu7m64+gDa/EsVSWd3QzEc0U0xN+rbEKsJC47kA==}
     hasBin: true
 
   to-regex-range@5.0.1:
@@ -1668,33 +1668,33 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@cartamd/plugin-code@4.0.6(carta-md@4.6.1(svelte@4.2.19))':
+  '@cartamd/plugin-code@4.0.6(carta-md@4.6.2(svelte@4.2.19))':
     dependencies:
       '@shikijs/rehype': 1.22.1
-      carta-md: 4.6.1(svelte@4.2.19)
+      carta-md: 4.6.2(svelte@4.2.19)
       unified: 11.0.5
 
-  '@cartamd/plugin-emoji@4.2.1(carta-md@4.6.1(svelte@4.2.19))(svelte@4.2.19)':
+  '@cartamd/plugin-emoji@4.2.1(carta-md@4.6.2(svelte@4.2.19))(svelte@4.2.19)':
     dependencies:
       bezier-easing: 2.1.0
-      carta-md: 4.6.1(svelte@4.2.19)
+      carta-md: 4.6.2(svelte@4.2.19)
       node-emoji: 2.1.3
       remark-emoji: 5.0.1
       svelte: 4.2.19
 
-  '@cartamd/plugin-math@4.2.1(carta-md@4.6.1(svelte@4.2.19))(svelte@4.2.19)':
+  '@cartamd/plugin-math@4.2.1(carta-md@4.6.2(svelte@4.2.19))(svelte@4.2.19)':
     dependencies:
-      carta-md: 4.6.1(svelte@4.2.19)
+      carta-md: 4.6.2(svelte@4.2.19)
       rehype-katex: 7.0.1
       remark-math: 6.0.0
       svelte: 4.2.19
     transitivePeerDependencies:
       - supports-color
 
-  '@cartamd/plugin-slash@4.1.2(carta-md@4.6.1(svelte@4.2.19))(svelte@4.2.19)':
+  '@cartamd/plugin-slash@4.1.2(carta-md@4.6.2(svelte@4.2.19))(svelte@4.2.19)':
     dependencies:
       bezier-easing: 2.1.0
-      carta-md: 4.6.1(svelte@4.2.19)
+      carta-md: 4.6.2(svelte@4.2.19)
       svelte: 4.2.19
 
   '@chevrotain/regexp-to-ast@11.0.3': {}
@@ -2013,7 +2013,7 @@ snapshots:
   autoprefixer@10.4.20(postcss@8.4.47):
     dependencies:
       browserslist: 4.24.2
-      caniuse-lite: 1.0.30001669
+      caniuse-lite: 1.0.30001671
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -2040,16 +2040,16 @@ snapshots:
 
   browserslist@4.24.2:
     dependencies:
-      caniuse-lite: 1.0.30001669
-      electron-to-chromium: 1.5.46
+      caniuse-lite: 1.0.30001671
+      electron-to-chromium: 1.5.47
       node-releases: 2.0.18
       update-browserslist-db: 1.1.1(browserslist@4.24.2)
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001669: {}
+  caniuse-lite@1.0.30001671: {}
 
-  carta-md@4.6.1(svelte@4.2.19):
+  carta-md@4.6.2(svelte@4.2.19):
     dependencies:
       diff: 5.2.0
       esm-env: 1.0.0
@@ -2063,9 +2063,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  carta-plugin-subscript@2.0.0(carta-md@4.6.1(svelte@4.2.19))(svelte@4.2.19)(unified@11.0.5):
+  carta-plugin-subscript@2.0.0(carta-md@4.6.2(svelte@4.2.19))(svelte@4.2.19)(unified@11.0.5):
     dependencies:
-      carta-md: 4.6.1(svelte@4.2.19)
+      carta-md: 4.6.2(svelte@4.2.19)
       remark-supersub: 1.0.0
       svelte: 4.2.19
       unified: 11.0.5
@@ -2181,7 +2181,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.5.46: {}
+  electron-to-chromium@1.5.47: {}
 
   emoji-regex@8.0.0: {}
 
@@ -3303,11 +3303,11 @@ snapshots:
       globalyzer: 0.1.0
       globrex: 0.1.2
 
-  tldts-core@6.1.55: {}
+  tldts-core@6.1.56: {}
 
-  tldts@6.1.55:
+  tldts@6.1.56:
     dependencies:
-      tldts-core: 6.1.55
+      tldts-core: 6.1.56
 
   to-regex-range@5.0.1:
     dependencies:
@@ -3317,7 +3317,7 @@ snapshots:
 
   tough-cookie@5.0.0:
     dependencies:
-      tldts: 6.1.55
+      tldts: 6.1.56
 
   tr46@5.0.0:
     dependencies:

@@ -20,7 +20,7 @@
 </div>
 
 <aside
-  class="fixed top-0 left-0 w-full md:w-64 flex flex-col h-full bg-mono-card shadow-lg z-50 transform transition-transform duration-200"
+  class="fixed top-0 left-0 w-full md:w-64 flex flex-col h-full bg-mono-card z-50 transform transition-transform duration-200"
   class:translate-x-0="{isSidebarOpen}"
   class:-translate-x-full="{!isSidebarOpen}">
   <div class="p-4">

@@ -19,6 +19,10 @@
         display: ${isFullscreen ? "block" : "none"} !important;
         padding-right: 5px;
       }
+      .carta-toolbar {
+        max-width: ${isFullscreen ? "100%" : "300px"} !important;
+        width: ${isFullscreen ? "fit-content" : "auto"} !important;
+      }
     `;
     const existingStyle = document.getElementById("fullscreen-style");
     if (existingStyle) {

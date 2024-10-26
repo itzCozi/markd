@@ -42,6 +42,7 @@ body {
   border-radius: 5px;
   z-index: 30;
   margin-left: auto;
+  max-width: 300px;
 }
 
 .carta-toolbar-right {

@@ -119,6 +119,17 @@ a:hover {
   margin-right: 10px;
 }
 
+.math-icon + span:before {
+  content: "Math";
+  visibility: visible;
+  font-size: medium !important;
+}
+
+.math-icon + span {
+  visibility: hidden;
+  font-size: 0px !important;
+}
+
 @media (max-width: 768px) {
   .divider {
     display: none !important;

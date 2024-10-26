@@ -60,7 +60,7 @@
           src="/favicon.svg"
           alt="logo"
           class="w-10 h-10" />
-        <p class="text-4xl font-bold text-type-primary">MarkD</p>
+        <p class="text-4xl font-bold text-type-emphasized">MarkD</p>
       </div>
     </button>
     <div class="flex flex-row gap-3 items-center">

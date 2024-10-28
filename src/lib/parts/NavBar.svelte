@@ -40,15 +40,6 @@
   });
 </script>
 
-<style>
-  .scale-hover {
-    transition: transform 0.15s;
-  }
-  .scale-hover:hover {
-    transform: scale(1.03);
-  }
-</style>
-
 <header class="navbar w-full p-4 bg-mono-card z-20">
   <nav class="flex justify-between items-center">
     <button

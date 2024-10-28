@@ -393,20 +393,20 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@shikijs/core@1.22.1':
-    resolution: {integrity: sha512-bqAhT/Ri5ixV4oYsvJNH8UJjpjbINWlWyXY6tBTsP4OmD6XnFv43nRJ+lTdxd2rmG5pgam/x+zGR6kLRXrpEKA==}
+  '@shikijs/core@1.22.2':
+    resolution: {integrity: sha512-bvIQcd8BEeR1yFvOYv6HDiyta2FFVePbzeowf5pPS1avczrPK+cjmaxxh0nx5QzbON7+Sv0sQfQVciO7bN72sg==}
 
-  '@shikijs/engine-javascript@1.22.1':
-    resolution: {integrity: sha512-540pyoy0LWe4jj2BVbgELwOFu1uFvRI7lg4hdsExrSXA9x7gqfzZ/Nnh4RfX86aDAgJ647gx4TCmRwACbnQSvw==}
+  '@shikijs/engine-javascript@1.22.2':
+    resolution: {integrity: sha512-iOvql09ql6m+3d1vtvP8fLCVCK7BQD1pJFmHIECsujB0V32BJ0Ab6hxk1ewVSMFA58FI0pR2Had9BKZdyQrxTw==}
 
-  '@shikijs/engine-oniguruma@1.22.1':
-    resolution: {integrity: sha512-L+1Vmd+a2kk8HtogUFymQS6BjUfJnzcWoUp1BUgxoDiklbKSMvrsMuLZGevTOP1m0rEjgnC5MsDmsr8lX1lC+Q==}
+  '@shikijs/engine-oniguruma@1.22.2':
+    resolution: {integrity: sha512-GIZPAGzQOy56mGvWMoZRPggn0dTlBf1gutV5TdceLCZlFNqWmuc7u+CzD0Gd9vQUTgLbrt0KLzz6FNprqYAxlA==}
 
-  '@shikijs/rehype@1.22.1':
-    resolution: {integrity: sha512-Uuuqj/poMLj1Z02sJsS1qEqpfUNp2hV2YFVt/SY5+Ielo5Ms1bRfYQHs3hTbsEDB6FmYuOu5ieqNumPlWBmrng==}
+  '@shikijs/rehype@1.22.2':
+    resolution: {integrity: sha512-A0RHgiYR5uiHvddwHehBN9j8PhOvfT6/GebSTWrapur6M+fD/4i3mlfUv7aFK4b+4GQ1R42L8fC5N98whZjNcg==}
 
-  '@shikijs/types@1.22.1':
-    resolution: {integrity: sha512-+45f8mu/Hxqs6Kyhfm98Nld5n7Q7lwhjU8UtdQwrOPs7BnM4VAb929O3IQ2ce+4D7SlNFlZGd8CnKRSnwbQreQ==}
+  '@shikijs/types@1.22.2':
+    resolution: {integrity: sha512-NCWDa6LGZqTuzjsGfXOBWfjS/fDIbDdmVDug+7ykVe1IKT4c1gakrvlfFYp5NhAXH/lyqLM8wsAPo5wNy73Feg==}
 
   '@shikijs/vscode-textmate@9.3.0':
     resolution: {integrity: sha512-jn7/7ky30idSkd/O5yDBfAnVt+JJpepofP/POZ1iMOxK59cOfqIgg/Dj0eFsjOTMw+4ycJN0uhZH/Eb0bs/EUA==}
@@ -707,8 +707,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.5.47:
-    resolution: {integrity: sha512-zS5Yer0MOYw4rtK2iq43cJagHZ8sXN0jDHDKzB+86gSBSAI4v07S97mcq+Gs2vclAxSh1j7vOAHxSVgduiiuVQ==}
+  electron-to-chromium@1.5.48:
+    resolution: {integrity: sha512-FXULnNK7ACNI9MTMOVAzUGiz/YrK9Kcb0s/JT4aJgsam7Eh6XYe7Y6q95lPq+VdBe1DpT2eTnfXFtnuPGCks4w==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -1373,8 +1373,8 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
-  shiki@1.22.1:
-    resolution: {integrity: sha512-PbJ6XxrWLMwB2rm3qdjIHNm3zq4SfFnOx0B3rEoi4AN8AUngsdyZ1tRe5slMPtn6jQkbUURLNZPpLR7Do3k78g==}
+  shiki@1.22.2:
+    resolution: {integrity: sha512-3IZau0NdGKXhH2bBlUk4w1IHNxPh6A5B2sUpyY+8utLu2j/h1QpFkAaUA1bAMxOWWGtTWcAh531vnS4NJKS/lA==}
 
   signal-exit@4.1.0:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
@@ -1680,7 +1680,7 @@ snapshots:
 
   '@cartamd/plugin-code@4.0.6(carta-md@4.6.3(svelte@4.2.19))':
     dependencies:
-      '@shikijs/rehype': 1.22.1
+      '@shikijs/rehype': 1.22.2
       carta-md: 4.6.3(svelte@4.2.19)
       unified: 11.0.5
 
@@ -1875,36 +1875,36 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.24.2':
     optional: true
 
-  '@shikijs/core@1.22.1':
+  '@shikijs/core@1.22.2':
     dependencies:
-      '@shikijs/engine-javascript': 1.22.1
-      '@shikijs/engine-oniguruma': 1.22.1
-      '@shikijs/types': 1.22.1
+      '@shikijs/engine-javascript': 1.22.2
+      '@shikijs/engine-oniguruma': 1.22.2
+      '@shikijs/types': 1.22.2
       '@shikijs/vscode-textmate': 9.3.0
       '@types/hast': 3.0.4
       hast-util-to-html: 9.0.3
 
-  '@shikijs/engine-javascript@1.22.1':
+  '@shikijs/engine-javascript@1.22.2':
     dependencies:
-      '@shikijs/types': 1.22.1
+      '@shikijs/types': 1.22.2
       '@shikijs/vscode-textmate': 9.3.0
       oniguruma-to-js: 0.4.3
 
-  '@shikijs/engine-oniguruma@1.22.1':
+  '@shikijs/engine-oniguruma@1.22.2':
     dependencies:
-      '@shikijs/types': 1.22.1
+      '@shikijs/types': 1.22.2
       '@shikijs/vscode-textmate': 9.3.0
 
-  '@shikijs/rehype@1.22.1':
+  '@shikijs/rehype@1.22.2':
     dependencies:
-      '@shikijs/types': 1.22.1
+      '@shikijs/types': 1.22.2
       '@types/hast': 3.0.4
       hast-util-to-string: 3.0.1
-      shiki: 1.22.1
+      shiki: 1.22.2
       unified: 11.0.5
       unist-util-visit: 5.0.0
 
-  '@shikijs/types@1.22.1':
+  '@shikijs/types@1.22.2':
     dependencies:
       '@shikijs/vscode-textmate': 9.3.0
       '@types/hast': 3.0.4
@@ -2057,7 +2057,7 @@ snapshots:
   browserslist@4.24.2:
     dependencies:
       caniuse-lite: 1.0.30001673
-      electron-to-chromium: 1.5.47
+      electron-to-chromium: 1.5.48
       node-releases: 2.0.18
       update-browserslist-db: 1.1.1(browserslist@4.24.2)
 
@@ -2073,7 +2073,7 @@ snapshots:
       remark-gfm: 4.0.0
       remark-parse: 11.0.0
       remark-rehype: 11.1.1
-      shiki: 1.22.1
+      shiki: 1.22.2
       svelte: 4.2.19
       unified: 11.0.5
     transitivePeerDependencies:
@@ -2197,7 +2197,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.5.47: {}
+  electron-to-chromium@1.5.48: {}
 
   emoji-regex@8.0.0: {}
 
@@ -3180,12 +3180,12 @@ snapshots:
 
   shebang-regex@3.0.0: {}
 
-  shiki@1.22.1:
+  shiki@1.22.2:
     dependencies:
-      '@shikijs/core': 1.22.1
-      '@shikijs/engine-javascript': 1.22.1
-      '@shikijs/engine-oniguruma': 1.22.1
-      '@shikijs/types': 1.22.1
+      '@shikijs/core': 1.22.2
+      '@shikijs/engine-javascript': 1.22.2
+      '@shikijs/engine-oniguruma': 1.22.2
+      '@shikijs/types': 1.22.2
       '@shikijs/vscode-textmate': 9.3.0
       '@types/hast': 3.0.4
 

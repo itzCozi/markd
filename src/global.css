@@ -101,6 +101,13 @@ a:hover {
   text-wrap: nowrap;
 }
 
+.scale-hover {
+  transition: transform 0.15s;
+}
+.scale-hover:hover {
+  transform: scale(1.03);
+}
+
 .carta-icons-menu {
   position: fixed !important;
   top: unset !important;

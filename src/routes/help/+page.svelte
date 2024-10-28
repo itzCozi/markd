@@ -74,7 +74,7 @@
   <HelpEntry
     title="Blockquote"
     description="Blockquotes are defined using the &gt; symbol followed by the text you want to standout, this is usually used for quotes or as a substitute callouts."
-    example="{`> "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...`}" />
+    example="> Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..." />
 
   <HelpEntry
     title="Code"
@@ -115,7 +115,9 @@ ___" />
   <HelpEntry
     title="Subscript & Superscript"
     description="Subscript is defined using two of the ~ symbol followed by the text you want to be subscripted. Superscript is defined using two the caret ^ symbol followed by the text you want to be superscripted."
-    example="H~2~O is a liquid. 2^10^ is 1024." />
+    example="H~2~O is a liquid. 2^10^ is 1024.
+or
+$H_20$ is a liquid. $2^{10}$ is 1024." />
 
   <HelpEntry
     title="Math"
@@ -130,17 +132,11 @@ $$`}">
     <p class="text-type-dimmed py-2">Math Preview:</p>
     <button
       on:click="{() => open('https://i.postimg.cc/3wGPNSC5/math-example.png', '_blank')}"
-      title="Math example"
-      class="relative flex group">
+      title="Math example">
       <img
         src="/math-example.png"
         alt="logo"
-        class="max-w-[400px] w-[99%] group-hover:opacity-35 transition-opacity duration-400 rounded" />
-      <div
-        class="absolute w-[99%] rounded bg-black bg-opacity-55 inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <span class="text-type-dimmed bg-mono-card px-2 py-1 rounded-sm"
-          >View full math example</span>
-      </div>
+        class="max-w-[400px] w-[99%] rounded scale-hover" />
     </button>
   </HelpEntry>
 

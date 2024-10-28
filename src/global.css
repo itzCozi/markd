@@ -104,6 +104,7 @@ a:hover {
 .scale-hover {
   transition: transform 0.15s;
 }
+
 .scale-hover:hover {
   transform: scale(1.03);
 }

@@ -109,6 +109,26 @@
     },
   });
 
+  function getOrdinalSuffix(day: number) {
+    if (day > 3 && day < 21) return "th";
+    switch (day % 10) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  }
+
+  const date = new Date();
+  const day = date.getDate();
+  const formattedDate = `${date.toLocaleString("en-US", { month: "long" })} ${day}${getOrdinalSuffix(day)}, ${date.getFullYear()}`;
+  const hyphens = "-".repeat(formattedDate.length);
+  const placeholder = `${formattedDate}\n${hyphens}`;
+
   function handleEditorScroll(event: Event) {
     if (!isScrollSyncEnabled) return;
     const editor = event.target as HTMLDivElement;
@@ -180,7 +200,7 @@
             bind:selectedTab
             theme="{$markdownTheme}"
             mode="tabs"
-            placeholder="Insert your markdown here..." />
+            {placeholder} />
         {/key}
       </div>
     </div>

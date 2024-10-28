@@ -18,6 +18,6 @@
   "singleAttributePerLine": true,
   "semi": true,
   "htmlWhitespaceSensitivity": "css",
-  "filepath": "{src/**/*.{ts,js,svelte,html,css},*.{ts,js,svelte,html,css,json}}",
+  "filepath": "{src/**/*.{ts,js,svelte,html,css},*.{ts,js,svelte,html,css,json,md}}",
   "plugins": ["prettier-plugin-svelte"]
 }

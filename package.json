@@ -6,7 +6,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "format": "prettier --log-level warn --write \"{src/**/*.{ts,js,svelte,html,css},*.{ts,js,svelte,html,css,json}}\"",
+    "format": "prettier --log-level warn --write \"{src/**/*.{ts,js,svelte,html,css},*.{ts,js,svelte,html,css,json,md}}\"",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
   },
@@ -30,7 +30,7 @@
     "@cartamd/plugin-math": "^4.2.1",
     "@cartamd/plugin-slash": "^4.1.2",
     "@chevrotain/regexp-to-ast": "^11.0.3",
-    "carta-md": "^4.6.2",
+    "carta-md": "^4.6.3",
     "carta-plugin-subscript": "^2.0.0",
     "isomorphic-dompurify": "^2.16.0",
     "katex": "^0.16.11",

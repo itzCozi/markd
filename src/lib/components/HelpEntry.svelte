@@ -12,5 +12,5 @@
       <code>{example}</code>
     </pre>
   {/if}
-  <slot></slot>
+  <slot />
 </div>

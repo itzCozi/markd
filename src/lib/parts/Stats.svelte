@@ -13,5 +13,5 @@
   <span class="separator">•</span>
   <span class="stat-item">Words: {wordCount}</span>
   <span class="separator">•</span>
-  <span class="stat-item">Read Time: {readTime} minutes</span>
+  <span class="stat-item">Read Time: {readTime} {readTime === 1 ? "minute" : "minutes"}</span>
 </div>

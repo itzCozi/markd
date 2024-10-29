@@ -164,9 +164,10 @@ a:hover {
 
   .stats {
     margin: 0;
+    border: none;
     border-radius: 0;
     padding-inline: 12px;
-    border-top: 1px solid #333333;
+    border-block: 1px solid #333333;
   }
 
   .divider {
@@ -210,15 +211,18 @@ a:hover {
   .fullscreen-toggle {
     display: none;
   }
+
   .stats {
     bottom: 50px !important;
     width: 100%;
   }
+
   .carta-icons-menu {
     bottom: 80px !important;
     left: unset !important;
     right: 0 !important;
   }
+
   .carta-editor {
     margin-bottom: 70px !important;
   }

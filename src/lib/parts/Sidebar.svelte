@@ -25,7 +25,7 @@
   class:-translate-x-full="{!isSidebarOpen}">
   <div class="p-4">
     <div class="flex justify-between mt-1 mb-5">
-      <p class="text-2xl font-semibold">Navigation</p>
+      <p class="text-2xl font-semibold text-type-emphasized">Navigation</p>
       <SmallIconButton
         title="Close"
         onClick="{closeSidebar}"

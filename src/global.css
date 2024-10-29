@@ -38,11 +38,19 @@ body {
   position: sticky !important;
   top: 0;
   background-color: #111 !important;
-  border: 1px solid #2f4359;
+  border: 1px solid #333333;
   border-radius: 5px;
   z-index: 30;
   margin-left: auto;
   max-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .carta-toolbar {
+    border: none;
+    border-radius: 0px;
+    border-top: 1px solid #333333;
+  }
 }
 
 .carta-toolbar-right {
@@ -77,7 +85,7 @@ a:hover {
   height: 32px;
   width: 140px;
   background-color: #111 !important;
-  border: 1px solid #2f4359;
+  border: 1px solid #333333;
   border-radius: 5px;
   z-index: 30;
   margin-left: auto;
@@ -95,10 +103,22 @@ a:hover {
   position: fixed;
   bottom: 0;
   right: 0;
+  margin: 5px;
   width: fit-content;
   border-radius: 5px;
   z-index: 30;
   text-wrap: nowrap;
+  padding-block: 5px;
+  padding-inline: 8px;
+}
+
+@media (max-width: 768px) {
+  .stats {
+    margin: 0;
+    border-radius: 0;
+    padding-inline: 12px;
+    border-top: 1px solid #333333;
+  }
 }
 
 .scale-hover {
@@ -116,7 +136,7 @@ a:hover {
   width: fit-content;
   height: fit-content;
   background-color: #111 !important;
-  border: 1px solid #2f4359;
+  border: 1px solid #333333;
   border-radius: 5px;
   padding: 10px;
   z-index: 90;

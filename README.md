@@ -22,12 +22,15 @@ Carta, all components are hand made using tailwind and svelte.
 - Code syntax highlighting
 - Live preview of markdown
 - Refined homemade editor
+- Advanced IntelliSense
 - Supports inline HTML
 - Scalable Split view
 - No ads or tracking
 - Persistent storage
 - Printer friendly
+- Emoji insertion
 - Extended syntax
+- Sleek dark UI
 - LaTeX support
 - Scroll sync
 - Zen mode

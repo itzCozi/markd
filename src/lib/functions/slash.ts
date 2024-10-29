@@ -1,3 +1,4 @@
+import { dateModule } from "./placeholder";
 import type { InputEnhancer } from "carta-md";
 
 function insertLine(input: any, string: string) {
@@ -150,6 +151,15 @@ export const additionalSnippets: SlashSnippet[] = [
   },
 
   // Advanced
+  {
+    id: "date",
+    group: "Advanced",
+    title: "Date",
+    description: "Add the date",
+    action: (input: InputEnhancer) => insertLine(input,
+      dateModule
+    ),
+  },
   {
     id: "definitionList",
     group: "Advanced",

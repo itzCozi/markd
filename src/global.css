@@ -35,7 +35,6 @@ body {
 
 .carta-toolbar {
   width: fit-content;
-  font-family: "monospace";
   position: sticky !important;
   top: 0;
   background-color: #121212 !important;
@@ -127,7 +126,6 @@ a:hover {
 
 .carta-icons-menu {
   position: fixed !important;
-  font-family: "monospace";
   top: unset !important;
   left: 10px !important;
   width: fit-content;

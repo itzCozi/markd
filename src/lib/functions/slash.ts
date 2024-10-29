@@ -156,9 +156,7 @@ export const additionalSnippets: SlashSnippet[] = [
     group: "Advanced",
     title: "Date",
     description: "Add the date",
-    action: (input: InputEnhancer) => insertLine(input,
-      dateModule
-    ),
+    action: (input: InputEnhancer) => insertLine(input, dateModule),
   },
   {
     id: "definitionList",

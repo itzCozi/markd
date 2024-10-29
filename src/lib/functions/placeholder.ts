@@ -16,6 +16,6 @@ const date = new Date();
 const day = date.getDate();
 const formattedDate = `${date.toLocaleString("en-US", { month: "long" })} ${day}${getOrdinalSuffix(day)}, ${date.getFullYear()}`;
 const hyphens = "-".repeat(formattedDate.length);
-export const placeholder = `${formattedDate}\n${hyphens}`;
 
+export const placeholder = `${formattedDate}\n${hyphens}`;
 export const dateModule = `${formattedDate}`;

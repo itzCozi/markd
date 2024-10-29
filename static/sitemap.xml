@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://markd.it/</loc>
-    <lastmod>2023-10-01</lastmod>
+    <lastmod>2023-10-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://markd.it/about</loc>
-    <lastmod>2023-10-01</lastmod>
+    <lastmod>2023-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://markd.it/help</loc>
-    <lastmod>2023-10-01</lastmod>
+    <lastmod>2023-10-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

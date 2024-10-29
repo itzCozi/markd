@@ -1,10 +1,10 @@
 .carta-emoji {
-  --background: #1e1e1e;
+  --background: #202020;
   --group-color: #c3c3c3;
   --title-color: #d2d2d2;
   --description-color: #aeaeae;
-  --hover-background: #222222;
-  --contrast-background: #262626;
+  --hover-background: #3a3a3a;
+  --contrast-background: #2c2c2c;
 
   display: flex;
   flex-wrap: wrap;

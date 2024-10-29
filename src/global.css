@@ -34,23 +34,26 @@ body {
 }
 
 .carta-toolbar {
+  color: #d0d0f4;
   width: fit-content;
   position: sticky !important;
   top: 0;
-  background-color: #111 !important;
+  background-color: #121212 !important;
   border: 1px solid #333333;
   border-radius: 5px;
   z-index: 30;
   margin-left: auto;
   max-width: 300px;
+  overflow: auto;
 }
 
-@media (max-width: 768px) {
-  .carta-toolbar {
-    border: none;
-    border-radius: 0px;
-    border-top: 1px solid #333333;
-  }
+.carta-toolbar::-webkit-scrollbar {
+  display: none;
+}
+
+.carta-toolbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .carta-toolbar-right {
@@ -84,7 +87,8 @@ a:hover {
   top: 0;
   height: 32px;
   width: 140px;
-  background-color: #111 !important;
+  color: #d0d0f4;
+  background-color: #121212 !important;
   border: 1px solid #333333;
   border-radius: 5px;
   z-index: 30;
@@ -103,6 +107,8 @@ a:hover {
   position: fixed;
   bottom: 0;
   right: 0;
+  background-color: #121212;
+  border: 1px solid #333333;
   margin: 5px;
   width: fit-content;
   border-radius: 5px;
@@ -110,15 +116,6 @@ a:hover {
   text-wrap: nowrap;
   padding-block: 5px;
   padding-inline: 8px;
-}
-
-@media (max-width: 768px) {
-  .stats {
-    margin: 0;
-    border-radius: 0;
-    padding-inline: 12px;
-    border-top: 1px solid #333333;
-  }
 }
 
 .scale-hover {
@@ -135,12 +132,13 @@ a:hover {
   left: 10px !important;
   width: fit-content;
   height: fit-content;
-  background-color: #111 !important;
+  color: #d0d0f4;
+  background-color: #121212 !important;
   border: 1px solid #333333;
   border-radius: 5px;
-  padding: 10px;
+  padding: 6px;
   z-index: 90;
-  gap: 2px;
+  gap: 1px;
 }
 
 .carta-icons-menu svg {
@@ -159,6 +157,19 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .carta-toolbar {
+    border: none;
+    border-radius: 0px;
+    border-top: 1px solid #333333;
+  }
+
+  .stats {
+    margin: 0;
+    border-radius: 0;
+    padding-inline: 12px;
+    border-top: 1px solid #333333;
+  }
+
   .divider {
     display: none !important;
   }

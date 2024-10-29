@@ -87,6 +87,7 @@
 
 <DropdownButton
   onClick="{printContent}"
+  file="pdf"
   title="Export as PDF">
-  Export as PDF (.pdf)
+  Export as PDF
 </DropdownButton>

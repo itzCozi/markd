@@ -6,7 +6,6 @@
   import IconButton from "$lib/components/IconButton.svelte";
   import Sidebar from "$lib/parts/Sidebar.svelte";
   import PdfButton from "$lib/components/buttons/PDFButton.svelte";
-  import TxtButton from "$lib/components/buttons/TxtButton.svelte";
   import HtmlButton from "$lib/components/buttons/HTMLButton.svelte";
   import FullscreenToggle from "$lib/components/buttons/FullscreenToggle.svelte";
   import MdButton from "$lib/components/buttons/MdButton.svelte";
@@ -83,7 +82,6 @@
             <!-- From longest item to shortest -->
             <MdButton />
             <HtmlButton />
-            <TxtButton />
             <PdfButton />
           </div>
         {/if}

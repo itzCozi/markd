@@ -17,6 +17,7 @@
 
 <DropdownButton
   onClick="{exportToMd}"
+  file="md"
   title="Export as Markdown">
-  Export Markdown (.md)
+  Export Workspace
 </DropdownButton>

@@ -75,7 +75,7 @@
         {/if}
         {#if exportMenuOpen}
           <div
-            class="origin-top-right z-40 absolute right-0 mt-2 w-48 rounded-md py-1 bg-mono-card ring-1 ring-black ring-opacity-15"
+            class="origin-top-right z-40 absolute right-0 mt-2 w-48 rounded-md bg-mono-background border border-[#333333]"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="user-menu-button"

@@ -18,6 +18,7 @@ module.exports = {
           lightBackground: "#ffffff",
           card: "#202020",
           accent: "#1a1a1a",
+          divider: "#333333",
           accentDark: "#252525",
           accentLight1: "#2c2c2c",
           accentLight2: "#3a3a3a",

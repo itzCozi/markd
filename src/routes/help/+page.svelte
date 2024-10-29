@@ -2,8 +2,6 @@
   import LargePageLayout from "$lib/components/LargePageLayout.svelte";
   import HelpEntry from "$lib/components/HelpEntry.svelte";
   import { CircleAlert } from "lucide-svelte";
-
-  const latexCode = `\\text{slope} = \\frac{f(5) - f(4)}{-1} = \\frac{0 - 1}{-1} = 1`;
 </script>
 
 <LargePageLayout>

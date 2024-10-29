@@ -34,8 +34,8 @@ body {
 }
 
 .carta-toolbar {
-  color: #d0d0f4;
   width: fit-content;
+  font-family: "monospace";
   position: sticky !important;
   top: 0;
   background-color: #121212 !important;
@@ -87,7 +87,6 @@ a:hover {
   top: 0;
   height: 32px;
   width: 140px;
-  color: #d0d0f4;
   background-color: #121212 !important;
   border: 1px solid #333333;
   border-radius: 5px;
@@ -128,21 +127,35 @@ a:hover {
 
 .carta-icons-menu {
   position: fixed !important;
+  font-family: "monospace";
   top: unset !important;
   left: 10px !important;
   width: fit-content;
   height: fit-content;
-  color: #d0d0f4;
   background-color: #121212 !important;
   border: 1px solid #333333;
   border-radius: 5px;
-  padding: 6px;
   z-index: 90;
-  gap: 1px;
+}
+
+.carta-icons-menu > * {
+  padding-inline: 8px;
+  padding-block: 2px;
+  border-bottom: 1px solid #333333;
+  border-radius: 0 !important;
+  transition: all 0.1s ease-in-out;
+}
+
+.carta-icons-menu > *:last-child {
+  border-bottom: none;
+}
+
+.carta-icons-menu button:hover {
+  background-color: #252525;
 }
 
 .carta-icons-menu svg {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .math-icon + span:before {
@@ -180,7 +193,7 @@ a:hover {
 
   .editor {
     width: 100% !important;
-    height: 100dvh;
+    height: 100%;
   }
 
   .carta-toolbar {
@@ -218,7 +231,8 @@ a:hover {
   }
 
   .carta-icons-menu {
-    bottom: 80px !important;
+    margin-bottom: 10px;
+    bottom: 76px !important;
     left: unset !important;
     right: 0 !important;
   }

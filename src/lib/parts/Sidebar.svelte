@@ -28,29 +28,25 @@
       <p class="text-2xl font-semibold text-type-emphasized">Navigation</p>
       <SmallIconButton
         title="Close"
-        onClick="{closeSidebar}"
-        className="">
+        onClick="{closeSidebar}">
         <XIcon />
       </SmallIconButton>
     </div>
     <div class="flex flex-col gap-3">
       <SidebarButton
         title="Home"
-        className=""
         onClick="{() => {
           closeSidebar();
           goto('/');
         }}">Home</SidebarButton>
       <SidebarButton
         title="About"
-        className=""
         onClick="{() => {
           closeSidebar();
           goto('/about');
         }}">About</SidebarButton>
       <SidebarButton
         title="help"
-        className=""
         onClick="{() => {
           closeSidebar();
           goto('/help');
@@ -60,7 +56,6 @@
   <div class="mt-auto mb-2 px-4 flex justify-between">
     <LargeIconButton
       title="GitHub"
-      className=""
       onClick="{() => {
         closeSidebar();
         window.location.href = 'https://github.com/itzcozi/markd';
@@ -69,7 +64,6 @@
     </LargeIconButton>
     <LargeIconButton
       title="Email"
-      className=""
       onClick="{() => {
         closeSidebar();
         open('mailto:dev@wyzie.ru', '_blank');

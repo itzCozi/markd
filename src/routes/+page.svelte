@@ -7,7 +7,7 @@
   import DOMPurify from "isomorphic-dompurify";
   import { markdownTheme } from "$lib/stores/themeStore";
   import NavBar from "$lib/parts/NavBar.svelte";
-  import Stats from "$lib/parts/stats.svelte";
+  import Stats from "$lib/parts/Stats.svelte";
 
   // Plugins:
 

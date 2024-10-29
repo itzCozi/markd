@@ -92,7 +92,6 @@
         <FullscreenToggle />
       {/if}
       <IconButton
-        className=""
         title="Navigation"
         onClick="{toggleSidebar}">
         <Menu />

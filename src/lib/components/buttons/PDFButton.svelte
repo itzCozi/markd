@@ -86,7 +86,6 @@
 </script>
 
 <DropdownButton
-  className=""
   onClick="{printContent}"
   title="Export as PDF">
   Export as PDF (.pdf)

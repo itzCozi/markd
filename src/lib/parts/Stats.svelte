@@ -1,5 +1,5 @@
 <script lang="ts">
-  import localStorageStore from "../../lib/stores/localStorage";
+  import localStorageStore from "../stores/localStorage";
 
   $: source = localStorageStore.get("markdown") || "";
   $: words = source.split(/\s+/).filter((word) => word !== "");
@@ -8,7 +8,7 @@
   $: readTime = Math.ceil(wordCount / 200);
 </script>
 
-<div class="stats bg-mono-card gap-3 text-type-dimmed text-xs">
+<div class="stats bg-mono-card gap-3 text-type-dimmed text-xs md:ring-1 ring-black ring-opacity-15">
   <span class="stat-item">Characters: {characterCount}</span>
   <span class="separator">•</span>
   <span class="stat-item">Words: {wordCount}</span>

@@ -25,7 +25,6 @@
 </script>
 
 <DropdownButton
-  className=""
   on:click="{exportToTxt}"
   title="Export as TXT">
   Export Plain Text (.txt)

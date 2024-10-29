@@ -16,7 +16,6 @@
 </script>
 
 <DropdownButton
-  className=""
   onClick="{exportToMd}"
   title="Export as Markdown">
   Export Markdown (.md)

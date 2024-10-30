@@ -27,7 +27,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <meta
       name="description"
-      content="MarkD is an advanced and heavily opinionated live markdown editor built with SvelteKit." />
+      content="An advanced, opinionated live Markdown editor built with SvelteKit from scratch." />
     <meta
       name="keywords"
       content="Markdown, Editor, SvelteKit, Live Editor, Advanced, Free, Open-source" />
@@ -48,7 +48,7 @@
       content="MarkD - Advanced Markdown Editor" />
     <meta
       property="og:description"
-      content="MarkD is an advanced and heavily opinionated live markdown editor built with SvelteKit." />
+      content="An advanced, opinionated live Markdown editor built with SvelteKit from scratch." />
     <meta
       property="og:image"
       content="/favicon.png" />
@@ -66,7 +66,7 @@
       content="MarkD - Advanced Markdown Editor" />
     <meta
       name="twitter:description"
-      content="MarkD is an advanced and heavily opinionated live markdown editor built with SvelteKit." />
+      content="An advanced, opinionated live Markdown editor built with SvelteKit from scratch." />
     <meta
       name="twitter:image"
       content="/favicon.png" />
@@ -81,13 +81,21 @@
       type="application/xml"
       title="Sitemap"
       href="/sitemap.xml" />
+    <link
+      rel="manifest"
+      href="/manifest.json" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+    </script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "MarkD",
         "url": "https://markd.it",
-        "description": "MarkD is an advanced and heavily opinionated live markdown editor built with SvelteKit."
+        "description": "An advanced, opinionated live Markdown editor built with SvelteKit from scratch."
       }
     </script>
     %sveltekit.head%

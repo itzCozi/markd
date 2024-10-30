@@ -127,14 +127,14 @@ $$
 $$
 \\text{slope} = \\frac{f(5) - f(4)}{-1} = \\frac{0 - 1}{-1} = 1
 $$`}">
-    <p class="text-type-dimmed py-2">Math Preview:</p>
+    <p class="text-type-dimmed py-2">Math preview:</p>
     <button
       on:click="{() => open('https://i.postimg.cc/3wGPNSC5/math-example.png', '_blank')}"
       title="Math example">
       <img
         src="/math-example.png"
         alt="logo"
-        class="max-w-[400px] w-[99%] rounded scale-hover" />
+        class="max-w-[400px] w-[99%] rounded" />
     </button>
   </HelpEntry>
 

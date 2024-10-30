@@ -45,12 +45,12 @@
       on:click="{() => goto('/')}"
       title="Home"
       class="hover:no-underline">
-      <div class="flex flex-row gap-3 items-center scale-hover duration-100">
+      <div class="flex flex-row gap-3 items-center">
         <img
           src="/favicon.svg"
           alt="logo"
           class="w-10 h-10" />
-        <p class="text-4xl font-bold text-type-emphasized">MarkD</p>
+        <p class="text-4xl font-semibold text-type-emphasized">MarkD</p>
       </div>
     </button>
     <div class="flex flex-row gap-3 items-center">

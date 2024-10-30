@@ -1,4 +1,4 @@
-import { formattedDate } from "./placeholder";
+import { formattedDate } from "$lib/functions/placeholder";
 import type { InputEnhancer } from "carta-md";
 
 function insertLine(input: any, string: string) {

@@ -1175,8 +1175,8 @@ packages:
     resolution: {integrity: sha512-QOSvevhslijgYwRx6Rv7zKdMF8lbRmx+uQGx2+vDc+KI/eBnsy9kit5aj23AgGu3pa4t9AgwbnXWqS+iOY+2aA==}
     engines: {node: '>= 6'}
 
-  caniuse-lite@1.0.30001674:
-    resolution: {integrity: sha512-jOsKlZVRnzfhLojb+Ykb+gyUSp9Xb57So+fAiFlLzzTKpqg8xxSav0e40c8/4F/v9N8QSvrRRaLeVzQbLqomYw==}
+  caniuse-lite@1.0.30001675:
+    resolution: {integrity: sha512-/wV1bQwPrkLiQMjaJF5yUMVM/VdRPOCU8QZ+PmG6uW6DvYSrNY1bpwHI/3mOcUosLaJCzYDi5o91IQB51ft6cg==}
 
   carta-md@4.6.3:
     resolution: {integrity: sha512-m5+y42ZWAQkbDCybPEqu8N3+DFrVAhOMGDnq3VmSCXGa5aLz4e+DLmb34JPCDUfmxQDWvKz0rvtc/d1SjhKiTg==}
@@ -1418,8 +1418,8 @@ packages:
     resolution: {integrity: sha512-/veY75JbMK4j1yjvuUxuVsiS/hr/4iHs9FTT6cgTexxdE0Ly/glccBAkloH/DofkjRbZU3bnoj38mOmhkZ0lHw==}
     engines: {node: '>=12'}
 
-  esm-env@1.1.1:
-    resolution: {integrity: sha512-5HLucDhz5yhDlMHqEedMyD4XjyV7+4vZhUS7zXNiBdSXFrViQCIeRmf7Gcs33USDcX0aGdCH+C6ZWbxzXy3ZGg==}
+  esm-env@1.1.4:
+    resolution: {integrity: sha512-oO82nKPHKkzIj/hbtuDYy/JHqBHFlMIW36SDiPCVsj87ntDLcWN+sJ1erdVryd4NxODacFTsdrIE3b7IamqbOg==}
 
   estree-walker@1.0.1:
     resolution: {integrity: sha512-1fMXF3YP4pZZVozF8j/ZLfvnR8NSIljt56UhbZ5PeeDmmGHpgpdwQt7ITlGvYaQukCvuBRMLEiKiYC+oeIg4cg==}
@@ -3846,7 +3846,7 @@ snapshots:
       '@types/cookie': 0.6.0
       cookie: 0.6.0
       devalue: 5.1.1
-      esm-env: 1.1.1
+      esm-env: 1.1.4
       import-meta-resolve: 4.1.0
       kleur: 4.1.5
       magic-string: 0.30.12
@@ -3983,7 +3983,7 @@ snapshots:
   autoprefixer@10.4.20(postcss@8.4.47):
     dependencies:
       browserslist: 4.24.2
-      caniuse-lite: 1.0.30001674
+      caniuse-lite: 1.0.30001675
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -4043,7 +4043,7 @@ snapshots:
 
   browserslist@4.24.2:
     dependencies:
-      caniuse-lite: 1.0.30001674
+      caniuse-lite: 1.0.30001675
       electron-to-chromium: 1.5.49
       node-releases: 2.0.18
       update-browserslist-db: 1.1.1(browserslist@4.24.2)
@@ -4060,12 +4060,12 @@ snapshots:
 
   camelcase-css@2.0.1: {}
 
-  caniuse-lite@1.0.30001674: {}
+  caniuse-lite@1.0.30001675: {}
 
   carta-md@4.6.3(svelte@4.2.19):
     dependencies:
       diff: 5.2.0
-      esm-env: 1.1.1
+      esm-env: 1.1.4
       rehype-stringify: 10.0.1
       remark-gfm: 4.0.0
       remark-parse: 11.0.0
@@ -4355,7 +4355,7 @@ snapshots:
 
   escape-string-regexp@5.0.0: {}
 
-  esm-env@1.1.1: {}
+  esm-env@1.1.4: {}
 
   estree-walker@1.0.1: {}
 

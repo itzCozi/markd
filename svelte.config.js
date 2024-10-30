@@ -11,11 +11,12 @@ const config = {
   vite: {
     plugins: [
       VitePWA({
-        registerType: 'autoUpdate',
+        registerType: "autoUpdate",
         manifest: {
           name: "MarkD",
           short_name: "MarkD",
-          description: "An advanced, opinionated live Markdown editor built with SvelteKit from scratch.",
+          description:
+            "An advanced, opinionated live Markdown editor built with SvelteKit from scratch.",
           start_url: "/",
           display: "standalone",
           background_color: "#202020",
@@ -24,18 +25,18 @@ const config = {
             {
               src: "/favicon.png",
               sizes: "192x192",
-              type: "image/png"
+              type: "image/png",
             },
             {
               src: "/favicon.png",
               sizes: "512x512",
-              type: "image/png"
-            }
-          ]
-        }
-      })
-    ]
-  }
+              type: "image/png",
+            },
+          ],
+        },
+      }),
+    ],
+  },
 };
 
 export default config;

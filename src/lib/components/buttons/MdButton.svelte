@@ -1,6 +1,6 @@
 <script lang="ts">
   import DropdownButton from "$lib/components/DropdownButton.svelte";
-  import localStorageStore from "../../stores/localStorage";
+  import localStorageStore from "$lib/stores/localStorage";
 
   let source = localStorageStore.get("markdown") || "";
 

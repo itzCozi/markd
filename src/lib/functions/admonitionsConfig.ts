@@ -10,11 +10,10 @@ export const defaultConfig: Config = {
   },
   titleFilter: ["[!NOTE]", "[!IMPORTANT]", "[!WARNING]", "[!TIP]", "[!CAUTION]"],
   titleTextMap: (title) => {
-    const displayTitle = ["[!NOTE]", "[!IMPORTANT]", "[!WARNING]", "[!TIP]", "[!CAUTION]"].includes(
-      title,
-    )
-      ? ""
-      : title.substring(2, title.length - 1);
+    const displayTitle =
+      ["[!NOTE]", "[!IMPORTANT]", "[!WARNING]", "[!TIP]", "[!CAUTION]"].includes(title) ? "" : (
+        title.substring(2, title.length - 1)
+      );
     return {
       displayTitle,
       checkedTitle: title.substring(2, title.length - 1),

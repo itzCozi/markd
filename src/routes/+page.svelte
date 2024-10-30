@@ -1,9 +1,9 @@
 <script lang="ts">
-  import "../styles.css"; // HTML renderer styles
+  import "@/styles/styles.css"; // HTML renderer styles
   import { setContext } from "svelte";
   import { Carta, Markdown, MarkdownEditor } from "carta-md";
   import { Carta as CartaType } from "carta-md";
-  import localStorageStore from "../lib/stores/localStorage";
+  import localStorageStore from "$lib/stores/localStorage";
   import DOMPurify from "isomorphic-dompurify";
   import { markdownTheme } from "$lib/stores/themeStore";
   import NavBar from "$lib/parts/NavBar.svelte";
@@ -13,11 +13,11 @@
   // Plugins:
 
   // Slash
-  import "../slash.css";
+  import "@/styles/slash.css";
   import { slash } from "@cartamd/plugin-slash";
   import { additionalSnippets } from "$lib/functions/slash";
   // Emoji
-  import "../emoji.css";
+  import "@/styles/emoji.css";
   import { emoji } from "@cartamd/plugin-emoji";
   // External links forced
   import type { Plugin, UnifiedTransformer } from "carta-md";
@@ -39,8 +39,8 @@
   });
   // Admonitions
   import plugin from "remark-github-beta-blockquote-admonitions";
-  import { defaultConfig } from "../lib/functions/admonitionsConfig";
-  import "../admonitions.css";
+  import { defaultConfig } from "$lib/functions/admonitionsConfig";
+  import "@/styles/admonitions.css";
 
   const admonitionsTransformer: UnifiedTransformer<"sync"> = {
     execution: "sync",
@@ -166,10 +166,11 @@
     style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div
-        class="line-count hidden p-2 text-gray-600 text-right border-r border-[#252525] w-12 {selectedTab ===
-        'write'
-          ? ''
-          : 'hidden'}">
+        class="line-count hidden p-2 text-gray-600 text-right border-r border-[#252525] w-12 {(
+          selectedTab === 'write'
+        ) ?
+          ''
+        : 'hidden'}">
       </div>
       <div
         class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"

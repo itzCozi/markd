@@ -81,8 +81,8 @@
             tabindex="-1">
             <!-- From longest item to shortest -->
             <MdButton />
-            <HtmlButton />
             <PdfButton />
+            <HtmlButton />
           </div>
         {/if}
       </div>

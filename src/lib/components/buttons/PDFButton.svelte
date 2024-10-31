@@ -1,5 +1,5 @@
 <script lang="ts">
-  import DropdownButton from "$lib/components/DropdownButton.svelte";
+  import DropdownButton from "$lib/components/buttons/DropdownButton.svelte";
   import { markdownTheme } from "$lib/stores/themeStore";
 
   // Print instead of pdf export

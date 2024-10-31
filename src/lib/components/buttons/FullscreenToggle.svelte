@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Maximize, Minimize } from "lucide-svelte";
-  import IconButton from "$lib/components/IconButton.svelte";
+  import IconButton from "$lib/components/buttons/IconButton.svelte";
 
   let isFullscreen = false;
 

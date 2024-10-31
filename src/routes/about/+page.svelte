@@ -1,17 +1,18 @@
 <script lang="ts">
-  import IconButton from "$lib/components/IconButton.svelte";
-  import PageLayout from "$lib/components/PageLayout.svelte";
+  import IconButton from "$lib/components/buttons/IconButton.svelte";
+  import PageLayout from "$lib/components/layout/PageLayout.svelte";
+  import Paragraph from "$lib/components/type/Paragraph.svelte";
 </script>
 
 <PageLayout>
   <p class="text-3xl font-semibold text-type-emphasized">About Us</p>
-  <p class="text-type-dimmed mt-2">
+  <Paragraph className="mt-2">
     MarkD is an advanced live markdown editor directly in your browser. It's built using SvelteKit
     and supports HTML as well as an extended markdown syntax, all in the same file. MarkD is an open
     source project and a very opinionated one at that. All of the styles are inline tailwind css
     classes, and the markdown editor is built on Carta. Fully hosted on Cloudflare Pages for the
     community!
-  </p>
+  </Paragraph>
   <div class="flex justify-center my-3">
     <button
       on:click="{() => open('https://github.com/itzcozi/markd', '_blank')}"

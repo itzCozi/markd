@@ -1,5 +1,5 @@
 <script lang="ts">
-  import DropdownButton from "$lib/components/DropdownButton.svelte";
+  import DropdownButton from "$lib/components/buttons/DropdownButton.svelte";
 
   function exportAsHtml() {
     const element = document.querySelector(".markdown-body");

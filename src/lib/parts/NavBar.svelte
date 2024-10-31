@@ -3,7 +3,7 @@
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
   import { Menu, FileText, CircleHelp } from "lucide-svelte";
-  import IconButton from "$lib/components/IconButton.svelte";
+  import IconButton from "$lib/components/buttons/IconButton.svelte";
   import Sidebar from "$lib/parts/Sidebar.svelte";
   import PdfButton from "$lib/components/buttons/PDFButton.svelte";
   import HtmlButton from "$lib/components/buttons/HTMLButton.svelte";

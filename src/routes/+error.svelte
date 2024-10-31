@@ -2,7 +2,7 @@
   import { page } from "$app/stores";
   import { goto } from "$app/navigation";
   import { Undo2 } from "lucide-svelte";
-  import IconButton from "$lib/components/IconButton.svelte";
+  import IconButton from "$lib/components/buttons/IconButton.svelte";
 </script>
 
 <div class="flex flex-col m-3">

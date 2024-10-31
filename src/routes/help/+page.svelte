@@ -1,6 +1,8 @@
 <script lang="ts">
-  import LargePageLayout from "$lib/components/LargePageLayout.svelte";
-  import HelpEntry from "$lib/components/HelpEntry.svelte";
+  import LargePageLayout from "$lib/components/layout/LargePageLayout.svelte";
+  import HelpEntry from "$lib/components/layout/HelpEntry.svelte";
+  import Divider from "$lib/components/type/Divider.svelte";
+  import Paragraph from "$lib/components/type/Paragraph.svelte";
   import { CircleAlert } from "lucide-svelte";
 </script>
 
@@ -9,23 +11,23 @@
     How to use <span class="underline decoration-1 underline-offset-4 decoration-wavy">MarkD</span
     >own
   </p>
-  <p class="text-type-dimmed">
+  <Paragraph>
     Markdown is a lightweight markup language with plain text formatting syntax. Its design allows
     easy conversion to HTML and other formats, and its syntax is influenced by Perl. Markdown is
     often used to format readme files, for writing messages in online discussion forums, and to
     create rich text using a plain text editor. Here I will teach you how to use markdown, both
     basic syntax and our custom site-specific syntax.
-  </p>
+  </Paragraph>
 
   <div class="flex flex-row gap-2 items-center">
     <p class="text-2xl my-2 text-type-emphasized">IntelliSense</p>
     <CircleAlert class="text-type-dimmed w-4 h-4 mb-3 -ml-1" />
   </div>
-  <p class="text-type-dimmed">
+  <Paragraph>
     Our editor features IntelliSense. Type / to see available commands, or : for emoji selection.
     You can create headers, lists, tables and basically anything using our IntelliSense.
-  </p>
-  <hr class="border-b border-mono-accentLight2 mt-4 border-0" />
+  </Paragraph>
+  <Divider className="mt-4" />
 
   <HelpEntry
     title="Headers"
@@ -127,7 +129,7 @@ $$
 $$
 \\text{slope} = \\frac{f(5) - f(4)}{-1} = \\frac{0 - 1}{-1} = 1
 $$`}">
-    <p class="text-type-dimmed py-2">Math preview:</p>
+    <Paragraph className="py-2">Math preview:</Paragraph>
     <button
       on:click="{() => open('https://i.postimg.cc/3wGPNSC5/math-example.png', '_blank')}"
       title="Math example">

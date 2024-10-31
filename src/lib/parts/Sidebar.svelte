@@ -1,7 +1,7 @@
 <script lang="ts">
-  import LargeIconButton from "$lib/components/LargeIconButton.svelte";
-  import SmallIconButton from "$lib/components/SmallIconButton.svelte";
-  import SidebarButton from "$lib/components/SidebarButton.svelte";
+  import LargeIconButton from "$lib/components/buttons/LargeIconButton.svelte";
+  import SmallIconButton from "$lib/components/buttons/SmallIconButton.svelte";
+  import SidebarButton from "$lib/components/buttons/SidebarButton.svelte";
   import { XIcon } from "lucide-svelte";
   import { goto } from "$app/navigation";
   import { Github, Mail } from "lucide-svelte";

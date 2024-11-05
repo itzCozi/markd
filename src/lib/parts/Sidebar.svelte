@@ -53,7 +53,7 @@
         }}">Docs</SidebarButton>
     </div>
   </div>
-  <div class="mt-auto mb-2 px-4 flex justify-between">
+  <div class="sidebar-icon-buttons mt-auto mb-2 px-4 flex justify-between">
     <LargeIconButton
       title="GitHub"
       onClick="{() => {

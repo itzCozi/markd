@@ -180,6 +180,9 @@
                       bottom: 0px !important;
                       height: 90px !important;
                     }
+                    .sidebar-icon-buttons {
+                      margin-bottom: 40px !important;
+                    }
                 `;
                 document.head.appendChild(style);
             }

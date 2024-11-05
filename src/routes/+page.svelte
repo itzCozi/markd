@@ -173,12 +173,12 @@
                 style.id = "pwa-style";
                 style.innerHTML = `
                     .carta-toolbar {
-                      bottom: 30px !important;
+                      bottom: 20px !important;
                       max-width: 95% !important;
                     }
                     .stats {
                       bottom: 0px !important;
-                      height: 110px !important;
+                      height: 90px !important;
                     }
                 `;
                 document.head.appendChild(style);

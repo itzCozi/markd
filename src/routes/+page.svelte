@@ -9,6 +9,7 @@
   import NavBar from "$lib/parts/NavBar.svelte";
   import Stats from "$lib/parts/Stats.svelte";
   import { placeholder } from "$lib/functions/placeholder";
+  import { onMount } from 'svelte';
 
   // Plugins:
 
@@ -152,6 +153,44 @@
     document.removeEventListener("mousemove", handleMouseMove);
     document.removeEventListener("mouseup", handleMouseUp);
   }
+
+  let pwa = false;
+
+    function isPWA() {
+        if (typeof window !== 'undefined') {
+            return window.matchMedia('(display-mode: standalone)').matches;
+        }
+        return false;
+    }
+
+    function managePWAStyles() {
+        pwa = isPWA();
+        const existingStyleTag = document.getElementById("pwa-style");
+
+        if (pwa) {
+            if (!existingStyleTag) {
+                const style = document.createElement("style");
+                style.id = "pwa-style";
+                style.innerHTML = `
+                    .carta-toolbar {
+                      bottom: 30px !important;
+                      max-width: 95% !important;
+                    }
+                    .stats {
+                      bottom: 0px !important;
+                      height: 110px !important;
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+        } else if (existingStyleTag) {
+            existingStyleTag.remove();
+        }
+    }
+
+    onMount(() => {
+        managePWAStyles();
+    });
 </script>
 
 <NavBar />
@@ -160,7 +199,7 @@
   <Stats />
 {/key}
 
-<div class="flex h-[calc(100dvh-73px)] bg-mono-background">
+<div class="flex h-[calc(100dvh-90px)] bg-mono-background">
   <div
     class="editor"
     style="width: {leftWidth}%;">
@@ -173,7 +212,7 @@
         : 'hidden'}">
       </div>
       <div
-        class="w-full p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
+        class="w-full pb-[env(safe-area-inset-bottom)] p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
         on:scroll="{handleEditorScroll}">
         {#key $markdownTheme}
           <MarkdownEditor
@@ -196,7 +235,7 @@
   </div>
 
   <div
-    class="renderer p-2 overflow-auto markdown-content"
+    class="renderer pb-[15px] p-2 overflow-auto markdown-content"
     style="width: {100 - leftWidth}%"
     on:scroll="{handleRendererScroll}">
     <div class="renderer-toolbar">

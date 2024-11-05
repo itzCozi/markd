@@ -19,6 +19,8 @@
     basic syntax and our custom site-specific syntax.
   </Paragraph>
 
+  <Divider className="mt-4" />
+
   <div class="flex flex-row gap-2 items-center">
     <p class="text-2xl my-2 text-type-emphasized">IntelliSense</p>
     <CircleAlert class="text-type-dimmed w-4 h-4 mb-3 -ml-1" />
@@ -27,7 +29,6 @@
     Our editor features IntelliSense. Type / to see available commands, or : for emoji selection.
     You can create headers, lists, tables and basically anything using our IntelliSense.
   </Paragraph>
-  <Divider className="mt-4" />
 
   <HelpEntry
     title="Headers"

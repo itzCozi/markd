@@ -9,7 +9,7 @@
   import NavBar from "$lib/parts/NavBar.svelte";
   import Stats from "$lib/parts/Stats.svelte";
   import { placeholder } from "$lib/functions/placeholder";
-  import { onMount } from 'svelte';
+  import { onMount } from "svelte";
 
   // Plugins:
 
@@ -156,44 +156,44 @@
 
   let pwa = false;
 
-    function isPWA() {
-        if (typeof window !== 'undefined') {
-            return window.matchMedia('(display-mode: standalone)').matches;
-        }
-        return false;
+  function isPWA() {
+    if (typeof window !== "undefined") {
+      return window.matchMedia("(display-mode: standalone)").matches;
     }
+    return false;
+  }
 
-    function managePWAStyles() {
-        pwa = isPWA();
-        const existingStyleTag = document.getElementById("pwa-style");
+  function managePWAStyles() {
+    pwa = isPWA();
+    const existingStyleTag = document.getElementById("pwa-style");
 
-        if (pwa) {
-            if (!existingStyleTag) {
-                const style = document.createElement("style");
-                style.id = "pwa-style";
-                style.innerHTML = `
-                    .carta-toolbar {
-                      bottom: 20px !important;
-                      max-width: 95% !important;
-                    }
-                    .stats {
-                      bottom: 0px !important;
-                      height: 90px !important;
-                    }
-                    .sidebar-icon-buttons {
-                      margin-bottom: 40px !important;
-                    }
-                `;
-                document.head.appendChild(style);
-            }
-        } else if (existingStyleTag) {
-            existingStyleTag.remove();
-        }
+    if (pwa) {
+      if (!existingStyleTag) {
+        const style = document.createElement("style");
+        style.id = "pwa-style";
+        style.innerHTML = `
+          .carta-toolbar {
+            bottom: 20px !important;
+            max-width: 95% !important;
+          }
+          .stats {
+            bottom: 0px !important;
+            height: 90px !important;
+          }
+          .sidebar-icon-buttons {
+            margin-bottom: 40px !important;
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    } else if (existingStyleTag) {
+      existingStyleTag.remove();
     }
+  }
 
-    onMount(() => {
-        managePWAStyles();
-    });
+  onMount(() => {
+    managePWAStyles();
+  });
 </script>
 
 <NavBar />
@@ -202,7 +202,7 @@
   <Stats />
 {/key}
 
-<div class="flex h-[calc(100dvh-90px)] bg-mono-background">
+<div class="flex h-[calc(100dvh-72px)] bg-mono-background">
   <div
     class="editor"
     style="width: {leftWidth}%;">
@@ -232,7 +232,7 @@
 
   <!-- svelte-ignore a11y-no-static-element-interactions -->
   <div
-    class="divider w-1 cursor-ew-resize bg-[#202020]"
+    class="divider w-1 h-full cursor-ew-resize bg-[#202020]"
     style="left: calc({leftWidth}% - 5px);"
     on:mousedown="{handleMouseDown}">
   </div>

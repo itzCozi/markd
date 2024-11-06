@@ -24,7 +24,6 @@ export default defineConfig({
         },
       },
     },
-    treeshake: true,
   },
   optimizeDeps: {
     include: ["svelte", "svelte/internal"],

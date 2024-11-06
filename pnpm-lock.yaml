@@ -10,25 +10,25 @@ importers:
     dependencies:
       '@cartamd/plugin-code':
         specifier: ^4.0.6
-        version: 4.0.6(carta-md@4.6.3(svelte@4.2.19))
+        version: 4.0.6(carta-md@4.6.4(svelte@4.2.19))
       '@cartamd/plugin-emoji':
         specifier: ^4.2.1
-        version: 4.2.1(carta-md@4.6.3(svelte@4.2.19))(svelte@4.2.19)
+        version: 4.2.1(carta-md@4.6.4(svelte@4.2.19))(svelte@4.2.19)
       '@cartamd/plugin-math':
         specifier: ^4.2.1
-        version: 4.2.1(carta-md@4.6.3(svelte@4.2.19))(svelte@4.2.19)
+        version: 4.2.1(carta-md@4.6.4(svelte@4.2.19))(svelte@4.2.19)
       '@cartamd/plugin-slash':
         specifier: ^4.1.2
-        version: 4.1.2(carta-md@4.6.3(svelte@4.2.19))(svelte@4.2.19)
+        version: 4.1.2(carta-md@4.6.4(svelte@4.2.19))(svelte@4.2.19)
       '@chevrotain/regexp-to-ast':
         specifier: ^11.0.3
         version: 11.0.3
       carta-md:
-        specifier: ^4.6.3
-        version: 4.6.3(svelte@4.2.19)
+        specifier: ^4.6.4
+        version: 4.6.4(svelte@4.2.19)
       carta-plugin-subscript:
         specifier: ^2.0.0
-        version: 2.0.0(carta-md@4.6.3(svelte@4.2.19))(svelte@4.2.19)(unified@11.0.5)
+        version: 2.0.0(carta-md@4.6.4(svelte@4.2.19))(svelte@4.2.19)(unified@11.0.5)
       cssnano:
         specifier: ^7.0.6
         version: 7.0.6(postcss@8.4.47)
@@ -1191,8 +1191,8 @@ packages:
   caniuse-lite@1.0.30001677:
     resolution: {integrity: sha512-fmfjsOlJUpMWu+mAAtZZZHz7UEwsUxIIvu1TJfO1HqFQvB/B+ii0xr9B5HpbZY/mC4XZ8SvjHJqtAY6pDPQEog==}
 
-  carta-md@4.6.3:
-    resolution: {integrity: sha512-m5+y42ZWAQkbDCybPEqu8N3+DFrVAhOMGDnq3VmSCXGa5aLz4e+DLmb34JPCDUfmxQDWvKz0rvtc/d1SjhKiTg==}
+  carta-md@4.6.4:
+    resolution: {integrity: sha512-hMhczUwTtb4r1EpswHbp3ZviMjEUjVd0svHU2WerfCBMzWq7JuwNw4KTEb8D+uifXRkUyYiufEOGZju7mSl6HQ==}
     peerDependencies:
       svelte: ^3.54.0 || ^4.0.0 || ^5.0.0-next.1
 
@@ -3798,33 +3798,33 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@cartamd/plugin-code@4.0.6(carta-md@4.6.3(svelte@4.2.19))':
+  '@cartamd/plugin-code@4.0.6(carta-md@4.6.4(svelte@4.2.19))':
     dependencies:
       '@shikijs/rehype': 1.22.2
-      carta-md: 4.6.3(svelte@4.2.19)
+      carta-md: 4.6.4(svelte@4.2.19)
       unified: 11.0.5
 
-  '@cartamd/plugin-emoji@4.2.1(carta-md@4.6.3(svelte@4.2.19))(svelte@4.2.19)':
+  '@cartamd/plugin-emoji@4.2.1(carta-md@4.6.4(svelte@4.2.19))(svelte@4.2.19)':
     dependencies:
       bezier-easing: 2.1.0
-      carta-md: 4.6.3(svelte@4.2.19)
+      carta-md: 4.6.4(svelte@4.2.19)
       node-emoji: 2.1.3
       remark-emoji: 5.0.1
       svelte: 4.2.19
 
-  '@cartamd/plugin-math@4.2.1(carta-md@4.6.3(svelte@4.2.19))(svelte@4.2.19)':
+  '@cartamd/plugin-math@4.2.1(carta-md@4.6.4(svelte@4.2.19))(svelte@4.2.19)':
     dependencies:
-      carta-md: 4.6.3(svelte@4.2.19)
+      carta-md: 4.6.4(svelte@4.2.19)
       rehype-katex: 7.0.1
       remark-math: 6.0.0
       svelte: 4.2.19
     transitivePeerDependencies:
       - supports-color
 
-  '@cartamd/plugin-slash@4.1.2(carta-md@4.6.3(svelte@4.2.19))(svelte@4.2.19)':
+  '@cartamd/plugin-slash@4.1.2(carta-md@4.6.4(svelte@4.2.19))(svelte@4.2.19)':
     dependencies:
       bezier-easing: 2.1.0
-      carta-md: 4.6.3(svelte@4.2.19)
+      carta-md: 4.6.4(svelte@4.2.19)
       svelte: 4.2.19
 
   '@chevrotain/regexp-to-ast@11.0.3': {}
@@ -4330,7 +4330,7 @@ snapshots:
 
   caniuse-lite@1.0.30001677: {}
 
-  carta-md@4.6.3(svelte@4.2.19):
+  carta-md@4.6.4(svelte@4.2.19):
     dependencies:
       diff: 5.2.0
       esm-env: 1.1.4
@@ -4344,9 +4344,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  carta-plugin-subscript@2.0.0(carta-md@4.6.3(svelte@4.2.19))(svelte@4.2.19)(unified@11.0.5):
+  carta-plugin-subscript@2.0.0(carta-md@4.6.4(svelte@4.2.19))(svelte@4.2.19)(unified@11.0.5):
     dependencies:
-      carta-md: 4.6.3(svelte@4.2.19)
+      carta-md: 4.6.4(svelte@4.2.19)
       remark-supersub: 1.0.0
       svelte: 4.2.19
       unified: 11.0.5

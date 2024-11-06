@@ -179,6 +179,8 @@
           .stats {
             bottom: 0px !important;
             height: 90px !important;
+            border-block: none !important;
+            border-top: 1px solid #333333 !important;
           }
           .sidebar-icon-buttons {
             margin-bottom: 40px !important;

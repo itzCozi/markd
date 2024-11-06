@@ -175,6 +175,7 @@
           @media (max-width: 768px) {
             .carta-toolbar {
               bottom: 18px !important;
+              padding-right: 3px !important;
             }
             .stats {
               bottom: 68px !important;

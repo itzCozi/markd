@@ -6,7 +6,7 @@
 </script>
 
 <div class="flex flex-col m-3">
-  <h1 class="font-bold">
+  <h1 class="font-semibold">
     <span class="text-red-600">{$page.status}</span>
     -
     {$page.error?.message}

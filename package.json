@@ -30,6 +30,7 @@
     "@chevrotain/regexp-to-ast": "^11.0.3",
     "carta-md": "^4.6.3",
     "carta-plugin-subscript": "^2.0.0",
+    "cssnano": "^7.0.6",
     "isomorphic-dompurify": "^2.16.0",
     "katex": "^0.16.11",
     "lucide-svelte": "^0.447.0",

@@ -20,7 +20,8 @@
       class="w-full flex justify-center items-center">
       <img
         src="https://github-readme-stats.vercel.app/api/pin/?username=itzcozi&repo=markd&theme=dark&show_owner=true&title_color=d0d0d0&text_color=a3a3a3&icon_color=4493f8&bg_color=151515&border_color=505050"
-        alt="Github repository" />
+        alt="Github repository"
+        title="Source code" />
     </button>
   </div>
   <div class="flex flex-row gap-3 items-center my-2">

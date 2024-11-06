@@ -136,7 +136,8 @@ $$`}">
       title="Math example">
       <img
         src="/math-example.png"
-        alt="logo"
+        alt="Math example"
+        title="Math example"
         class="max-w-[400px] w-[99%] rounded" />
     </button>
   </HelpEntry>

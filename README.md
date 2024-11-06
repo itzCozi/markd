@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://markd.it" alt="Homepage" title="Homepage" style="display: flex; flex-direction: column; align-items: center; gap: 1em; text-decoration: none;">
-    <img src="static/favicon.svg" height="120">
+    <img src="static/favicon.svg" height="120" alt="logo">
     <h1 align="center">MarkD</h1>
   </a>
 </p>

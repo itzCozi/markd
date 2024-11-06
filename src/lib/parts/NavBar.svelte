@@ -49,6 +49,7 @@
         <img
           src="/favicon.svg"
           alt="logo"
+          title="Home"
           class="w-10 h-10" />
         <p class="text-4xl font-semibold text-type-emphasized">MarkD</p>
       </div>

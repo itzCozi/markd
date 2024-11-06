@@ -172,18 +172,20 @@
         const style = document.createElement("style");
         style.id = "pwa-style";
         style.innerHTML = `
-          .carta-toolbar {
-            bottom: 20px !important;
-            max-width: 95% !important;
-          }
-          .stats {
-            bottom: 0px !important;
-            height: 90px !important;
-            border-block: none !important;
-            border-top: 1px solid #333333 !important;
-          }
-          .sidebar-icon-buttons {
-            margin-bottom: 40px !important;
+          @media (max-width: 768px) {
+            .carta-toolbar {
+              bottom: 18px !important;
+            }
+            .stats {
+              bottom: 68px !important;
+              border-block: 1px solid #333333 !important;
+            }
+            .carta-icons-menu {
+              margin-bottom: 36px !important;
+            }
+            .sidebar-icon-buttons {
+              margin-bottom: 40px !important;
+            }
           }
         `;
         document.head.appendChild(style);

@@ -162,11 +162,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  .carta-toolbar {
-    border: none;
-    border-radius: 0px;
-  }
-
   .stats {
     margin: 0;
     border: none;
@@ -199,6 +194,7 @@ a:hover {
     max-width: unset;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    border: none;
   }
 
   .carta-toolbar-left {

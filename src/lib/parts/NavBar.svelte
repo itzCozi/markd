@@ -51,7 +51,7 @@
           alt="logo"
           title="Home"
           class="w-10 h-10" />
-        <p class="text-4xl font-semibold text-type-emphasized">MarkD</p>
+        <h1 class="text-4xl font-semibold text-type-emphasized">MarkD</h1>
       </div>
     </button>
     <div class="flex flex-row gap-3 items-center">

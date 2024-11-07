@@ -7,10 +7,10 @@
 </script>
 
 <LargePageLayout>
-  <p class="text-3xl mb-2 font-semibold text-type-emphasized">
+  <h2 class="text-3xl mb-2 font-semibold text-type-emphasized">
     How to use <span class="underline decoration-1 underline-offset-4 decoration-wavy">MarkD</span
     >own
-  </p>
+  </h2>
   <Paragraph>
     Markdown is a lightweight markup language with plain text formatting syntax. Its design allows
     easy conversion to HTML and other formats, and its syntax is influenced by Perl. Markdown is
@@ -20,7 +20,7 @@
   </Paragraph>
 
   <div class="flex flex-row gap-2 items-center">
-    <p class="text-2xl my-2 text-type-emphasized">IntelliSense</p>
+    <h3 class="text-2xl my-2 text-type-emphasized">IntelliSense</h3>
     <CircleAlert class="text-type-dimmed w-4 h-4 mb-3 -ml-1" />
   </div>
   <Paragraph>

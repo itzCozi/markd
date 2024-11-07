@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.6",
-    "@sveltejs/kit": "^2.7.7",
+    "@sveltejs/kit": "^2.8.0",
     "@sveltejs/vite-plugin-svelte": "^3.1.2",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
@@ -28,7 +28,7 @@
     "@cartamd/plugin-math": "^4.2.1",
     "@cartamd/plugin-slash": "^4.1.2",
     "@chevrotain/regexp-to-ast": "^11.0.3",
-    "carta-md": "^4.6.4",
+    "carta-md": "^4.6.5",
     "carta-plugin-subscript": "^2.0.0",
     "cssnano": "^7.0.6",
     "isomorphic-dompurify": "^2.16.0",

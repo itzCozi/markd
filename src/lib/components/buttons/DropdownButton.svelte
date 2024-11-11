@@ -4,20 +4,14 @@
     file?: string | undefined;
     onClick?: any;
     title?: string;
-    children?: import('svelte').Snippet;
+    children?: import("svelte").Snippet;
   }
 
-  let {
-    className = "",
-    file = "",
-    onClick = () => {},
-    title = "",
-    children
-  }: Props = $props();
+  let { className = "", file = "", onClick = () => {}, title = "", children }: Props = $props();
 </script>
 
 <button
-  class="{`block w-full px-4 py-2 text-left text-sm text-type-primary hover:bg-mono-accentDark duration-100 ease-in-out border-b border-[#333333] last:border-b-0 ${className}`}"
+  class={`block w-full px-4 py-2 text-left text-sm text-type-primary hover:bg-mono-accentDark duration-100 ease-in-out border-b border-[#333333] last:border-b-0 ${className}`}
   onclick={onClick}
   {title}>
   <div class="flex justify-between items-center">

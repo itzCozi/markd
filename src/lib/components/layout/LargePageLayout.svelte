@@ -3,7 +3,7 @@
   import Divider from "$lib/components/type/Divider.svelte";
   import Paragraph from "$lib/components/type/Paragraph.svelte";
   interface Props {
-    children?: import('svelte').Snippet;
+    children?: import("svelte").Snippet;
   }
 
   let { children }: Props = $props();

@@ -4,15 +4,10 @@
     title: string;
     description: string;
     example?: string | null | undefined;
-    children?: import('svelte').Snippet;
+    children?: import("svelte").Snippet;
   }
 
-  let {
-    title,
-    description,
-    example = null,
-    children
-  }: Props = $props();
+  let { title, description, example = null, children }: Props = $props();
 </script>
 
 <div class="my-4">

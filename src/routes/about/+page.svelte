@@ -15,7 +15,7 @@
   </Paragraph>
   <div class="flex justify-center my-3">
     <button
-      onclick={() => open('https://github.com/itzcozi/markd', '_blank')}
+      onclick={() => open("https://github.com/itzcozi/markd", "_blank")}
       title="Source code"
       class="w-full flex justify-center items-center">
       <img
@@ -27,7 +27,7 @@
   <div class="flex flex-row gap-3 items-center my-2">
     <IconButton
       title="Email"
-      onClick={() => window.open('mailto:dev@wyzie.ru')}
+      onClick={() => window.open("mailto:dev@wyzie.ru")}
       className="w-full py-2 rounded-md">
       Email Us
     </IconButton>

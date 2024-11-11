@@ -9,6 +9,7 @@
   import Stats from "$lib/parts/Stats.svelte";
   import { placeholder } from "$lib/functions/placeholder";
   import { onMount } from "svelte";
+  import { Check, XIcon } from "lucide-svelte";
 
   // Plugins:
 
@@ -253,22 +254,27 @@
     style="width: {100 - leftWidth}%"
     onscroll={handleRendererScroll}>
     <div class="renderer-toolbar">
-      <span class="mr-2 text-type-primary">Sync Scroll</span>
-      <label class="inline-flex items-center">
+      <span class="mr-3 text-type-primary">Sync Scroll</span>
+      <label
+        class="inline-flex items-center cursor-pointer"
+        title="Theme Toggle">
         <input
           type="checkbox"
           bind:checked={isScrollSyncEnabled}
           class="hidden" />
         <span
-          class="{`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${isScrollSyncEnabled ? 'bg-[#2E6AAC]' : 'bg-[#3a3a3a]'} rounded-full cursor-pointer`}">
+          class={`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${
+            isScrollSyncEnabled ? "bg-[#2E6AAC]" : "bg-[#3a3a3a]"
+          } rounded-full`}>
           <span
-            class="{`absolute top-1 left-1 inline-block w-3 h-3 bg-white rounded-full transition-transform duration-200 ease-in-out ${isScrollSyncEnabled ? 'translate-x-3' : ''}`}"
-          ></span>
-          <span
-            class="{`absolute top-1 left-1 flex items-center justify-center w-3 h-3 transition-transform duration-200 ${isScrollSyncEnabled ? 'translate-x-3' : ''}`}">
-            <i
-              class="{`fas ${isScrollSyncEnabled ? 'fa-check' : 'fa-times'} ${isScrollSyncEnabled ? 'text-[#2E6AAC]' : 'text-type-footer'} text-[10px]`}"
-            ></i>
+            class={`absolute top-1 left-1 inline-block w-3 h-3 bg-transpartent rounded-full transition-transform duration-200 ease-in-out ${
+              isScrollSyncEnabled ? "translate-x-3" : ""
+            }`}>
+            {#if isScrollSyncEnabled}
+              <Check class="w-3 h-3 text-white" />
+            {:else}
+              <XIcon class="w-3 h-3 text-white" />
+            {/if}
           </span>
         </span>
       </label>

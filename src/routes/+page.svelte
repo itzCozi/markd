@@ -106,7 +106,12 @@
     },
   }));
 
-  let source = $state<string>(localStorageStore.get("markdown") || "");
+  let source = $state("");
+
+  onMount(() => {
+    const cached = localStorageStore.get("markdown") ;
+    if (cached) source = cached;
+  })
 
   $effect(() => {
       localStorageStore.set("markdown", source);

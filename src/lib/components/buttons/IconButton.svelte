@@ -1,12 +1,22 @@
 <script lang="ts">
-  export let className: string | undefined = "";
-  export let onClick = () => {};
-  export let title = "";
+  interface Props {
+    className?: string | undefined;
+    onClick?: any;
+    title?: string;
+    children?: import('svelte').Snippet;
+  }
+
+  let {
+    className = "",
+    onClick = () => {},
+    title = "",
+    children
+  }: Props = $props();
 </script>
 
 <button
   class="{`text-type-primary/85 block p-2 bg-mono-accentLight1 hover:bg-mono-accentLight2 duration-200 rounded ease-in-out ${className}`}"
-  on:click={onClick}
+  onclick={onClick}
   {title}>
-  <slot />
+  {@render children?.()}
 </button>

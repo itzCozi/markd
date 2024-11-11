@@ -10,8 +10,8 @@
   import FullscreenToggle from "$lib/components/buttons/FullscreenToggle.svelte";
   import MdButton from "$lib/components/buttons/MdButton.svelte";
 
-  let isSidebarOpen = false;
-  let exportMenuOpen = false;
+  let isSidebarOpen = $state(false);
+  let exportMenuOpen = $state(false);
   let preventClose = false;
 
   function toggleSidebar() {
@@ -42,7 +42,7 @@
 <header class="navbar w-full p-4 bg-mono-card z-20">
   <nav class="flex justify-between items-center">
     <button
-      on:click={() => goto('/')}
+      onclick={() => goto('/')}
       title="Home"
       class="hover:no-underline">
       <div class="flex flex-row gap-3 items-center">

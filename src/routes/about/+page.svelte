@@ -15,7 +15,7 @@
   </Paragraph>
   <div class="flex justify-center my-3">
     <button
-      on:click={() => open('https://github.com/itzcozi/markd', '_blank')}
+      onclick={() => open('https://github.com/itzcozi/markd', '_blank')}
       title="Source code"
       class="w-full flex justify-center items-center">
       <img

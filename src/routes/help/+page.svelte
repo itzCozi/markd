@@ -132,7 +132,7 @@ $$
 $$`}>
     <Paragraph className="py-2">Math preview:</Paragraph>
     <button
-      on:click={() => open('https://i.postimg.cc/3wGPNSC5/math-example.png', '_blank')}
+      onclick={() => open('https://i.postimg.cc/3wGPNSC5/math-example.png', '_blank')}
       title="Math example">
       <img
         src="/math-example.png"

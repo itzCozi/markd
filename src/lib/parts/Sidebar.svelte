@@ -5,8 +5,12 @@
   import { XIcon } from "lucide-svelte";
   import { goto } from "$app/navigation";
   import { Github, Mail } from "lucide-svelte";
-  export let isSidebarOpen = false;
-  export let closeSidebar;
+  interface Props {
+    isSidebarOpen?: boolean;
+    closeSidebar: any;
+  }
+
+  let { isSidebarOpen = false, closeSidebar }: Props = $props();
 </script>
 
 <div
@@ -15,8 +19,8 @@
   class:pointer-events-none="{!isSidebarOpen}"
   role="button"
   tabindex="0"
-  on:click={closeSidebar}
-  on:keydown={(e) => e.key === 'Enter' && closeSidebar()}>
+  onclick={closeSidebar}
+  onkeydown={(e) => e.key === 'Enter' && closeSidebar()}>
 </div>
 
 <aside

@@ -1,6 +1,5 @@
 <script lang="ts">
   import "@/styles/styles.css"; // HTML renderer styles
-  import { setContext } from "svelte";
   import { Carta, Markdown, MarkdownEditor } from "carta-md";
   import { Carta as CartaType } from "carta-md";
   import localStorageStore from "$lib/stores/localStorage";
@@ -77,18 +76,14 @@
   import { subscript } from "carta-plugin-subscript";
   // End Plugins
 
-  let leftWidth = 50;
+  let leftWidth = $state(50);
   let isResizing = false;
-  let selectedTab: "write" | "preview" = "write";
+  let selectedTab: "write" | "preview" = $state("write");
   let editorScrollTop = 0;
   let rendererScrollTop = 0;
-  let isScrollSyncEnabled = true;
-  let carta: CartaType;
-  let source = localStorageStore.get("markdown") || "";
-  setContext("source", source);
-  $: localStorageStore.set("markdown", source);
+  let isScrollSyncEnabled = $state(true);
 
-  $: carta = new Carta({
+  let carta: CartaType = $derived(new Carta({
     rehypeOptions: { allowDangerousHtml: true },
     sanitizer: DOMPurify.sanitize,
     theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
@@ -109,6 +104,12 @@
       // see https://stackoverflow.com/a/78076200/7884074
       singleTilde: false,
     },
+  }));
+
+  let source = $state<string>(localStorageStore.get("markdown") || "");
+
+  $effect(() => {
+      localStorageStore.set("markdown", source);
   });
 
   function handleEditorScroll(event: Event) {
@@ -221,7 +222,7 @@
       </div>
       <div
         class="w-full pb-[env(safe-area-inset-bottom)] p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
-        on:scroll={handleEditorScroll}>
+        onscroll={handleEditorScroll}>
         {#key $markdownTheme}
           <MarkdownEditor
             {carta}
@@ -235,17 +236,17 @@
     </div>
   </div>
 
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
     class="divider w-1 h-full cursor-ew-resize bg-[#202020]"
     style="left: calc({leftWidth}% - 5px);"
-    on:mousedown={handleMouseDown}>
+    onmousedown={handleMouseDown}>
   </div>
 
   <div
     class="renderer pb-[15px] p-2 overflow-auto markdown-content"
     style="width: {100 - leftWidth}%"
-    on:scroll={handleRendererScroll}>
+    onscroll={handleRendererScroll}>
     <div class="renderer-toolbar">
       <span class="mr-2 text-type-primary">Sync Scroll</span>
       <label class="inline-flex items-center">

@@ -42,7 +42,7 @@
 <header class="navbar w-full p-4 bg-mono-card z-20">
   <nav class="flex justify-between items-center">
     <button
-      on:click="{() => goto('/')}"
+      on:click={() => goto('/')}
       title="Home"
       class="hover:no-underline">
       <div class="flex flex-row gap-3 items-center">
@@ -58,7 +58,7 @@
       {#if $page.url.pathname === "/"}
         <IconButton
           title="Help"
-          onClick="{() => goto('/help')}">
+          onClick={() => goto('/help')}>
           <CircleHelp />
         </IconButton>
       {/if}
@@ -67,9 +67,9 @@
           <IconButton
             className="export-menu"
             title="Export"
-            onClick="{() => {
+            onClick={() => {
               exportMenuOpen = !exportMenuOpen;
-            }}">
+            }}>
             <FileText />
           </IconButton>
         {/if}
@@ -92,7 +92,7 @@
       {/if}
       <IconButton
         title="Navigation"
-        onClick="{toggleSidebar}">
+        onClick={toggleSidebar}>
         <Menu />
       </IconButton>
     </div>

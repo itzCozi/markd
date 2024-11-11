@@ -27,7 +27,7 @@
 </script>
 
 <DropdownButton
-  onClick="{exportAsHtml}"
+  onClick={exportAsHtml}
   file="html"
   title="Export as HTML">
   Export as HTML

@@ -16,7 +16,7 @@
 </script>
 
 <DropdownButton
-  onClick="{exportToMd}"
+  onClick={exportToMd}
   file="md"
   title="Export as Markdown">
   Export Workspace

@@ -42,7 +42,7 @@
 <IconButton
   className="fullscreen-toggle"
   title="Fullscreen Toggle"
-  onClick="{toggleFullscreen}">
+  onClick={toggleFullscreen}>
   {#if isFullscreen}
     <Minimize />
   {:else}

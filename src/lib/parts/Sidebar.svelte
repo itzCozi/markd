@@ -15,8 +15,8 @@
   class:pointer-events-none="{!isSidebarOpen}"
   role="button"
   tabindex="0"
-  on:click="{closeSidebar}"
-  on:keydown="{(e) => e.key === 'Enter' && closeSidebar()}">
+  on:click={closeSidebar}
+  on:keydown={(e) => e.key === 'Enter' && closeSidebar()}>
 </div>
 
 <aside
@@ -28,46 +28,46 @@
       <h3 class="text-2xl font-semibold text-type-emphasized">Navigation</h3>
       <SmallIconButton
         title="Close"
-        onClick="{closeSidebar}">
+        onClick={closeSidebar}>
         <XIcon />
       </SmallIconButton>
     </div>
     <div class="flex flex-col gap-3">
       <SidebarButton
         title="Home"
-        onClick="{() => {
+        onClick={() => {
           closeSidebar();
           goto('/');
-        }}">Home</SidebarButton>
+        }}>Home</SidebarButton>
       <SidebarButton
         title="About"
-        onClick="{() => {
+        onClick={() => {
           closeSidebar();
           goto('/about');
-        }}">About</SidebarButton>
+        }}>About</SidebarButton>
       <SidebarButton
         title="help"
-        onClick="{() => {
+        onClick={() => {
           closeSidebar();
           goto('/help');
-        }}">Docs</SidebarButton>
+        }}>Docs</SidebarButton>
     </div>
   </div>
   <div class="sidebar-icon-buttons mt-auto mb-2 px-4 flex justify-between">
     <LargeIconButton
       title="GitHub"
-      onClick="{() => {
+      onClick={() => {
         closeSidebar();
         window.location.href = 'https://github.com/itzcozi/markd';
-      }}">
+      }}>
       <Github />
     </LargeIconButton>
     <LargeIconButton
       title="Email"
-      onClick="{() => {
+      onClick={() => {
         closeSidebar();
         open('mailto:dev@wyzie.ru', '_blank');
-      }}">
+      }}>
       <Mail />
     </LargeIconButton>
   </div>

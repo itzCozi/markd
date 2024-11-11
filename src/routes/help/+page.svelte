@@ -123,16 +123,16 @@ $H_20$ is a liquid. $2^{10}$ is 1024." />
   <HelpEntry
     title="Math"
     description="Math is defined using the $$ symbol followed by an equation in LaTeX format, then followed by an ending set of double dollar signs."
-    example="{`$$
+    example={`$$
 f(5) = (5 - 5)^2 = 0
 $$
 
 $$
 \\text{slope} = \\frac{f(5) - f(4)}{-1} = \\frac{0 - 1}{-1} = 1
-$$`}">
+$$`}>
     <Paragraph className="py-2">Math preview:</Paragraph>
     <button
-      on:click="{() => open('https://i.postimg.cc/3wGPNSC5/math-example.png', '_blank')}"
+      on:click={() => open('https://i.postimg.cc/3wGPNSC5/math-example.png', '_blank')}
       title="Math example">
       <img
         src="/math-example.png"

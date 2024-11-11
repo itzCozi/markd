@@ -1,8 +1,18 @@
 <script lang="ts">
   import Paragraph from "$lib/components/type/Paragraph.svelte";
-  export let title: string;
-  export let description: string;
-  export let example: string | null | undefined = null;
+  interface Props {
+    title: string;
+    description: string;
+    example?: string | null | undefined;
+    children?: import('svelte').Snippet;
+  }
+
+  let {
+    title,
+    description,
+    example = null,
+    children
+  }: Props = $props();
 </script>
 
 <div class="my-4">
@@ -13,5 +23,5 @@
       <code>{example}</code>
     </pre>
   {/if}
-  <slot />
+  {@render children?.()}
 </div>

@@ -1,11 +1,11 @@
 <script lang="ts">
   import localStorageStore from "$lib/stores/localStorage";
 
-  $: source = localStorageStore.get("markdown") || "";
-  $: words = source.split(/\s+/).filter((word) => word !== "");
-  $: wordCount = words.length;
-  $: characterCount = source.length;
-  $: readTime = Math.ceil(wordCount / 200);
+  let source = $derived(localStorageStore.get("markdown") || "");
+  let words = $derived(source.split(/\s+/).filter((word) => word !== ""));
+  let wordCount = $derived(words.length);
+  let characterCount = $derived(source.length);
+  let readTime = $derived(Math.ceil(wordCount / 200));
 </script>
 
 <div class="stats gap-4 text-type-dimmed text-xs">

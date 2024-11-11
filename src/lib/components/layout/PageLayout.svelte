@@ -2,6 +2,11 @@
   import NavBar from "$lib/parts/NavBar.svelte";
   import Divider from "$lib/components/type/Divider.svelte";
   import Paragraph from "$lib/components/type/Paragraph.svelte";
+  interface Props {
+    children?: import('svelte').Snippet;
+  }
+
+  let { children }: Props = $props();
 </script>
 
 <div class="sticky top-0">
@@ -11,7 +16,7 @@
 <div
   class="py-6 mx-2 bg-mono-background flex flex-wrap justify-center items-center overflow-hidden">
   <div class="w-[97%] p-5 bg-mono-accent max-w-2xl rounded-md">
-    <slot />
+    {@render children?.()}
 
     <Divider />
     <Paragraph className="text-xs mt-2">

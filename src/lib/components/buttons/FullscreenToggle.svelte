@@ -2,7 +2,7 @@
   import { Maximize, Minimize } from "lucide-svelte";
   import IconButton from "$lib/components/buttons/IconButton.svelte";
 
-  let isFullscreen = false;
+  let isFullscreen = $state(false);
 
   function toggleFullscreen() {
     isFullscreen = !isFullscreen;

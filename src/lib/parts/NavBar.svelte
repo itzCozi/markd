@@ -9,6 +9,7 @@
   import HtmlButton from "$lib/components/buttons/HTMLButton.svelte";
   import FullscreenToggle from "$lib/components/buttons/FullscreenToggle.svelte";
   import MdButton from "$lib/components/buttons/MdButton.svelte";
+  import ThemeToggle from "$lib/components/buttons/ThemeToggle.svelte";
 
   let isSidebarOpen = $state(false);
   let exportMenuOpen = $state(false);
@@ -42,7 +43,7 @@
 <header class="navbar w-full p-4 bg-mono-card z-20">
   <nav class="flex justify-between items-center">
     <button
-      onclick={() => goto('/')}
+      onclick={() => goto("/")}
       title="Home"
       class="hover:no-underline">
       <div class="flex flex-row gap-3 items-center">
@@ -58,7 +59,7 @@
       {#if $page.url.pathname === "/"}
         <IconButton
           title="Help"
-          onClick={() => goto('/help')}>
+          onClick={() => goto("/help")}>
           <CircleHelp />
         </IconButton>
       {/if}

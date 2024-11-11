@@ -84,38 +84,40 @@
   let rendererScrollTop = 0;
   let isScrollSyncEnabled = $state(true);
 
-  let carta: CartaType = $derived(new Carta({
-    rehypeOptions: { allowDangerousHtml: true },
-    sanitizer: DOMPurify.sanitize,
-    theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
-    extensions: [
-      slash({
-        snippets: additionalSnippets,
-      }),
-      emoji(),
-      externalLinks(),
-      admonitions(),
-      math(),
-      code({ theme: $markdownTheme === "light" ? "light-plus" : "dark-plus" }),
-      rawhtml,
-      subscript(),
-    ],
-    gfmOptions: {
-      // remark-gfm that Carta uses convert single tilde to strikethrough, disable that to use single tilde for subscript.
-      // see https://stackoverflow.com/a/78076200/7884074
-      singleTilde: false,
-    },
-  }));
+  let carta: CartaType = $derived(
+    new Carta({
+      rehypeOptions: { allowDangerousHtml: true },
+      sanitizer: DOMPurify.sanitize,
+      theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
+      extensions: [
+        slash({
+          snippets: additionalSnippets,
+        }),
+        emoji(),
+        externalLinks(),
+        admonitions(),
+        math(),
+        code({ theme: $markdownTheme === "light" ? "light-plus" : "dark-plus" }),
+        rawhtml,
+        subscript(),
+      ],
+      gfmOptions: {
+        // remark-gfm that Carta uses convert single tilde to strikethrough, disable that to use single tilde for subscript.
+        // see https://stackoverflow.com/a/78076200/7884074
+        singleTilde: false,
+      },
+    }),
+  );
 
   let source = $state("");
 
   onMount(() => {
-    const cached = localStorageStore.get("markdown") ;
+    const cached = localStorageStore.get("markdown");
     if (cached) source = cached;
-  })
+  });
 
   $effect(() => {
-      localStorageStore.set("markdown", source);
+    localStorageStore.set("markdown", source);
   });
 
   function handleEditorScroll(event: Event) {
@@ -214,7 +216,8 @@
   <Stats />
 {/key}
 
-<div class="flex h-[calc(100dvh-72px)] bg-mono-background">
+<div
+  class={`flex h-[calc(100dvh-72px)] ${$markdownTheme === "light" ? "bg-mono-lightBackground" : "bg-mono-background"}`}>
   <div
     class="editor"
     style="width: {leftWidth}%;">
@@ -227,7 +230,7 @@
         : 'hidden'}">
       </div>
       <div
-        class="w-full pb-[env(safe-area-inset-bottom)] p-2 border-none outline-none resize-none bg-mono-background font-mono overflow-y-auto"
+        class={`w-full p-2 border-none outline-none resize-none ${$markdownTheme === "light" ? "bg-mono-lightBackground" : "bg-mono-background"} font-mono overflow-y-auto`}
         onscroll={handleEditorScroll}>
         {#key $markdownTheme}
           <MarkdownEditor

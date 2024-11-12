@@ -11,7 +11,12 @@ function createPersistentStore<T extends string>(
 
   if (typeof window !== "undefined") {
     const storedValue = localStorage.getItem(key);
-    data = storedValue ? (JSON.parse(storedValue) as T) : initialValue;
+    if (storedValue) {
+      data = JSON.parse(storedValue) as T;
+    } else {
+      const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      data = prefersDarkScheme ? ("dark" as T) : initialValue;
+    }
     handleThemeChange(data);
   } else {
     data = initialValue;

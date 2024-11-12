@@ -188,6 +188,7 @@ a:hover {
     position: fixed !important;
     top: unset !important;
     bottom: 0;
+    border-radius: 0;
     left: 0 !important;
     right: 0 !important;
     width: 100% !important;
@@ -216,6 +217,7 @@ a:hover {
 
   .carta-icons-menu {
     margin-bottom: 10px;
+    border-radius: 0;
     bottom: 76px !important;
     left: unset !important;
     right: 0 !important;

@@ -21,17 +21,17 @@
     on:change={toggleMarkdownTheme} />
 
   <span
-    class={`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${
-      isLightTheme ? "bg-[#F6D365]" : "bg-[#3a3a3a]"
-    } rounded-full`}>
+    class={`relative inline-block w-8 h-5 transition duration-200 ease-in-out rounded-full ${
+      isLightTheme ? "bg-mono-yellowAccent" : "bg-mono-accentLight2"
+    }`}>
     <span
       class={`absolute top-1 left-1 inline-block w-3 h-3 bg-transpartent rounded-full transition-transform duration-200 ease-in-out ${
         isLightTheme ? "translate-x-3" : ""
       }`}>
       {#if isLightTheme}
-        <Sun class="w-3 h-3 text-[#3a3a3a]" />
+        <Sun class="w-3 h-3 text-type-dark" />
       {:else}
-        <Moon class="w-3 h-3 text-white" />
+        <Moon class="w-3 h-3 text-type-emphasized" />
       {/if}
     </span>
   </span>

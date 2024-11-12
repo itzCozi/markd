@@ -183,18 +183,13 @@
         style.innerHTML = `
           @media (max-width: 768px) {
             .carta-toolbar {
-              bottom: 18px !important;
+              height: 68px !important;
               padding-right: 3px !important;
+              padding-bottom: 10px !important;
             }
             .stats {
               bottom: 68px !important;
               border-block: 1px solid #333333 !important;
-            }
-            .carta-icons-menu {
-              margin-bottom: 36px !important;
-            }
-            .sidebar-icon-buttons {
-              margin-bottom: 40px !important;
             }
           }
         `;
@@ -223,7 +218,7 @@
     style="width: {leftWidth}%;">
     <div class="flex h-full overflow-hidden">
       <div
-        class="line-count hidden p-2 text-gray-600 text-right border-r border-[#252525] w-12 {(
+        class="line-count hidden p-2 text-gray-600 text-right border-r border-mono-accentDark w-12 {(
           selectedTab === 'write'
         ) ?
           ''
@@ -247,7 +242,7 @@
 
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
-    class="divider w-1 h-full cursor-ew-resize bg-[#202020]"
+    class="divider w-1 h-full cursor-ew-resize bg-mono-card"
     style="left: calc({leftWidth}% - 5px);"
     onmousedown={handleMouseDown}>
   </div>
@@ -257,7 +252,7 @@
     style="width: {100 - leftWidth}%"
     onscroll={handleRendererScroll}>
     <div class="renderer-toolbar">
-      <span class="mr-3 text-type-primary">Sync Scroll</span>
+      <span class="mr-3 text-type-primary">Sync scroll</span>
       <label
         class="inline-flex items-center cursor-pointer"
         title="Theme Toggle">
@@ -267,16 +262,16 @@
           class="hidden" />
         <span
           class={`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${
-            isScrollSyncEnabled ? "bg-[#2E6AAC]" : "bg-[#3a3a3a]"
+            isScrollSyncEnabled ? "bg-mono-blueAccent" : "bg-mono-accentLight2"
           } rounded-full`}>
           <span
-            class={`absolute top-1 left-1 inline-block w-3 h-3 bg-transpartent rounded-full transition-transform duration-200 ease-in-out ${
+            class={`absolute top-1 left-1 inline-block w-3 h-3 rounded-full transition-transform duration-200 ease-in-out ${
               isScrollSyncEnabled ? "translate-x-3" : ""
             }`}>
             {#if isScrollSyncEnabled}
-              <Check class="w-3 h-3 text-white" />
+              <Check class="w-3 h-3 text-type-emphasized" />
             {:else}
-              <XIcon class="w-3 h-3 text-white" />
+              <XIcon class="w-3 h-3 text-type-emphasized" />
             {/if}
           </span>
         </span>

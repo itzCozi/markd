@@ -52,6 +52,11 @@
           goto("/");
         }}>Home</SidebarButton>
       <SidebarButton
+        title="settings"
+        onClick={() => {
+          toggleSettingsPane();
+        }}>Settings</SidebarButton>
+      <SidebarButton
         title="About"
         onClick={() => {
           closeSidebar();
@@ -63,13 +68,6 @@
           closeSidebar();
           goto("/help");
         }}>Docs</SidebarButton>
-      <SidebarButton
-        title="settings"
-        onClick={() => {
-          toggleSettingsPane();
-        }}
-        >Settings
-      </SidebarButton>
     </div>
   </div>
   <div class="sidebar-icon-buttons mt-auto mb-2 px-4 flex justify-between">

@@ -2,7 +2,7 @@
   import LargeIconButton from "$lib/components/buttons/LargeIconButton.svelte";
   import SmallIconButton from "$lib/components/buttons/SmallIconButton.svelte";
   import SidebarButton from "$lib/components/buttons/SidebarButton.svelte";
-  import { XIcon } from "lucide-svelte";
+  import { XIcon, ChevronLeft } from "lucide-svelte";
   import { goto } from "$app/navigation";
   import { Github, Mail } from "lucide-svelte";
   import SettingsPane from "./SettingsPane.svelte";
@@ -17,6 +17,10 @@
 
   function toggleSettingsPane() {
     showSettingsPane = !showSettingsPane;
+  }
+
+  function backToSidebar() {
+    showSettingsPane = false;
   }
 </script>
 
@@ -52,7 +56,7 @@
           goto("/");
         }}>Home</SidebarButton>
       <SidebarButton
-        title="settings"
+        title="Settings"
         onClick={() => {
           toggleSettingsPane();
         }}>Settings</SidebarButton>
@@ -63,7 +67,7 @@
           goto("/about");
         }}>About</SidebarButton>
       <SidebarButton
-        title="help"
+        title="Help"
         onClick={() => {
           closeSidebar();
           goto("/help");
@@ -91,7 +95,27 @@
 </aside>
 
 {#if showSettingsPane}
-  <div class="fixed inset-0 flex justify-center items-center z-50">
-    <SettingsPane on:close={() => (showSettingsPane = false)} />
-  </div>
+  <aside
+    class="fixed top-0 left-0 w-full md:w-64 flex flex-col h-full bg-mono-card z-50 transform transition-transform duration-200"
+    class:translate-x-0={isSidebarOpen && showSettingsPane}>
+    <div class="p-4">
+      <div class="flex items-center mt-1 mb-5 w-full">
+        <SmallIconButton
+          title="Back"
+          onClick={backToSidebar}>
+          <ChevronLeft />
+        </SmallIconButton>
+        <h3 class="text-2xl font-semibold text-type-emphasized mx-auto">Settings</h3>
+        <SmallIconButton
+          title="Close"
+          onClick={() => {
+            showSettingsPane = false;
+            closeSidebar();
+          }}>
+          <XIcon />
+        </SmallIconButton>
+      </div>
+      <SettingsPane on:close={() => (showSettingsPane = false)} />
+    </div>
+  </aside>
 {/if}

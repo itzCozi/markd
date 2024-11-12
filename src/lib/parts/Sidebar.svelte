@@ -30,7 +30,10 @@
   class:pointer-events-none={!isSidebarOpen}
   role="button"
   tabindex="0"
-  onclick={closeSidebar}
+  onclick={() => {
+    showSettingsPane = false;
+    closeSidebar();
+  }}
   onkeydown={(e) => e.key === "Enter" && closeSidebar()}>
 </div>
 

@@ -31,7 +31,7 @@
   role="button"
   tabindex="0"
   onclick={() => {
-    showSettingsPane = false;
+    backToSidebar();
     closeSidebar();
   }}
   onkeydown={(e) => e.key === "Enter" && closeSidebar()}>
@@ -43,7 +43,7 @@
   class:-translate-x-full={!isSidebarOpen}
   class:hidden={showSettingsPane}>
   <div class="p-4">
-    <div class="flex justify-between mt-1 mb-5">
+    <div class="flex items-center justify-between mt-1 mb-5">
       <h3 class="text-2xl font-semibold text-type-emphasized">Navigation</h3>
       <SmallIconButton
         title="Close"
@@ -102,23 +102,15 @@
     class="fixed top-0 left-0 w-full md:w-64 flex flex-col h-full bg-mono-card z-50 transform transition-transform duration-200"
     class:translate-x-0={isSidebarOpen && showSettingsPane}>
     <div class="p-4">
-      <div class="flex items-center mt-1 mb-5 w-full">
+      <div class="flex items-center justify-between mt-1 mb-5">
+        <h3 class="text-2xl font-semibold text-type-emphasized">Settings</h3>
         <SmallIconButton
           title="Back"
           onClick={backToSidebar}>
           <ChevronLeft />
         </SmallIconButton>
-        <h3 class="text-2xl font-semibold text-type-emphasized mx-auto">Settings</h3>
-        <SmallIconButton
-          title="Close"
-          onClick={() => {
-            showSettingsPane = false;
-            closeSidebar();
-          }}>
-          <XIcon />
-        </SmallIconButton>
       </div>
-      <SettingsPane on:close={() => (showSettingsPane = false)} />
+      <SettingsPane on:close={() => backToSidebar()} />
     </div>
   </aside>
 {/if}

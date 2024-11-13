@@ -9,5 +9,6 @@
       <Paragraph className="text-type-primary">Toggle theme</Paragraph>
       <ThemeToggle />
     </div>
+    <!-- Add editorTheme here to change the "dark-pro" shiki theme -->
   </div>
 </div>

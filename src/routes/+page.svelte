@@ -88,6 +88,8 @@
     new Carta({
       rehypeOptions: { allowDangerousHtml: true },
       sanitizer: DOMPurify.sanitize,
+      // We should make this a store that changes based on the
+      // markdownTheme and the settings
       theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
       extensions: [
         slash({

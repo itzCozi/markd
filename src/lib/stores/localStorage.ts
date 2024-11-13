@@ -1,5 +1,3 @@
-import { writable } from "svelte/store";
-
 interface LocalStorageStore {
   get: (key: string) => string | null;
   set: (key: string, value: string) => void;

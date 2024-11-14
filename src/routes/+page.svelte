@@ -9,6 +9,7 @@
   import Stats from "$lib/parts/Stats.svelte";
   import { placeholder } from "$lib/functions/placeholder";
   import { onMount } from "svelte";
+  import { editorTheme } from "$lib/stores/editorThemeStore";
   import { Check, XIcon } from "lucide-svelte";
 
   // Plugins:
@@ -90,7 +91,7 @@
       sanitizer: DOMPurify.sanitize,
       // We should make this a store that changes based on the
       // markdownTheme and the settings
-      theme: $markdownTheme === "light" ? "light-plus" : "dark-plus",
+      theme: $editorTheme,
       extensions: [
         slash({
           snippets: additionalSnippets,
@@ -99,7 +100,7 @@
         externalLinks(),
         admonitions(),
         math(),
-        code({ theme: $markdownTheme === "light" ? "light-plus" : "dark-plus" }),
+        code({ theme: $editorTheme }),
         rawhtml,
         subscript(),
       ],

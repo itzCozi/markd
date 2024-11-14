@@ -1,6 +1,6 @@
+import { markdownTheme } from "$lib/stores/themeStore";
 import { writable, derived } from "svelte/store";
 import type { Writable } from "svelte/store";
-import { markdownTheme } from "$lib/stores/themeStore";
 
 function createPersistentStore(key: string, initialValue: string | null): Writable<string | null> {
   let data: string | null;
@@ -39,12 +39,3 @@ export const editorTheme = derived(
     }
   },
 );
-
-// Now we can change the editor theme by calling the `setCustomEditorTheme` function.
-// This will go on the settingsPane
-
-// import { userEditorTheme } from "$lib/stores/editorThemeStore";
-
-// function setCustomEditorTheme(theme: string) {
-//   userEditorTheme.set(theme);
-// }

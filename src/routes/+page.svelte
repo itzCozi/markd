@@ -1,26 +1,26 @@
 <script lang="ts">
   import "@/styles/styles.css"; // HTML renderer styles
   import { Carta, Markdown, MarkdownEditor } from "carta-md";
-  import { Carta as CartaType } from "carta-md";
+  import { editorTheme } from "$lib/stores/editorThemeStore";
+  import { placeholder } from "$lib/functions/placeholder";
   import localStorageStore from "$lib/stores/localStorage";
-  import DOMPurify from "isomorphic-dompurify";
   import { markdownTheme } from "$lib/stores/themeStore";
   import NavBar from "$lib/parts/NavBar.svelte";
-  import Stats from "$lib/parts/Stats.svelte";
-  import { placeholder } from "$lib/functions/placeholder";
-  import { onMount } from "svelte";
-  import { editorTheme } from "$lib/stores/editorThemeStore";
+  import { Carta as CartaType } from "carta-md";
   import { Check, XIcon } from "lucide-svelte";
+  import DOMPurify from "isomorphic-dompurify";
+  import Stats from "$lib/parts/Stats.svelte";
+  import { onMount } from "svelte";
 
   // Plugins:
 
   // Slash
-  import "@/styles/slash.css";
-  import { slash } from "@cartamd/plugin-slash";
   import { additionalSnippets } from "$lib/functions/slash";
+  import { slash } from "@cartamd/plugin-slash";
+  import "@/styles/slash.css";
   // Emoji
-  import "@/styles/emoji.css";
   import { emoji } from "@cartamd/plugin-emoji";
+  import "@/styles/emoji.css";
   // External links forced
   import type { Plugin, UnifiedTransformer } from "carta-md";
   import rehypeExternalLinks from "rehype-external-links";
@@ -40,8 +40,8 @@
     transformers: [externalLinksTransformer],
   });
   // Admonitions
-  import plugin from "remark-github-beta-blockquote-admonitions";
   import { defaultConfig } from "$lib/functions/admonitionsConfig";
+  import plugin from "remark-github-beta-blockquote-admonitions";
   import "@/styles/admonitions.css";
 
   const admonitionsTransformer: UnifiedTransformer<"sync"> = {
@@ -70,8 +70,8 @@
     ],
   };
   // Math
-  import { math } from "@cartamd/plugin-math";
   import "katex/dist/katex.css";
+  import { math } from "@cartamd/plugin-math";
   // Code
   import { code } from "@cartamd/plugin-code";
   // Subscript + Superscript

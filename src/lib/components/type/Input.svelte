@@ -13,9 +13,8 @@
 </script>
 
 <input
-  class={`text-type-primary block py-1 bg-mono-accentLight1 rounded-sm outline-none ${className}`}
-  placeholder={placeholder}
-  value={value}
-  oninput={(event) => dispatch('input', event)}
-/>
+  class={`text-type-primary block py-1 bg-mono-accentLight1 rounded-sm text-center caret-type-primary outline-none ${className}`}
+  {placeholder}
+  {value}
+  oninput={(event) => dispatch("input", event)} />
 {@render children?.()}

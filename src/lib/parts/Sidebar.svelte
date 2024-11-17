@@ -6,6 +6,7 @@
   import { goto } from "$app/navigation";
   import { Github, Mail } from "lucide-svelte";
   import SettingsPane from "./SettingsPane.svelte";
+  import { fly } from "svelte/transition";
 
   interface Props {
     isSidebarOpen?: boolean;
@@ -13,14 +14,14 @@
   }
 
   let { isSidebarOpen = false, closeSidebar }: Props = $props();
-  let showSettingsPane = $state(false);
+  let currentPage = $state("main");
 
-  function toggleSettingsPane() {
-    showSettingsPane = !showSettingsPane;
+  function navigateTo(page: string) {
+    currentPage = page;
   }
 
   function backToSidebar() {
-    showSettingsPane = false;
+    currentPage = "main";
   }
 </script>
 
@@ -38,79 +39,93 @@
 </div>
 
 <aside
-  class="fixed top-0 left-0 w-full md:w-64 flex flex-col h-full bg-mono-card z-50 transform transition-transform duration-200"
+  class="fixed top-0 left-0 w-full md:w-64 flex flex-col h-full bg-mono-card z-50 transform transition-transform duration-200 overflow-hidden"
   class:translate-x-0={isSidebarOpen}
-  class:-translate-x-full={!isSidebarOpen}
-  class:hidden={showSettingsPane}>
-  <div class="p-4">
-    <div class="flex items-center justify-between mt-1 mb-5">
-      <h3 class="text-2xl font-semibold text-type-emphasized">Navigation</h3>
-      <SmallIconButton
-        title="Close"
-        onClick={closeSidebar}>
-        <XIcon />
-      </SmallIconButton>
-    </div>
-    <div class="flex flex-col gap-3">
-      <SidebarButton
-        title="Home"
-        onClick={() => {
-          closeSidebar();
-          goto("/");
-        }}>Home</SidebarButton>
-      <SidebarButton
-        title="Settings"
-        onClick={() => {
-          toggleSettingsPane();
-        }}>Settings</SidebarButton>
-      <SidebarButton
-        title="About"
-        onClick={() => {
-          closeSidebar();
-          goto("/about");
-        }}>About</SidebarButton>
-      <SidebarButton
-        title="Help"
-        onClick={() => {
-          closeSidebar();
-          goto("/help");
-        }}>Docs</SidebarButton>
-    </div>
-  </div>
-  <div class="sidebar-icon-buttons mt-auto mb-2 px-4 flex justify-between">
-    <LargeIconButton
-      title="GitHub"
-      onClick={() => {
-        closeSidebar();
-        window.location.href = "https://github.com/itzcozi/markd";
-      }}>
-      <Github />
-    </LargeIconButton>
-    <LargeIconButton
-      title="Email"
-      onClick={() => {
-        closeSidebar();
-        open("mailto:dev@wyzie.ru", "_blank");
-      }}>
-      <Mail />
-    </LargeIconButton>
+  class:-translate-x-full={!isSidebarOpen}>
+  <div class="relative w-full h-full flex flex-col">
+    <!-- Main Page -->
+    {#if currentPage === "main"}
+      <div
+        class="absolute inset-0"
+        in:fly={{ x: -200, duration: 300 }}
+        out:fly={{ x: 200, duration: 300 }}>
+        <div class="p-4 flex-grow">
+          <div class="flex items-center justify-between mt-1 mb-5">
+            <h3 class="text-2xl font-semibold text-type-emphasized">Navigation</h3>
+            <SmallIconButton
+              title="Close"
+              onClick={closeSidebar}>
+              <XIcon />
+            </SmallIconButton>
+          </div>
+          <div class="flex flex-col gap-3">
+            <SidebarButton
+              title="Home"
+              onClick={() => {
+                closeSidebar();
+                goto("/");
+              }}>Home</SidebarButton>
+            <SidebarButton
+              title="Settings"
+              onClick={() => {
+                navigateTo("settings");
+              }}>Settings</SidebarButton>
+            <SidebarButton
+              title="About"
+              onClick={() => {
+                closeSidebar();
+                goto("/about");
+              }}>About</SidebarButton>
+            <SidebarButton
+              title="Help"
+              onClick={() => {
+                closeSidebar();
+                goto("/help");
+              }}>Docs</SidebarButton>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sidebar-icon-buttons mt-auto mb-2 px-4 flex justify-between"
+        in:fly={{ y: 200, duration: 300 }}
+        out:fly={{ y: 200, duration: 300 }}>
+        <LargeIconButton
+          title="GitHub"
+          onClick={() => {
+            closeSidebar();
+            window.location.href = "https://github.com/itzcozi/markd";
+          }}>
+          <Github />
+        </LargeIconButton>
+        <LargeIconButton
+          title="Email"
+          onClick={() => {
+            closeSidebar();
+            open("mailto:dev@wyzie.ru", "_blank");
+          }}>
+          <Mail />
+        </LargeIconButton>
+      </div>
+    {/if}
+
+    <!-- Settings Page -->
+    {#if currentPage === "settings"}
+      <div
+        class="absolute inset-0"
+        in:fly={{ x: 200, duration: 300 }}
+        out:fly={{ x: -200, duration: 300 }}>
+        <div class="p-4">
+          <div class="flex items-center justify-between mt-1 mb-5">
+            <h3 class="text-2xl font-semibold text-type-emphasized">Settings</h3>
+            <SmallIconButton
+              title="Back"
+              onClick={backToSidebar}>
+              <ChevronLeft />
+            </SmallIconButton>
+          </div>
+          <SettingsPane on:close={() => backToSidebar()} />
+        </div>
+      </div>
+    {/if}
   </div>
 </aside>
-
-{#if showSettingsPane}
-  <aside
-    class="fixed top-0 left-0 w-full md:w-64 flex flex-col h-full bg-mono-card z-50 transform transition-transform duration-200"
-    class:translate-x-0={isSidebarOpen && showSettingsPane}>
-    <div class="p-4">
-      <div class="flex items-center justify-between mt-1 mb-5">
-        <h3 class="text-2xl font-semibold text-type-emphasized">Settings</h3>
-        <SmallIconButton
-          title="Back"
-          onClick={backToSidebar}>
-          <ChevronLeft />
-        </SmallIconButton>
-      </div>
-      <SettingsPane on:close={() => backToSidebar()} />
-    </div>
-  </aside>
-{/if}

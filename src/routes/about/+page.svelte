@@ -1,5 +1,6 @@
 <script lang="ts">
   import IconButton from "$lib/components/buttons/IconButton.svelte";
+  import TextButton from "$lib/components/buttons/TextButton.svelte";
   import PageLayout from "$lib/components/layout/PageLayout.svelte";
   import Paragraph from "$lib/components/type/Paragraph.svelte";
 </script>
@@ -14,15 +15,15 @@
     community!
   </Paragraph>
   <div class="flex justify-center my-3">
-    <button
-      onclick={() => open("https://github.com/itzcozi/markd", "_blank")}
+    <TextButton
+      onClick={() => open("https://github.com/itzcozi/markd", "_blank")}
       title="Source code"
-      class="w-full flex justify-center items-center">
+      className="w-full flex justify-center items-center">
       <img
         src="https://github-readme-stats.vercel.app/api/pin/?username=itzcozi&repo=markd&theme=dark&show_owner=true&title_color=d0d0d0&text_color=a3a3a3&icon_color=4493f8&bg_color=151515&border_color=505050"
         alt="Github repository"
         title="Source code" />
-    </button>
+    </TextButton>
   </div>
   <div class="flex flex-row gap-3 items-center my-2">
     <IconButton

@@ -9,7 +9,7 @@
   import HtmlButton from "$lib/components/buttons/HTMLButton.svelte";
   import FullscreenToggle from "$lib/components/buttons/FullscreenToggle.svelte";
   import MdButton from "$lib/components/buttons/MdButton.svelte";
-  import ThemeToggle from "$lib/components/buttons/ThemeToggle.svelte";
+  import TextButton from "$lib/components/buttons/TextButton.svelte";
 
   let isSidebarOpen = $state(false);
   let exportMenuOpen = $state(false);
@@ -42,10 +42,10 @@
 
 <header class="navbar w-full p-4 bg-mono-card z-20">
   <nav class="flex justify-between items-center">
-    <button
-      onclick={() => goto("/")}
+    <TextButton
+      onClick={() => goto("/")}
       title="Home"
-      class="hover:no-underline">
+      className="hover:no-underline">
       <div class="flex flex-row gap-3 items-center">
         <img
           src="/favicon.svg"
@@ -54,7 +54,7 @@
           class="w-10 h-10" />
         <h1 class="text-4xl font-semibold text-type-emphasized">MarkD</h1>
       </div>
-    </button>
+    </TextButton>
     <div class="flex flex-row gap-3 items-center">
       {#if $page.url.pathname === "/"}
         <IconButton

@@ -1,5 +1,6 @@
 <script lang="ts">
   import LargePageLayout from "$lib/components/layout/LargePageLayout.svelte";
+  import TextButton from "$lib/components/buttons/TextButton.svelte";
   import HelpEntry from "$lib/components/layout/HelpEntry.svelte";
   import Divider from "$lib/components/type/Divider.svelte";
   import Paragraph from "$lib/components/type/Paragraph.svelte";
@@ -131,15 +132,15 @@ $$
 \\text{slope} = \\frac{f(5) - f(4)}{-1} = \\frac{0 - 1}{-1} = 1
 $$`}>
     <Paragraph className="py-2">Math preview:</Paragraph>
-    <button
-      onclick={() => open("https://i.postimg.cc/3wGPNSC5/math-example.png", "_blank")}
+    <TextButton
+      onClick={() => open("https://i.postimg.cc/3wGPNSC5/math-example.png", "_blank")}
       title="Math example">
       <img
         src="/math-example.png"
         alt="Math example"
         title="Math example"
         class="max-w-[400px] w-[99%] rounded" />
-    </button>
+    </TextButton>
   </HelpEntry>
 
   <HelpEntry

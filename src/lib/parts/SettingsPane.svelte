@@ -2,6 +2,7 @@
   import Paragraph from "$lib/components/type/Paragraph.svelte";
   import { userEditorTheme, editorTheme } from "$lib/stores/editorThemeStore";
   import ThemeToggle from "$lib/components/buttons/ThemeToggle.svelte";
+  import TextButton from "$lib/components/buttons/TextButton.svelte";
   import SmallIconButton from "$lib/components/buttons/SmallIconButton.svelte";
   import { Save } from "lucide-svelte";
 
@@ -24,27 +25,31 @@
     <div class="flex flex-col gap-1">
       <div class="flex justify-between items-center">
         <Paragraph className="text-type-primary">Editor theme</Paragraph>
-        <input
-          class="text-type-primary block py-1 mx-2 bg-mono-accentLight1 rounded-sm outline-none w-28 text-center caret-type-primary"
-          placeholder={$editorTheme}
-          bind:value={$userEditorTheme} />
-        <SmallIconButton
-          title="Save theme"
-          onClick={reloadPage}>
-          <Save />
-        </SmallIconButton>
+        <div class="relative">
+          <input
+            class="text-type-primary block py-1 pr-8 bg-mono-accentLight1 rounded-sm outline-none w-28 text-center caret-type-primary"
+            placeholder={$editorTheme}
+            bind:value={$userEditorTheme} />
+          <div class="absolute right-0 top-1/2 -translate-y-1/2">
+            <SmallIconButton
+              title="Save theme"
+              className="rounded-sm"
+              onClick={reloadPage}>
+              <Save />
+            </SmallIconButton>
+          </div>
+        </div>
       </div>
       <Paragraph className="text-sm">
-        <button
+        <TextButton
           title="Reset theme"
-          type="button"
-          onclick={() => {
+          className="pb-1"
+          onClick={() => {
             resetThemeToDefault();
             reloadPage();
-          }}
-          class="text-blue-500 hover:underline">
-          Reset theme to default.
-        </button>
+          }}>
+          Reset to default
+        </TextButton>
         <br />
         All themes are from shiki, you can find them
         <a

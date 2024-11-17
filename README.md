@@ -23,6 +23,7 @@ Carta, all components are hand made using tailwind and svelte.
 - Live preview of markdown
 - Refined homemade editor
 - Advanced IntelliSense
+- Custom editor themes
 - Supports inline HTML
 - Scalable Split view
 - No ads or tracking

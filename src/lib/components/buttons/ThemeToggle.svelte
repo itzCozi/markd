@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { userEditorTheme } from "$lib/stores/editorThemeStore";
   import { markdownTheme } from "$lib/stores/themeStore";
   import { Sun, Moon } from "lucide-svelte";
 
@@ -8,6 +9,7 @@
 
   function toggleMarkdownTheme() {
     markdownTheme.update((theme) => (theme === "light" ? "" : "light"));
+    userEditorTheme.update((theme) => (theme === "light-plus" ? "dark-plus" : "light-plus"));
   }
 </script>
 
@@ -21,11 +23,11 @@
     on:change={toggleMarkdownTheme} />
 
   <span
-    class={`relative inline-block w-8 h-5 transition duration-200 ease-in-out rounded-full ${
+    class={`relative inline-block w-8 h-5 duration-300 ease-in-out rounded-full ${
       isLightTheme ? "bg-mono-yellowAccent" : "bg-mono-accentLight2"
     }`}>
     <span
-      class={`absolute top-1 left-1 inline-block w-3 h-3 bg-transpartent rounded-full transition-transform duration-200 ease-in-out ${
+      class={`absolute top-1 left-1 inline-block w-3 h-3 rounded-full transition-transform duration-300 ease-in-out ${
         isLightTheme ? "translate-x-3" : ""
       }`}>
       {#if isLightTheme}

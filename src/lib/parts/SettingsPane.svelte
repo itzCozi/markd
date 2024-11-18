@@ -27,8 +27,7 @@
         <Paragraph className="text-type-primary">Editor theme</Paragraph>
         <div class="relative">
           <input
-            class="text-type-primary block py-1 pr-8 bg-mono-accentLight1 rounded-sm outline-none w-28 text-center caret-type-primary"
-            placeholder={$editorTheme}
+            class="text-type-primary block py-1 pr-8 bg-mono-accentLight1 rounded-sm outline-none w-[120px] text-center caret-type-primary overflow-scroll"
             bind:value={$userEditorTheme} />
           <div class="absolute right-0 top-1/2 -translate-y-1/2">
             <SmallIconButton

@@ -27,7 +27,7 @@ function createPersistentStore(key: string, initialValue: string | null): Writab
   return store;
 }
 
-export const userEditorTheme = createPersistentStore("userEditorTheme", null);
+export const userEditorTheme = createPersistentStore("userEditorTheme", "dark-plus");
 
 export const editorTheme = derived(
   [userEditorTheme, markdownTheme],

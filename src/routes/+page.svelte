@@ -188,7 +188,7 @@
             .carta-toolbar {
               height: 68px !important;
               padding-right: 3px !important;
-              padding-bottom: 10px !important;
+              padding-bottom: 18px !important;
             }
             .stats {
               bottom: 68px !important;

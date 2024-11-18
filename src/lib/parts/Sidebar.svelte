@@ -47,8 +47,8 @@
     {#if currentPage === "main"}
       <div
         class="absolute inset-0"
-        in:fly={{ x: -200, duration: 300 }}
-        out:fly={{ x: 200, duration: 300 }}>
+        in:fly={{ x: -200, duration: 400 }}
+        out:fly={{ x: 200, duration: 400 }}>
         <div class="p-4 flex-grow">
           <div class="flex items-center justify-between mt-1 mb-5">
             <h3 class="text-2xl font-semibold text-type-emphasized">Navigation</h3>
@@ -87,8 +87,8 @@
       </div>
       <div
         class="sidebar-icon-buttons mt-auto mb-2 px-4 flex justify-between"
-        in:fly={{ y: 200, duration: 300 }}
-        out:fly={{ y: 200, duration: 300 }}>
+        in:fly={{ y: 200, duration: 400 }}
+        out:fly={{ y: 200, duration: 400 }}>
         <LargeIconButton
           title="GitHub"
           onClick={() => {
@@ -112,8 +112,8 @@
     {#if currentPage === "settings"}
       <div
         class="absolute inset-0"
-        in:fly={{ x: 200, duration: 300 }}
-        out:fly={{ x: -200, duration: 300 }}>
+        in:fly={{ x: 200, duration: 400 }}
+        out:fly={{ x: -200, duration: 400 }}>
         <div class="p-4">
           <div class="flex items-center justify-between mt-1 mb-5">
             <h3 class="text-2xl font-semibold text-type-emphasized">Settings</h3>

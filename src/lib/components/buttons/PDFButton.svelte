@@ -1,5 +1,6 @@
 <script lang="ts">
   import DropdownButton from "$lib/components/buttons/DropdownButton.svelte";
+  import { userEditorTheme } from "$lib/stores/editorThemeStore";
   import { markdownTheme } from "$lib/stores/themeStore";
 
   // Print instead of pdf export
@@ -20,13 +21,15 @@
     overlay.style.fontSize = "2rem";
     overlay.innerText = "Exporting...";
     document.body.appendChild(overlay);
-
     const originalTheme = $markdownTheme;
+    const originalEditorTheme = $userEditorTheme;
 
-    if ($markdownTheme === "light") {
-      console.error("theme is light");
-    } else {
+    if ($markdownTheme !== "light") {
       markdownTheme.update((theme) => (theme === "light" ? "" : "light"));
+    }
+
+    if ($userEditorTheme !== "light-plus") {
+      userEditorTheme.update((theme) => (theme === "light-plus" ? "" : "light-plus"));
     }
 
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -79,6 +82,10 @@
 
     if (originalTheme !== "light") {
       markdownTheme.update((theme) => "dark");
+    }
+
+    if (originalEditorTheme !== "light-plus") {
+      userEditorTheme.update((theme) => originalEditorTheme);
     }
 
     window.location.reload();

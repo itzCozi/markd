@@ -36,7 +36,7 @@ Carta, all components are hand made using tailwind and svelte.
 - Scroll sync
 - Zen mode
 
-![Editor example](.github/editor-example.png) ![Printer preview](.github/printer-preview.png)
+![Editor example](.github/editor-preview.png) ![Printer preview](.github/printer-preview.png)
 
 ### Contact Us
 

@@ -185,6 +185,9 @@
         style.id = "pwa-style";
         style.innerHTML = `
           @media (max-width: 768px) {
+            .carta-icons-menu {
+              margin-bottom: 30px !important;
+            }
             .carta-toolbar {
               height: 68px !important;
               padding-right: 3px !important;

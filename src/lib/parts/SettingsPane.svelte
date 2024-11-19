@@ -3,8 +3,63 @@
   import { userEditorTheme, editorTheme } from "$lib/stores/editorThemeStore";
   import ThemeToggle from "$lib/components/buttons/ThemeToggle.svelte";
   import TextButton from "$lib/components/buttons/TextButton.svelte";
-  import SmallIconButton from "$lib/components/buttons/SmallIconButton.svelte";
-  import { Save } from "lucide-svelte";
+
+  let themes = [
+    "dark-plus",
+    "light-plus",
+    "andromeeda",
+    "aurora-x",
+    "ayu-dark",
+    "catppuccin-frappe",
+    "catppuccin-latte",
+    "catppuccin-macchiato",
+    "catppuccin-mocha",
+    "dracula",
+    "dracula-soft",
+    "everforest-dark",
+    "everforest-light",
+    "github-dark",
+    "github-dark-default",
+    "github-dark-dimmed",
+    "github-dark-high-contrast",
+    "github-light",
+    "github-light-default",
+    "github-light-high-contrast",
+    "houston",
+    "kanagawa-dragon",
+    "kanagawa-lotus",
+    "kanagawa-wave",
+    "laserwave",
+    "material-theme",
+    "material-theme-darker",
+    "material-theme-lighter",
+    "material-theme-ocean",
+    "material-theme-palenight",
+    "min-dark",
+    "min-light",
+    "monokai",
+    "night-owl",
+    "nord",
+    "one-dark-pro",
+    "one-light",
+    "plastic",
+    "poimandres",
+    "red",
+    "rose-pine",
+    "rose-pine-dawn",
+    "rose-pine-moon",
+    "slack-dark",
+    "slack-ochin",
+    "snazzy-light",
+    "solarized-dark",
+    "solarized-light",
+    "synthwave-84",
+    "tokyo-night",
+    "vesper",
+    "vitesse-black",
+    "vitesse-dark",
+    "vitesse-light",
+  ];
 
   function resetThemeToDefault() {
     userEditorTheme.set(null);
@@ -22,34 +77,39 @@
       <ThemeToggle />
     </div>
 
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-2">
       <div class="flex justify-between items-center">
         <Paragraph className="text-type-primary">Editor theme</Paragraph>
-        <div class="relative">
-          <input
-            class="text-type-primary block py-1 pr-8 bg-mono-accentLight1 rounded-sm outline-none w-[120px] text-center caret-type-primary overflow-scroll"
-            bind:value={$userEditorTheme} />
-          <div class="absolute right-0 top-1/2 -translate-y-1/2">
-            <SmallIconButton
-              title="Save theme"
-              className="rounded-sm"
-              onClick={reloadPage}>
-              <Save />
-            </SmallIconButton>
-          </div>
-        </div>
+        <!-- make this only 600 pixles tall and customize to fit the theme using css -->
+        <select
+          class="text-type-primary p-1 bg-mono-accentLight1 rounded-sm outline-none w-[120px] caret-type-primary overflow-ellipsis text-center appearance-none"
+          bind:value={$userEditorTheme}
+          placeholder={$editorTheme}>
+          {#each themes as theme}
+            <option value={theme}>{theme}</option>
+          {/each}
+        </select>
       </div>
-      <Paragraph className="text-sm">
+      <div class="flex justify-between items-center">
+        <TextButton
+          title="Save theme"
+          className="text-sm"
+          onClick={() => {
+            reloadPage();
+          }}>
+          Save theme
+        </TextButton>
         <TextButton
           title="Reset theme"
-          className="pb-1"
+          className="text-sm"
           onClick={() => {
             resetThemeToDefault();
             reloadPage();
           }}>
-          Reset to default
+          Reset theme
         </TextButton>
-        <br />
+      </div>
+      <Paragraph className="text-sm">
         All themes are from shiki, you can find them
         <a
           href="https://shiki.matsu.io/themes"

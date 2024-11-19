@@ -189,12 +189,12 @@
               margin-bottom: 30px !important;
             }
             .carta-toolbar {
-              height: 68px !important;
+              height: 70px !important;
               padding-right: 3px !important;
               padding-bottom: 18px !important;
             }
             .stats {
-              bottom: 68px !important;
+              bottom: 70px !important;
               border-block: 1px solid #333333 !important;
             }
           }

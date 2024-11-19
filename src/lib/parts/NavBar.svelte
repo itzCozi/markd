@@ -10,6 +10,7 @@
   import FullscreenToggle from "$lib/components/buttons/FullscreenToggle.svelte";
   import MdButton from "$lib/components/buttons/MdButton.svelte";
   import TextButton from "$lib/components/buttons/TextButton.svelte";
+  import DropdownContainer from "$lib/components/layout/DropdownContainer.svelte";
 
   let isSidebarOpen = $state(false);
   let exportMenuOpen = $state(false);
@@ -75,17 +76,12 @@
           </IconButton>
         {/if}
         {#if exportMenuOpen}
-          <div
-            class="origin-top-right z-40 absolute right-0 mt-2 w-48 rounded-md bg-mono-background border border-mono-divider"
-            role="menu"
-            aria-orientation="vertical"
-            aria-labelledby="user-menu-button"
-            tabindex="-1">
+          <DropdownContainer id="export-menu">
             <!-- From longest item to shortest -->
             <MdButton />
             <PdfButton />
             <HtmlButton />
-          </div>
+          </DropdownContainer>
         {/if}
       </div>
       {#if $page.url.pathname === "/"}

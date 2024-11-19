@@ -1,19 +1,8 @@
 <script lang="ts">
   import Paragraph from "$lib/components/type/Paragraph.svelte";
-  import { userEditorTheme, editorTheme } from "$lib/stores/editorThemeStore";
+  import { userEditorTheme } from "$lib/stores/editorThemeStore";
   import ThemeToggle from "$lib/components/buttons/ThemeToggle.svelte";
-  import TextButton from "$lib/components/buttons/TextButton.svelte";
-  import { onMount } from "svelte";
-  import { page } from "$app/stores";
-  import { goto } from "$app/navigation";
   import DropdownContainer from "$lib/components/layout/DropdownContainer.svelte";
-  import { Menu, FileText, CircleHelp } from "lucide-svelte";
-  import IconButton from "$lib/components/buttons/IconButton.svelte";
-  import Sidebar from "$lib/parts/Sidebar.svelte";
-  import PdfButton from "$lib/components/buttons/PDFButton.svelte";
-  import HtmlButton from "$lib/components/buttons/HTMLButton.svelte";
-  import FullscreenToggle from "$lib/components/buttons/FullscreenToggle.svelte";
-  import MdButton from "$lib/components/buttons/MdButton.svelte";
   import DropdownButton from "$lib/components/buttons/DropdownButton.svelte";
   import BorderButton from "$lib/components/buttons/BorderButton.svelte";
 
@@ -106,21 +95,32 @@
     </div>
 
     <div class="flex flex-col gap-2">
-      <div class="flex justify-between items-center">
-        <Paragraph className="text-type-primary">Editor theme</Paragraph>
+      <div class="flex justify-between items-center w-full">
+        <Paragraph className="text-type-primary whitespace-nowrap">Editor theme</Paragraph>
         <!-- make this only 600 pixels tall and customize to fit the theme using css -->
-        <div class="relative inline-block text-left">
-          <button
-            type="button"
-            class="text-type-primary p-1 bg-mono-accentLight1 rounded-sm outline-none w-[110px] overflow-ellipsis text-center cursor-pointer select-none"
+        <button
+          type="button"
+          class="text-type-primary p-1 bg-mono-accentLight1 rounded-sm outline-none min-w-[110px] w-auto ml-5 h-[32px] overflow-hidden whitespace-nowrap text-ellipsis text-center cursor-pointer select-none flex-shrink"
+          onclick={() => {
+            toggleThemeMenu();
+          }}
+          title="Select theme"
+          aria-label="Select theme">
+          {$userEditorTheme}
+        </button>
+        {#if themeMenuOpen}
+          <div
+            class="fixed inset-0 bg-black bg-opacity-0 z-40 transition-opacity duration-200 cursor-default"
+            class:opacity-0={!themeMenuOpen}
+            class:pointer-events-none={!themeMenuOpen}
+            role="button"
+            tabindex="0"
             onclick={() => {
               toggleThemeMenu();
             }}
-            title="Select theme"
-            aria-label="Select theme">
-            {$userEditorTheme}
-          </button>
-          {#if themeMenuOpen}
+            onkeydown={(e) => e.key === "Enter" && toggleThemeMenu()}>
+          </div>
+          <div class="end-0 absolute z-50 mr-3 mt-4">
             <DropdownContainer
               id="theme-dropdown"
               height="h-52">
@@ -135,34 +135,28 @@
                 </DropdownButton>
               {/each}
             </DropdownContainer>
-          {/if}
-        </div>
+          </div>
+        {/if}
       </div>
-      <div class="flex justify-between items-center">
-        <BorderButton
-          title="Save theme"
-          className="text-sm"
-          onClick={() => {
-            reloadPage();
-          }}>
-          Save theme
-        </BorderButton>
-        <BorderButton
-          title="Reset theme"
-          className="text-sm"
-          onClick={() => {
-            resetThemeToDefault();
-            reloadPage();
-          }}>
-          Reset theme
-        </BorderButton>
-      </div>
-      <Paragraph className="text-sm">
-        All themes are from shiki, you can find them
-        <a
-          href="https://shiki.matsu.io/themes"
-          title="Available themes">here.</a>
-      </Paragraph>
+    </div>
+    <div class="flex justify-between items-center">
+      <BorderButton
+        title="Save theme"
+        className="text-sm"
+        onClick={() => {
+          reloadPage();
+        }}>
+        Apply theme
+      </BorderButton>
+      <BorderButton
+        title="Reset theme"
+        className="text-sm"
+        onClick={() => {
+          resetThemeToDefault();
+          reloadPage();
+        }}>
+        Reset theme
+      </BorderButton>
     </div>
   </div>
 </div>

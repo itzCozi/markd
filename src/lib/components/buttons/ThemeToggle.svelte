@@ -9,7 +9,7 @@
 
   function toggleMarkdownTheme() {
     markdownTheme.update((theme) => (theme === "light" ? "" : "light"));
-    userEditorTheme.update((theme) => (theme === "light-plus" ? "dark-plus" : "light-plus"));
+    userEditorTheme.set($markdownTheme === "light" ? "light-plus" : "dark-plus");
   }
 </script>
 

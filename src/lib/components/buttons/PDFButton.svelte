@@ -25,11 +25,11 @@
     const originalEditorTheme = $userEditorTheme;
 
     if ($markdownTheme !== "light") {
-      markdownTheme.update((theme) => (theme === "light" ? "" : "light"));
+      markdownTheme.update((theme) => "light");
     }
 
     if ($userEditorTheme !== "light-plus") {
-      userEditorTheme.update((theme) => (theme === "light-plus" ? "" : "light-plus"));
+      userEditorTheme.update((theme) => "light-plus");
     }
 
     await new Promise((resolve) => setTimeout(resolve, 1000));

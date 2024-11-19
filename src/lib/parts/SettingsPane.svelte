@@ -100,7 +100,7 @@
         <!-- make this only 600 pixels tall and customize to fit the theme using css -->
         <button
           type="button"
-          class="text-type-primary p-1 bg-mono-accentLight1 rounded-sm outline-none min-w-[110px] w-auto ml-4 h-[32px] overflow-hidden whitespace-nowrap text-ellipsis text-center cursor-pointer select-none flex-shrink"
+          class="text-type-primary p-1 bg-mono-accentLight1 rounded-sm outline-none min-w-[100px] w-auto ml-4 h-[32px] overflow-hidden text-ellipsis text-center cursor-pointer select-none flex-shrink break-words truncate"
           onclick={() => {
             toggleThemeMenu();
           }}

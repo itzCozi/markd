@@ -5,6 +5,7 @@
   import DropdownContainer from "$lib/components/layout/DropdownContainer.svelte";
   import DropdownButton from "$lib/components/buttons/DropdownButton.svelte";
   import BorderButton from "$lib/components/buttons/BorderButton.svelte";
+  import { ChevronDown } from "lucide-svelte";
 
   let themes = [
     "dark-plus",
@@ -100,13 +101,18 @@
         <!-- make this only 600 pixels tall and customize to fit the theme using css -->
         <button
           type="button"
-          class="text-type-primary p-1 bg-mono-accentLight1 rounded-sm outline-none min-w-[100px] w-auto ml-4 h-[32px] overflow-hidden text-ellipsis text-center cursor-pointer select-none flex-shrink break-words truncate"
+          class="text-type-primary p-1 bg-mono-accentLight1 rounded-sm outline-none min-w-[110px] w-auto ml-4 h-[32px] text-center cursor-pointer select-none flex-shrink break-words truncate flex items-center justify-center gap-1"
           onclick={() => {
             toggleThemeMenu();
           }}
           title="Select theme"
           aria-label="Select theme">
-          {$userEditorTheme}
+          <p
+            class="overflow-hidden text-ellipsis"
+            title={$userEditorTheme}>
+            {$userEditorTheme}
+          </p>
+          <ChevronDown size={17} />
         </button>
         {#if themeMenuOpen}
           <div

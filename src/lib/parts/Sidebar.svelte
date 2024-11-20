@@ -85,6 +85,7 @@
           </div>
         </div>
       </div>
+      <!-- Deeze no work :(-->
       <div
         class="sidebar-icon-buttons mt-auto mb-2 px-4 flex justify-between"
         in:fly={{ y: 200, duration: 400 }}

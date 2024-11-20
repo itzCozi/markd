@@ -10,7 +10,7 @@
 </script>
 
 <button
-  class={`text-type-primary/85 border border-type-footer rounded-md p-1 hover:text-type-primary transition-colors duration-200 ${className}`}
+  class={`text-type-primary/85 border border-type-footer rounded p-1 hover:text-type-primary transition-colors duration-200 ${className}`}
   onclick={onClick}
   {title}>
   {@render children?.()}

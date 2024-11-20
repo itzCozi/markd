@@ -46,7 +46,7 @@
     <!-- Main Page -->
     {#if currentPage === "main"}
       <div
-        class="absolute inset-0"
+        class="absolute inset-0 flex flex-col"
         in:fly={{ x: -200, duration: 400 }}
         out:fly={{ x: 200, duration: 400 }}>
         <div class="p-4 flex-grow">
@@ -84,28 +84,24 @@
               }}>Docs</SidebarButton>
           </div>
         </div>
-      </div>
-      <!-- Deeze no work :(-->
-      <div
-        class="sidebar-icon-buttons mt-auto mb-2 px-4 flex justify-between"
-        in:fly={{ y: 200, duration: 400 }}
-        out:fly={{ y: 200, duration: 400 }}>
-        <LargeIconButton
-          title="GitHub"
-          onClick={() => {
-            closeSidebar();
-            window.location.href = "https://github.com/itzcozi/markd";
-          }}>
-          <Github />
-        </LargeIconButton>
-        <LargeIconButton
-          title="Email"
-          onClick={() => {
-            closeSidebar();
-            open("mailto:dev@wyzie.ru", "_blank");
-          }}>
-          <Mail />
-        </LargeIconButton>
+        <div class="sidebar-icon-buttons mb-2 px-4 flex justify-between">
+          <LargeIconButton
+            title="GitHub"
+            onClick={() => {
+              closeSidebar();
+              window.location.href = "https://github.com/itzcozi/markd";
+            }}>
+            <Github />
+          </LargeIconButton>
+          <LargeIconButton
+            title="Email"
+            onClick={() => {
+              closeSidebar();
+              open("mailto:dev@wyzie.ru", "_blank");
+            }}>
+            <Mail />
+          </LargeIconButton>
+        </div>
       </div>
     {/if}
 

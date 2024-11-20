@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { page } from "$app/stores";
+  import IconButton from "$lib/components/buttons/IconButton.svelte";
   import { goto } from "$app/navigation";
   import { Undo2 } from "lucide-svelte";
-  import IconButton from "$lib/components/buttons/IconButton.svelte";
+  import { page } from "$app/stores";
 </script>
 
 <div class="flex flex-col m-3">

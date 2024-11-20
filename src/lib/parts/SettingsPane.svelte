@@ -1,24 +1,25 @@
 <script lang="ts">
-  import Paragraph from "$lib/components/type/Paragraph.svelte";
-  import { userEditorTheme } from "$lib/stores/editorThemeStore";
-  import ThemeToggle from "$lib/components/buttons/ThemeToggle.svelte";
   import DropdownContainer from "$lib/components/layout/DropdownContainer.svelte";
   import DropdownButton from "$lib/components/buttons/DropdownButton.svelte";
   import BorderButton from "$lib/components/buttons/BorderButton.svelte";
+  import ThemeToggle from "$lib/components/buttons/ThemeToggle.svelte";
+  import TextButton from "$lib/components/buttons/TextButton.svelte";
+  import { userEditorTheme } from "$lib/stores/editorThemeStore";
+  import Paragraph from "$lib/components/type/Paragraph.svelte";
   import { ChevronDown } from "lucide-svelte";
 
-  let themes = [
+  const themes = [
     "dark-plus",
     "light-plus",
     "andromeeda",
     "aurora-x",
     "ayu-dark",
+    "dracula",
+    "dracula-soft",
     "catppuccin-frappe",
     "catppuccin-latte",
     "catppuccin-macchiato",
     "catppuccin-mocha",
-    "dracula",
-    "dracula-soft",
     "everforest-dark",
     "everforest-light",
     "github-dark",
@@ -63,8 +64,8 @@
     "vitesse-dark",
     "vitesse-light",
   ];
+  const preventClose = false;
   let themeMenuOpen = $state(false);
-  let preventClose = false;
 
   function closeThemeMenu() {
     const themeMenu = document.querySelector(".theme-dropdown");
@@ -98,25 +99,22 @@
     <div class="flex flex-col gap-2">
       <div class="flex justify-between items-center w-full">
         <Paragraph className="text-type-primary whitespace-nowrap">Editor theme</Paragraph>
-        <!-- make this only 600 pixels tall and customize to fit the theme using css -->
-        <button
-          type="button"
-          class="text-type-primary p-1 bg-mono-accentLight1 rounded-sm outline-none min-w-[110px] w-auto ml-4 h-[32px] text-center cursor-pointer select-none flex-shrink break-words truncate flex items-center justify-center gap-1"
-          onclick={() => {
+        <TextButton
+          className="text-type-primary p-1 bg-mono-accentLight1 rounded-sm outline-none min-w-[110px] w-auto ml-4 h-[32px] text-center cursor-pointer select-none flex-shrink break-words truncate flex items-center justify-center gap-1"
+          onClick={() => {
             toggleThemeMenu();
           }}
-          title="Select theme"
-          aria-label="Select theme">
+          title="Select theme">
           <p
             class="overflow-hidden text-ellipsis"
             title={$userEditorTheme}>
             {$userEditorTheme}
           </p>
           <ChevronDown size={17} />
-        </button>
+        </TextButton>
         {#if themeMenuOpen}
           <div
-            class="fixed inset-0 bg-black bg-opacity-0 z-40 transition-opacity duration-200 cursor-default"
+            class="fixed inset-0 bg-opacity-0 z-40 transition-opacity duration-200 cursor-default"
             class:opacity-0={!themeMenuOpen}
             class:pointer-events-none={!themeMenuOpen}
             role="button"

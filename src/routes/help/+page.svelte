@@ -2,8 +2,8 @@
   import LargePageLayout from "$lib/components/layout/LargePageLayout.svelte";
   import TextButton from "$lib/components/buttons/TextButton.svelte";
   import HelpEntry from "$lib/components/layout/HelpEntry.svelte";
-  import Divider from "$lib/components/type/Divider.svelte";
   import Paragraph from "$lib/components/type/Paragraph.svelte";
+  import Divider from "$lib/components/type/Divider.svelte";
   import { CircleAlert } from "lucide-svelte";
 </script>
 

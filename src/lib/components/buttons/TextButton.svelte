@@ -10,7 +10,7 @@
 </script>
 
 <button
-  class={`text-type-primary/85 hover:underline ${className}`}
+  class={`text-type-primary/85 ${className}`}
   onclick={onClick}
   {title}>
   {@render children?.()}

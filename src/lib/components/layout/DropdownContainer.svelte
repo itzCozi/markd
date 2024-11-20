@@ -1,8 +1,13 @@
 <script lang="ts">
-  export let width = "w-48";
-  export let height = "";
-  export let position = "right-0";
-  export let id: string;
+  interface Props {
+    position?: string;
+    height?: string;
+    width?: string;
+    id?: string;
+    children?: import("svelte").Snippet;
+  }
+
+  let { position = "right-0", height = "", width = "w-48", id, children }: Props = $props();
 </script>
 
 <div
@@ -11,5 +16,5 @@
   aria-orientation="vertical"
   aria-labelledby="{id}-button"
   tabindex="-1">
-  <slot></slot>
+  {@render children?.()}
 </div>

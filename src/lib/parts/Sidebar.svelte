@@ -3,10 +3,10 @@
   import SmallIconButton from "$lib/components/buttons/SmallIconButton.svelte";
   import SidebarButton from "$lib/components/buttons/SidebarButton.svelte";
   import { XIcon, ChevronLeft } from "lucide-svelte";
-  import { goto } from "$app/navigation";
-  import { Github, Mail } from "lucide-svelte";
   import SettingsPane from "./SettingsPane.svelte";
+  import { Github, Mail } from "lucide-svelte";
   import { fly } from "svelte/transition";
+  import { goto } from "$app/navigation";
 
   interface Props {
     isSidebarOpen?: boolean;
@@ -89,7 +89,7 @@
             title="GitHub"
             onClick={() => {
               closeSidebar();
-              window.location.href = "https://github.com/itzcozi/markd";
+              window.open("https://github.com/itzcozi/markd", "_blank");
             }}>
             <Github />
           </LargeIconButton>

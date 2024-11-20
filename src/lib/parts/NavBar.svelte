@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-  import { page } from "$app/stores";
-  import { goto } from "$app/navigation";
-  import { Menu, FileText, CircleHelp } from "lucide-svelte";
-  import IconButton from "$lib/components/buttons/IconButton.svelte";
-  import Sidebar from "$lib/parts/Sidebar.svelte";
-  import PdfButton from "$lib/components/buttons/PDFButton.svelte";
-  import HtmlButton from "$lib/components/buttons/HTMLButton.svelte";
-  import FullscreenToggle from "$lib/components/buttons/FullscreenToggle.svelte";
-  import MdButton from "$lib/components/buttons/MdButton.svelte";
-  import TextButton from "$lib/components/buttons/TextButton.svelte";
   import DropdownContainer from "$lib/components/layout/DropdownContainer.svelte";
+  import FullscreenToggle from "$lib/components/buttons/FullscreenToggle.svelte";
+  import TextButton from "$lib/components/buttons/TextButton.svelte";
+  import IconButton from "$lib/components/buttons/IconButton.svelte";
+  import HtmlButton from "$lib/components/buttons/HTMLButton.svelte";
+  import PdfButton from "$lib/components/buttons/PDFButton.svelte";
+  import MdButton from "$lib/components/buttons/MdButton.svelte";
+  import { Menu, FileText, CircleHelp } from "lucide-svelte";
+  import Sidebar from "$lib/parts/Sidebar.svelte";
+  import { goto } from "$app/navigation";
+  import { page } from "$app/stores";
+  import { onMount } from "svelte";
 
   let isSidebarOpen = $state(false);
   let exportMenuOpen = $state(false);
@@ -45,8 +45,7 @@
   <nav class="flex justify-between items-center">
     <TextButton
       onClick={() => goto("/")}
-      title="Home"
-      className="hover:no-underline">
+      title="Home">
       <div class="flex flex-row gap-3 items-center">
         <img
           src="/favicon.svg"

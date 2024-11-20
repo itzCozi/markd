@@ -1,5 +1,5 @@
 <script lang="ts">
-  import "@/styles/styles.css"; // HTML renderer styles
+  import { rendererTheme } from "$lib/stores/rendererThemeStore";
   import { Carta, Markdown, MarkdownEditor } from "carta-md";
   import { editorTheme } from "$lib/stores/editorThemeStore";
   import { placeholder } from "$lib/functions/placeholder";
@@ -11,7 +11,7 @@
   import DOMPurify from "isomorphic-dompurify";
   import Stats from "$lib/parts/Stats.svelte";
   import { onMount } from "svelte";
-  import { rendererTheme } from "$lib/stores/rendererThemeStore";
+  import "@/styles/styles.css"; // HTML renderer styles
 
   // Plugins:
 

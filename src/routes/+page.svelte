@@ -11,6 +11,7 @@
   import DOMPurify from "isomorphic-dompurify";
   import Stats from "$lib/parts/Stats.svelte";
   import { onMount } from "svelte";
+  import { rendererTheme } from "$lib/stores/rendererThemeStore";
 
   // Plugins:
 
@@ -100,7 +101,7 @@
         externalLinks(),
         admonitions(),
         math(),
-        code({ theme: $editorTheme }),
+        code({ theme: $rendererTheme }),
         rawhtml,
         subscript(),
       ],

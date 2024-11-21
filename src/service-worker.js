@@ -1,7 +1,6 @@
 import { build, files, version } from "$service-worker";
 
 const CACHE_NAME = `cache-${version}`;
-
 const to_cache = build.concat(files);
 const staticAssets = new Set(to_cache);
 
@@ -27,7 +26,6 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
-
   const url = new URL(event.request.url);
 
   if (staticAssets.has(url.pathname)) {

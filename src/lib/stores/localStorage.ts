@@ -4,7 +4,7 @@ interface LocalStorageStore {
   remove: (key: string) => void;
 }
 
-const localStorageStore: LocalStorageStore = {
+export const localStorageStore: LocalStorageStore = {
   get: (key: string) => {
     if (typeof window !== "undefined") {
       return localStorage.getItem(key);
@@ -22,5 +22,3 @@ const localStorageStore: LocalStorageStore = {
     }
   },
 };
-
-export default localStorageStore;

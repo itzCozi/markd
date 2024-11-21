@@ -1,5 +1,5 @@
 <script lang="ts">
-  import localStorageStore from "$lib/stores/localStorage";
+  import { localStorageStore } from "$lib/stores/localStorage";
 
   let source = $derived(localStorageStore.get("markdown") || "");
   let words = $derived(source.split(/\s+/).filter((word) => word !== ""));

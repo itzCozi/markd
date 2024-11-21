@@ -101,7 +101,7 @@
       <div class="flex justify-between items-center w-full">
         <Paragraph className="text-type-primary whitespace-nowrap">Editor theme</Paragraph>
         <TextButton
-          className="text-type-primary p-1 bg-mono-accentLight1 rounded-sm outline-none min-w-[110px] w-auto ml-4 h-[32px] text-center cursor-pointer select-none flex-shrink break-words truncate flex items-center justify-center gap-1"
+          className="text-type-primary p-1 bg-mono-accentLight1 rounded-sm outline-none min-w-[110px] w-auto ml-4 h-[32px] text-center items-center cursor-pointer select-none flex-shrink break-words truncate flex justify-center gap-1"
           onClick={() => {
             toggleThemeMenu();
           }}

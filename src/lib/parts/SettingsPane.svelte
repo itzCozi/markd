@@ -6,6 +6,7 @@
   import TextButton from "$lib/components/buttons/TextButton.svelte";
   import { userEditorTheme } from "$lib/stores/editorThemeStore";
   import Paragraph from "$lib/components/type/Paragraph.svelte";
+  import { markdownTheme } from "$lib/stores/themeStore";
   import { ChevronDown } from "lucide-svelte";
 
   const themes = [
@@ -81,7 +82,7 @@
   }
 
   function resetThemeToDefault() {
-    userEditorTheme.set(null);
+    userEditorTheme.set($markdownTheme === "light" ? "light-plus" : "dark-plus");
   }
 
   function reloadPage() {

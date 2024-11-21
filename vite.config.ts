@@ -1,8 +1,8 @@
 import { defineConfig } from "vite";
 import { sveltekit } from "@sveltejs/kit/vite";
-import postcss from "./postcss.config.js";
 import viteCompression from "vite-plugin-compression";
 import path from "path";
+import postcss from "./postcss.config.js";
 
 export default defineConfig({
   plugins: [sveltekit(), viteCompression({ algorithm: "brotliCompress" })],

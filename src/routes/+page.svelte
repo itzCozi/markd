@@ -259,7 +259,7 @@
     style="width: {100 - leftWidth}%"
     onscroll={handleRendererScroll}>
     <div class="renderer-toolbar">
-      <span class="mr-3 text-type-primary">Sync scroll</span>
+      <span class="mr-3 text-type-primary">Scroll sync</span>
       <label
         class="inline-flex items-center cursor-pointer"
         title="Theme Toggle">

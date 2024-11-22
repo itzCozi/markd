@@ -1,11 +1,11 @@
-/node_modules
+node_modules
 .git
 
 # Output
 .output
 .vercel
-/.svelte-kit
-/build
+.svelte-kit
+build
 
 # OS
 .DS_Store

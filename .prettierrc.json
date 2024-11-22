@@ -17,6 +17,7 @@
   "tabWidth": 2,
   "singleAttributePerLine": true,
   "semi": true,
+  "endOfLine": "lf",
   "experimentalTernaries": true,
   "htmlWhitespaceSensitivity": "css",
   "filepath": "{src/**/*.{ts,js,svelte,html,css},*.{ts,js,svelte,html,css,json,md,xml}}",

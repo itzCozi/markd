@@ -3,7 +3,6 @@
   // No js please all typescript :)
   "compilerOptions": {
     "allowJs": false,
-    "checkJs": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,

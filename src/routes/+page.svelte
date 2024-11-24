@@ -9,7 +9,6 @@
   import { Carta as CartaType } from "carta-md";
   import { Check, XIcon } from "lucide-svelte";
   import DOMPurify from "isomorphic-dompurify";
-  import Stats from "$lib/parts/Stats.svelte";
   import { onMount } from "svelte";
   import "@/styles/styles.css"; // HTML renderer styles
 
@@ -210,12 +209,23 @@
   onMount(() => {
     managePWAStyles();
   });
+
+  let words = $derived(source.split(/\s+/).filter((word) => word !== ""));
+  let wordCount = $derived(words.length);
+  let characterCount = $derived(source.length);
+  let readTime = $derived(Math.ceil(wordCount / 200));
 </script>
 
 <NavBar />
 
 {#key source}
-  <Stats />
+  <div class="stats gap-4 text-type-dimmed text-xs">
+    <span class="stat-item">Characters: {characterCount}</span>
+    <span class="separator">•</span>
+    <span class="stat-item">Words: {wordCount}</span>
+    <span class="separator">•</span>
+    <span class="stat-item">Length: {readTime} {readTime === 1 ? "minute" : "minutes"}</span>
+  </div>
 {/key}
 
 <div

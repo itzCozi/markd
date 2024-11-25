@@ -45,6 +45,8 @@ editor.
 - [GitHub Issues](https://github.com/itzCozi/markd/issues)
 - [Developers Email](mailto:dev@wyzie.ru)
 
+Our license is MIT and can be found on our website [here](https://markd.it/license).
+
 ---
 
 <sup>

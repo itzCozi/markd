@@ -145,5 +145,5 @@ $$`}>
 
   <HelpEntry
     title="HTML Code"
-    description="Our editor allows for HTML code to be used in the same file as markdown. This is useful for centering text and other more complex things markdown doesn't support natively." />
+    description="Our editor allows for HTML code to be used in the same file as markdown. This is useful for centering text and other more complex things markdown doesn't support natively. We give users lots of power with this..." />
 </LargePageLayout>

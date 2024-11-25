@@ -1,6 +1,5 @@
 node_modules
 .git
-.vscode
 
 # Output
 .output

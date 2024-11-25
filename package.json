@@ -1,12 +1,23 @@
 {
   "name": "markd",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://markd.it",
+  "contributors": [
+    "Pasithea",
+    "BadDeveloper"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itzcozi/markd"
+  },
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --log-level warn --write \"{src/**/*.{ts,js,svelte,html,css},*.{ts,js,svelte,html,css,json,md,xml}}\"",
-    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    "check": "svelte-kit sync && svelte-check --workspace /src",
+    "check:watch": "svelte-kit sync && svelte-check --workspace /src --watch"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.6",
@@ -21,7 +32,6 @@
     "tailwindcss": "^3.4.15",
     "vite": "^5.4.11"
   },
-  "type": "module",
   "dependencies": {
     "@cartamd/plugin-code": "^4.0.6",
     "@cartamd/plugin-emoji": "^4.2.1",
@@ -40,5 +50,32 @@
     "unified": "^11.0.5",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-pwa": "^0.20.5"
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": false,
+    "svelteStrictMode": true,
+    "svelteAllowShorthand": true,
+    "svelteIndentScriptAndStyle": true,
+    "embeddedLanguageFormatting": "auto",
+    "bracketSameLine": true,
+    "bracketSpacing": true,
+    "arrowParens": "always",
+    "jsxSingleQuote": false,
+    "svelteSortOrder": "options-scripts-styles-markup",
+    "quoteProps": "as-needed",
+    "proseWrap": "always",
+    "useTabs": false,
+    "printWidth": 100,
+    "tabWidth": 2,
+    "singleAttributePerLine": true,
+    "semi": true,
+    "endOfLine": "lf",
+    "experimentalTernaries": true,
+    "htmlWhitespaceSensitivity": "css",
+    "filepath": "{src/**/*.{ts,js,svelte,html,css},*.{ts,js,svelte,html,css,json,md,xml}}",
+    "plugins": [
+      "prettier-plugin-svelte"
+    ]
   }
 }

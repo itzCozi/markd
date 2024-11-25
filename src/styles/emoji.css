@@ -24,6 +24,7 @@
 
 .carta-emoji button {
   background: var(--contrast-background);
+  transition: background 0.2s ease;
 
   cursor: pointer;
   display: inline-block;

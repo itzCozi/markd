@@ -5,7 +5,7 @@
   padding-inline: 15px;
   padding-block: 0.5px;
   margin: 10px 0;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .admonition.note .admonition-title {
@@ -14,7 +14,7 @@
 }
 
 .admonition.note {
-  border-left-color: #1f6feb;
+  border-left: 4px solid #1f6feb;
 }
 
 .admonition.tip .admonition-title {
@@ -23,7 +23,7 @@
 }
 
 .admonition.tip {
-  border-left-color: #238636;
+  border-left: 4px solid #238636;
 }
 
 .admonition.important .admonition-title {
@@ -32,7 +32,7 @@
 }
 
 .admonition.important {
-  border-left-color: #8957e5;
+  border-left: 4px solid #8957e5;
 }
 
 .admonition.warning .admonition-title {
@@ -41,7 +41,7 @@
 }
 
 .admonition.warning {
-  border-left-color: #d89715;
+  border-left: 4px solid #d89715;
 }
 
 .admonition.caution .admonition-title {
@@ -50,9 +50,5 @@
 }
 
 .admonition.caution {
-  border-left-color: #da3633;
-}
-
-.admonition-title {
-  color: #808080;
+  border-left: 4px solid #da3633;
 }

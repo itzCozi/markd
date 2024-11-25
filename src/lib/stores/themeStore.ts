@@ -55,24 +55,34 @@ function handleThemeChange(theme: string) {
 
         .carta-renderer pre {
           color: black;
-          background-color: #f0f0f0;
+          background-color: #dfdfdf;
+        }
+
+        .admonition {
+          background-color: #dfdfdf;
         }
 
         .carta-slash {
-          --background: #F5F5F5FF;
-          --group-color: #3b3b3b;
-          --title-color: #232323;
-          --description-color: #313030;
-          --hover-background: #f1f1f1;
+          --background: #dfdfdf;
+          --group-color: #3c3c3c;
+          --title-color: #2d2d2d;
+          --description-color: #515151;
+          --hover-background: #c5c5c5;
+          --contrast-background: #d3d3d3;
         }
 
         .carta-emoji {
-          --background: #F5F5F5FF;
-          --group-color: #3b3b3b;
-          --title-color: #232323;
-          --description-color: #313030;
-          --hover-background: #f1f1f1;
-          --contrast-background: #f1f1f1;
+          --background: #dfdfdf;
+          --group-color: #3c3c3c;
+          --title-color: #2d2d2d;
+          --description-color: #515151;
+          --hover-background: #c5c5c5;
+          --contrast-background: #d3d3d3;
+        }
+
+        .carta-emoji button:hover,
+        .carta-emoji button.carta-active {
+          background: var(--hover-background);
         }
 
         html, body {

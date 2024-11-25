@@ -52,7 +52,7 @@
     style.innerHTML = `
     @media print {
       h1, h2, h3, h4, h5, h6, p, ul, li, table {
-        color: black;
+        color: #1e1e1e;
       }
       .renderer {
         display: block !important;

@@ -9,9 +9,7 @@
 }
 :root ::-webkit-scrollbar-thumb {
   background-color: #252525;
-}
-:root ::-webkit-scrollbar-thumb:hover {
-  background-color: #353535;
+  cursor: pointer;
 }
 
 :root {
@@ -26,7 +24,7 @@ body {
   font-family: "open sans";
   margin: 0;
   padding: 0;
-  caret-color: white;
+  caret-color: #e0e0e0;
 }
 
 .hidden {

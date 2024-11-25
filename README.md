@@ -36,6 +36,7 @@ editor.
 - Sleek dark UI
 - LaTeX support
 - Scroll sync
+- Light mode
 - Zen mode
 
 ![Editor example](.github/editor-preview.png) ![Printer preview](.github/printer-preview.png)

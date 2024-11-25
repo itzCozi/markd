@@ -47,9 +47,7 @@ switch (date.getMonth()) {
     }
     break;
   case 10:
-    if (day < 25) {
-      extraMessage = "Happy Thanksgiving! 🦃";
-    }
+    extraMessage = "Happy Thanksgiving! 🦃";
     break;
   case 11:
     if (day < 25) {

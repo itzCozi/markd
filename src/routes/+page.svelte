@@ -1,7 +1,6 @@
 <script lang="ts">
-  import { rendererTheme } from "$lib/stores/rendererThemeStore";
   import { Carta, Markdown, MarkdownEditor } from "carta-md";
-  import { editorTheme } from "$lib/stores/editorThemeStore";
+  import { editorTheme, rendererTheme } from "$lib/stores/editorThemeStore";
   import { placeholder } from "$lib/functions/placeholder";
   import { localStorageStore } from "$lib/stores/localStorage";
   import { markdownTheme } from "$lib/stores/themeStore";

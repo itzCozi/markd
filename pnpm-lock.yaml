@@ -10,25 +10,25 @@ importers:
     dependencies:
       '@cartamd/plugin-code':
         specifier: ^4.0.6
-        version: 4.0.6(carta-md@4.6.7(svelte@5.2.12))
+        version: 4.0.6(carta-md@4.6.7(svelte@5.4.0))
       '@cartamd/plugin-emoji':
         specifier: ^4.2.1
-        version: 4.2.1(carta-md@4.6.7(svelte@5.2.12))(svelte@5.2.12)
+        version: 4.2.1(carta-md@4.6.7(svelte@5.4.0))(svelte@5.4.0)
       '@cartamd/plugin-math':
         specifier: ^4.2.1
-        version: 4.2.1(carta-md@4.6.7(svelte@5.2.12))(svelte@5.2.12)
+        version: 4.2.1(carta-md@4.6.7(svelte@5.4.0))(svelte@5.4.0)
       '@cartamd/plugin-slash':
         specifier: ^4.1.2
-        version: 4.1.2(carta-md@4.6.7(svelte@5.2.12))(svelte@5.2.12)
+        version: 4.1.2(carta-md@4.6.7(svelte@5.4.0))(svelte@5.4.0)
       '@chevrotain/regexp-to-ast':
         specifier: ^11.0.3
         version: 11.0.3
       carta-md:
         specifier: ^4.6.7
-        version: 4.6.7(svelte@5.2.12)
+        version: 4.6.7(svelte@5.4.0)
       carta-plugin-subscript:
         specifier: ^2.0.0
-        version: 2.0.0(carta-md@4.6.7(svelte@5.2.12))(svelte@5.2.12)(unified@11.0.5)
+        version: 2.0.0(carta-md@4.6.7(svelte@5.4.0))(svelte@5.4.0)(unified@11.0.5)
       cssnano:
         specifier: ^7.0.6
         version: 7.0.6(postcss@8.4.49)
@@ -40,7 +40,7 @@ importers:
         version: 0.16.11
       lucide-svelte:
         specifier: ^0.447.0
-        version: 0.447.0(svelte@5.2.12)
+        version: 0.447.0(svelte@5.4.0)
       rehype-external-links:
         specifier: ^3.0.0
         version: 3.0.0
@@ -62,13 +62,13 @@ importers:
     devDependencies:
       '@sveltejs/adapter-static':
         specifier: ^3.0.6
-        version: 3.0.6(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))
+        version: 3.0.6(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))
       '@sveltejs/kit':
         specifier: ^2.9.0
-        version: 2.9.0(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
+        version: 2.9.0(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
       '@sveltejs/vite-plugin-svelte':
         specifier: ^4.0.2
-        version: 4.0.2(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
+        version: 4.0.2(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.4.49)
@@ -80,13 +80,13 @@ importers:
         version: 3.4.1
       prettier-plugin-svelte:
         specifier: ^3.3.2
-        version: 3.3.2(prettier@3.4.1)(svelte@5.2.12)
+        version: 3.3.2(prettier@3.4.1)(svelte@5.4.0)
       svelte:
-        specifier: ^5.2.12
-        version: 5.2.12
+        specifier: ^5.4.0
+        version: 5.4.0
       svelte-check:
         specifier: ^4.1.0
-        version: 4.1.0(picomatch@4.0.2)(svelte@5.2.12)(typescript@5.6.2)
+        version: 4.1.0(picomatch@4.0.2)(svelte@5.4.0)(typescript@5.6.2)
       tailwindcss:
         specifier: ^3.4.15
         version: 3.4.15
@@ -1190,8 +1190,8 @@ packages:
   caniuse-api@3.0.0:
     resolution: {integrity: sha512-bsTwuIg/BZZK/vreVTYYbSWoe2F+71P7K5QGEX+pT250DZbfU1MQ5prOKpPR+LL6uWKK3KMwMCAS74QB3Um1uw==}
 
-  caniuse-lite@1.0.30001684:
-    resolution: {integrity: sha512-G1LRwLIQjBQoyq0ZJGqGIJUXzJ8irpbjHLpVRXDvBEScFJ9b17sgK6vlx0GAJFE21okD7zXl08rRRUfq6HdoEQ==}
+  caniuse-lite@1.0.30001685:
+    resolution: {integrity: sha512-e/kJN1EMyHQzgcMEEgoo+YTCO1NGCmIYHk5Qk8jT6AazWemS5QFKJ5ShCJlH3GZrNIdZofcNCEwZqbMjjKzmnA==}
 
   carta-md@4.6.7:
     resolution: {integrity: sha512-dJFg1SLEBdoXDCfetMjceW+lZ1SfUZ3nsWRttwGUnCx052OPqBYrTP7ticwQqyolcNlR29aMm1neEuNGpYaDWg==}
@@ -1644,8 +1644,8 @@ packages:
   has-property-descriptors@1.0.2:
     resolution: {integrity: sha512-55JNKuIW+vq4Ke1BjOTjM2YctQIvCT7GFzHwmfZPGo5wnrgkid0YQtnAleFSqumZm4az3n2BS+erby5ipJdgrg==}
 
-  has-proto@1.0.3:
-    resolution: {integrity: sha512-SJ1amZAJUiZS+PhsVLf5tGydlaVB8EdFpaSO4gmiUKUOxk8qzn5AIy4ZeJUmh22znIdk/uMAUT2pl3FxzVUH+Q==}
+  has-proto@1.1.0:
+    resolution: {integrity: sha512-QLdzI9IIO1Jg7f9GT1gXpPpXArAn6cS31R1eEZqz08Gc+uQ8/XiqHWt17Fiw+2p6oTTIq5GXEpQkAlA88YRl/Q==}
     engines: {node: '>= 0.4'}
 
   has-symbols@1.0.3:
@@ -1754,8 +1754,8 @@ packages:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
     engines: {node: '>=8'}
 
-  is-boolean-object@1.1.2:
-    resolution: {integrity: sha512-gDYaKHJmnj4aWxyj6YHyXVpdQawtVLHU5cb+eztPGczf6cjuTdwve5ZIEfgXqH4e57An1D1AKf8CZ3kYrQRqYA==}
+  is-boolean-object@1.2.0:
+    resolution: {integrity: sha512-kR5g0+dXf/+kXnqI+lu0URKYPKgICtHGGNCDSB10AaUFj3o/HkB3u7WfpRBJGFopxxY0oH3ux7ZsDjLtK7xqvw==}
     engines: {node: '>= 0.4'}
 
   is-callable@1.2.7:
@@ -1805,8 +1805,8 @@ packages:
     resolution: {integrity: sha512-5KoIu2Ngpyek75jXodFvnafB6DJgr3u8uuK0LEZJjrU19DrMD3EVERaR8sjz8CCGgpZvxPl9SuE1GMVPFHx1mw==}
     engines: {node: '>= 0.4'}
 
-  is-number-object@1.0.7:
-    resolution: {integrity: sha512-k1U0IRzLMo7ZlYIfzRu23Oh6MiIFasgpb9X76eqfFZAqwH44UI4KTBvBYIZ1dSL9ZzChTB9ShHfLkR4pdW5krQ==}
+  is-number-object@1.1.0:
+    resolution: {integrity: sha512-KVSZV0Dunv9DTPkhXwcZ3Q+tUc9TsaE1ZwX5J2WMvsSGS6Md8TFPun5uwh0yRdrNerI6vf/tbJxqSx4c1ZI1Lw==}
     engines: {node: '>= 0.4'}
 
   is-number@7.0.0:
@@ -1847,8 +1847,8 @@ packages:
     resolution: {integrity: sha512-hFoiJiTl63nn+kstHGBtewWSKnQLpyb155KHheA1l39uvtO9nWIop1p3udqPcUd/xbF1VLMO4n7OI6p7RbngDg==}
     engines: {node: '>=8'}
 
-  is-string@1.0.7:
-    resolution: {integrity: sha512-tE2UXzivje6ofPW7l23cjDOMa09gb7xlAqG6jG5ej6uPV32TlWP3NKPigtaGeHNu9fohccRYvIiZMfOOnOYUtg==}
+  is-string@1.1.0:
+    resolution: {integrity: sha512-PlfzajuF9vSo5wErv3MJAKD/nqf9ngAs1NFQYm16nUYFO2IzxJ2hcm+IOCg+EEopdykNNUhVq5cz35cAUxU8+g==}
     engines: {node: '>= 0.4'}
 
   is-symbol@1.0.4:
@@ -2777,8 +2777,8 @@ packages:
       svelte: ^4.0.0 || ^5.0.0-next.0
       typescript: '>=5.0.0'
 
-  svelte@5.2.12:
-    resolution: {integrity: sha512-lcrJVygO05nzQkgRLxaz3qd0kamyhujfpCxalzzKabJUueVrnpc0bhHgR2hUa/335XvOHO39wtc79C72g+5ftw==}
+  svelte@5.4.0:
+    resolution: {integrity: sha512-2I/mjD8cXDpKfdfUK+T6yo/OzugMXIm8lhyJUFM5F/gICMYnkl3C/+4cOSpia8TqpDsi6Qfm5+fdmBNMNmaf2g==}
     engines: {node: '>=18'}
 
   svgo@3.3.2:
@@ -3841,34 +3841,34 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@cartamd/plugin-code@4.0.6(carta-md@4.6.7(svelte@5.2.12))':
+  '@cartamd/plugin-code@4.0.6(carta-md@4.6.7(svelte@5.4.0))':
     dependencies:
       '@shikijs/rehype': 1.24.0
-      carta-md: 4.6.7(svelte@5.2.12)
+      carta-md: 4.6.7(svelte@5.4.0)
       unified: 11.0.5
 
-  '@cartamd/plugin-emoji@4.2.1(carta-md@4.6.7(svelte@5.2.12))(svelte@5.2.12)':
+  '@cartamd/plugin-emoji@4.2.1(carta-md@4.6.7(svelte@5.4.0))(svelte@5.4.0)':
     dependencies:
       bezier-easing: 2.1.0
-      carta-md: 4.6.7(svelte@5.2.12)
+      carta-md: 4.6.7(svelte@5.4.0)
       node-emoji: 2.1.3
       remark-emoji: 5.0.1
-      svelte: 5.2.12
+      svelte: 5.4.0
 
-  '@cartamd/plugin-math@4.2.1(carta-md@4.6.7(svelte@5.2.12))(svelte@5.2.12)':
+  '@cartamd/plugin-math@4.2.1(carta-md@4.6.7(svelte@5.4.0))(svelte@5.4.0)':
     dependencies:
-      carta-md: 4.6.7(svelte@5.2.12)
+      carta-md: 4.6.7(svelte@5.4.0)
       rehype-katex: 7.0.1
       remark-math: 6.0.0
-      svelte: 5.2.12
+      svelte: 5.4.0
     transitivePeerDependencies:
       - supports-color
 
-  '@cartamd/plugin-slash@4.1.2(carta-md@4.6.7(svelte@5.2.12))(svelte@5.2.12)':
+  '@cartamd/plugin-slash@4.1.2(carta-md@4.6.7(svelte@5.4.0))(svelte@5.4.0)':
     dependencies:
       bezier-easing: 2.1.0
-      carta-md: 4.6.7(svelte@5.2.12)
-      svelte: 5.2.12
+      carta-md: 4.6.7(svelte@5.4.0)
+      svelte: 5.4.0
 
   '@chevrotain/regexp-to-ast@11.0.3': {}
 
@@ -4136,13 +4136,13 @@ snapshots:
       magic-string: 0.25.9
       string.prototype.matchall: 4.0.11
 
-  '@sveltejs/adapter-static@3.0.6(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))':
+  '@sveltejs/adapter-static@3.0.6(@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))':
     dependencies:
-      '@sveltejs/kit': 2.9.0(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
+      '@sveltejs/kit': 2.9.0(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
 
-  '@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))':
+  '@sveltejs/kit@2.9.0(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 4.0.2(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
+      '@sveltejs/vite-plugin-svelte': 4.0.2(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
       '@types/cookie': 0.6.0
       cookie: 0.6.0
       devalue: 5.1.1
@@ -4154,27 +4154,27 @@ snapshots:
       sade: 1.8.1
       set-cookie-parser: 2.7.1
       sirv: 3.0.0
-      svelte: 5.2.12
+      svelte: 5.4.0
       tiny-glob: 0.2.9
       vite: 5.4.11(@types/node@22.7.4)(terser@5.36.0)
 
-  '@sveltejs/vite-plugin-svelte-inspector@3.0.1(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))':
+  '@sveltejs/vite-plugin-svelte-inspector@3.0.1(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 4.0.2(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
+      '@sveltejs/vite-plugin-svelte': 4.0.2(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
       debug: 4.3.7
-      svelte: 5.2.12
+      svelte: 5.4.0
       vite: 5.4.11(@types/node@22.7.4)(terser@5.36.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))':
+  '@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))':
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 3.0.1(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.2.12)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
+      '@sveltejs/vite-plugin-svelte-inspector': 3.0.1(@sveltejs/vite-plugin-svelte@4.0.2(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0)))(svelte@5.4.0)(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
       debug: 4.3.7
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.14
-      svelte: 5.2.12
+      svelte: 5.4.0
       vite: 5.4.11(@types/node@22.7.4)(terser@5.36.0)
       vitefu: 1.0.4(vite@5.4.11(@types/node@22.7.4)(terser@5.36.0))
     transitivePeerDependencies:
@@ -4284,7 +4284,7 @@ snapshots:
   autoprefixer@10.4.20(postcss@8.4.49):
     dependencies:
       browserslist: 4.24.2
-      caniuse-lite: 1.0.30001684
+      caniuse-lite: 1.0.30001685
       fraction.js: 4.3.7
       normalize-range: 0.1.2
       picocolors: 1.1.1
@@ -4346,7 +4346,7 @@ snapshots:
 
   browserslist@4.24.2:
     dependencies:
-      caniuse-lite: 1.0.30001684
+      caniuse-lite: 1.0.30001685
       electron-to-chromium: 1.5.67
       node-releases: 2.0.18
       update-browserslist-db: 1.1.1(browserslist@4.24.2)
@@ -4366,13 +4366,13 @@ snapshots:
   caniuse-api@3.0.0:
     dependencies:
       browserslist: 4.24.2
-      caniuse-lite: 1.0.30001684
+      caniuse-lite: 1.0.30001685
       lodash.memoize: 4.1.2
       lodash.uniq: 4.5.0
 
-  caniuse-lite@1.0.30001684: {}
+  caniuse-lite@1.0.30001685: {}
 
-  carta-md@4.6.7(svelte@5.2.12):
+  carta-md@4.6.7(svelte@5.4.0):
     dependencies:
       diff: 5.2.0
       esm-env: 1.2.1
@@ -4381,16 +4381,16 @@ snapshots:
       remark-parse: 11.0.0
       remark-rehype: 11.1.1
       shiki: 1.24.0
-      svelte: 5.2.12
+      svelte: 5.4.0
       unified: 11.0.5
     transitivePeerDependencies:
       - supports-color
 
-  carta-plugin-subscript@2.0.0(carta-md@4.6.7(svelte@5.2.12))(svelte@5.2.12)(unified@11.0.5):
+  carta-plugin-subscript@2.0.0(carta-md@4.6.7(svelte@5.4.0))(svelte@5.4.0)(unified@11.0.5):
     dependencies:
-      carta-md: 4.6.7(svelte@5.2.12)
+      carta-md: 4.6.7(svelte@5.4.0)
       remark-supersub: 1.0.0
-      svelte: 5.2.12
+      svelte: 5.4.0
       unified: 11.0.5
 
   ccount@2.0.1: {}
@@ -4669,7 +4669,7 @@ snapshots:
       globalthis: 1.0.4
       gopd: 1.1.0
       has-property-descriptors: 1.0.2
-      has-proto: 1.0.3
+      has-proto: 1.1.0
       has-symbols: 1.0.3
       hasown: 2.0.2
       internal-slot: 1.0.7
@@ -4679,7 +4679,7 @@ snapshots:
       is-negative-zero: 2.0.3
       is-regex: 1.2.0
       is-shared-array-buffer: 1.0.3
-      is-string: 1.0.7
+      is-string: 1.1.0
       is-typed-array: 1.1.13
       is-weakref: 1.0.2
       object-inspect: 1.13.3
@@ -4847,7 +4847,7 @@ snapshots:
     dependencies:
       es-errors: 1.3.0
       function-bind: 1.1.2
-      has-proto: 1.0.3
+      has-proto: 1.1.0
       has-symbols: 1.0.3
       hasown: 2.0.2
 
@@ -4910,7 +4910,9 @@ snapshots:
     dependencies:
       es-define-property: 1.0.0
 
-  has-proto@1.0.3: {}
+  has-proto@1.1.0:
+    dependencies:
+      call-bind: 1.0.7
 
   has-symbols@1.0.3: {}
 
@@ -5086,7 +5088,7 @@ snapshots:
     dependencies:
       binary-extensions: 2.3.0
 
-  is-boolean-object@1.1.2:
+  is-boolean-object@1.2.0:
     dependencies:
       call-bind: 1.0.7
       has-tostringtag: 1.0.2
@@ -5127,8 +5129,9 @@ snapshots:
 
   is-negative-zero@2.0.3: {}
 
-  is-number-object@1.0.7:
+  is-number-object@1.1.0:
     dependencies:
+      call-bind: 1.0.7
       has-tostringtag: 1.0.2
 
   is-number@7.0.0: {}
@@ -5160,8 +5163,9 @@ snapshots:
 
   is-stream@2.0.1: {}
 
-  is-string@1.0.7:
+  is-string@1.1.0:
     dependencies:
+      call-bind: 1.0.7
       has-tostringtag: 1.0.2
 
   is-symbol@1.0.4:
@@ -5292,9 +5296,9 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-svelte@0.447.0(svelte@5.2.12):
+  lucide-svelte@0.447.0(svelte@5.4.0):
     dependencies:
-      svelte: 5.2.12
+      svelte: 5.4.0
 
   magic-string@0.25.9:
     dependencies:
@@ -5937,10 +5941,10 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  prettier-plugin-svelte@3.3.2(prettier@3.4.1)(svelte@5.2.12):
+  prettier-plugin-svelte@3.3.2(prettier@3.4.1)(svelte@5.4.0):
     dependencies:
       prettier: 3.4.1
-      svelte: 5.2.12
+      svelte: 5.4.0
 
   prettier@3.4.1: {}
 
@@ -6347,19 +6351,19 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  svelte-check@4.1.0(picomatch@4.0.2)(svelte@5.2.12)(typescript@5.6.2):
+  svelte-check@4.1.0(picomatch@4.0.2)(svelte@5.4.0)(typescript@5.6.2):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       chokidar: 4.0.1
       fdir: 6.4.2(picomatch@4.0.2)
       picocolors: 1.1.1
       sade: 1.8.1
-      svelte: 5.2.12
+      svelte: 5.4.0
       typescript: 5.6.2
     transitivePeerDependencies:
       - picomatch
 
-  svelte@5.2.12:
+  svelte@5.4.0:
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -6491,7 +6495,7 @@ snapshots:
       call-bind: 1.0.7
       for-each: 0.3.3
       gopd: 1.1.0
-      has-proto: 1.0.3
+      has-proto: 1.1.0
       is-typed-array: 1.1.13
 
   typed-array-byte-offset@1.0.3:
@@ -6500,7 +6504,7 @@ snapshots:
       call-bind: 1.0.7
       for-each: 0.3.3
       gopd: 1.1.0
-      has-proto: 1.0.3
+      has-proto: 1.1.0
       is-typed-array: 1.1.13
       reflect.getprototypeof: 1.0.7
 
@@ -6691,9 +6695,9 @@ snapshots:
   which-boxed-primitive@1.0.2:
     dependencies:
       is-bigint: 1.0.4
-      is-boolean-object: 1.1.2
-      is-number-object: 1.0.7
-      is-string: 1.0.7
+      is-boolean-object: 1.2.0
+      is-number-object: 1.1.0
+      is-string: 1.1.0
       is-symbol: 1.0.4
 
   which-builtin-type@1.2.0:

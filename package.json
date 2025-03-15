@@ -39,6 +39,7 @@
     "@cartamd/plugin-slash": "^4.1.2",
     "@chevrotain/regexp-to-ast": "^11.0.3",
     "carta-md": "^4.6.7",
+    "carta-plugin-ins-del": "^2.0.1",
     "carta-plugin-subscript": "^2.0.0",
     "cssnano": "^7.0.6",
     "isomorphic-dompurify": "^2.20.0",

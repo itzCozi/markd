@@ -159,6 +159,14 @@ a:hover {
   font-size: 0px !important;
 }
 
+.markdown-body ins {
+  text-decoration: underline;
+}
+
+.markdown-body del {
+  text-decoration: line-through;
+}
+
 @media (max-width: 768px) {
   .stats {
     margin: 0;

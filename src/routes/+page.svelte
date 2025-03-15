@@ -75,6 +75,8 @@
   import { code } from "@cartamd/plugin-code";
   // Subscript + Superscript
   import { subscript } from "carta-plugin-subscript";
+  // Ins + Del
+  import { insdel } from "carta-plugin-ins-del";
   // End Plugins
 
   let leftWidth = $state(50);
@@ -102,6 +104,7 @@
         code({ theme: $rendererTheme }),
         rawhtml,
         subscript(),
+        insdel(),
       ],
       gfmOptions: {
         // remark-gfm that Carta uses convert single tilde to strikethrough, disable that to use single tilde for subscript.

@@ -26,6 +26,9 @@ importers:
       carta-md:
         specifier: ^4.6.7
         version: 4.6.7(svelte@5.17.4)
+      carta-plugin-ins-del:
+        specifier: ^2.0.1
+        version: 2.0.1(carta-md@4.6.7(svelte@5.17.4))(unified@11.0.5)
       carta-plugin-subscript:
         specifier: ^2.0.0
         version: 2.0.0(carta-md@4.6.7(svelte@5.17.4))(svelte@5.17.4)(unified@11.0.5)
@@ -1257,6 +1260,12 @@ packages:
     resolution: {integrity: sha512-dJFg1SLEBdoXDCfetMjceW+lZ1SfUZ3nsWRttwGUnCx052OPqBYrTP7ticwQqyolcNlR29aMm1neEuNGpYaDWg==}
     peerDependencies:
       svelte: ^3.54.0 || ^4.0.0 || ^5.0.0-next.1
+
+  carta-plugin-ins-del@2.0.1:
+    resolution: {integrity: sha512-Whl1DYoV5acr0vyvM+3u3eR2gis6jHD8CNnzmDm7r+2008ueSd2W7xrcgYM0CO89/v76UZwzATopUJten+xpXQ==}
+    peerDependencies:
+      carta-md: ^4.0.0
+      unified: ^11.0.4
 
   carta-plugin-subscript@2.0.0:
     resolution: {integrity: sha512-KFIj0S+FGurD3zviOeUSqzdv+uxtFoaYVMKnUvw8GFXj9dPquGA+IibHIEvgNMejfVd3m9sFrT4GgyvYpg932A==}
@@ -2661,6 +2670,9 @@ packages:
   remark-github-beta-blockquote-admonitions@3.1.1:
     resolution: {integrity: sha512-36ofXpQnz9wrZthe0WB1qtNCgflHFsz7VoUG/j+WJU/GxMpo7Tp+qN86s/Tvx6MiusQIDg0BZhWXnfklEXRiVw==}
 
+  remark-ins@1.1.0:
+    resolution: {integrity: sha512-5cxLP3SqLfRdw2NR1I6BQprdEjCalYMqPFyXvtdV9jZUl9CReXvPMTkjb6upvw2ISs4dK/cQs/p1Ln0X7Ob35g==}
+
   remark-math@6.0.0:
     resolution: {integrity: sha512-MMqgnP74Igy+S3WwnhQ7kqGlEerTETXMvJhrUzDikVZ2/uogJCb+WHUg97hK9/jcfc0dkD73s3LN8zU49cTEtA==}
 
@@ -3028,8 +3040,20 @@ packages:
     resolution: {integrity: sha512-uNaeirEPvpZWSgzwsPGtU2zVSTrn/8L5q/IexZmH0eH6SA73CmAA5U4GwORTxQAZs95TAXLNqeLoPPNO5gZfWg==}
     engines: {node: '>=8'}
 
+  unist-builder@4.0.0:
+    resolution: {integrity: sha512-wmRFnH+BLpZnTKpc5L7O67Kac89s9HMrtELpnNaE6TAobq5DTZZs5YaTQfAZBA9bFPECx2uVAPO31c+GVug8mg==}
+
   unist-util-find-after@5.0.0:
     resolution: {integrity: sha512-amQa0Ep2m6hE2g72AugUItjbuM8X8cGQnFoHk0pGfrFeT9GZhzN5SW8nRsiGKK7Aif4CrACPENkA6P/Lw6fHGQ==}
+
+  unist-util-find-all-after@5.0.0:
+    resolution: {integrity: sha512-nGmOYvTSdGcI4RvrUNfe0mOsqqbbJOtqCQsppsY9KZjmv3nwM3YRgNBwFPdZ8Y+iv9Z/2PDjR9u6u+uK62XTTg==}
+
+  unist-util-find-all-before@5.0.0:
+    resolution: {integrity: sha512-zir6a7GsXfdn4YAWR4F3hLNKZjTjLBJurdyquysvmX38xbftS1+qwvEhutxxHLq0Pp1tW5V1TDiuj+qluuOnKw==}
+
+  unist-util-find-between-all@1.0.5:
+    resolution: {integrity: sha512-zqpIPPzhbG6fI5lqYZhS1UPsMvxV9IY6dwbizLHLPAGNb3pQT3mTvmzXpP1K2lmUh4bhUwAN4gkQcxhR/OLS4g==}
 
   unist-util-is@5.2.1:
     resolution: {integrity: sha512-u9njyyfEh43npf1M+yGKDGVPbY/JWEemg5nH05ncKPfi+kBbKBJoTdsogMu33uhytuLlv9y0O7GH7fEdwLdLQw==}
@@ -4558,6 +4582,12 @@ snapshots:
       unified: 11.0.5
     transitivePeerDependencies:
       - supports-color
+
+  carta-plugin-ins-del@2.0.1(carta-md@4.6.7(svelte@5.17.4))(unified@11.0.5):
+    dependencies:
+      carta-md: 4.6.7(svelte@5.17.4)
+      remark-ins: 1.1.0
+      unified: 11.0.5
 
   carta-plugin-subscript@2.0.0(carta-md@4.6.7(svelte@5.17.4))(svelte@5.17.4)(unified@11.0.5):
     dependencies:
@@ -6306,6 +6336,16 @@ snapshots:
     dependencies:
       unist-util-visit: 5.0.0
 
+  remark-ins@1.1.0:
+    dependencies:
+      '@types/mdast': 4.0.4
+      unist-builder: 4.0.0
+      unist-util-find-after: 5.0.0
+      unist-util-find-all-after: 5.0.0
+      unist-util-find-all-before: 5.0.0
+      unist-util-find-between-all: 1.0.5
+      unist-util-visit: 5.0.0
+
   remark-math@6.0.0:
     dependencies:
       '@types/mdast': 4.0.4
@@ -6835,7 +6875,26 @@ snapshots:
     dependencies:
       crypto-random-string: 2.0.0
 
+  unist-builder@4.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
+
   unist-util-find-after@5.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.0
+
+  unist-util-find-all-after@5.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.0
+
+  unist-util-find-all-before@5.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.0
+
+  unist-util-find-between-all@1.0.5:
     dependencies:
       '@types/unist': 3.0.3
       unist-util-is: 6.0.0

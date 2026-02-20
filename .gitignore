@@ -1,6 +1,7 @@
 # Basic
 node_modules
 .git
+package-lock.json
 
 # Output
 .output

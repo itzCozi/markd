@@ -225,15 +225,13 @@
 
 <NavBar />
 
-{#key source}
-  <div class="stats gap-4 text-type-dimmed text-xs">
-    <span class="stat-item">Characters: {characterCount}</span>
-    <span class="separator">•</span>
-    <span class="stat-item">Words: {wordCount}</span>
-    <span class="separator">•</span>
-    <span class="stat-item">Length: {readTime} {readTime === 1 ? "minute" : "minutes"}</span>
-  </div>
-{/key}
+<div class="stats gap-4 text-type-dimmed text-xs">
+  <span class="stat-item">Characters: {characterCount}</span>
+  <span class="separator">•</span>
+  <span class="stat-item">Words: {wordCount}</span>
+  <span class="separator">•</span>
+  <span class="stat-item">Length: {readTime} {readTime === 1 ? "minute" : "minutes"}</span>
+</div>
 
 <div
   class={`flex h-[calc(100dvh-72px)] ${$markdownTheme === "light" ? "bg-mono-lightBackground" : "bg-mono-background"}`}>

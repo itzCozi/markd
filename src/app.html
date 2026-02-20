@@ -1,7 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <title id="page-title">MarkD</title>
+
+    <!-- Preconnect for performance -->
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com" />
@@ -9,22 +15,33 @@
       rel="preconnect"
       href="https://fonts.gstatic.com"
       crossorigin />
+
+    <!-- Google Fonts with display=swap for better performance -->
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet" />
-    <meta charset="utf-8" />
+      rel="stylesheet"
+      media="print"
+      onload="this.media = 'all'" />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet" />
+    </noscript>
+
     <link
       rel="icon"
+      href="/favicon.svg"
+      type="image/svg+xml" />
+    <link
+      rel="alternate icon"
       href="/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      href="/favicon.png" />
+
     <meta
       name="theme-color"
       content="#202020" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <meta
       name="description"
       content="An advanced, opinionated live Markdown editor built with SvelteKit from scratch." />

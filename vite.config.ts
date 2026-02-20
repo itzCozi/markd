@@ -5,9 +5,14 @@ import path from "path";
 import postcss from "./postcss.config.js";
 
 export default defineConfig({
-  plugins: [sveltekit(), viteCompression({ algorithm: "brotliCompress" })],
+  plugins: [
+    sveltekit(),
+    viteCompression({ algorithm: "brotliCompress", ext: ".br" }),
+    viteCompression({ algorithm: "gzip", ext: ".gz" }),
+  ],
   css: {
     postcss,
+    devSourcemap: true,
   },
   resolve: {
     alias: {
@@ -17,16 +22,13 @@ export default defineConfig({
   build: {
     minify: "esbuild",
     target: "esnext",
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ["svelte", "svelte/internal"],
-        },
-      },
+    cssMinify: true,
+    modulePreload: {
+      polyfill: false,
     },
   },
   optimizeDeps: {
-    include: ["svelte", "svelte/internal"],
+    include: ["carta-md", "lucide-svelte", "isomorphic-dompurify"],
   },
   server: {
     fs: {

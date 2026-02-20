@@ -2,14 +2,15 @@
   import { userEditorTheme } from "$lib/stores/editorThemeStore";
   import { markdownTheme } from "$lib/stores/themeStore";
   import { Sun, Moon } from "lucide-svelte";
+  import { get } from "svelte/store";
 
-  let isLightTheme = false;
-
-  $: isLightTheme = $markdownTheme === "light";
+  let isLightTheme = $derived($markdownTheme === "light");
 
   function toggleMarkdownTheme() {
-    markdownTheme.update((theme) => (theme === "light" ? "" : "light"));
-    userEditorTheme.set($markdownTheme === "light" ? "light-plus" : "dark-plus");
+    const currentTheme = get(markdownTheme);
+    const newTheme = currentTheme === "light" ? "dark" : "light";
+    markdownTheme.set(newTheme);
+    userEditorTheme.set(newTheme === "light" ? "light-plus" : "dark-plus");
   }
 </script>
 
@@ -18,9 +19,9 @@
   title="Theme Toggle">
   <input
     type="checkbox"
-    bind:checked={isLightTheme}
+    checked={isLightTheme}
     class="hidden"
-    on:change={toggleMarkdownTheme} />
+    onchange={toggleMarkdownTheme} />
 
   <span
     class={`relative inline-block w-8 h-5 duration-300 ease-in-out rounded-full ${

@@ -5,7 +5,6 @@
   import { localStorageStore } from "$lib/stores/localStorage";
   import { markdownTheme } from "$lib/stores/themeStore";
   import NavBar from "$lib/parts/NavBar.svelte";
-  import { Carta as CartaType } from "carta-md";
   import { Check, XIcon } from "lucide-svelte";
   import DOMPurify from "isomorphic-dompurify";
   import { onMount } from "svelte";
@@ -80,13 +79,13 @@
   // End Plugins
 
   let leftWidth = $state(50);
-  let isResizing = false;
+  let isResizing = $state(false);
   let selectedTab: "write" | "preview" = $state("write");
-  let editorScrollTop = 0;
-  let rendererScrollTop = 0;
+  let editorScrollTop = $state(0);
+  let rendererScrollTop = $state(0);
   let isScrollSyncEnabled = $state(true);
 
-  let carta: CartaType = $derived(
+  let carta = $derived(
     new Carta({
       rehypeOptions: { allowDangerousHtml: true },
       sanitizer: DOMPurify.sanitize,
@@ -117,8 +116,18 @@
   let source = $state("");
 
   onMount(() => {
+    // Load cached markdown content
     const cached = localStorageStore.get("markdown");
     if (cached) source = cached;
+
+    // Setup PWA styles
+    managePWAStyles();
+
+    // Cleanup on unmount
+    return () => {
+      const pwaStyle = document.getElementById("pwa-style");
+      if (pwaStyle) pwaStyle.remove();
+    };
   });
 
   $effect(() => {
@@ -207,10 +216,6 @@
       existingStyleTag.remove();
     }
   }
-
-  onMount(() => {
-    managePWAStyles();
-  });
 
   let words = $derived(source.split(/\s+/).filter((word) => word !== ""));
   let wordCount = $derived(words.length);

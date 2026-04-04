@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Carta, Markdown, MarkdownEditor } from "carta-md";
+  import { Carta, MarkdownEditor } from "carta-md";
   import { editorTheme, rendererTheme } from "$lib/stores/editorThemeStore";
   import { placeholder } from "$lib/functions/placeholder";
   import { localStorageStore } from "$lib/stores/localStorage";
@@ -216,19 +216,45 @@
   let wordCount = $derived(words.length);
   let characterCount = $derived(source.length);
   let readTime = $derived(Math.ceil(wordCount / 200));
+
+  // Custom reactive preview renderer.
+  // carta-md's Markdown component is non-reactive (renders once on mount),
+  // so we drive rendering ourselves with $effect + debouncing, which also
+  // avoids the $setRenderer conflict between MarkdownEditor and Markdown.
+  let previewHtml = $state("");
+  let renderTimer: ReturnType<typeof setTimeout>;
+  let renderVersion = 0;
+
+  $effect(() => {
+    const src = source;
+    const c = carta;
+    const version = ++renderVersion;
+
+    clearTimeout(renderTimer);
+    renderTimer = setTimeout(async () => {
+      try {
+        const html = await c.render(src);
+        if (version === renderVersion) {
+          previewHtml = html;
+        }
+      } catch (e) {
+        console.error("Preview render error:", e);
+      }
+    }, 300);
+
+    return () => clearTimeout(renderTimer);
+  });
 </script>
 
 <NavBar />
 
-{#key source}
-  <div class="stats gap-4 text-type-dimmed text-xs">
-    <span class="stat-item">Characters: {characterCount}</span>
-    <span class="separator">•</span>
-    <span class="stat-item">Words: {wordCount}</span>
-    <span class="separator">•</span>
-    <span class="stat-item">Length: {readTime} {readTime === 1 ? "minute" : "minutes"}</span>
-  </div>
-{/key}
+<div class="stats gap-4 text-type-dimmed text-xs">
+  <span class="stat-item">Characters: {characterCount}</span>
+  <span class="separator">&bull;</span>
+  <span class="stat-item">Words: {wordCount}</span>
+  <span class="separator">&bull;</span>
+  <span class="stat-item">Length: {readTime} {readTime === 1 ? "minute" : "minutes"}</span>
+</div>
 
 <div
   class={`flex h-[calc(100dvh-72px)] ${$markdownTheme === "light" ? "bg-mono-lightBackground" : "bg-mono-background"}`}>
@@ -296,11 +322,8 @@
         </span>
       </label>
     </div>
-    {#key source + $markdownTheme}
-      <Markdown
-        {carta}
-        value={source}
-        theme={$markdownTheme} />
-    {/key}
+    <div class="carta-viewer carta-theme__{$markdownTheme} markdown-body">
+      {@html previewHtml}
+    </div>
   </div>
 </div>

@@ -19,14 +19,6 @@
     {@render children?.()}
 
     <Divider />
-    <Paragraph className="text-xs mt-2">
-      Created by <a
-        href="https://github.com/itzcozi"
-        title="BadDeveloper's github">BadDeveloper</a>
-      and
-      <a
-        href="https://github.com/Pasithea0"
-        title="Pas's github">Pasithea</a> with 💙
-    </Paragraph>
+    <Paragraph className="text-xs mt-2">Created by <a href="https://github.com/itzcozi" title="BadDeveloper's github">BadDeveloper</a> and <a href="https://github.com/Pasithea0" title="Pas's github">Pasithea</a> with 💙</Paragraph>
   </div>
 </div>

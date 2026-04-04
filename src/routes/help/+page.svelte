@@ -12,34 +12,25 @@
     How to use <span class="underline decoration-1 underline-offset-4 decoration-wavy">MarkD</span
     >own
   </h2>
-  <Paragraph>
-    Markdown is a lightweight markup language with plain text formatting syntax. Its design allows
-    easy conversion to HTML and other formats, and its syntax is influenced by Perl. Markdown is
-    often used to format readme files, for writing messages in online discussion forums, and to
-    create rich text using a plain text editor. Here I will teach you how to use markdown, both
-    basic syntax and our custom site-specific syntax.
-  </Paragraph>
+  <Paragraph>Markdown is a lightweight markup language with plain text formatting syntax. Its design allows easy conversion to HTML and other formats, and its syntax is influenced by Perl. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. Here I will teach you how to use markdown, both basic syntax and our custom site-specific syntax.</Paragraph>
 
   <div class="flex flex-row gap-2 items-center">
     <h3 class="text-2xl my-2 text-type-emphasized">IntelliSense</h3>
     <CircleAlert class="text-type-dimmed w-4 h-4 mb-3 -ml-1" />
   </div>
-  <Paragraph>
-    Our editor features IntelliSense. Type / to see available commands, or : for emoji selection.
-    You can create headers, lists, tables and basically anything using our IntelliSense.
-  </Paragraph>
+  <Paragraph>Our editor features IntelliSense. Type / to see available commands, or : for emoji selection. You can create headers, lists, tables and basically anything using our IntelliSense.</Paragraph>
 
   <Divider className="mt-4" />
 
   <HelpEntry
     title="Headers"
     description="Headers are defined by the number of # symbols before the text. The number of # symbols determines the size of the header. The maximum number of # symbols is 6."
-    example="# Header 1
+    example={`# Header 1
 ## Header 2
 ### Header 3
 #### Header 4
 ##### Header 5
-###### Header 6" />
+###### Header 6`} />
 
   <HelpEntry
     title="Hyperlinks"
@@ -54,19 +45,19 @@
   <HelpEntry
     title="Lists"
     description="Lists are defined using - or * symbols, followed by text. Either a hyphen or an asterisk can be used. Numbered lists are defined using numbers followed by a period."
-    example="- Item 1
+    example={`- Item 1
 - Item 2
 - Item 3
 
 1. First item
 2. Second item
-3. Third item" />
+3. Third item`} />
 
   <HelpEntry
     title="Checklists"
     description="Checklists are defined by using - [ ] for an unchecked box and - [x] the - can be replaced with an * as well."
-    example="- [ ] Unchecked box
-- [x] Checked box" />
+    example={`- [ ] Unchecked box
+- [x] Checked box`} />
 
   <HelpEntry
     title="Strikethrough"
@@ -81,13 +72,13 @@
   <HelpEntry
     title="Code"
     description="Code is defined using the ` symbol. Inline code is defined by wrapping the code in singular backticks. Block code is defined by wrapping the code in triple backticks. Code blocks allow for syntax highlighting by specifying the language after the first set of triple backticks."
-    example="`git clone https://github.com/itzcozi/markd.git`
+    example={`\`git clone https://github.com/itzcozi/markd.git\`
 
-```py
+\`\`\`py
 number1 = 1
 number2 = 2
 print(number1 + number2)
-```" />
+\`\`\``} />
 
   <HelpEntry
     title="Image"
@@ -97,22 +88,22 @@ print(number1 + number2)
   <HelpEntry
     title="Dividers"
     description="Dividers are defined by three or more hyphens, asterisks, or underscores creating a horizontal line."
-    example="---
+    example={`---
 ***
-___" />
+___`} />
 
   <HelpEntry
     title="Tables"
     description="Tables are defined by using pipes | to separate columns and hyphens - to separate the header row from the content."
-    example="| Header 1 | Header 2 |
+    example={`| Header 1 | Header 2 |
 |----------|----------|
-| Cell 1   | Cell 2   |" />
+| Cell 1   | Cell 2   |`} />
 
   <HelpEntry
     title="Admonitions"
     description="Admonitions are defined by using the &#62; symbol followed by the type of admonition you want to use and the text you want to display. The admonition types are [!NOTE], [!IMPORTANT], [!TIP], [!CAUTION] and [!WARNING]."
-    example="> [!NOTE]
-> Something *Noteworthy*" />
+    example={`> [!NOTE]
+> Something *Noteworthy*`} />
 
   <HelpEntry
     title="Subscript & Superscript"

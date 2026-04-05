@@ -31,11 +31,12 @@
   class:pointer-events-none={!isSidebarOpen}
   role="button"
   tabindex="0"
+  aria-label="Close sidebar"
   onclick={() => {
     backToSidebar();
     closeSidebar();
   }}
-  onkeydown={(e) => e.key === "Enter" && closeSidebar()}>
+  onkeydown={(e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), backToSidebar(), closeSidebar())}>
 </div>
 
 <aside
@@ -66,10 +67,10 @@
                 goto("/");
               }}>Home</SidebarButton>
             <SidebarButton
-              title="Settings"
+              title="Theme"
               onClick={() => {
                 navigateTo("settings");
-              }}>Settings</SidebarButton>
+              }}>Theme</SidebarButton>
             <SidebarButton
               title="About"
               onClick={() => {
@@ -105,7 +106,7 @@
       </div>
     {/if}
 
-    <!-- Settings Page -->
+    <!-- Theme Page -->
     {#if currentPage === "settings"}
       <div
         class="absolute inset-0"
@@ -113,7 +114,7 @@
         out:fly={{ x: -200, duration: 400 }}>
         <div class="p-4">
           <div class="flex items-center justify-between mt-1 mb-5">
-            <h3 class="text-2xl font-semibold text-type-emphasized">Settings</h3>
+            <h3 class="text-2xl font-semibold text-type-emphasized">Theme</h3>
             <SmallIconButton
               title="Back"
               onClick={backToSidebar}>

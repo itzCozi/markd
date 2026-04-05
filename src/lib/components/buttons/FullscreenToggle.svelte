@@ -6,29 +6,7 @@
 
   function toggleFullscreen() {
     isFullscreen = !isFullscreen;
-    const style = document.createElement("style");
-    style.id = "fullscreen-style";
-    style.innerHTML = `
-      .editor {
-        width: ${isFullscreen ? "100%" : "{leftWidth}%"} !important;
-      }
-      .renderer {
-        display: ${isFullscreen ? "none" : "block"} !important;
-      }
-      .carta-toolbar-left {
-        display: ${isFullscreen ? "block" : "none"} !important;
-        padding-right: 5px;
-      }
-      .carta-toolbar {
-        max-width: ${isFullscreen ? "100%" : "300px"} !important;
-        width: ${isFullscreen ? "fit-content" : "auto"} !important;
-      }
-    `;
-    const existingStyle = document.getElementById("fullscreen-style");
-    if (existingStyle) {
-      existingStyle.remove();
-    }
-    document.head.appendChild(style);
+    document.body.classList.toggle("fullscreen", isFullscreen);
 
     if (!isFullscreen) {
       const writeButton = document.querySelector(".carta-toolbar-left button");

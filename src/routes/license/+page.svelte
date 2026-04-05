@@ -5,7 +5,7 @@
 
 <div class="flex items-center justify-center min-h-screen p-6">
   <div class="mx-auto flex flex-col gap-2 max-w-2xl">
-    <h3 class="text-2xl text-type-emphasized mb-1">MIT License</h3>
+    <h2 class="text-2xl text-type-emphasized mb-1">MIT License</h2>
     <p>
       Copyright (c) 2024 <a
         href="https://github.com/itzcozi"

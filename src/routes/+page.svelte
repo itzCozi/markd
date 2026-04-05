@@ -248,6 +248,7 @@
 
 <NavBar />
 
+<main id="main-content">
 <div class="stats gap-4 text-type-dimmed text-xs">
   <span class="stat-item">Characters: {characterCount}</span>
   <span class="separator">&bull;</span>
@@ -272,7 +273,7 @@
       <div
         class={`w-full p-2 border-none outline-none resize-none ${$markdownTheme === "light" ? "bg-mono-lightBackground" : "bg-mono-background"} font-mono overflow-y-auto`}
         onscroll={handleEditorScroll}>
-        {#key $markdownTheme}
+        {#key `${$markdownTheme}-${$editorTheme}`}
           <MarkdownEditor
             {carta}
             bind:value={source}
@@ -287,20 +288,20 @@
 
   <!-- svelte-ignore a11y_no_static_element_interactions -->
   <div
-    class="divider w-1 h-full cursor-ew-resize bg-mono-card"
+    class="divider w-1.5 h-full cursor-ew-resize bg-mono-card hover:bg-mono-accentLight2 transition-colors"
     style="left: calc({leftWidth}% - 5px);"
     onmousedown={handleMouseDown}>
   </div>
 
   <div
-    class="renderer pb-[15px] p-2 overflow-auto markdown-content"
+    class="renderer pb-[15px] p-2 overflow-auto markdown-content {selectedTab === 'preview' ? 'mobile-show' : ''}"
     style="width: {100 - leftWidth}%"
     onscroll={handleRendererScroll}>
     <div class="renderer-toolbar">
-      <span class="mr-3 text-type-primary">Scroll sync</span>
+      <span class="text-type-primary text-sm">Scroll sync</span>
       <label
         class="inline-flex items-center cursor-pointer"
-        title="Theme Toggle">
+        title="Scroll sync toggle">
         <input
           type="checkbox"
           bind:checked={isScrollSyncEnabled}
@@ -327,3 +328,4 @@
     </div>
   </div>
 </div>
+</main>

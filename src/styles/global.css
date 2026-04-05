@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* --- Skip navigation --- */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 999;
+  padding: 0.75rem 1.5rem;
+  background-color: #2e6aac;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+}
+.skip-nav:focus {
+  top: 0;
+}
+
+/* --- Focus indicators --- */
+:focus-visible {
+  outline: 2px solid #4493f8;
+  outline-offset: 2px;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+label:focus-visible {
+  outline: 2px solid #4493f8;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* --- Scrollbar --- */
 :root ::-webkit-scrollbar {
   width: 8px;
   background-color: transparent;
@@ -14,14 +46,14 @@
 
 :root {
   --background-color: #121212;
-  font-family: "open sans";
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 html,
 body {
   background-color: var(--background-color);
   color: #d0d0d0;
-  font-family: "open sans";
+  font-family: "IBM Plex Sans", sans-serif;
   margin: 0;
   padding: 0;
   caret-color: #e0e0e0;
@@ -69,11 +101,13 @@ body {
 
 a {
   color: #4493f8;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
 a:hover {
-  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .renderer-toolbar {
@@ -81,9 +115,11 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
   top: 0;
   height: 32px;
-  width: 140px;
+  width: fit-content;
+  padding-inline: 12px;
   background-color: #121212 !important;
   border: 1px solid #333333;
   border-radius: 5px;
@@ -93,6 +129,35 @@ a:hover {
 
 .carta-renderer {
   background-color: transparent !important;
+  color: #d0d0d0;
+}
+
+.carta-renderer h1,
+.carta-renderer h2,
+.carta-renderer h3,
+.carta-renderer h4,
+.carta-renderer h5,
+.carta-renderer h6 {
+  color: #f0f6fc;
+}
+
+.carta-renderer p,
+.carta-renderer ul,
+.carta-renderer ol,
+.carta-renderer li,
+.carta-renderer td,
+.carta-renderer th {
+  color: #d0d0d0;
+}
+
+.carta-renderer a {
+  color: #4493f8;
+}
+
+.carta-renderer pre,
+.carta-renderer code {
+  background-color: #202020;
+  color: #d0d0d0;
 }
 
 #footnote-label {
@@ -115,13 +180,11 @@ a:hover {
 }
 
 .carta-icons-menu {
-  position: fixed !important;
   color: #d0d0d0;
   font-weight: 400;
-  top: unset !important;
-  left: 10px !important;
   width: fit-content;
   height: fit-content;
+  margin-top: 8px;
   background-color: #121212 !important;
   border: 1px solid #333333;
   border-radius: 5px;
@@ -180,13 +243,32 @@ a:hover {
     display: none !important;
   }
 
+  .editor,
+  .renderer {
+    width: 100% !important;
+    height: 100%;
+  }
+
   .renderer {
     display: none !important;
   }
 
-  .editor {
+  .renderer.mobile-show {
+    display: block !important;
+    position: fixed !important;
+    top: 72px;
+    left: 0;
+    right: 0;
+    bottom: 50px;
+    z-index: 25;
+    background-color: var(--background-color);
+    overflow-y: auto;
+    padding: 12px;
     width: 100% !important;
-    height: 100%;
+  }
+
+  .carta-renderer {
+    display: none !important;
   }
 
   .carta-toolbar {
@@ -222,13 +304,157 @@ a:hover {
   }
 
   .carta-icons-menu {
-    margin-bottom: 10px;
+    position: fixed !important;
     bottom: 76px !important;
+    top: unset !important;
     left: unset !important;
-    right: 0 !important;
+    right: 4px !important;
+    margin-top: 0;
+    margin-bottom: 8px;
   }
 
   .carta-editor {
     margin-bottom: 70px !important;
+  }
+}
+
+/* --- Light theme (class-toggled, scoped to editor) --- */
+html.light .editor,
+html.light .renderer,
+html.light .carta-editor {
+  --background-color: #ffffff;
+  color: #1f2328;
+  caret-color: black;
+}
+
+html.light .editor ::-webkit-scrollbar-thumb,
+html.light .renderer ::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5;
+}
+html.light .editor ::-webkit-scrollbar,
+html.light .renderer ::-webkit-scrollbar {
+  border-left-color: #d1d9e0;
+}
+
+html.light .carta-renderer h1,
+html.light .carta-renderer h2,
+html.light .carta-renderer h3,
+html.light .carta-renderer p,
+html.light .carta-renderer ul,
+html.light .carta-renderer li {
+  color: #1f2328;
+}
+
+html.light .carta-renderer pre {
+  color: #1f2328;
+  background-color: #dfdfdf;
+}
+
+html.light .admonition {
+  background-color: #dfdfdf;
+}
+
+html.light .carta-toolbar {
+  background-color: #f5f5f5 !important;
+  border-color: #d1d9e0 !important;
+}
+
+html.light .carta-toolbar button {
+  color: #1f2328;
+}
+
+html.light .renderer-toolbar {
+  background-color: #f5f5f5 !important;
+  border-color: #d1d9e0 !important;
+  color: #1f2328;
+}
+
+html.light .renderer-toolbar span {
+  color: #1f2328;
+}
+
+html.light .stats {
+  background-color: #f5f5f5;
+  border-color: #d1d9e0;
+  color: #59636e;
+}
+
+html.light .carta-icons-menu {
+  color: #1f2328;
+  background-color: #f5f5f5 !important;
+  border-color: #d1d9e0;
+}
+
+html.light .carta-icons-menu button:hover {
+  background-color: #e8e8e8;
+}
+
+html.light .carta-slash {
+  --background: #dfdfdf;
+  --group-color: #3c3c3c;
+  --title-color: #2d2d2d;
+  --description-color: #515151;
+  --hover-background: #c5c5c5;
+  --contrast-background: #d3d3d3;
+}
+
+html.light .carta-emoji {
+  --background: #dfdfdf;
+  --group-color: #3c3c3c;
+  --title-color: #2d2d2d;
+  --description-color: #515151;
+  --hover-background: #c5c5c5;
+  --contrast-background: #d3d3d3;
+}
+
+html.light .carta-emoji button:hover,
+html.light .carta-emoji button.carta-active {
+  background: var(--hover-background);
+}
+
+html.light .shiki {
+  background-color: transparent !important;
+}
+
+html.light .divider {
+  background-color: #d1d9e0 !important;
+}
+
+/* --- Fullscreen mode (class-toggled) --- */
+body.fullscreen .editor {
+  width: 100% !important;
+}
+body.fullscreen .renderer {
+  display: none !important;
+}
+body.fullscreen .carta-toolbar-left {
+  display: block !important;
+  padding-right: 5px;
+}
+body.fullscreen .carta-toolbar {
+  max-width: 100% !important;
+  width: fit-content !important;
+}
+
+/* --- Print styles --- */
+@media print {
+  .navbar, .stats, .carta-toolbar, .renderer-toolbar, .editor, .divider, .skip-nav {
+    display: none !important;
+  }
+  .renderer {
+    display: block !important;
+    width: 100% !important;
+    overflow: visible !important;
+    position: static !important;
+  }
+  html, body {
+    background-color: #fff !important;
+    color: #1e1e1e !important;
+  }
+  h1, h2, h3, h4, h5, h6, p, ul, li, table {
+    color: #1e1e1e !important;
+  }
+  .admonition {
+    break-inside: avoid;
   }
 }

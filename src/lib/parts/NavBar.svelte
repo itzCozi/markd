@@ -38,6 +38,7 @@
 
   onMount(() => {
     document.addEventListener("click", closeExportMenu);
+    return () => document.removeEventListener("click", closeExportMenu);
   });
 </script>
 

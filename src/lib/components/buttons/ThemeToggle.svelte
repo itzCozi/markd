@@ -3,9 +3,7 @@
   import { markdownTheme } from "$lib/stores/themeStore";
   import { Sun, Moon } from "lucide-svelte";
 
-  let isLightTheme = false;
-
-  $: isLightTheme = $markdownTheme === "light";
+  let isLightTheme = $derived($markdownTheme === "light");
 
   function toggleMarkdownTheme() {
     markdownTheme.update((theme) => (theme === "light" ? "" : "light"));
@@ -14,13 +12,13 @@
 </script>
 
 <label
-  class="inline-flex items-center cursor-pointer"
+  class="inline-flex items-center cursor-pointer min-w-[44px] min-h-[44px] justify-center"
   title="Theme Toggle">
   <input
     type="checkbox"
-    bind:checked={isLightTheme}
+    checked={isLightTheme}
     class="hidden"
-    on:change={toggleMarkdownTheme} />
+    onchange={toggleMarkdownTheme} />
 
   <span
     class={`relative inline-block w-8 h-5 duration-300 ease-in-out rounded-full ${

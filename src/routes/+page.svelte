@@ -187,16 +187,20 @@
         style.id = "pwa-style";
         style.innerHTML = `
           @media (max-width: 768px) {
+            :root {
+              --toolbar-height: 70px;
+            }
             .carta-icons-menu {
               margin-bottom: 30px !important;
             }
             .carta-toolbar {
-              height: 70px !important;
               padding-right: 3px !important;
               padding-bottom: 18px !important;
             }
+            .carta-editor {
+              margin-bottom: 70px !important;
+            }
             .stats {
-              bottom: 70px !important;
               border-block: 1px solid #333333 !important;
             }
           }
@@ -258,7 +262,7 @@
 </div>
 
 <div
-  class={`flex h-[calc(100dvh-72px)] ${$markdownTheme === "light" ? "bg-mono-lightBackground" : "bg-mono-background"}`}>
+  class={`flex h-[calc(100dvh-var(--navbar-height))] ${$markdownTheme === "light" ? "bg-mono-lightBackground" : "bg-mono-background"}`}>
   <div
     class="editor"
     style="width: {leftWidth}%;">

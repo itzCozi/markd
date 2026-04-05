@@ -46,6 +46,8 @@ label:focus-visible {
 
 :root {
   --background-color: #121212;
+  --navbar-height: 72px;
+  --toolbar-height: 50px;
   font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -256,10 +258,10 @@ a:hover {
   .renderer.mobile-show {
     display: block !important;
     position: fixed !important;
-    top: 72px;
+    top: var(--navbar-height);
     left: 0;
     right: 0;
-    bottom: 50px;
+    bottom: var(--toolbar-height);
     z-index: 25;
     background-color: var(--background-color);
     overflow-y: auto;
@@ -272,7 +274,7 @@ a:hover {
   }
 
   .carta-toolbar {
-    height: 50px !important;
+    height: var(--toolbar-height) !important;
     position: fixed !important;
     top: unset !important;
     bottom: 0;
@@ -299,13 +301,13 @@ a:hover {
   }
 
   .stats {
-    bottom: 50px !important;
+    bottom: var(--toolbar-height) !important;
     width: 100%;
   }
 
   .carta-icons-menu {
     position: fixed !important;
-    bottom: 76px !important;
+    bottom: calc(var(--toolbar-height) + 26px) !important;
     top: unset !important;
     left: unset !important;
     right: 4px !important;
@@ -314,7 +316,7 @@ a:hover {
   }
 
   .carta-editor {
-    margin-bottom: 70px !important;
+    margin-bottom: calc(var(--toolbar-height) + 20px) !important;
   }
 }
 

@@ -3,7 +3,9 @@
   import NewLine from "$lib/components/type/NewLine.svelte";
 </script>
 
-<div id="main-content" class="flex items-center justify-center min-h-screen p-6">
+<div
+  id="main-content"
+  class="flex items-center justify-center min-h-screen p-6">
   <div class="mx-auto flex flex-col gap-2 max-w-2xl">
     <h2 class="text-2xl text-type-emphasized mb-1">MIT License</h2>
     <p>

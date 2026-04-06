@@ -7,7 +7,12 @@
 
 <PageLayout>
   <h2 class="text-3xl font-semibold text-type-emphasized">About Us</h2>
-  <Paragraph className="mt-2">MarkD is an advanced live markdown editor directly in your browser. It's built using SvelteKit and supports HTML as well as an extended markdown syntax all in the same file. MarkD is an open source project and an extremely opinionated one at that. All of the styles are made with custom tailwind css classes, and the markdown editor is built with Carta. Fully hosted on Cloudflare Pages for the community!</Paragraph>
+  <Paragraph className="mt-2"
+    >MarkD is an advanced live markdown editor directly in your browser. It's built using SvelteKit
+    and supports HTML as well as an extended markdown syntax all in the same file. MarkD is an open
+    source project and an extremely opinionated one at that. All of the styles are made with custom
+    tailwind css classes, and the markdown editor is built with Carta. Fully hosted on Cloudflare
+    Pages for the community!</Paragraph>
   <div class="flex justify-center my-3">
     <TextButton
       onClick={() => open("https://github.com/itzcozi/markd", "_blank")}

@@ -214,6 +214,8 @@
 
   onMount(() => {
     managePWAStyles();
+    // Re-trigger Carta toolbar overflow calculation after layout settles
+    requestAnimationFrame(() => window.dispatchEvent(new Event("resize")));
   });
 
   let words = $derived(source.split(/\s+/).filter((word) => word !== ""));
@@ -253,83 +255,85 @@
 <NavBar />
 
 <main id="main-content">
-<div class="stats gap-4 text-type-dimmed text-xs">
-  <span class="stat-item">Characters: {characterCount}</span>
-  <span class="separator">&bull;</span>
-  <span class="stat-item">Words: {wordCount}</span>
-  <span class="separator">&bull;</span>
-  <span class="stat-item">Length: {readTime} {readTime === 1 ? "minute" : "minutes"}</span>
-</div>
+  <div class="stats gap-4 text-type-dimmed text-xs">
+    <span class="stat-item">Characters: {characterCount}</span>
+    <span class="separator">&bull;</span>
+    <span class="stat-item">Words: {wordCount}</span>
+    <span class="separator">&bull;</span>
+    <span class="stat-item">Length: {readTime} {readTime === 1 ? "minute" : "minutes"}</span>
+  </div>
 
-<div
-  class={`flex h-[calc(100dvh-var(--navbar-height))] ${$markdownTheme === "light" ? "bg-mono-lightBackground" : "bg-mono-background"}`}>
   <div
-    class="editor"
-    style="width: {leftWidth}%;">
-    <div class="flex h-full overflow-hidden">
-      <div
-        class="line-count hidden p-2 text-gray-600 text-right border-r border-mono-accentDark w-12 {(
-          selectedTab === 'write'
-        ) ?
-          ''
-        : 'hidden'}">
-      </div>
-      <div
-        class={`w-full p-2 border-none outline-none resize-none ${$markdownTheme === "light" ? "bg-mono-lightBackground" : "bg-mono-background"} font-mono overflow-y-auto`}
-        onscroll={handleEditorScroll}>
-        {#key `${$markdownTheme}-${$editorTheme}`}
-          <MarkdownEditor
-            {carta}
-            bind:value={source}
-            bind:selectedTab
-            theme={$markdownTheme}
-            mode="tabs"
-            {placeholder} />
-        {/key}
+    class={`flex h-[calc(100dvh-var(--navbar-height))] ${$markdownTheme === "light" ? "bg-mono-lightBackground" : "bg-mono-background"}`}>
+    <div
+      class="editor"
+      style="width: {leftWidth}%;">
+      <div class="flex h-full overflow-hidden">
+        <div
+          class="line-count hidden p-2 text-gray-600 text-right border-r border-mono-accentDark w-12 {(
+            selectedTab === 'write'
+          ) ?
+            ''
+          : 'hidden'}">
+        </div>
+        <div
+          class={`w-full p-2 border-none outline-none resize-none ${$markdownTheme === "light" ? "bg-mono-lightBackground" : "bg-mono-background"} font-mono overflow-y-auto`}
+          onscroll={handleEditorScroll}>
+          {#key `${$markdownTheme}-${$editorTheme}`}
+            <MarkdownEditor
+              {carta}
+              bind:value={source}
+              bind:selectedTab
+              theme={$markdownTheme}
+              mode="tabs"
+              {placeholder} />
+          {/key}
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- svelte-ignore a11y_no_static_element_interactions -->
-  <div
-    class="divider w-1.5 h-full cursor-ew-resize bg-mono-card hover:bg-mono-accentLight2 transition-colors"
-    style="left: calc({leftWidth}% - 5px);"
-    onmousedown={handleMouseDown}>
-  </div>
+    <!-- svelte-ignore a11y_no_static_element_interactions -->
+    <div
+      class="divider w-1.5 h-full cursor-ew-resize bg-mono-card hover:bg-mono-accentLight2 transition-colors"
+      style="left: calc({leftWidth}% - 5px);"
+      onmousedown={handleMouseDown}>
+    </div>
 
-  <div
-    class="renderer pb-[15px] p-2 overflow-auto markdown-content {selectedTab === 'preview' ? 'mobile-show' : ''}"
-    style="width: {100 - leftWidth}%"
-    onscroll={handleRendererScroll}>
-    <div class="renderer-toolbar">
-      <span class="text-type-primary text-sm">Scroll sync</span>
-      <label
-        class="inline-flex items-center cursor-pointer"
-        title="Scroll sync toggle">
-        <input
-          type="checkbox"
-          bind:checked={isScrollSyncEnabled}
-          class="hidden" />
-        <span
-          class={`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${
-            isScrollSyncEnabled ? "bg-mono-blueAccent" : "bg-mono-accentLight2"
-          } rounded-full`}>
+    <div
+      class="renderer pb-[15px] p-2 overflow-auto markdown-content {selectedTab === 'preview' ?
+        'mobile-show'
+      : ''}"
+      style="width: {100 - leftWidth}%"
+      onscroll={handleRendererScroll}>
+      <div class="renderer-toolbar">
+        <span class="text-type-primary text-sm">Scroll sync</span>
+        <label
+          class="inline-flex items-center cursor-pointer"
+          title="Scroll sync toggle">
+          <input
+            type="checkbox"
+            bind:checked={isScrollSyncEnabled}
+            class="hidden" />
           <span
-            class={`absolute top-1 left-1 inline-block w-3 h-3 rounded-full transition-transform duration-200 ease-in-out ${
-              isScrollSyncEnabled ? "translate-x-3" : ""
-            }`}>
-            {#if isScrollSyncEnabled}
-              <Check class="w-3 h-3 text-type-emphasized" />
-            {:else}
-              <XIcon class="w-3 h-3 text-type-emphasized" />
-            {/if}
+            class={`relative inline-block w-8 h-5 transition duration-200 ease-in-out ${
+              isScrollSyncEnabled ? "bg-mono-blueAccent" : "bg-mono-accentLight2"
+            } rounded-full`}>
+            <span
+              class={`absolute top-1 left-1 inline-block w-3 h-3 rounded-full transition-transform duration-200 ease-in-out ${
+                isScrollSyncEnabled ? "translate-x-3" : ""
+              }`}>
+              {#if isScrollSyncEnabled}
+                <Check class="w-3 h-3 text-type-emphasized" />
+              {:else}
+                <XIcon class="w-3 h-3 text-type-emphasized" />
+              {/if}
+            </span>
           </span>
-        </span>
-      </label>
-    </div>
-    <div class="carta-viewer carta-theme__{$markdownTheme} markdown-body">
-      {@html previewHtml}
+        </label>
+      </div>
+      <div class="carta-viewer carta-theme__{$markdownTheme} markdown-body">
+        {@html previewHtml}
+      </div>
     </div>
   </div>
-</div>
 </main>

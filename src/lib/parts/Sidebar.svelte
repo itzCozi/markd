@@ -36,7 +36,8 @@
     backToSidebar();
     closeSidebar();
   }}
-  onkeydown={(e) => (e.key === "Enter" || e.key === " ") && (e.preventDefault(), backToSidebar(), closeSidebar())}>
+  onkeydown={(e) =>
+    (e.key === "Enter" || e.key === " ") && (e.preventDefault(), backToSidebar(), closeSidebar())}>
 </div>
 
 <aside

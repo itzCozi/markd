@@ -12,13 +12,20 @@
     How to use <span class="underline decoration-1 underline-offset-4 decoration-wavy">MarkD</span
     >own
   </h2>
-  <Paragraph>Markdown is a lightweight markup language with plain text formatting syntax. Its design allows easy conversion to HTML and other formats, and its syntax is influenced by Perl. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. Here I will teach you how to use markdown, both basic syntax and our custom site-specific syntax.</Paragraph>
+  <Paragraph
+    >Markdown is a lightweight markup language with plain text formatting syntax. Its design allows
+    easy conversion to HTML and other formats, and its syntax is influenced by Perl. Markdown is
+    often used to format readme files, for writing messages in online discussion forums, and to
+    create rich text using a plain text editor. Here I will teach you how to use markdown, both
+    basic syntax and our custom site-specific syntax.</Paragraph>
 
   <div class="flex flex-row gap-2 items-center">
     <h3 class="text-2xl my-2 text-type-emphasized">IntelliSense</h3>
     <CircleAlert class="text-type-dimmed w-4 h-4 mb-3 -ml-1" />
   </div>
-  <Paragraph>Our editor features IntelliSense. Type / to see available commands, or : for emoji selection. You can create headers, lists, tables and basically anything using our IntelliSense.</Paragraph>
+  <Paragraph
+    >Our editor features IntelliSense. Type / to see available commands, or : for emoji selection.
+    You can create headers, lists, tables and basically anything using our IntelliSense.</Paragraph>
 
   <Divider className="mt-4" />
 

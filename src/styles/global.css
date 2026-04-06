@@ -286,10 +286,12 @@ a:hover {
     margin-left: 0 !important;
     margin-right: 0 !important;
     border: none;
+    overflow: hidden !important;
   }
 
   .carta-toolbar-left {
-    display: block !important;
+    display: flex !important;
+    align-items: center;
   }
 
   .renderer-toolbar {
@@ -440,7 +442,13 @@ body.fullscreen .carta-toolbar {
 
 /* --- Print styles --- */
 @media print {
-  .navbar, .stats, .carta-toolbar, .renderer-toolbar, .editor, .divider, .skip-nav {
+  .navbar,
+  .stats,
+  .carta-toolbar,
+  .renderer-toolbar,
+  .editor,
+  .divider,
+  .skip-nav {
     display: none !important;
   }
   .renderer {
@@ -449,11 +457,21 @@ body.fullscreen .carta-toolbar {
     overflow: visible !important;
     position: static !important;
   }
-  html, body {
+  html,
+  body {
     background-color: #fff !important;
     color: #1e1e1e !important;
   }
-  h1, h2, h3, h4, h5, h6, p, ul, li, table {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  li,
+  table {
     color: #1e1e1e !important;
   }
   .admonition {

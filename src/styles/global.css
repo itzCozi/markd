@@ -73,6 +73,8 @@ body {
   border-radius: 5px;
   z-index: 30;
   overflow: hidden;
+  width: fit-content;
+  margin-left: auto;
 }
 
 .carta-toolbar::-webkit-scrollbar {

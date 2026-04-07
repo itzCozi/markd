@@ -212,10 +212,55 @@
     }
   }
 
+  /**
+   * Filters the carta overflow menu to only show icons that aren't
+   * already visible in the toolbar (fixes carta-md's unreliable detection).
+   */
+  function filterOverflowMenu(menu: HTMLElement) {
+    const toolbarContainer = document.querySelector(".carta-toolbar");
+    const toolbarRight = document.querySelector(".carta-toolbar-right");
+    if (!toolbarContainer || !toolbarRight) return;
+
+    const containerRect = toolbarContainer.getBoundingClientRect();
+
+    // Collect aria-labels of icons fully visible within the toolbar bounds
+    const visibleLabels = new Set<string>();
+    toolbarRight.querySelectorAll<HTMLElement>(".carta-icon").forEach((icon) => {
+      const rect = icon.getBoundingClientRect();
+      if (rect.left >= containerRect.left && rect.right <= containerRect.right) {
+        const label = icon.getAttribute("aria-label") || icon.getAttribute("title");
+        if (label && label !== "Menu") visibleLabels.add(label);
+      }
+    });
+
+    // Hide menu items whose label matches a visible toolbar icon
+    menu.querySelectorAll<HTMLElement>(".carta-icon-full").forEach((item) => {
+      const label = item.getAttribute("aria-label");
+      item.style.display = label && visibleLabels.has(label) ? "none" : "";
+    });
+  }
+
   onMount(() => {
     managePWAStyles();
     // Re-trigger Carta toolbar overflow calculation after layout settles
     requestAnimationFrame(() => window.dispatchEvent(new Event("resize")));
+
+    // Watch for the overflow menu appearing and filter its items
+    const editor = document.querySelector(".carta-editor");
+    if (!editor) return;
+
+    const observer = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        for (const node of mutation.addedNodes) {
+          if (node instanceof HTMLElement && node.classList.contains("carta-icons-menu")) {
+            filterOverflowMenu(node);
+          }
+        }
+      }
+    });
+    observer.observe(editor, { childList: true });
+
+    return () => observer.disconnect();
   });
 
   let words = $derived(source.split(/\s+/).filter((word) => word !== ""));
